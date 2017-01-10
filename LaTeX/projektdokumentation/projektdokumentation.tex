@@ -1,0 +1,73 @@
+\makeatletter
+\def\input@path{{../projektdokumentation/}}
+\makeatother
+\documentclass[a4paper,11pt,twoside,openright]{memoir}
+\input{../preamble/preamble}
+
+%Debugging
+%\overfullrule=2cm
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{40}{20}%
+      \selectfont}
+
+\title{\TitleFont Autovandingssystem \\ \footnotesize\textit{Projektdokumentation }}
+\author{Afgangsprojekt af: \\Kenn Hedegaard Eskildsen \\Karsten Schou Nielsen\\ \\ Vejleder: \\Bjarne Funch Skipper} 
+
+\date{Ingeniørhøjskolen, Aarhus Universitet \\ \today}
+
+\usepackage[firstpage]{draftwatermark}
+\SetWatermarkText{\includegraphics{../fig/Billeder/forsidebillede.jpg}}
+
+\begin{document}
+\fancyhf{} %Clear all header/footers
+\frontmatter
+\maketitle
+\vfill
+
+%kilde https://pixabay.com/da/vanddr%C3%A5ber-vand-natur-v%C3%A6ske-578897/
+
+%\begin{figure}
+%\centering
+%\includegraphics[scale=1, trim=90 100 90 450, clip=true]{../fig/forside_dokumentation_underskrevet}
+%\end{figure}
+
+\begin{table} [h]
+	\centering
+	\begin{tabular}{|l|r|l|}
+	\hline 
+	\textbf{Navn} 				& \textbf{Studienummer} & \textbf{Underskrift~~~~~~~~~~~~~~~~~~~~} 		\\ \hline
+	Kenn Hedegaard Eskildsen 	& 201370904 & \\ && 												\\ \hline
+	Karsten Schou Nielsen 		& 201370045 & \\ && 												\\ \hline
+	\end{tabular}
+\end{table}
+
+\clearpage
+\pagestyle{plain}
+
+\tableofcontents
+
+\vfill
+%\input{Arbejdsopgaver/arbejdsopgaver}
+
+\mainmatter
+\pagestyle{fancy}
+\fancyhf{} %Clear all header/footers
+\fancyhead[RO,LE]{Gruppe 1 - AU2}
+\fancyhead[CE,CO]{\nouppercase{\leftmark}}
+\fancyhead[LO,RE]{IHA, AU}
+\fancyfoot[CO,CE]{\nouppercase{\rightmark}}
+\fancyfoot[LE,RO]{\thepage}
+\include{projektformulering/projektformulering}			\cleartorightpage
+\include{kravspecifikation/kravspecifikation} 		 	\cleartorightpage
+\include{systemarkitektur/systemarkitektur} 		 	\cleartorightpage
+\include{hwdesign/hwdesign} 						 	\cleartorightpage
+\include{swdesign/swdesign} 						 	\cleartorightpage
+\include{hwimplementering/hwimpl} 						\cleartorightpage
+\include{swimplementering/swimpl} 		 				\cleartorightpage
+\include{acceptTest/accepttest}						 	\cleartorightpage
+\include{litteraturliste/litteraturliste}				\cleartorightpage
+%etc...
+
+\end{document}
