@@ -3,10 +3,13 @@
 \contentsline {chapter}{Indhold}{ii}{section*.1}
 \contentsline {chapter}{\chapternumberline {1}Projektformulering}{1}{chapter.1}
 \contentsline {chapter}{\chapternumberline {2}Kravspecifikation}{3}{chapter.2}
-\contentsline {chapter}{\chapternumberline {3}Systemarkitektur}{5}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Hardwaredesign}{7}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Softwaredesign}{9}{chapter.5}
-\contentsline {chapter}{\chapternumberline {6}Hardware Implementering}{11}{chapter.6}
-\contentsline {chapter}{\chapternumberline {7}Software Implementering}{13}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Accepttest}{15}{chapter.8}
-\contentsline {chapter}{Litteraturliste}{17}{section*.6}
+\contentsline {section}{\numberline {2.1}Funktionelle krav}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Fremtidige krav}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Use Cases}{4}{section.2.3}
+\contentsline {chapter}{\chapternumberline {3}Systemarkitektur}{7}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Hardwaredesign}{9}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Softwaredesign}{11}{chapter.5}
+\contentsline {chapter}{\chapternumberline {6}Hardware Implementering}{13}{chapter.6}
+\contentsline {chapter}{\chapternumberline {7}Software Implementering}{15}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Accepttest}{17}{chapter.8}
+\contentsline {chapter}{Litteraturliste}{19}{section*.6}

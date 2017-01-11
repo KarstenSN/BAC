@@ -1,3 +1,64 @@
 \chapter{Kravspecifikation} \label{ch:kravspecifikation}
+Det automatiske fugtbaseret havevandingsanlæg består samlet af en sensor, en kontrolboks og en motorventil. Dette udgør et automatisk fugtbaseret havevandingsanlæg. 
+Systemet henvender sig til privatpersoner med interesse i havearbejde. Disse personer har ofte brug for at få andre til at tilse deres have hvis de er væk fra deres ejendom mere end et par dage ad gangen. Med dette system gives havepasseren mulighed for at vande haven automatisk og kan derfor være væk længere tid ad gangen. Systemet skal baseres på jordfugtigheden således der undgås at vande når planten ikke mangler vand. Systemet vil derfor både kunne spare havepasseren for en del arbejde og samtidig sikre at planterne altid har den optimale fugtighed uden at bruge unødige mængder vand. Systemet virker ved at sensoren er placeret ved et gromedie og sender et trådløst signal indeholdende jordfugtigheden samt en overfladetemperatur, batteristatus og lysintensitet til kontrolboksen. Kontrolboksen åbner eller lukker herefter for den givne ventil afhængig af hvilken fugtighed kontrolboksen er præindstillet til. Brugeren har endvidere mulighed for at vælge at vandingsanlæget kun vander om aftnen, morgnen eller begge. 
+
+%---------------------------------------------------------------------------------------
+%									FUNKTIONELLE KRAV
+%---------------------------------------------------------------------------------------
+
+\section{Funktionelle krav} \label{sec:funktionelle_krav}
+I denne sektion opstilles de funktionelle krav til systemet. Kravende er det som systemet skal kunne gøre når det er fuldt funktionelt. 
+
+
+\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
+	\item  \emph{Systemet} skal bestå af en sensor samt en kontrolboks indeholdende en ventil
+	\item  \emph{Sensoren} skal måle temperatur, jordfugtighed samt lysintensitet
+	\item  \emph{Sensoren} skal være batteridrevet
+	\item  \emph{Kontrolboksen} skal udveksle data med sensoren via en trådløsforbindelse
+	\item  \emph{Kontrolboksen} skal indeholde en brugergrænseflade i form af keypad og display
+	\item  \emph{Kontrolboksen} skal drive en indbygget motorventil til at åbne og lukke for vandet
+	\item  \emph{Kontrolboksen} skal kunne måle om slangen er sprunget fra, hvis den er skal der gives en fejlmeddelse
+	\item  \emph{Brugeren} skal have mulighed for at åbne og lukke for ventilen manuelt på kontrolboksen
+	\item  \emph{Brugeren} skal kunne aktivere/deaktivere systemet på kontrolboksen 
+	\item  \emph{Brugeren} skal have mulighed for at indstille en åbningstid for ventilen når der vandes
+	\item  \emph{Brugeren} skal have mulighed for at indstille en ønsket jordfugtighed på kontrolboksen som systemet herefter skal opretholde
+	\item  \emph{Brugeren} skal have mulighed for at indstille en tidsbaseret vandingssekvens
+	\item  \emph{Brugeren} skal kunne vælge automatisk vandingstidsrum, eks. om aftenen, morgenen eller begge
+	\item  \emph{Kommunikation} mellem sensor til kontrolboks skal virke ved minimum 50m
+\end{enumerate}
+
+\section{Fremtidige krav} \label{sec:fremtige_krav}
+Herunder opstilles der nogle krav som i fremtiden kan være med til at forbedre systemet. Disse krav kan tænkes opfyldt i en fremtidig version hvor der allerede er konstrureret et produkt i forvejen og kan altså ses som at være forbedringer til en vertion 2. 
+
+\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
+	\item  \emph{Systemet} skal kunne betjenes via en smartphone applikation, hvori det er muligt at se grafer over tid for jurdfugtigheden, temperaturen samt lysintensiteten
+	\item  \emph{Systemet} skal kunne indstilles til en bestemt afgrøde, således brugeren ikke selv skal vide hvilken fugtighed en bestemt afgrøde kræver
+	\item  \emph{Systemet} skal kunne tilsluttes flere sensore
+
+\end{enumerate}
+
+\section{Use Cases} \label{sec:use_cases}
+Udfra kravende i sektion \ref{sec:funktionelle_krav} opstilles der følgende use cases som ses i figur (ref)
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+\caption{Blokdiagram af det samlede system}
+\label{fig:BDDsystem}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDkontrolboks.pdf}
+\caption{Blokdiagram af kontrolboksen}
+\label{fig:BDDkontrolboks}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDsensor.pdf}
+\caption{Blokdiagram af sensoren}
+\label{fig:BDDsensor}
+\end{figure}
 
 \clearpage
