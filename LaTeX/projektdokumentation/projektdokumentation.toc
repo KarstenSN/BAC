@@ -6,11 +6,17 @@
 \contentsline {section}{\numberline {2.1}Funktionelle krav}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Fremtidige krav}{4}{section.2.2}
 \contentsline {section}{\numberline {2.3}Use Cases}{4}{section.2.3}
-\contentsline {subsubsection}{Use Case 1: Aktiver system}{4}{section*.2}
-\contentsline {chapter}{\chapternumberline {3}Systemarkitektur}{9}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Hardwaredesign}{11}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Softwaredesign}{13}{chapter.5}
-\contentsline {chapter}{\chapternumberline {6}Hardware Implementering}{15}{chapter.6}
-\contentsline {chapter}{\chapternumberline {7}Software Implementering}{17}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Accepttest}{19}{chapter.8}
-\contentsline {chapter}{Litteraturliste}{21}{section*.7}
+\contentsline {subsubsection}{Use Case 1: Aktiver system}{6}{section*.2}
+\contentsline {subsubsection}{Use Case 2: Afl\IeC {\ae }s data}{6}{section*.3}
+\contentsline {subsubsection}{Use Case 3: Indstil \IeC {\o }nsket fugtighed i jorden}{7}{section*.4}
+\contentsline {subsubsection}{Use Case 4: Indstil \IeC {\r a}bningstid for ventil}{7}{section*.5}
+\contentsline {subsubsection}{Use Case 5: Indstil tidsbaseret vandingsinterval}{8}{section*.6}
+\contentsline {subsubsection}{Use Case 6: \IeC {\r A}bn/luk ventil manuelt}{8}{section*.7}
+\contentsline {subsubsection}{Use Case 7: V\IeC {\ae }lg automatisk vandingstidspunkt}{9}{section*.8}
+\contentsline {chapter}{\chapternumberline {3}Systemarkitektur}{11}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Hardwaredesign}{13}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Softwaredesign}{15}{chapter.5}
+\contentsline {chapter}{\chapternumberline {6}Hardware Implementering}{17}{chapter.6}
+\contentsline {chapter}{\chapternumberline {7}Software Implementering}{19}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Accepttest}{21}{chapter.8}
+\contentsline {chapter}{Litteraturliste}{23}{section*.13}

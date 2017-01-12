@@ -1,10 +1,10 @@
 \subsubsection{Use Case 1: Aktiver system}
 %-------------------- UC1 --------------------
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 
 \textbf{Navn:} 						 & UC1: Tænd/sluk system						\\ \hline
-\textbf{Formål:}					 & Her gives brugeren mulighed for at tænde eller slukke for systemet.  Dette gøres ved at holde power knappen nede i 3 sekunder på tastaturet på kontrolboksen. Er systemet slukket vil systemet tænde og omvendt. Se Figur xx for skitse af tastatur 							\\ \hline
+\textbf{Formål:}					 & Her gives brugeren mulighed for at tænde eller slukke for systemet.  Dette gøres ved at holde power knappen nede i 3 sekunder på tastaturet på kontrolboksen. Se Figur xx for skitse af tastatur 							\\ \hline
 \textbf{Initiering:}				 & Bruger 										\\ \hline
 \textbf{Aktører:} 					 & Bruger 										\\ \hline
 \textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding \\ \hline
@@ -17,6 +17,9 @@
 		\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
 		\item {[}Ext 1 : Systemet er i forvejen tændt{]}
 		\end{packed_item}
+		\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
+		\item {[}Ext 2 : Det er første gang systemet tændes{]}
+		\end{packed_item}
 	
 \end{packed_enum} 																\\ \hline
 
@@ -24,6 +27,11 @@
 \textbf{{[}Ext 1 : Systemet er i forvejen tændt{]}}
 	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
 		\item Systemet slukker og teksten i displayet forsvinder				
+	\end{packed_enum}
+\textbf{{[}Ext 2 : Det er første gang systemet tændes eller der er ikke forbindelse til sensoren{]}}
+	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
+		\item Teksten "Søger efter sensor" fremkommer på displayet og bliver stående indtil der er forbindelse til en sensor
+		\item Der vises nu temperatur og fugtighed på displayet, målt i jorden hvor sensoren er placeret			
 	\end{packed_enum}
 																				\\ \hline
 
