@@ -1,79 +1,193 @@
 \chapter{Kravspecifikation} \label{ch:kravspecifikation}
-Det automatiske fugtbaseret havevandingsanlæg består samlet af en sensor, en kontrolboks og en motorventil. Dette udgør et automatisk fugtbaseret havevandingsanlæg. 
-Systemet henvender sig til privatpersoner med interesse i havearbejde. Disse personer har ofte brug for at få andre til at tilse deres have hvis de er væk fra deres ejendom mere end et par dage ad gangen. Med dette system gives havepasseren mulighed for at vande haven automatisk og kan derfor være væk længere tid ad gangen. Systemet skal baseres på jordfugtigheden således der undgås at vande når planten ikke mangler vand. Systemet vil derfor både kunne spare havepasseren for en del arbejde og samtidig sikre at planterne altid har den optimale fugtighed uden at bruge unødige mængder vand. Systemet virker ved at sensoren er placeret ved et gromedie og sender et trådløst signal indeholdende jordfugtigheden samt en overfladetemperatur, batteristatus og lysintensitet til kontrolboksen. Kontrolboksen åbner eller lukker herefter for den givne ventil afhængig af hvilken fugtighed kontrolboksen er præindstillet til. Brugeren har endvidere mulighed for at vælge at vandingsanlæget kun vander om aftnen, morgnen eller begge. 
+I det følgende afsnit opstilles de funktionelle og ikke-funktionelle krav til systemt. De funktionelle krav er prioriteret efter MoSCoW-modellen. 
+
+	% \TODO{lave henvisning til MoSCoW i litteraturlisten}
+
+Denne model benyttes til at sikre en målrettet projektudvikling, og hvert individuelt krav tildeles en prioritering. Hermed kan opnås størst fokus på de mest systemkritiske krav, metoden er beskrevet nærmere i afsnit \ref{sec:moscow}. De Ikke-funktionelle krav er arrangeret efter FURPS+ modellen.
+
 
 %---------------------------------------------------------------------------------------
 %									FUNKTIONELLE KRAV
 %---------------------------------------------------------------------------------------
-
+\newpage
 \section{Funktionelle krav} \label{sec:funktionelle_krav}
-I denne sektion opstilles de funktionelle krav til systemet. Kravende er det som systemet skal kunne gøre når det er fuldt funktionelt. 
+I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen textit{prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}.
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | L{1.9 cm}| m{2.9 cm} |} \hline
+	\textbf{ID:} 		& \textbf{Krav:}		& \textbf{Prioritet:} 	& \textbf{Kommentarer:} 								\\ \hline
+	
+MC\_01	& Systemet skal bestå af en sensor samt en kontrolboks indeholdende mikroprocessor og en ventil.	& \textit{Must}	 & 	\\ \hline
+MC\_02	& Systemet skal kunne pre-indstilles til en specifik afgrøde 										& \textit{Could} &  \\ \hline
+MC\_03	& Systemet skal kunne betjenes fra en smartphone-applikation										& \textit{Would} &  \\ \hline
+MC\_04	& Systemet skal kunne tilsluttes flere sensor														& \textit{Would} &  \\ \hline
+MC\_05	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet									& \textit{Must}  & 	\\ \hline
+EL\_01	& Sensoren skal være batteridrevet																	& \textit{Must}	 & 	\\ \hline
+EL\_02	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet					& \textit{Must}	 & 	\\ \hline
+CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse					& \textit{Must}	 & 	\\ \hline
+CM\_02	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 50m								& \textit{Should}& 	\\ \hline
+UX\_01	& Kontrolboksen skal indeholde UI i form af keypad og display										& \textit{Must}	 & 	\\ \hline
+UX\_02	& Kontrolboksen skal kunne måle om slangen er sprunget fra, og give fejlmelding 					& \textit{Should}& 	\\ \hline
+UX\_03	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen				& \textit{Must}	 & 	\\ \hline
+UX\_04	& Brugeren skal kunne aktivere/deaktivere systemet på kontrolboksen 								& \textit{Must}	 & 	\\ \hline
+UX\_05	& Brugeren skal have mulighed for at indstille et ønsket vandingsinterval							& \textit{Must}	 & 	\\ \hline
+UX\_06	& Brugeren skal have mulighed for at indstille en ønsket jordfugtighed på kontrolboksen.			& \textit{Must}	 & 	\\ \hline
+UX\_07	& Brugeren skal have mulighed for at indstille en tidsbaseret vandingssekvens						& \textit{Must}  & 	\\ \hline
+UX\_08	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. om aftenen, morgenen eller begge		& \textit{Must}	 & 	\\ \hline
+UX\_09	& Brugeren skal have mulighed for at indstille en tidsbaseret vandingssekvens 						& \textit{Should}& 	\\ \hline		
+
+	\end{tabularx}
+	\caption{Funktionelle krav}
+	\label{tbl:funk_krav}
+\end{table}
 
 
-\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
-	\item  \emph{Systemet} skal bestå af en sensor samt en kontrolboks indeholdende en ventil
-	\item  \emph{Sensoren} skal måle temperatur, jordfugtighed samt lysintensitet
-	\item  \emph{Sensoren} skal være batteridrevet
-	\item  \emph{Kontrolboksen} skal udveksle data med sensoren via en trådløsforbindelse
-	\item  \emph{Kontrolboksen} skal indeholde en brugergrænseflade i form af keypad og display
-	\item  \emph{Kontrolboksen} skal drive en indbygget motorventil til at åbne og lukke for vandet
-	\item  \emph{Kontrolboksen} skal kunne måle om slangen er sprunget fra, hvis den er skal der gives en fejlmeddelse
-	\item  \emph{Brugeren} skal have mulighed for at åbne og lukke for ventilen manuelt på kontrolboksen
-	\item  \emph{Brugeren} skal kunne aktivere/deaktivere systemet på kontrolboksen 
-	\item  \emph{Brugeren} skal have mulighed for at indstille en åbningstid for ventilen når der vandes
-	\item  \emph{Brugeren} skal have mulighed for at indstille en ønsket jordfugtighed på kontrolboksen som systemet herefter skal opretholde
-	\item  \emph{Brugeren} skal have mulighed for at indstille en tidsbaseret vandingssekvens
-	\item  \emph{Brugeren} skal kunne vælge automatisk vandingstidsrum, eks. om aftenen, morgenen eller begge
-	\item  \emph{Kommunikation} mellem sensor til kontrolboks skal virke ved minimum 50m
-\end{enumerate}
 
-\section{MoSCoW} \label{sec:moscow}
-%kilde kilde: https://www.projectsmart.co.uk/moscow-method.php
-MoSCoW metoden er en made at arrangere kravende til systemet på. Under must er de krav som der skal være gennemført før at systemet kan siges at opfylde et minimum krav. Should er hvad der bør være men det er ikke nødvendigt at implementere hvis der ikke er tid eller resurser til det. Could er hvad systemet kan gøre, men det bliver kun implementeret hvis der er resurser og overskud. Would er fremtidige krav som kan være krav til en fremtidig version og implementeres derfor ikke.   
+\subsection{MoSCoW} \label{sec:moscow}
+I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref{tbl:funk_krav}, dog er de her arrangeret efter MoSCoW-modellen. Under \textit{Must} placeres de krav som skal være opfyldt for at systemet kan siges at være minimum funktionsdygtigt. \textit{Should} indeholder de krav der bør være implementeret for at systemet kan kaldes fuldt funktionsdygtigt, disse krav implementeres hvis tid og ressourcer tillader det. \textit{Could} indeholder de krav som systemet ville ha kunne opfylde hvis tid og ressourcer ikke er en begrænsning. textit{Would} er fremtidige krav til systemets efterfølgende iterationer, disse er derfor ikke implementeret i denne prototype.   
 
 \textbf{Must}
-\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
-	\item  \emph{Systemet} skal bestå af en sensor samt en kontrolboks indeholdende en ventil
-	\item  \emph{Sensoren} skal måle temperatur, jordfugtighed samt lysintensitet
-	\item  \emph{Sensoren} skal være batteridrevet
-	\item  \emph{Kontrolboksen} skal udveksle data med sensoren via en trådløsforbindelse
-	\item  \emph{Kontrolboksen} skal indeholde en brugergrænseflade i form af keypad og display
-	\item  \emph{Kontrolboksen} skal drive en indbygget motorventil til at åbne og lukke for vandet
-	\item  \emph{Brugeren} skal have mulighed for at åbne og lukke for ventilen manuelt på kontrolboksen
-	\item  \emph{Brugeren} skal kunne aktivere/deaktivere systemet på kontrolboksen 
-	\item  \emph{Brugeren} skal have mulighed for at indstille en åbningstid for ventilen når der vandes
-	\item  \emph{Brugeren} skal have mulighed for at indstille en ønsket jordfugtighed på kontrolboksen som systemet herefter skal opretholde
-	\item  \emph{Brugeren} skal kunne vælge automatisk vandingstidsrum, eks. om aftenen, morgenen eller begge
-\end{enumerate}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
+		MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks indeholdende mikroprocessor og en motorventil.  	\\
+		MC\_05	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet										\\
+		EL\_01	& Sensoren skal være batteridrevet																		\\
+		EL\_02	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet						\\
+		CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse 						\\
+		UX\_01	& Kontrolboksen skal indeholde UI i form af keypad og display											\\ 
+		UX\_03	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen					\\
+		UX\_04	& Brugeren skal kunne aktivere/deaktivere systemet på kontrolboksen										\\
+		UX\_05	& Brugeren skal have mulighed for at indstille et ønsket vandingsinterval								\\
+		UX\_06	& Brugeren skal have mulighed for at indstille en ønsket jordfugtighed på kontrolboksen					\\
+		UX\_07	& Brugeren skal have mulighed for at indstille en tidsbaseret vandingssekvens							\\
+		UX\_08	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. om aftenen, morgenen eller begge			\\
+	\end{tabularx}
+	\caption{Must krav}
+	\label{tbl:must_krav}
+\end{table}
 
 \textbf{Should}
-\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
-	\item  \emph{Kontrolboksen} skal kunne måle om slangen er sprunget fra, hvis den er skal der gives en fejlmeddelse
-	\item  \emph{Brugeren} skal have mulighed for at indstille en tidsbaseret vandingssekvens
-	\item  \emph{Kommunikation} mellem sensor til kontrolboks skal virke ved minimum 50m
-\end{enumerate}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
+		CM\_02	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 50m				\\
+		UX\_02	& Kontrolboksen skal kunne måle om slangen er sprunget fra, og give fejlmelding 	\\
+		UX\_09	& Brugeren skal have mulighed for at indstille en tidsbaseret vandingssekvens		\\
+	\end{tabularx}
+	\caption{Should krav}
+	\label{tbl:should_krav}
+\end{table}
 
 \textbf{Could}
-\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
-	\item \emph{Systemet} skal kunne indstilles til en bestemt afgrøde, således brugeren ikke selv skal vide hvilken fugtighed en bestemt afgrøde kræver		
-\end{enumerate}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
+		MC\_02	& Systemet skal kunne pre-indstilles til en specifik afgrøde 	\\
+	\end{tabularx}
+	\caption{Could krav}
+	\label{tbl:could_krav}
+\end{table}
 
 \textbf{Would}
-\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
-\item \emph{Systemet} skal kunne betjenes via en smartphone applikation, hvori det er muligt at se grafer over tid for jordfugtigheden, temperaturen samt lysintensiteten	
-\item \emph{Systemet} skal kunne tilsluttes flere sensore
-\end{enumerate}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
+		MC\_03	& Systemet skal kunne betjenes fra en smartphone-applikation	\\
+		MC\_04	& Systemet skal kunne tilsluttes flere sensor					\\
+	\end{tabularx}
+	\caption{Would krav}
+	\label{tbl:would_krav}
+\end{table}
+
+
+%---------------------------------------------------------------------------------------
+%									IKKE-FUNKTIONELLE KRAV
+%---------------------------------------------------------------------------------------
+\newpage
+\section{Ikke-Funktionelle krav} \label{sec:ikke_funktionelle_krav}
+
+De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard. 
+
+% FIND en fornuftig reference 
+
+Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
+Modellen inddeler kravsættet i følgende undergrupper.
+
+\begin{itemize}
+	\item 	Functionality (funktionalitet)
+	\item	Usability (Brugervenlighed)
+	\item	Reliability (Driftsikkerhed)
+	\item	Performance (Performance)
+	\item	Supportability (Vedligeholdelse)
+	\item	+ (Design and Fysiske begrænsninger, Interfaces)
+\end{itemize}
+
+Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav}. De ikke funktionelle krav er indekseret som det ses på de følgende tabeller, som med de funktionelle krav tildeles her unik krav ID. 
+
+\newpage
+\textbf{Brugervenlighed}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} 	\\ \hline
+		US\_01		 & Keypad'en skal bestå af 4 taktile trykknapper						&	\\ \hline
+		US\_02		 & Keypad'en skal indeholde 1 rød LED til indikation af fejl 			&	\\ \hline
+		US\_03		 & Displayet skal kunne vise jordfugtighed, temperatur					&	\\ \hline
+		US\_04		 & Displayet skal kunne vise systemets menuer							&	\\ \hline
+	\end{tabularx}
+	\caption{Krav til brugervenlighed}
+	\label{tbl:brugervenlighed_krav}
+\end{table}
+
+\textbf{Driftsikkerhed}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
+		RI\_01		 & Systemfejl skal indikeres med rød LED på keypad						& \\ \hline
+		RI\_02		 & Systemfejlmelding skal vises på display 								& \\ \hline
+		RI\_03		 & Systemet skal ha en MTBF (MeanTime Between Failures) på ????			& \\ \hline
+		RI\_04		 & System skal ha en MTTR (MeanTime To Restore) på ????					& \\ \hline
+	\end{tabularx}
+	\caption{Krav til driftsikkerhed}
+	\label{tbl:driftsikkerhed_krav}
+\end{table}
+
+\textbf{Performance}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
+		PF\_01		 & Batteritype (AAA ???)												& \\ \hline
+		PF\_02		 & Sensorens batterilevetid (min 1 år)  								& \\ \hline
+		PF\_03		 & Hvor mange instanser af systemet skal kunne køre samtidig			& \\ \hline
+		PF\_04		 & Temperatur range (1-70 graderC)										& \\ \hline
+		PF\_05		 & Målepræcision (5\%)													& \\ \hline
+		PF\_06		 & Systemrespons fra brugerinteraktion til aktuator skal være 1<sek		& \\ \hline
+	\end{tabularx}
+	\caption{Krav til performance}
+	\label{tbl:performance_krav}
+\end{table}
+
+\textbf{Vedligeholdelse}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
+		SP\_01		 & Systemet skal kun vedligeholdes i forbindelse med batteriskift 		& \\ \hline
+		SP\_02		 & Batteriet skal være let tilgængelig 									& \\ \hline
+		SP\_03		 & Brugeren skal selv kunne skifte batteri på sensor-enheden			& \\ \hline
+	\end{tabularx}
+	\caption{Krav til vedligeholdelse}
+	\label{tbl:vedligeholdelse_krav}
+\end{table}
+
+
 %--------------------------------------------------------------------------------------
 %												USE CASES
 %--------------------------------------------------------------------------------------
+\newpage
 \section{Use Cases} \label{sec:use_cases}
-Udfra kravende i sektion \ref{sec:funktionelle_krav} opstilles der følgende use cases som ses i figur \ref{fig:UCsystem}
+Ud fra de funktionelle krav i sektion \ref{sec:funktionelle_krav} opstilles følgende use cases som ses i use case-diagrammet på figur \ref{fig:UCdiagram}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/Usecases.pdf}
 \caption{Use cases over systemet}
-\label{fig:UCsystem}
+\label{fig:Udiagram}
 \end{figure}
 
 % UC1:  Aktiver system
