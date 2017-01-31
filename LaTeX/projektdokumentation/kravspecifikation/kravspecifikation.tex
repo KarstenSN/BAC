@@ -27,14 +27,41 @@ I denne sektion opstilles de funktionelle krav til systemet. Kravende er det som
 	\item  \emph{Kommunikation} mellem sensor til kontrolboks skal virke ved minimum 50m
 \end{enumerate}
 
-\section{Fremtidige krav} \label{sec:fremtige_krav}
-Herunder opstilles der nogle krav som i fremtiden kan være med til at forbedre systemet. Disse krav kan tænkes opfyldt i en fremtidig version hvor der allerede er konstrureret et produkt i forvejen og kan altså ses som at være forbedringer til en vertion 2. 
+\section{MoSCoW} \label{sec:moscow}
+%kilde kilde: https://www.projectsmart.co.uk/moscow-method.php
+MoSCoW metoden er en made at arrangere kravende til systemet på. Under must er de krav som der skal være gennemført før at systemet kan siges at opfylde et minimum krav. Should er hvad der bør være men det er ikke nødvendigt at implementere hvis der ikke er tid eller resurser til det. Could er hvad systemet kan gøre, men det bliver kun implementeret hvis der er resurser og overskud. Would er fremtidige krav som kan være krav til en fremtidig version og implementeres derfor ikke.   
 
+\textbf{Must}
 \begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
-	\item  \emph{Systemet} skal kunne betjenes via en smartphone applikation, hvori det er muligt at se grafer over tid for jurdfugtigheden, temperaturen samt lysintensiteten
-	\item  \emph{Systemet} skal kunne indstilles til en bestemt afgrøde, således brugeren ikke selv skal vide hvilken fugtighed en bestemt afgrøde kræver
-	\item  \emph{Systemet} skal kunne tilsluttes flere sensore
+	\item  \emph{Systemet} skal bestå af en sensor samt en kontrolboks indeholdende en ventil
+	\item  \emph{Sensoren} skal måle temperatur, jordfugtighed samt lysintensitet
+	\item  \emph{Sensoren} skal være batteridrevet
+	\item  \emph{Kontrolboksen} skal udveksle data med sensoren via en trådløsforbindelse
+	\item  \emph{Kontrolboksen} skal indeholde en brugergrænseflade i form af keypad og display
+	\item  \emph{Kontrolboksen} skal drive en indbygget motorventil til at åbne og lukke for vandet
+	\item  \emph{Brugeren} skal have mulighed for at åbne og lukke for ventilen manuelt på kontrolboksen
+	\item  \emph{Brugeren} skal kunne aktivere/deaktivere systemet på kontrolboksen 
+	\item  \emph{Brugeren} skal have mulighed for at indstille en åbningstid for ventilen når der vandes
+	\item  \emph{Brugeren} skal have mulighed for at indstille en ønsket jordfugtighed på kontrolboksen som systemet herefter skal opretholde
+	\item  \emph{Brugeren} skal kunne vælge automatisk vandingstidsrum, eks. om aftenen, morgenen eller begge
+\end{enumerate}
 
+\textbf{Should}
+\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
+	\item  \emph{Kontrolboksen} skal kunne måle om slangen er sprunget fra, hvis den er skal der gives en fejlmeddelse
+	\item  \emph{Brugeren} skal have mulighed for at indstille en tidsbaseret vandingssekvens
+	\item  \emph{Kommunikation} mellem sensor til kontrolboks skal virke ved minimum 50m
+\end{enumerate}
+
+\textbf{Could}
+\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
+	\item \emph{Systemet} skal kunne indstilles til en bestemt afgrøde, således brugeren ikke selv skal vide hvilken fugtighed en bestemt afgrøde kræver		
+\end{enumerate}
+
+\textbf{Would}
+\begin{enumerate}\itemsep1pt \parskip0pt \parsep0pt
+\item \emph{Systemet} skal kunne betjenes via en smartphone applikation, hvori det er muligt at se grafer over tid for jordfugtigheden, temperaturen samt lysintensiteten	
+\item \emph{Systemet} skal kunne tilsluttes flere sensore
 \end{enumerate}
 %--------------------------------------------------------------------------------------
 %												USE CASES
