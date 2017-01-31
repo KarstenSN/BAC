@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  31 JAN 2017 09:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  31 JAN 2017 14:16
 entering extended mode
 **./projektdokumentation.tex
 (projektdokumentation.tex
@@ -1791,7 +1791,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
 (Font)              using `T1/cmr/b/n' instead on input line 27.
 
-<../fig/Billeder/forsidebillede.jpg, id=55, 1927.2pt x 1284.8pt>
+<../fig/Billeder/forsidebillede.jpg, id=63, 1927.2pt x 1284.8pt>
 File: ../fig/Billeder/forsidebillede.jpg Graphic file (type jpg)
 
 <use ../fig/Billeder/forsidebillede.jpg>
@@ -1891,84 +1891,84 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 30.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 69.
 
-<../fig/Systemarkitektur/Usecases.pdf, id=114, 449.21727pt x 527.25081pt>
+<../fig/Systemarkitektur/Usecases.pdf, id=124, 449.21727pt x 527.25081pt>
 File: ../fig/Systemarkitektur/Usecases.pdf Graphic file (type pdf)
 
 <use ../fig/Systemarkitektur/Usecases.pdf>
 Package pdftex.def Info: ../fig/Systemarkitektur/Usecases.pdf used on input lin
-e 73.
+e 74.
 (pdftex.def)             Requested size: 378.40144pt x 444.1588pt.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 78.
  [4]
 (Kravspecifikation/usecases/uc1.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"))
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 81.
  [5 <../fig/Systemarkitektur/Usecases.pdf>] (Kravspecifikation/usecases/uc2.tex
 )
 (Kravspecifikation/usecases/uc3.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 87.
  [6]
 (Kravspecifikation/usecases/uc4.tex) (Kravspecifikation/usecases/uc5.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 93.
  [7]
 (Kravspecifikation/usecases/uc6.tex) (Kravspecifikation/usecases/uc7.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 99.
  [8]
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 
 [9])
 Package babel Info: Redefining danish shorthand "|
@@ -1992,7 +1992,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
-<../fig/Systemarkitektur/BDDsystem.pdf, id=222, 428.1275pt x 244.64398pt>
+<../fig/Systemarkitektur/BDDsystem.pdf, id=232, 428.1275pt x 244.64398pt>
 File: ../fig/Systemarkitektur/BDDsystem.pdf Graphic file (type pdf)
 
 <use ../fig/Systemarkitektur/BDDsystem.pdf>
@@ -2000,7 +2000,7 @@ Package pdftex.def Info: ../fig/Systemarkitektur/BDDsystem.pdf used on input li
 ne 7.
 (pdftex.def)             Requested size: 378.40144pt x 216.22806pt.
 
-<../fig/Systemarkitektur/BDDkontrolboks.pdf, id=223, 663.28099pt x 316.35089pt>
+<../fig/Systemarkitektur/BDDkontrolboks.pdf, id=233, 663.28099pt x 316.35089pt>
 File: ../fig/Systemarkitektur/BDDkontrolboks.pdf Graphic file (type pdf)
 <use ../fig/Systemarkitektur/BDDkontrolboks.pdf>
 Package pdftex.def Info: ../fig/Systemarkitektur/BDDkontrolboks.pdf used on inp
@@ -2010,7 +2010,7 @@ ut line 14.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../fig/Systemarkitektur/BDDsensor.pdf, id=224, 663.28099pt x 315.29596pt>
+<../fig/Systemarkitektur/BDDsensor.pdf, id=234, 663.28099pt x 315.29596pt>
 File: ../fig/Systemarkitektur/BDDsensor.pdf Graphic file (type pdf)
 
 <use ../fig/Systemarkitektur/BDDsensor.pdf>
@@ -2056,20 +2056,106 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 2.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 2.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 4.
+
+<../fig/Jordfugt/maling1.PNG, id=297, 578.16pt x 396.7322pt>
+File: ../fig/Jordfugt/maling1.PNG Graphic file (type png)
+
+<use ../fig/Jordfugt/maling1.PNG>
+Package pdftex.def Info: ../fig/Jordfugt/maling1.PNG used on input line 11.
+(pdftex.def)             Requested size: 378.40144pt x 259.65869pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 15.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 15.
  [13
 
 
 
 
 
-])
+]
+<../fig/Jordfugt/akvivalentjord.PNG, id=311, 507.39563pt x 345.54094pt>
+File: ../fig/Jordfugt/akvivalentjord.PNG Graphic file (type png)
+
+<use ../fig/Jordfugt/akvivalentjord.PNG>
+Package pdftex.def Info: ../fig/Jordfugt/akvivalentjord.PNG used on input line 
+24.
+(pdftex.def)             Requested size: 236.5pt x 161.05975pt.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 30.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 30.
+ [14 <../fig/Jordfugt/maling1.PNG> <../fig/Jordfugt/akvivalentjord.PNG>]
+<../fig/Jordfugt/maelingafsystem.PNG, id=322, 570.63188pt x 371.88937pt>
+File: ../fig/Jordfugt/maelingafsystem.PNG Graphic file (type png)
+
+<use ../fig/Jordfugt/maelingafsystem.PNG>
+Package pdftex.def Info: ../fig/Jordfugt/maelingafsystem.PNG used on input line
+ 33.
+(pdftex.def)             Requested size: 378.40144pt x 246.61102pt.
+
+<../fig/Jordfugt/functionfit.PNG, id=326, 526.21594pt x 364.36125pt>
+File: ../fig/Jordfugt/functionfit.PNG Graphic file (type png)
+
+<use ../fig/Jordfugt/functionfit.PNG>
+Package pdftex.def Info: ../fig/Jordfugt/functionfit.PNG used on input line 48.
+
+(pdftex.def)             Requested size: 378.40144pt x 262.023pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 52.
+ [15 <../fig/Jordfugt/maelingafsystem.PNG>]
+<../fig/Jordfugt/residualplot.PNG, id=337, 494.59781pt x 357.58594pt>
+File: ../fig/Jordfugt/residualplot.PNG Graphic file (type png)
+
+<use ../fig/Jordfugt/residualplot.PNG>
+Package pdftex.def Info: ../fig/Jordfugt/residualplot.PNG used on input line 55
+.
+(pdftex.def)             Requested size: 378.40144pt x 273.57416pt.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 64.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 64.
+ [16 <../fig/Jordfugt/functionfit.PNG> <../fig/Jordfugt/residualplot.PNG>]
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 64.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 64.
+ [17])
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining danish shorthand "~
@@ -2078,7 +2164,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 65.
- [14
+ [18
 
 
 
@@ -2098,7 +2184,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 5.
- [15
+ [19
 
 
 
@@ -2111,15 +2197,15 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 66.
- [16
+
+[20
 
 
 
 ]
 \openout2 = `hwimplementering/hwimpl.aux'.
 
-
-(hwimplementering/hwimpl.tex
+ (hwimplementering/hwimpl.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2132,7 +2218,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 3.
- [17
+ [21
 
 
 
@@ -2145,7 +2231,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 67.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 67.
- [18
+ [22
 
 
 
@@ -2165,7 +2251,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
- [19
+
+[23
 
 
 
@@ -2178,8 +2265,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 68.
-
-[20
+ [24
 
 
 
@@ -2199,7 +2285,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
- [21
+ [25
 
 
 
@@ -2212,18 +2298,20 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 69.
- [22
+ [26
 
 
 
 ]
 \openout2 = `litteraturliste/litteraturliste.aux'.
 
- (litteraturliste/litteraturliste.tex
+
+(litteraturliste/litteraturliste.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
+
 bibitemlist
 )
 Package babel Info: Redefining danish shorthand "|
@@ -2234,7 +2322,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 70.
- [23
+ [27
 
 
 
@@ -2247,7 +2335,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 70.
- [24
+ [28
 
 
 ]
@@ -2266,7 +2354,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 73.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 73.
 Package rerunfilecheck Info: File `projektdokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 743D3545F6D0D0C6998C10B00F27E10C;697.
+(rerunfilecheck)             Checksum: A279E32280860D49E6ACACE5710D7FF1;835.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2276,15 +2364,15 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27458 strings out of 493333
- 487255 string characters out of 3139188
- 715025 words of memory out of 3000000
- 30410 multiletter control sequences out of 15000+200000
- 28585 words of font info for 77 fonts, out of 3000000 for 9000
+ 27516 strings out of 493333
+ 488511 string characters out of 3139188
+ 715687 words of memory out of 3000000
+ 30443 multiletter control sequences out of 15000+200000
+ 29048 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,13n,58p,10402b,883s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi65
-7\ectt1000.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+ <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1200.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi657\ecti1000.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\
 ljfour\jknappen\ec\dpi720\ecbx1200.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2
 .9\fonts\pk\ljfour\jknappen\ec\dpi1037\ecbx1200.pk> <C:\Users\Karsten\AppData\L
@@ -2295,10 +2383,13 @@ x1000.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
 c\dpi600\ecrm1200.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
 r\jknappen\ec\dpi600\ecrb0900.pk> <C:\Users\Karsten\AppData\Local\MiKTeX\2.9\fo
 nts\pk\ljfour\jknappen\ec\dpi1389\ecrb1728.pk><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on projektdokumentation.pdf (26 pages, 1764693 bytes).
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb>
+Output written on projektdokumentation.pdf (30 pages, 1896514 bytes).
 PDF statistics:
- 705 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
