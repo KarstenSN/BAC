@@ -2,36 +2,36 @@
 Der er valgt at bruge transciveren MRFX49A fra Microchip, da den er SPI-kompatibel og hellere ikke behøver at blive forprogrammeret som mange andre RF-kredse skal. I stedet skal den sættes op via SPI kommunikationen. Chippen er som skræddersyet til dette system da den er designet til batteri applikationer. Den har en indbygget "low battery voltage detect" som kan give et interrupt til mikroprocessoren når batterispændingen når under et bestemt niveau, som sættes af mikroprocessoren. Den har også en indbygget wake-up timer så mikroprocessoren kan ligges i sleep-mode og herved minimere strømforbruget til nogle få uA, indtil den vækkes op igen efter en forudbestemt tid. Transciveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte bruges i consumer elektronik. Dog er 915MHz mere rettet til den Amerikanske marked.   
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_circuit.PNG}
-\caption{Applikation circuit af MRFX49A}
-\label{fig:mrfx49a_cir}
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_circuit.PNG}
+	\caption{Applikation circuit af MRFX49A}
+	\label{fig:mrfx49a_cir}
 \end{figure}
 
 MRF49XA har i alt 16 indbyggede registre som der bruges til at konfigurere IC'en med. For et overblik over disse henvises der til databladet. Der vil herunder blive gennemgået hvordan der skrives og læses fra et register. STSREG er statusregistret og er det eneste register der kan læses fra. Når statusregistret læses er der oftet blevet givet et eksternt interrupt til mikroprocessoren, dette interrupt kan være forsaget af mange grunde og disse grunde aflæses i statusregistret. Grundende til interruptet kan være at der er for lav batterispænding, at der er wake-up timer overflow, eller at der er blevet modtaget en byte fra senderen osv. Overblik over STSREG kan ses i Figur \ref{fig:mrfx49a_stsreg} og en fuld læsning ses i Figur \ref{fig:mrfx49a_read}. Hvis bit 10 er "1" når status registret læses betyder det "Low Battery Detected", for resten af statusregistret henvises til databladet.  
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{../fig/transciver/mrfx49a_stsreg.PNG}
-\caption{Overblik over STSREG}
-\label{fig:mrfx49a_stsreg}
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/transciver/mrfx49a_stsreg.PNG}
+	\caption{Overblik over STSREG}
+	\label{fig:mrfx49a_stsreg}
 \end{figure}
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{../fig/transciver/mrfx49a_read.PNG}
-\caption{Læsning af STSREG}
-\label{fig:mrfx49a_read}
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/transciver/mrfx49a_read.PNG}
+	\caption{Læsning af STSREG}
+	\label{fig:mrfx49a_read}
 \end{figure}
 
 
 Normalt startes der med at skrive til GENCREG som er det gennerelle konfigurations register. Her vælges der hvilken frekvens transciveren skal kommunikere ved, hvilken load kapacitet krystallet skal bruge, om TX data registret skal aktiveres og om FIFO-registret skal aktiveres. Overblik over GENCREG kan ses i Figur \ref{fig:mrfx49a_gencreg}.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{../fig/transciver/mrfx49a_gencreg.PNG}
-\caption{Overblik over GENCREG}
-\label{fig:mrfx49a_gencreg}
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/transciver/mrfx49a_gencreg.PNG}
+	\caption{Overblik over GENCREG}
+	\label{fig:mrfx49a_gencreg}
 \end{figure}
 
 CBB<15:8> indeholder indeholder det første byte som skal sendes til reciveren. Dette byte fortæller hvilket register der ønskes at skrive til. For GENCREG er andressen 0x80H. Bit 7-0 er her hvor funktionaliteten sættes. Ønsker vi at loade krystallet med 10pF, at kommunikere ved 433MHz at aktivere FIFO og TX registret skal denne byte indeholde 0xD3H. En komplet skrivning skal derfor indeholde 0x80D3H. Den eneste forskel fra læsesekvensen i Figur \ref{fig:mrfx49a_read} er at SDI nu indeholder dataet i stedet for SDO. 

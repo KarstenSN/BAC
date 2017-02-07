@@ -1,65 +1,10 @@
 \chapter{Hardwaredesign}
-\section{Jordfugtsensor} \label{sec:jordfugtsensor}
 
-\subsection{Måling af jordfugt}
-Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:Multi-Sensor System}, en kapasitiv målemetode\cite{lib:Multi-Sensor System}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste og billigste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling.  
-\subsubsection{Resistiv måling}
-Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}.   
- 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/maling1.PNG}
-\caption{Impedans måling af jorden ved 17\% fugtighed}
-\label{fig:maling1}
-\end{figure} 
-
-Udfra Figur\ref{fig:maling1} kan der opstilles et ækvivalentdiagram som ses på Figur\ref{fig:akvj1}. I det øjeblik der bliver sat en spænding på proben, vil C1 være totalt afladet og det vil derfor være muligt at aflæse værdien af R1 ved brug af spændingsdeler-formlen. C1 vil herefter begynde at oplade og derfor træder R2 mere og mere i kraft. Det blev  besluttet at modellere jorden som et førsteordens system med overføringsfunktionen:
-\begin{equation}
-System = \dfrac{\alpha \cdot \beta}{S + \alpha}
-\end{equation}
-Ved brug af denne overføringsfunktion ses R1 som værende 0 ohm. 
- 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{../fig/Jordfugt/akvivalentjord.PNG}
-\caption{Ækvivalentdiagram af jorden}
-\label{fig:akvj1}
-\end{figure} 
-
-I matlab blev der skrevet et script, som kan findes i bilagende, til at udregne overføringsfunktionen. Der blev i alt foretaget målinger på tre typer jord, en taget på Helgenæs, en i Randers samt en så og plantejord fra en plantesæk. Aflæsningstiden blev foretaget ved 3 tau og ikke ved 1 tau som ellers er normalen. Dette skyldes at R1 er sat til at være 0 ohm. 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/maelingafsystem.PNG}
-\caption{Måling af overføringsfunktion i MATLAB}
-\label{fig:msystem}
-\end{figure} 
-
-På Figur\ref{fig:msystem} ses hvordan den approximerende overføringsfunktion er blevet målt. Den grønne streg er starttidspunktet og den gule streg er stoptidspunket. Mellem disse to streger aflæses tiden af tre tidskonstanter. Disse divideres med 3 således vi står tilbage med $\alpha$. $\beta$ aflæses blot som forholdet mellem inputtet og outputtet lige før spændingen går negativ. Grunden til at spændingen går negativ skyldes at der med tiden vil opstå slitage på proben, denne slitage vendes således at hver enkelt spyd vil slides lige meget. Det ses at når spændingen fjernes fra proben aflades C1 langsomt. Der blev noteret overføringsfunktioner for alle tre typer jord ved forskellige fugtigheder og tilsidst blev der lavet en regression til at bestemme fugtigheden ud fra $\beta$. $\alpha$ kunne også bruges til at bestemmer fugtigheden, men det viste sig hurtigt at den var meget upræcis at bruge, da den afhang meget af tiden siden den foregående måling. På Figur\ref{fig:funcfit} ses regressionen og på Figur\ref{fig:resplot} ses et residual plot over regressionen. Regressionen blev bestemt via matlabs indbyggede funktion \textit{fit} til at være:
-
-\begin{equation}
-Fugtighed = a \cdot exp(b\cdot x) + c \cdot exp(d\cdot x)
-\end{equation}
-
-Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
- 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/functionfit.PNG}
-\caption{Functionfit i MATLAB}
-\label{fig:funcfit}
-\end{figure} 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/residualplot.PNG}
-\caption{Plot over residualerne}
-\label{fig:resplot}
-\end{figure} 
- 
-Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvilket må siges ikke at leve op til kravet om 5\% præcision. 
-\subsubsection{Kapasitiv måling}
+\input{hwdesign/jordfugt}
+\clearpage
 
 \input{hwdesign/transciver}
+\clearpage
 
+\input{hwdesign/antenne}
 \clearpage
