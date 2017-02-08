@@ -1,1 +1,48 @@
 \section{Antenne} \label{sec:antenne}
+
+\subsection{Valg af antenne}
+
+Til første iteration af kontrolboksen blev det valgt at benytte en through-hole monteret helical-antenne, dette valg blev truffet på baggrund af ønsket om hurtigt at komme i gang med en simple og effektiv løsning uden de store krav til plads og beregninger. En antenne af typen W3127 ISM 433MHz Helical Antenna fra \textit{Pulse Electronics}. Denne antenne er var den mest isotropiske af kandidaterne med en Max Gain på $ G_{max}=-2.9 dBi$. jvf. Fig 3 i !!!!!! INDSÆT REF TIL LITTERATURLISTE!!!!!
+
+Efterfølgende blev det besluttet at finde en mere pladsvenlig løsning, da sensorboksen og PCB'et heri stiller nogle formfaktor krav der umuliggøre en sådan antenne. Der er ganske enkelt ikke plads til den på sensor-PCB'et og i sensorboksen.
+Der blev derfor valgt at forsøge sig med beregninger på en patch-antenne med samme båndbredde.
+
+\subsection{Patch-antenne}
+For i første omgang at få et overblik over det fysiske omfang af en patchantenne ved 433Mhz, blev der foretaget en række beregninger. Beregninger og designmetode baserer sig på fremgangsmåden i "ANTENNA THEORY
+ANALYSIS AND DESIGN 3.ed" af Constantine A. Balanis. !!!!!! INDSÆT REF TIL LITTERATURLISTE!!!!! fra kapitel.14 om Microstrip Antennas. 
+
+Patchantennen opbygges med "line feed" efter transmissionlinje-modellen som er den model der giver et hurtigt overblik over de fysiskeparametre, men dog er mindre præcis og er sværere at modellere kobling på. Men i første omgang ønske jo netop bare en formfaktor. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/antenner/Balanis_fig_14_1a_MicrostripAntenna.png}
+	\caption{Koncept for en transmissionlinje-model af patchantenne}
+	\label{fig:antenne1}
+\end{figure} 
+
+Ved denne model opnås udstråling fra 2 slots og input-resistance kan kontrolleres ved at varierer reces-punktet. Men inden da skal $w$ og $l$ først fastlæggelse. 
+
+\subsubsection{beregninger på patch-antenne}
+Følgende er kendt på forhånd: 
+
+\begin{table}[ht]
+	\begin{tabularx}{\textwidth}{  m{1 cm} | L{10 cm} | m{2.9 cm}} 										\\ \hline
+		$\varepsilon_{r}$ 	& Dielectric constant of the substrate (FR4) 	& $ 4.3 $ 						\\ \hline
+		$ f_{r}$ 			& Resonant frequency 							& $ 466 \times 10^{6} Hz $ 		\\ \hline
+		$ h $				& Hight of the substrate						& $ 0.1588  cm $ 				\\ \hline
+		$ v_{0} $			& Free-space velocity of light					& $ 30 \times 10^9 m/s $		\\ \hline
+		$ \mu_{0} $			& Free-space Permeability						& $ 4\pi \times 10^{-7} $ 		\\ \hline
+		$ \varepsilon_{0}$ 	& Free-space Permittivity						& $ 8.854 \times 10^{-12} $ 	\\  \hline
+	\end{tabularx}
+	\caption{Info til beregninger}
+	\label{tbl:Info_beregninger}
+\end{table}
+
+% pga af plads mangel skifter vi til patch eller smd-antenne
+
+% Beregninger omkring patch antenne
+
+% beregninger omkring smd-antenne
+
+% valg af smd-antenne
+
