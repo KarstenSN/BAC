@@ -31,6 +31,7 @@
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
+*.bak
 *.lof
 *.log
 *.lot
