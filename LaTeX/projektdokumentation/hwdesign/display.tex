@@ -1,0 +1,2 @@
+\section{Display} 
+Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus, have baggrundsbelysning og have 16X2 karakterer. Ved at kigge flere datablade igennem blev der fundet frem til Newheaven's display \textit{NHD-C0216CiZ-FSW-FBW-3V3}. Det smarte ved det er at det har en indbygget DC-DC step-up converter således at displayet kan forsynes ned til 3V. Normalt kører LCD displays på 5V. Opsætningen og skrivning sker via I2C og for beskrivelse af dette henvises til software design afsnittet og databladet. 
