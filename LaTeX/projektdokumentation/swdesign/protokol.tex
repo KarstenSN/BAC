@@ -1,0 +1,30 @@
+\section{Trådløs protokol}
+Det første der skal ske når sensoren er placeret i jorden og kontrolboksen tændes, er at sensoren og kontrolboksen skal parres. Dette skal ske automatisk og ikke være noget som brugeren behøver at være bevist om. For at det kan lade sig gøre skal sensoren og kontrolboks som udgangspunkt have ID 0. Når kontrolboksen tændes første gang vil den søge efter en sensor med ID 0. Er der en sensor i nærheden som ikke har været parret før, vil den svare på forespørgeren. Når kontrolboksen har modtaget en respons fra sensoren vil den generere et tilfældigt ID som den herefter sender til sensoren. Sensoren svarer tilbage med dens accept. Sensoren og kontrolboksen har således nu samme ID og er herved parret. Går sensoren i stykker og skal derfor udskiftet, eller ønskes der at parre sensor og kontrolboks igen, tages batteriet ud af sensoren i nogle få sekunder, hvorefter det sættes i, igen. Herved har sensoren mistet sin hukommelse og starter igen med ID 0. Da kontrolboksen nu ikke længere kan finde sensoren med det gamle ID, vil den på ny gå ud og søge efter ID 0 og herved skabe en nu parring. Se Figur \ref{fig:parring}. Når parringen er gennemført vil kontrolboksen herefter gå ud og forespørge om data fra sensoren. Dette sker ved at udveksle pakker. Kontrolboksen indeholder den korteste protokol på kun 4 bytes. De to første bytes er et startword som bruges af transciveren til at generere et interrupt til mikroprocessoren, om at der nu bliver modtaget en pakke. Det 3. byte er ID'et på kontrolboksen og det 4. er en checksum som er summen af hele pakken. se Figur \ref{fig:kbpakke}. Når sensoren har modtaget pakken ved den at den nu skal sende dens data til kontrolboksen og har herved sin egen pakke til det formål. se Figur \ref{fig:sensorpakke}. Denne pakke består også af et startword, ID og checksum. Men den indeholder også batteristatus og temperatur, jordfugtighed og lysstyrke. Temperaturen og jordfugtigheden sendes over med hver to byte. Det ene indeholder det hele tal fx. 25 hvis temperaturen er 25.2 grader. og det næste inderholder 2 for selve kommatallet. Se figur \ref{fig:udvdata} for sekvens over udveksling af data.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Kommunikation/parring.jpg}
+	\caption{Parringssekvens over kontrolboks og sensor}
+	\label{fig:parring}
+\end{figure}      
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Kommunikation/udvdata.jpg}
+	\caption{Udveksling af data mellem kontrolboks og sensor}
+	\label{fig:udvdata}
+\end{figure}      
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Kommunikation/kontrolbokspakke.jpg}
+	\caption{Kontrolboks pakke}
+	\label{fig:kbpakke}
+\end{figure}      
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Kommunikation/sensorpakke.jpg}
+	\caption{Sensor pakke}
+	\label{fig:sensorpakke}
+\end{figure}      
