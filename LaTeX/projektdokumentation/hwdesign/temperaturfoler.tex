@@ -1,0 +1,38 @@
+\section{Temperaturføler}
+Der er blevet designet to typer temperaturføler. En med en analog udgang som giver en spænding der aflæses af mikroprocessoren og en der aflæses via I2C. Se Figur \ref{fig:atemp} og Figur \ref{fig:dtemp}.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+	\includegraphics[width=1\textwidth]{../fig/Temperatur/temp_lmt.jpg}
+	\caption{Diagram over den analoge temperaturføler}
+	\label{fig:atemp}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+	\includegraphics[width=1\textwidth]{../fig/Temperatur/temp_i2c.jpg}
+	\caption{Diagram over den digitale temperaturføler}
+	\label{fig:dtemp}
+  \end{minipage}
+\end{figure}
+
+Den analoge temperaturføler blev designet først og via en kurve som ses i Figur \ref{fig:tempkurve}. Kan temperaturen aflæses. Ved af køre på mikroprocessorens interne 2.56V referenceforsyning, fås der en opløsning af ADC'en på:
+
+\begin{equation}
+	ADC opløsning = \dfrac{2.56V}{2^{10}}=2.5mV
+\end{equation}
+
+Denne opløsning sætter begrænsningen af hvor mange decimaler temperaturen kan aflæses ved, sammen med følgerens egen præcision på +-0.25$^{\circ}$C. Da hældningen på kurven i Figur \ref{fig:tempkurve} er -10mV bliver den samlede mulige decimal afstand på:
+
+\begin{equation}
+	Decimal afstand = \dfrac{2.5mV}{10mV}=0.25^{\circ}C
+\end{equation}
+
+Hvilket ikke stemmer overens med krav: \textit{PF\_07}. For at få præcisionen ned til de to decimaler som kræves gøres der derfor brug af TMP74B som har et I2C interface og en opløsning på 0.0625$^{\circ}$C og en præcision på +-0.5$^{\circ}$C. Se Figur \ref{fig:dtemp}. A0,A1,A2 bruges til at sætte en adresse, så man således kan have flere temperatur følere på en I2C bus. Dette er dog ikke nødvendigt i dette system og adressen er hermed sat til 0. AL kan bruges til at give et interrupt når temperaturen kommer over et bestemt niveau. Dette gør vi dog hellere ikke brug af i vores design.  
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Temperatur/kurve.jpg}
+	\caption{Output vs temperatur for LMT86}
+	\label{fig:tempkurve}
+\end{figure}  
