@@ -1,0 +1,100 @@
+\section{RF-Transceiver} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Klassebeskrivelser/rfTransciver/rfTransciver.png}
+	\caption{Klassediagram over RF-Transciveren}
+	\label{fig:class_rftransciver}
+\end{figure} 
+
+\textbf{Variabel beskrivelse}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+Navn & Type & Beskrivelse \\\hline
+\texttt{mrf\_Register}         & \texttt{struct}           &Bliver brugt til at gemme værdierne af i alt 17 registre, som er konfigurerbare på transceiveren. Disse register sættes og skrives til transceiveren i initieringsfunktionen \texttt{rfTransceiverInit}. Når der skal ændres på nogle funktioner i transciveren er det vigtigt at vide hvad der i forvejen står i et register, for at undgå at overskrive en indstilling. Defor opdateres denne struct hver gang et register ændres. \\\hline
+\end{tabularx}
+\caption{Attributter for klassen MainWindow}
+\label{table:attr_distancesensor}
+\end{table}
+
+\textbf{Funktionsbeskrivelser}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{SendByte} \\\hline
+Parametre &  \_byte: uint16\_t \\\hline
+Returværdi &  void\\\hline
+Beskrivelse & Kan bruges til at sende en enkelt byte til transceiveren over SPI bussen. Denne funktion er til rådighed for programmøren under udvikling af software og bliver derfor ikke brugt direkte. Den bliver oftest kaldt af andre funktioner. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{Sendbyte}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{enableReceiver} \\\hline
+Parametre &  Ingen \\\hline
+Returværdi &  void\\\hline
+Beskrivelse & Bruges til at gøre transceiveren funktionel efter den har været disablet. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{enableTransceiver}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{disableReceiver} \\\hline
+Parametre &  Ingen \\\hline
+Returværdi &  void\\\hline
+Beskrivelse & Bruges til at disable transciveren således den ikke har nogen funktion og derved ikke bruger unødig strøm. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{disableTransceiver}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{getFifo} \\\hline
+Parametre &  Ingen \\\hline
+Returværdi &  uint8\_t\\\hline
+Beskrivelse & Modtager hvad der står i FOFOREG når transciveren har givet et interrupt om at registreret er fuldt. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{getFifo}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{writeRegister} \\\hline
+Parametre &  \_value: uint16\_t  \\\hline
+Returværdi &  void\\\hline
+Beskrivelse & Bruges til at skrive til et register i transceiveren. Registret OR'ed sammen med dets settings bliver givet med som parametre. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{writeRegister}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{getStatus} \\\hline
+Parametre &  Ingen  \\\hline
+Returværdi &  uint16\_t \\\hline
+Beskrivelse & Kaldes når transceiveren har givet et interrupt og læser herefter \texttt{STATUSREG}, således mikroprocessoren ved hvad der forårsagede interruptet. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{writeRegister}}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
