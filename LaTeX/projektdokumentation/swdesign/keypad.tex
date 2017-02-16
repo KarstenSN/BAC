@@ -1,0 +1,51 @@
+\section{Keypad} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/keypad/keypad.png}
+	\caption{Klassediagram over keypad}
+	\label{fig:keypad}
+\end{figure} 
+
+\textbf{Funktionsbeskrivelser}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{getKeyPressed} \\\hline
+Parametre &  Ingen \\\hline
+Returværdi &  char \\\hline
+Beskrivelse &  Læser om der bliver trykket på en knap på keypad'en, bliver der trykket på en knap vil funktionen vente indtil knappen er sluppet igen, for at undgå kontaktprel. Funktionen kan returnere \texttt{KEY1},\texttt{KEY2}, \texttt{KEY3} og \texttt{KEY4}.\\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{getKeyPressed}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{ledOn} \\\hline
+Parametre &  Ingen \\\hline
+Returværdi &  void \\\hline
+Beskrivelse &  Tænder for LED'en på keypad'en \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{ledOn}}
+\end{table}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{ledOff} \\\hline
+Parametre &  Ingen \\\hline
+Returværdi &  void \\\hline
+Beskrivelse &  Slukker for LED'en på keypad'en \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{ledOff}}
+\end{table}
+
+\textbf{Ekstern funktion}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{| l | Z |} \hline
+Funktion & \texttt{motorvalveInit} \\\hline
+Parametre &  \_motorvalve: struct motorvalve* \\\hline
+Returværdi &  void \\\hline
+Beskrivelse &  Giver funktionspointere fra .c filen videre til structen. \\\hline
+\end{tabularx}
+\caption{Metodebeskrivelse for \texttt{motorvalveInit}}
+\end{table}
+
