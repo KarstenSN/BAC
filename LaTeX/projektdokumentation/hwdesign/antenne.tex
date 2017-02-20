@@ -3,8 +3,7 @@
 \subsection{Valg af transmissionsfrekvens}
 
 Valget af transmissionsfrekvens afhænger af hvilken effekt der ønskes ved receiver-antennen og dermed hvor lang rækkevidde der kan opnås, 
-dette sættes i forhold til den effekt transmitter-antennen fødes med. \\
-Sammenhængen imellem disse parametre fås ved \textit{Friis transmissions formel} 
+dette sættes i forhold til den effekt transmitter-antennen fødes med. Sammenhængen imellem disse parametre fås ved \textit{Friis transmissions formel} 
 2-117 på side 95 i \cite{lib:balanis}
 
 \begin{align} \label{eq:ant_friis}
@@ -36,9 +35,8 @@ samt $ e_{cd} $ til $ 0.9 $. Dette er optimistisk sat, men det er grundet et øn
 		$ D_{r}  $ 	& $ 1 						$	& Directivity of receiver 					\\
 		$ e_{r}  $	& $ 0.9 					$	& Radiation efficiency of receiver			\\
 		$ e_{t}  $	& $ 0.9 					$	& Radiation efficiency of transmitter		\\
-		$ e_{cd} $	& $ 0.9 					$	& Radiation efficiency						\\
 		$ f  	 $	& $ 433						$	& Transmit frequency in $ Hz $				\\
-		$ v_{0}  $	& $ 2.99 \times 10^8 m/s $		& Free-space velocity of light in $ m/s $	\\
+		$ v_{0}  $	& $ 2.99 \times 10^8 m/s 	$	& Free-space velocity of light in $ m/s $	\\
 		
 	\end{tabularx}
 	\caption{system parametre}
@@ -58,7 +56,7 @@ Da transmitter og receiver er af samme type gælder denne parameter for begge an
 	A_{r} = e_{r} D_{r}(\theta_{r},\phi_{r}) \frac{\lambda^{2}}{4 \pi} \Rightarrow  0.9 \times 1 \times \frac{0,6905^{2}}{4 \pi} = 0.03415
 \end{align}
 
-Nu kendes faktoren for hvor meget at den udstrålede effekt der kan omsættes, og $ P_{r} $ kan nu beregnes ved at benytte formel 2-114 og 2-116 på side 95 i \cite{lib:balanis}
+Nu kendes faktoren for hvor meget af den udstrålede effekt der kan omsættes og $ P_{r} $ kan nu beregnes ved at benytte formel 2-114 og 2-116 på side 95 i \cite{lib:balanis}
 
 \begin{align} \label{eq:ant_Wt}
 	W_{t} = e_{t} \frac{P_{t} D_{t}(\theta_{t},\phi_{t})}{4 \pi R^{2}}
@@ -66,12 +64,15 @@ Nu kendes faktoren for hvor meget at den udstrålede effekt der kan omsættes, o
 
 Nu fås den modtagne effektiv som ligning \ref{eq:ant_Wt} ganget på ligning \ref{eq:ant_ar}
 
-\begin{align} \label{eq:Pr}
+\begin{align} \label{eq:ant_Pr}
 	P_{r} = e_{t} \frac{P_{t} D_{t}(\theta_{t},\phi_{t})}{4 \pi R^{2}} \times e_{r} D_{r}(\theta_{r},\phi_{r}) \frac{\lambda^{2}}{4 \pi}
 \end{align}
 
 Denne ligning kan nu løses for $ R $ for at finde den maksimale rækkevidde for antennen.  
 
+\begin{align} \label{eq:ant_Pr}
+	R = \sqrt{ e_{t}   \frac{P_{t} D_{t}(\theta_{t},\phi_{t})} {4 \pi P_{r}} \times e_{r} D_{r}(\theta_{r},\phi_{r}) \frac{\lambda^{2}}{4 \pi}}
+\end{align}
 
 \newpage
 %%% HERTIL %%%%
