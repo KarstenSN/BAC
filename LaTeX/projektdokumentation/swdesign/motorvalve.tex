@@ -2,60 +2,64 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/motorvalve/motorvalve.png}
-	\caption{Klassediagram over I2C-Display}
-	\label{fig:i2cdisp}
+	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/motorvalve/motorvalve.pdf}
+	\caption{Klassediagram over motorvalve}
+	\label{fig:mortorvalve}
 \end{figure} 
 
 \textbf{Funktionsbeskrivelser}
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{open} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  uint8\_t \\\hline
-Beskrivelse &  Åbner for motorventilen. Funktionen aflæser om ventilen er åbnet eller lukket inden den fortager sig mere. Er ventilen lukket vil funktionen herefter åbne ventilen og returnere 0. Er ventilen i forvejen åben vil funktionen returnere 1. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{open}}
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{open} 			\\\hline
+		Parametre 	& Ingen 					\\\hline
+		Returværdi 	& uint8\_t 					\\\hline
+		Beskrivelse & Åbner for motorventilen. Funktionen aflæser om ventilen er åbnet eller lukket inden den fortager sig mere. Er ventilen lukket vil funktionen herefter åbne 	ventilen og returnere 0. Er ventilen i forvejen åben vil funktionen returnere 1. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{open}}
 \end{table}
 
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{close} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  uint8\_t \\\hline
-Beskrivelse &  Lukker for motorventilen. Funktionen aflæser om ventilen er åbnet eller lukket inden den fortager sig mere. Er ventilen åben vil funktionen herefter lukke ventilen og returnere 0. Er ventilen i forvejen lukket vil funktionen returnere 1. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{close}}
-\end{table}
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{brake} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void \\\hline
-Beskrivelse &  Bremser motorventilen således den låses i sin position. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{brake}}
+	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
+		Funktion 	& \texttt{close} 			\\\hline
+		Parametre	& Ingen 					\\\hline
+		Returværdi 	& uint8\_t 					\\\hline
+		Beskrivelse & Lukker for motorventilen. Funktionen aflæser om ventilen er åbnet eller lukket inden den fortager sig mere. Er ventilen åben vil funktionen herefter lukke 	ventilen og returnere 0. Er ventilen i forvejen lukket vil funktionen returnere 1. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{close}}
 \end{table}
 
+
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{getStatus} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  uint8\_t \\\hline
-Beskrivelse &  Returnerer posotionen for motorventilen. Er ventilen lukket vil den returnere 0, er ventilen åben vil funktionen returnere 1.  \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{getStatus}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{brake} 			\\\hline
+		Parametre 	& Ingen 					\\\hline
+		Returværdi 	& void 						\\\hline
+		Beskrivelse & Bremser motorventilen således den låses i sin position. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{brake}}
 \end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{getStatus} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Returnerer posotionen for motorventilen. Er ventilen lukket vil den returnere 0, er ventilen åben vil funktionen returnere 1.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{getStatus}}
+\end{table}
+
 
 \textbf{Ekstern funktion}
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{motorvalveInit} \\\hline
-Parametre &  \_motorvalve: struct motorvalve* \\\hline
-Returværdi &  void \\\hline
-Beskrivelse &  Giver funktionspointere fra .c filen til structen. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{motorvalveInit}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{motorvalveInit} \\\hline
+		Parametre 	& \_motorvalve: struct motorvalve* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Giver funktionspointere fra .c filen til structen. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{motorvalveInit}}
 \end{table}
-
+\vfill

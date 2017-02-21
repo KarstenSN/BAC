@@ -2,261 +2,247 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/i2cDisp/i2cdisp.png}
-	\caption{Klassediagram over I2C-Display}
+	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/i2cDisp/i2cdisp.pdf}
+	\caption{Klassediagram over I2CDisp}
 	\label{fig:i2cdisp}
 \end{figure} 
 
 \textbf{Variabel beskrivelse}
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
-Navn & Type & Beskrivelse \\\hline
-\texttt{statusByte}         & \texttt{unsigned char}           & Gemmer indstillingerne som er sat på displayet, herunder, curser, blink, on/off osv. \\\hline
-\end{tabularx}
-\caption{Attributter for klassen i2cDisp}
+	\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+		Navn 						& Type 						& Beskrivelse \\\hline
+		\texttt{statusByte}         & \texttt{unsigned char}	& Gemmer indstillingerne som er sat på displayet, herunder, curser, blink, on/off osv. \\ \hline
+	\end{tabularx}
+	\caption{Attributter for klassen i2cDisp}
 \end{table}
 
 \textbf{Funktionsbeskrivelser}
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{writeChar} \\\hline
-Parametre &  \_data: char \\\hline
-Returværdi &  int8\_t\\\hline
-Beskrivelse & Skriver en karakter til displayet. Returner 0 hvis skrivning er sket fejlfrit og 1 hvis der er opstået en fejl. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{writeChar}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{writeChar} 	\\ \hline
+		Parametre 	& \_data: char 			\\ \hline
+		Returværdi 	& int8\_t 				\\ \hline
+		Beskrivelse & Skriver en karakter til displayet. Returner 0 hvis skrivning er sket fejlfrit og 1 hvis der er opstået en fejl. \\ \hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{writeChar}}
 \end{table}
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{writeString} \\\hline
-Parametre &  \_stringPtr: char* \\\hline
-Returværdi &  int8\_t\\\hline
-Beskrivelse & Skriver en en string til displayet. Returner 0 hvis skrivning er sket fejlfrit og 1 hvis der er opstået en fejl. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{writeString}}
-\end{table}
-
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{writeInt} \\\hline
-Parametre &  \_number: uint32\_t \\\hline
-Returværdi &  int8\_t\\\hline
-Beskrivelse & Skriver et heltal til displayet. Returner 0 hvis skrivning er sket fejlfrit og 1 hvis der er opstået en fejl. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{writeInt}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{curserOn} \\\hline
-Parametre &  ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse & Sætter curseren på displayet on \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{curserOn}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{curserOff} \\\hline
-Parametre &  ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse & Sætter curseren på displayet off \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{curserOff}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{writeString} 	\\ \hline
+		Parametre 	& \_stringPtr: char* 	\\ \hline
+		Returværdi 	& int8\_t\\\hline
+		Beskrivelse & Skriver en en string til displayet. Returner 0 hvis skrivning er sket fejlfrit og 1 hvis der er opstået en fejl. \\ \hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{writeString}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{blinkOn} \\\hline
-Parametre &  ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse & Sætter curseren på displayet til at blinke \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{blinkOn}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{writeInt} \\\hline
+		Parametre 	& \_number: uint32\_t \\\hline
+		Returværdi 	& int8\_t\\\hline
+		Beskrivelse & Skriver et heltal til displayet. Returner 0 hvis skrivning er sket fejlfrit og 1 hvis der er opstået en fejl. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{writeInt}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{curserOn} \\\hline
+		Parametre 	& ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sætter curseren på displayet on \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{curserOn}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{curserOff} \\\hline
+		Parametre 	& ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sætter curseren på displayet off \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{curserOff}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{blinkOff} \\\hline
-Parametre &  ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse & Sætter curseren på displayet til at være konstant on \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{blinkOff}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{blinkOn} \\\hline
+		Parametre	& ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sætter curseren på displayet til at blinke \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{blinkOn}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{moveCursor} \\\hline
-Parametre &  \_digit: char \ \_line: char \\\hline
-Returværdi &  void\\\hline
-Beskrivelse & Flytter curseren til en bestemt position på displayet. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{moveCursor}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{blinkOff} \\\hline
+		Parametre 	& ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sætter curseren på displayet til at være konstant on \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{blinkOff}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{on} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Gør karakterene på displayet synlige. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{on}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{moveCursor} \\\hline
+		Parametre 	& \_digit: char \ \_line: char \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Flytter curseren til en bestemt position på displayet. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{moveCursor}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{off} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Gør karakterene på displayet usynlige. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{off}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{clear} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Sletter alt hvad der står på displayet og flytter cursoren til position 0,0. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{clear}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{on} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Gør karakterene på displayet synlige. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{on}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{clearAC} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Clearer adresse counteren således curseren flyttes til position 0,0. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{clearAC}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{off} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Gør karakterene på displayet usynlige. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{off}}
 \end{table}
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{lightOn} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Tænder for baggrundslyset på displayet. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{lightOn}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{lightOff} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Slukker for baggrundslyset på displayet. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{lightOff}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{resetHigh} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Sætter reset porten på displayet høj. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{resetHigh}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{resetLow} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Sætter reset porten på displayet lav. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{resetLow}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{i2cStart} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Initierer de perifere enheder på mikroprocessoren som har med I2C at gøre. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{i2cStart}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{i2cStop} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Deaktiverer I2C. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{i2cStop}}
-\end{table}
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{i2cWriteByte} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void\\\hline
-Beskrivelse &  Skriver en byte ud på I2C bussen \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{i2cWriteByte}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{clear} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sletter alt hvad der står på displayet og flytter cursoren til position 0,0. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{clear}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{i2cGetStatus} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  unsigned char \\\hline
-Beskrivelse &  Læser I2C status registret på mikroprocessoren og returnerer status. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{i2cGetStatus}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{clearAC} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Clearer adresse counteren således curseren flyttes til position 0,0. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{clearAC}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{lightOn} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Tænder for baggrundslyset på displayet. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{lightOn}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{lightOff} \\\hline
+		Parametre	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Slukker for baggrundslyset på displayet. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{lightOff}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion	& \texttt{resetHigh} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sætter reset porten på displayet høj. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{resetHigh}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{resetLow} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Sætter reset porten på displayet lav. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{resetLow}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{i2cStart} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Initierer de perifere enheder på mikroprocessoren som har med I2C at gøre. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{i2cStart}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{i2cStop} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Deaktiverer I2C. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{i2cStop}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{i2cWriteByte} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void\\\hline
+		Beskrivelse & Skriver en byte ud på I2C bussen \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{i2cWriteByte}}
 \end{table}
 
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{dispInit} \\\hline
-Parametre &  Ingen \\\hline
-Returværdi &  void \\\hline
-Beskrivelse &  Initierer displayet til dets karakterset og standard indstillinger samt enabler DC/DC boost converteren. Bliver kaldt af \texttt{i2cDispInit}. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{dispInit}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{i2cGetStatus} \\\hline
+		Parametre 	& Ingen 				\\\hline
+		Returværdi 	& unsigned char 		\\\hline
+		Beskrivelse & Læser I2C status registret på mikroprocessoren og returnerer status. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{i2cGetStatus}}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{dispInit} 	\\\hline
+		Parametre 	& Ingen 				\\\hline
+		Returværdi 	& void 					\\\hline
+		Beskrivelse & Initierer displayet til dets karakterset og standard indstillinger samt enabler DC/DC boost-converteren. Bliver kaldt af \texttt{i2cDispInit}. \\ \hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{dispInit}}
 \end{table}
 
 \textbf{Ekstern funktion }
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{| l | Z |} \hline
-Funktion & \texttt{i2cDispInit} \\\hline
-Parametre &  \_disp: struct i2cdisp* \\\hline
-Returværdi &  void \\\hline
-Beskrivelse &  Initierer i2cDisp structen og giver funktionspointere fra .c filen videre. Funktionen initierer også selve displayet og sætter det op til dets standard indstillinger. \\\hline
-\end{tabularx}
-\caption{Metodebeskrivelse for \texttt{i2cDispInit}}
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{i2cDispInit} 	\\\hline
+		Parametre 	& \_disp: struct i2cdisp* \\\hline
+		Returværdi 	& void \\\hline	
+		Beskrivelse & Initierer i2cDisp structen og giver funktionspointere fra .c filen videre. Funktionen initierer også selve displayet og sætter det op til dets standard 	indstillinger. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{i2cDispInit}}
 \end{table}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
