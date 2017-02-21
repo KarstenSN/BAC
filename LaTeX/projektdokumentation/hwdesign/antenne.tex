@@ -15,8 +15,8 @@ dette sættes i forhold til den effekt transmitter-antennen fødes med. Sammenh�
 		$ e_{r} $	& Radiation efficiency of receiver		&	\\
 		$ e_{t} $	& Radiation efficiency of transmitter	&	\\
 		$\lambda$ 	& Wavelength in Meters					&	\\
-		$ P_{r} $ 	& Received Power in dBm 				&	\\
-		$ P_{t} $	& Transmited Power in dBm				&	\\
+		$ P_{r} $ 	& Received Power in W 					&	\\
+		$ P_{t} $	& Transmited Power in W					&	\\
 		$ D_{t} $	& Directivity of Transmitter			&	\\
 		$ D_{r} $	& Directivity of Receiver				&	\\
 		$ R 	$ 	& Distance between Antennas in Meters	&	\\
@@ -25,12 +25,11 @@ dette sættes i forhold til den effekt transmitter-antennen fødes med. Sammenh�
 	\label{tbl:friis_param}
 \end{table}
 
-Følgende parametre kan opstilles for systemet, her antages det at udstrålingseffektiviteten for transmitter og receiver, 
-samt $ e_{cd} $ til $ 0.9 $. Dette er optimistisk sat, men det er grundet et ønske om at få en målestok for antennens maksimale rækkevidde. 
+Følgende parametre kan opstilles for systemet, her antages det at udstrålingseffektiviteten $ e_{t} $ og $ e_{r} $ for transmitter og receiver sættes til $ 0.9 $. Dette er optimistisk sat, men det er grundet et ønske om at få en målestok for antennens maksimale rækkevidde. 
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{ m{1.5 cm}  m{4 cm}  Z } 	\\										
-		$ P_{t}	 $ 	& $ 5 \times 10^{-3} 		$	& Transmit Power in $ dBm $					\\
+		$ P_{t}	 $ 	& $ 5 \times 10^{-3} 		$	& Transmit Power in $ W $					\\
 		$ D_{t}  $ 	& $ 1 						$	& Directivity of transmitter 				\\
 		$ D_{r}  $ 	& $ 1 						$	& Directivity of receiver 					\\
 		$ e_{r}  $	& $ 0.9 					$	& Radiation efficiency of receiver			\\
@@ -46,7 +45,7 @@ samt $ e_{cd} $ til $ 0.9 $. Dette er optimistisk sat, men det er grundet et øn
 Først omregnes transmissionsfrekvensen til bølgelængder: 
 
 \begin{align} \label{eq:ant_lambda}
-	\lambda = \frac{v_{0}}{f} \Rightarrow \frac{2.99 \times 10^8 m/s}{f} = 0,69053
+	\lambda = \frac{v_{0}}{f} \Rightarrow \frac{2.99 \times 10^8 m/s}{f} = 0,69053 m
 \end{align}
 
 Herefter benyttes $ \lambda $ til at beregne antennens maksimum effektiv areal $ A_{r} $.\\
