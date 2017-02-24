@@ -1,10 +1,30 @@
 \section{Måling af jordfugt}  \label{sec:jordfugt}
-Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste og billigste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling.
- 
-\subsubsection{Resistiv måling}
-Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}.   
+Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste og billigste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling. Skalaen som der er brugt at at bestemme jordfugten er den volumetriske skala\cite{lib:wiki_waterContent}. 
 
-\newpage 
+\begin{equation}
+	\theta = \frac{V_w}{V_s + V_w +V_a} \cdot 100\%
+	\label{equ:fugtighed}
+\end{equation}
+
+Hvor $\theta$ er fugtigheden i procent. $V_w$ er volumen af væsken, $V_s$ er volumen af jorden og $V_a$ er volumen af luften indeholdende i jorden. For at gøre det nemmere at bestemme en jordfugtighed afvejes først 1 liter jord, som der sammenpresses nok til at der ikke er noget luft i prøven. Herefter noteres vægten som $m_{s1L}$ og nu kan ligning \ref{equ:fugtighed} omskrives til ligning \ref{equ:fugtighed2} 
+
+\begin{equation}
+	\theta = \frac{m_w\cdot 100\%}{(m_{wet}-m_w)\cdot \eta} + m_w 
+	\label{equ:fugtighed2}
+\end{equation}
+
+Hvor $m_w$ er massen af væske, $m_{wet}$ er massen af den fugtige jord og $\eta$ er udregnet via vægten af 1 liter jord.
+
+\begin{equation}
+	\eta = \frac{1}{m_{s1L}}
+\end{equation}
+
+Det er derfor nu muligt at bestemme en jordfugtighed uden at skulle måle volumen af prøven. Til vejning af jordprøver er der blevet brugt en vægt af producenten \texttt{Sartorius} model \texttt{QUINTIX2102-1S} med en præcision på $\pm0.01g$.
+
+\subsubsection{Resistiv måling}
+Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}.  
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/maling1.PNG}
@@ -27,7 +47,7 @@ Ved brug af denne overføringsfunktion ses R1 som værende 0 ohm.
 
 I matlab blev der skrevet et script, som kan findes i bilagende, til at udregne overføringsfunktionen. Der blev i alt foretaget målinger på tre typer jord, en taget på Helgenæs, en i Randers samt en så og plantejord fra en plantesæk. Aflæsningen blev foretaget ved 3$\tau$ og ikke ved 1 $\tau$ som ellers er normalen. Dette skyldes at R1 er sat til 0 ohm. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/maelingafsystem.PNG}
 	\caption{Måling af overføringsfunktion i MATLAB}
@@ -42,14 +62,14 @@ På figur \ref{fig:msystem} ses hvordan den approksimerende overføringsfunktion
 
 Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
  
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/functionfit.PNG}
 	\caption{Functionfit i MATLAB}
 	\label{fig:funcfit}
 \end{figure} 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/residualplot.PNG}
 	\caption{Plot over residualerne}
