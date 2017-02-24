@@ -9,7 +9,7 @@ Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jor
 Hvor $\theta$ er fugtigheden i procent. $V_w$ er volumen af væsken, $V_s$ er volumen af jorden og $V_a$ er volumen af luften indeholdende i jorden. For at gøre det nemmere at bestemme en jordfugtighed afvejes først 1 liter jord, som der sammenpresses nok til at der ikke er noget luft i prøven. Herefter noteres vægten som $m_{s1L}$ og nu kan ligning \ref{equ:fugtighed} omskrives til ligning \ref{equ:fugtighed2} 
 
 \begin{equation}
-	\theta = \frac{m_w\cdot 100\%}{(m_{wet}-m_w)\cdot \eta} + m_w 
+	\theta = \frac{m_w}{(m_{wet}-m_w)\cdot \eta + m_w} \cdot 100\% 
 	\label{equ:fugtighed2}
 \end{equation}
 
@@ -57,7 +57,7 @@ I matlab blev der skrevet et script, som kan findes i bilagende, til at udregne 
 På figur \ref{fig:msystem} ses hvordan den approksimerende overføringsfunktion er blevet målt. Den grønne streg er start tidspunktet og den gule streg er stop tidspunket. i Intervallet herimellem aflæses tiden af tre tidskonstanter. Disse divideres med 3 således at $\alpha$ står tilbage. $\beta$ aflæses blot som forholdet mellem inputtet og outputtet lige før spændingen går negativ. Grunden til at spændingen går negativ skyldes at der med tiden vil opstå slitage på proben, denne slitage vendes således at hver enkelt spyd vil slides lige meget. Det ses at når spændingen fjernes fra proben aflades C1 langsomt. Der blev noteret overføringsfunktioner for alle tre typer jord ved forskellige fugtigheder og tilsidst blev der lavet en regression til at bestemme fugtigheden ud fra $\beta$. $\alpha$ kunne også bruges til at bestemmer fugtigheden, men det viste sig hurtigt at den var meget upræcis at bruge, da den afhang meget af tiden siden den foregående måling. På Figur\ref{fig:funcfit} ses regressionen og på Figur\ref{fig:resplot} ses et residual plot over regressionen. Regressionen blev bestemt via matlabs indbyggede funktion \textit{fit} til at være:
 
 \begin{equation}
-	Fugtighed = a \cdot exp(b\cdot x) + c \cdot exp(d\cdot x)
+	\theta = a \cdot exp(b\cdot x) + c \cdot exp(d\cdot x)
 \end{equation}
 
 Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
