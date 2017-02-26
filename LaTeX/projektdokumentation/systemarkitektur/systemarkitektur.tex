@@ -1,6 +1,6 @@
 \chapter{Systemarkitektur} \label{sec:sysark}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
 \caption{Blokdiagram af det samlede system}
@@ -8,21 +8,22 @@
 \end{figure}
 
 I Figur \ref{fig:BDDsystem} ses et Blok diagram over det samlede system. Det ses at det der betegnes som systemet er en sensor og en kontrolboks. Se blokdiagram over sensoren og kontrolboksen i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
+\raggedbottom
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDkontrolboks.pdf}
 \caption{Blokdiagram af kontrolboksen}
 \label{fig:BDDkontrolboks}
 \end{figure}
 
-I Figur \ref{fig:BDDkontrolboks} ses der et blokdiagram over 
+I Figur \ref{fig:BDDkontrolboks} ses der et blokdiagram over kontrolboksen. \texttt{HF-transceiver} er blokken som står for kommunikation mellem sensor og kontrolboks. Kommunikationen sker ved en trådløs forbindelse og derfor indeholder blokken også en antenne. \texttt{Mokroprocessor} tager sig af at behandle data fra alle de andre blokke og give brugeren besked via \texttt{Display} om nuværende status samt mulighed for at navigere rundt i indstillingerne. \texttt{Tastatur} bruges af brugeren til at indstille systemet til hans ønsker. \texttt{Motorventil} åbner og lukker for vandtilførslen og styrres via \texttt{Mikroprocessor}. \texttt{Plasthus} omkranser hele elektronikken således det bliver beskyttet for både vand og støv. \texttt{DC-connector} bruges til at koble en spændingsforsyning til kontrolboksen. \texttt{Batteri} forsynet sensoren med strøm og \texttt{Plasthus} er en vandtæt plastkasse som omkranser elektronikken.  
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDsensor.pdf}
 \caption{Blokdiagram af sensoren}
 \label{fig:BDDsensor}
 \end{figure}
 
-\clearpage
+I Figur \ref{fig:BDDsensor} ses der et blokdiagram over sensoren. \texttt{Jordfugtmåler} måler fugten i jorden og denne blok er monteret på \texttt{Plasthus} således at den kan stikkes i jorden, uden at de andre blokke bliver udsat for vand og støv. \texttt{Mikroprocessor} behandler data fra de andre blokken og sende det til kontrolboksen via \texttt{HF-transceiver}. \texttt{Temperatur-føler} måler overflade temperaturen og \texttt{Lysmåler} måler lysintensiteten således \texttt{Mikroprocessor} kan udregne om det er morgen eller aften.   

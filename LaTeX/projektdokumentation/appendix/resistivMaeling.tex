@@ -1,0 +1,133 @@
+\section{Måling af jordfugt}  \label{appendix:jordfugt}
+
+I Listing \ref{lst:matlab_rise_func} ses der MATLAB koden over hvordan $\alpha$ og $\beta$ er bestemt ud fra data fra oscilloscopet. Dataet bliver indlæst i en .csv fil og scriptet laver alle udregningerne automatisk. Dette skript er vist med en måling af en så og plantejord med en fugtighed på 9.09\%.
+
+\begin{lstlisting}[caption={MainWindows constructor},label=lst:matlab_rise_func,frame=single]
+clear
+clc
+close all
+format longeng
+data = csvread('9p09percent.csv',6,0);
+filterlength = 10;
+
+%%filtrer data
+datafilt = data;
+for i = 1:length(data)-filterlength
+    value = 0;
+    value2 = 0;
+    
+    for j = 1:filterlength
+        value = value + data(j+i,2);
+    end
+    
+    for j = 1:filterlength
+        value2 = value2 + data(j+i,3);
+    end
+    
+    datafilt(i,2)=value/filterlength;
+    datafilt(i,3)=value2/filterlength;
+end
+
+%%udregninger
+meanval = mean(datafilt(:,2));
+maxval = max(datafilt(:,2));
+maxval2 = max(datafilt(:,3));
+minval = 0;%min(datafilt(:,2));
+
+
+steadyval = maxval;
+
+starttime = 0;
+stoptime = 0;
+startval = 0;
+for i = 1:length(data)-filterlength
+  %  if (datafilt(i,2)> (minval) && (data(i,2)< (minval+maxval * 0.01)) && (i > 1) )
+  %      starttime = datafilt(i-1,1);
+  %      startval = datafilt(i-1,2);
+  %  end
+    if ((datafilt(i,3)> 0.3) \&\& (startval == 0))
+        starttime = datafilt(i,1);
+        startval = datafilt(i,2);
+    end
+  
+    if (datafilt(i,2)> steadyval * 0.95) \&\& (datafilt(i,2)< steadyval * 1)
+        stoptime = datafilt(i,1);
+        stopval = datafilt(i,2);
+    end
+    
+    if (starttime ~= 0) \&\& (stoptime ~= 0) \&\& (starttime < stoptime)
+        break
+    end
+end
+
+if (starttime == 0) || (stoptime == 0)
+    error('Data not valid. Frequency may be to low.')
+end
+
+beta = maxval/maxval2
+alpha = 1/((stoptime - starttime)/3)
+fcut = alpha/(2*pi)
+rise = (stoptime - starttime)/3
+
+%transferfunction
+num = [0 (alpha*beta)];
+den = [0 1 alpha];
+G = tf(num,den)
+%figure(2)
+%step(G*5+minval)
+
+%timedomain
+simData = zeros(length(data),1);
+timeOffset = 0;
+timeOffset2 = 0;
+for i = 1:length(datafilt)
+    if (datafilt(i,3) > (maxval2/2) \&\& (timeOffset == 0))
+        timeOffset = datafilt(i,1)-datafilt(1,1);
+        timeOffset2 = 0;
+    end
+    if (timeOffset ~= 0)
+        simData(i)=(1-exp(-alpha*((datafilt(i,1)-datafilt(1,1))-timeOffset)))*maxval2*beta+minval;
+    end
+    
+    if ((datafilt(i,3) <= (maxval2/2)) \&\& (timeOffset2 == 0) \&\& (timeOffset ~= 0))
+        timeOffset = 0;
+        timeOffset2 = datafilt(i,1)-datafilt(1,1);
+    end
+    
+    if (timeOffset2 ~= 0 \&\& timeOffset == 0)
+        simData(i)=((exp(-alpha*((datafilt(i,1)-datafilt(1,1))-timeOffset2)))*maxval2*beta+minval);
+    end
+    
+    if (timeOffset2 == 0 \&\& timeOffset == 0)
+        simData(i)=minval;
+    end
+   
+end
+
+%%plot data
+figure(1)
+plot(datafilt(:,1),datafilt(:,3), 'lineWidth',2)
+hold on
+plot(datafilt(:,1),datafilt(:,2), 'lineWidth',2)
+plot(datafilt(:,1),simData, 'lineWidth',2)
+title('Plot of measurement')
+xlabel('Time (s)')
+ylabel('Voltage (v)')
+legend('Input', 'Output', 'Approximated system')
+line('XData', [starttime starttime data(1,1)], 'YData', [0 startval startval], 'LineWidth', 1,'LineStyle', '-', 'Color', [0 0.6 0])
+line('XData', [stoptime stoptime data(1,1)], 'YData', [0 stopval stopval], 'LineWidth', 1,'LineStyle', '-', 'Color', [1 1 0])
+dim = [.2 .6 .3 .3];
+str = {strcat('alpha = ', num2str(alpha)),strcat('beta = ', num2str(beta)),strcat('fcut = ', num2str(fcut))};
+annotation('textbox',dim,'String',str,'FitBoxToText','on');
+hold off
+
+% G(s)=(1/R*C)/(s+(1/R*C))
+%R = 3700;
+%C = 1/(alpha*R)
+
+
+
+
+   
+\end{lstlisting}
+
