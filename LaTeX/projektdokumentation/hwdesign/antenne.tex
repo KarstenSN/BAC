@@ -1,8 +1,8 @@
 \newpage
 \section{Antenne} \label{sec:antenne}
-\subsection{Valg af transmissionsfrekvens}
 
-Valget af transmissionsfrekvens afhænger af hvilken effekt der ønskes ved receiver-antennen og dermed hvor lang rækkevidde der kan opnås, 
+
+Valget af antennetype og transmissionsfrekvens afhænger af hvilken effekt der ønskes ved receiver-antennen og dermed hvor lang rækkevidde der kan opnås, 
 dette sættes i forhold til den effekt transmitter-antennen fødes med. Sammenhængen imellem disse parametre fås ved \textit{Friis transmissions formel} 
 2-117 på side 95 i \cite{lib:balanis}
 
@@ -16,7 +16,7 @@ dette sættes i forhold til den effekt transmitter-antennen fødes med. Sammenh�
 		$ e_{t} $	& Radiation efficiency of transmitter	&	\\
 		$\lambda$ 	& Wavelength in Meters					&	\\
 		$ P_{r} $ 	& Received Power in W 					&	\\
-		$ P_{t} $	& Transmited Power in W					&	\\
+		$ P_{t} $	& Transmitted Power in W				&	\\
 		$ D_{t} $	& Directivity of Transmitter			&	\\
 		$ D_{r} $	& Directivity of Receiver				&	\\
 		$ R 	$ 	& Distance between Antennas in Meters	&	\\
@@ -25,15 +25,15 @@ dette sættes i forhold til den effekt transmitter-antennen fødes med. Sammenh�
 	\label{tbl:friis_param}
 \end{table}
 
-Følgende parametre kan opstilles for systemet, her antages det at udstrålingseffektiviteten $ e_{t} $ og $ e_{r} $ for transmitter og receiver sættes til $ 0.9 $. Dette er optimistisk sat, men det er grundet et ønske om at få en målestok for antennens maksimale rækkevidde. 
+Følgende parametre kan opstilles for systemet, her antages det at udstrålingseffektiviteten $ e_{t} $ og $ e_{r} $ for transmitter og receiver sættes til $ 0.1 $. Dette er optimistisk sat, men det er grundet et ønske om at få en målestok for antennens maksimale rækkevidde. 
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{ m{1.5 cm}  m{4 cm}  Z } 	\\										
 		$ P_{t}	 $ 	& $ 5 \times 10^{-3} 		$	& Transmit Power in $ W $					\\
 		$ D_{t}  $ 	& $ 1 						$	& Directivity of transmitter 				\\
 		$ D_{r}  $ 	& $ 1 						$	& Directivity of receiver 					\\
-		$ e_{r}  $	& $ 0.9 					$	& Radiation efficiency of receiver			\\
-		$ e_{t}  $	& $ 0.9 					$	& Radiation efficiency of transmitter		\\
+		$ e_{r}  $	& $ 1 \times 10^{-3}  		$	& Radiation efficiency of receiver			\\
+		$ e_{t}  $	& $ 1 \times 10^{-3}  		$	& Radiation efficiency of transmitter		\\
 		$ f  	 $	& $ 433						$	& Transmit frequency in $ Hz $				\\
 		$ v_{0}  $	& $ 2.99 \times 10^8 m/s 	$	& Free-space velocity of light in $ m/s $	\\
 		
@@ -70,23 +70,15 @@ Nu fås den modtagne effektiv som ligning \ref{eq:ant_Wt} ganget på ligning \re
 Denne ligning kan nu løses for $ R $ for at finde den maksimale rækkevidde for antennen.  
 
 \begin{align} \label{eq:ant_R}
-	R = \sqrt{ e_{t}   \frac{P_{t} D_{t}(\theta_{t},\phi_{t})} {4 \pi P_{r}} \times e_{r} D_{r}(\theta_{r},\phi_{r}) \frac{\lambda^{2}}{4 \pi}}
+	R = \sqrt{ e_{t}   \frac{P_{t} D_{t}(\theta_{t},\phi_{t})} {4 \pi P_{r}} \times e_{r} D_{r}(\theta_{r},\phi_{r}) \frac{\lambda^{2}}{4 \pi}}= 38,86m
 \end{align}
 
+af ligning \ref{eq:ant_R} ses det at ved den givne transmissionsfrekvens kan det forventes at opnå en rækkevidde på 38m og dette opfylder krav \textit{CM2} om rækkevidde.
 \newpage
-%%% HERTIL %%%%
-
-
-
-
-
-
-
-
 
 \subsection{Valg af antenne}
 
-Til første iteration af kontrolboksen blev det valgt at benytte en through-hole monteret helical-antenne, dette valg blev truffet på baggrund af ønsket om hurtigt at komme i gang med en simple og effektiv løsning uden de store krav til plads og beregninger. En antenne af typen W3127 ISM 433MHz Helical Antenna fra \textit{Pulse Electronics}. Denne antenne er var den mest isotropiske af kandidaterne med en Max Gain på $ G_{max}=-2.9 dBi$. jvf. Fig 3 i databladet !!!!!! INDSÆT REF TIL LITTERATURLISTE / Bilag!!!!!
+Til første iteration af kontrolboksen blev det valgt at benytte en through-hole monteret helical-antenne, dette valg blev truffet på baggrund af ønsket om en quick and dirty løsning til at komme hurtigt igang. En antenne af typen W3127 ISM 433MHz fra \textit{Pulse Electronics} blev benyttet. Denne antenne er den mest isotropiske af kandidaterne med en Max Gain på $ G_{max}=-2.9 dBi$. jvf. Fig 3 i databladet \cite{lib:ant_W3127_datasheet}
 
 Efterfølgende blev det besluttet at finde en mere pladsvenlig løsning, da sensorboksen og PCB'et heri stiller nogle formfaktor krav der umuliggøre en sådan antenne. Der er ganske enkelt ikke plads til den på sensor-PCB'et og i sensorboksen.
 Der blev derfor valgt at forsøge sig med beregninger på en patch-antenne med samme båndbredde.
