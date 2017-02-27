@@ -1,8 +1,8 @@
 \section{Resistiv måling af jordfugt}  \label{appendix:res_jordfugt}
 
-I Listing \ref{lst:matlab_rise_func} ses der MATLAB koden over hvordan $\alpha$ og $\beta$ er bestemt ud fra data fra oscilloscopet. Dataet bliver indlæst i en .csv fil og scriptet laver alle udregningerne automatisk. Dette skript er vist med en måling af sand med en fugtighed på 9.09\%.
+I Listing \ref{lst:matlab_rise_func1} ses der MATLAB koden over hvordan $\alpha$ og $\beta$ er bestemt ud fra data fra oscilloskopet. Dataet bliver indlæst i en .csv fil og scriptet laver alle udregningerne automatisk. Dette skript er vist med en måling af sand med en fugtighed på 9.09\%.
 
-\begin{lstlisting}[caption={MainWindows constructor},label=lst:matlab_rise_func,frame=single]
+\begin{lstlisting}[caption={MainWindows constructor},label=lst:matlab_rise_func1,frame=single]
 clear
 clc
 close all
@@ -140,7 +140,7 @@ Koden laver en figur hvor værdierne af $\alpha$ og $\beta$ kan aflæses. Se Fig
 $\alpha$ og $\beta$ blev noteret for sandet og der blev skrevet et nyt script til at lave en regression. Det blev forsøgt at samle dataet således at både $\alpha$ og $\beta$ hver i sær kunne bruges til at udregne fugtigheden i sandet. Til sidst blev det forsøgt at lave en regression med begge værdier inkluderet. Denne kurve viste sig dog at være meget følsom for variationer og kunne ved en lille ændring af enten $\alpha$ eller $\beta$ give en negativ værdi. $\alpha$ viste sig at variere meget siden tiden fra foregående måling. $\beta$ værdien ligger dog meget stabil og er derfor den eneste egnede værdi at bestemme fugtigheden. 
 
 
-\begin{lstlisting}[caption={Matlab kode til hjælp af bestemmelse af $\alpha$ og $\beta$},label=lst:matlab_rise_func,frame=single]
+\begin{lstlisting}[caption={Matlab kode til hjælp af bestemmelse af $\alpha$ og $\beta$},label=lst:matlab_rise_func2,frame=single]
 clc
 clear
 close all
@@ -190,26 +190,26 @@ humity = func3d(190,0.502)
 	\centering
 	\includegraphics[width=0.7\textwidth]{../fig/appendix/jordfugt/funkalpha.PNG}
 	\caption{Kurve hvor fugtighed kan aflæses via $\alpha$}
-	\label{fig:appj1}
+	\label{fig:appj2}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../fig/appendix/jordfugt/funkbeta.PNG}
 	\caption{Kurve hvor fugtighed kan aflæses via $\beta$}
-	\label{fig:appj1}
+	\label{fig:appj3}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../fig/appendix/jordfugt/funk3d.PNG}
 	\caption{3D Kurve hvor fugtighed kan aflæses både via $\alpha$ og $\beta$}
-	\label{fig:appj1}
+	\label{fig:appj4}
 \end{figure} 
 
 Der blev noteret data fra i alt 3 typer jord og disse blev samlet til et nyt script som lavede en regression via $\beta$. Det viste sig dog at der var for stor variation mellem jordtyperne og regressionen kunne derfor ikke ramme præcis. Se Figur \ref{fig:appfuncfit} og \ref{fig:appresplot}.
 
-\begin{lstlisting}[caption={Matlab kode til hjælp af bestemmelse af $\alpha$ og $\beta$},label=lst:matlab_rise_func,frame=single]
+\begin{lstlisting}[caption={Matlab kode til hjælp af bestemmelse af $\alpha$ og $\beta$},label=lst:matlab_rise_func3,frame=single]
 clc
 clear
 close all
