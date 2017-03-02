@@ -1,1 +1,62 @@
 \section{Softwaredesign} \label{sec:softwaredesign}
+\subsection{Kontrolboks}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Klassebeskrivelser/klassediagramKontrolboks.pdf}
+	\caption{Klassediagram over kontrolboksen}
+	\label{fig:cdKontrolboks}
+\end{figure}
+
+\textbf{Controller: Microprocessor} \\
+\texttt{Mikroprocessor}: Klasse der behandler data fra de resterende klasser. \newline
+Den opdaterer data i \texttt{controlbox-package} som herefter sendes til \texttt{HF-transceiver}. \texttt{Mikroprocessor} kommunikerer direkte med \texttt{HF-transceiver} i forbindelse med initiering og parring. \texttt{Mikroprocessor} kommunikerer herudover med \texttt{Keypad}, \texttt{Display} og \texttt{Motorvalve}. \\
+
+\textbf{Boundary: HF-transcevier} \\
+\texttt{HF-transceiver}: Driver der styrer kommunikation med HF-transceiveren. \newline
+Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikroprocessor}. Den transmitterer \texttt{controlbox-package} til sensoren. 
+
+\textbf{Boundary: Keypad} \\
+\texttt{Keypad}: Driver der styrer brugerinterfacet til tasteturets 4 trykknapper, samt LED til fejlindikation. \\
+
+\textbf{Boundary: Display} \\
+\texttt{Display}: Driver der styrer kommunikation med I2C Display’et, herunder også baggrundsbelysning. \\
+
+\textbf{Domain: Controlbox Package} \\
+\texttt{Controlbox Package}: Datapakke på 4 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt checksum. \\
+
+\textbf{Domain: Sensor Package} \\
+\texttt{Sensor Package}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
+
+
+\subsection{Sensor}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Klassebeskrivelser/klassediagramSensor.pdf}
+	\caption{Klassediagram over sensor}
+	\label{fig:cdSensor}
+\end{figure}
+
+\textbf{Controller: Microprocessor} \\
+\texttt{Mikroprocessor}: Klasse der behandler data fra de resterende klasser. Den opdaterer data i \texttt{Sensor-package} som herefter sendes til \texttt{HF-transceiver}. \texttt{Mikroprocessor} kommunikerer direkte med \texttt{HF-transceiver} i forbindelse med initiering og parring. \texttt{Mikroprocessor} kommunikerer herudover med \texttt{Soil Probe}, \texttt{temperature Sensor} og \texttt{Light Sensor}. \\
+
+\textbf{Boundary: HF-transcevier} \\
+\texttt{HF-transceiver}: Driver der styrer kommunikation med HF-transceiveren. Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikroprocessor}. Den transmitterer \texttt{Sensor-package} til kontrolboksen. 
+
+\textbf{Boundary: Soil Probe} \\
+\texttt{Soil Probe}: Driver der styrer hardwarekredsløbet til jordfugtighedsmåling. \\
+
+\textbf{Boundary: Temperature Sensor} \\
+\texttt{Temperature Sensor}: Driver til temperatursensor. \\
+
+\textbf{Boundary: Light Sensor} \\
+\texttt{Light Sensor}: Driver der styrer hardwarekredsløbet til lysmåling. \\
+
+\textbf{Domain: Controlbox Package} \\
+\texttt{Controlbox Package}: Datapakke på 4 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt checksum \\
+
+\textbf{Domain: Sensor Package} \\
+\texttt{Sensor Package}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
+
+
