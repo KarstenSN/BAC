@@ -1,0 +1,223 @@
+\section{Hardwaredesign}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+	\caption{Blokdiagram af det samlede system}
+	\label{fig:BDDsystem}
+\end{figure}
+
+I Figur \ref{fig:BDDsystem} ses et blok definitions diagram over det samlede system. Det samlede system indeholder en sensor og en kontrolboks. Seperate blokdiagramer over sensoren og kontrolboksen ses i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
+
+\raggedbottom
+
+\subsection{Kontrolboks}
+
+Herunder opstilles der kravene til de enkelte blokke som udgør kontrolboksen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDkontrolboks.pdf}
+	\caption{Blokdiagram af kontrolboksen}
+	\label{fig:BDDkontrolboks}
+\end{figure}
+
+\textbf{Mikroprocessor} \\
+Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge I/O-porte samt en analog reset pin. Den skal forsynes med 3.3VDC $ \pm 10\% $ og kunne programmeres eksternt. 
+
+\textbf{Motorventil} \\
+Motorventilen skal bestå af en motor som forsynes med 5VDC $ \pm 10\%$ og have to kontakter der afbrydes når ventilen er i hhv. en fuldt lukket eller åben position. Den skal kunne tilsluttes 1/2" vandrør og være lavet af et solidt materiale. Motorventilen skal monteres på kontrolboksen. 
+
+\textbf{Display} \\
+Displayet skal forsynes med 3VDC $ \pm 10\%$ og skal kommunikere via I2C. Displayet skal bestå af 2x16 karakter og være i størrelsen 50mmx20mm $\pm 10\%$
+
+\textbf{HF-Transceiver} \\
+HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart. 
+
+\textbf{Strømforsyning} \\
+Strømforsyningen skal inkludere en DC-connector, monteret på kontrolboksen. Den skal have ESD beskyttelse og beskytte mod omvendt polarisation og strøm-overforbrug. Den skal kunne acceptere 5VDC $\pm 10\%$ inputspænding og herved indeholde en spændingsregulator som giver 3.3VDC $\pm 10\%$. 
+
+\textbf{Tastatur} \\
+Tastaturet skal bestå af 4 trykknapper samt en rød LED til indikation af fejl.  
+
+
+\subsection{Sensor}
+
+Herunder opstilles der kravende til de enkelte blokke som udgør sensoren i Figur \ref{fig:BDDsensor}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDsensor.pdf}
+	\caption{Blokdiagram af sensoren}
+	\label{fig:BDDsensor}
+\end{figure}
+
+\textbf{Mikroprocessor} \\
+Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge porte, have en analog reset pin og den skal kunne programmeres eksternt. Den skal forsynes med 3.3VDC $ \pm 10\%$ samt indeholde en min. 10bits analog til digital konverter. 
+
+\textbf{Jordfugt måler} \\
+Jordfugt måleren skal inkludere et jordspyd som stikkes ned i jorden for at måle jordfugtigheden. Den skal give en analog spænding ud mellem 0-3.3VDC som indikerer fugtigheden. 
+
+\textbf{Temperaturføler}
+Temperaturføleren skal kommunikere via I2C og skal have en præcision på minimum $\pm 0.5^\circ$C og en decimalafstand på minimum $0.1^\circ$C.
+
+\textbf{HF-Transceiver} \\
+HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart. 
+
+\textbf{Batteriholder} \\
+Batteriholderen skal kunne indeholde 2 batterier af typen AAA med en spænding på 1.5VDC hver.  
+
+\textbf{Lysmåler} \\
+Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 2VDC $\pm 50\%$.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/IBDkontrolboks.pdf}
+	\caption{Internt blokdiagram af kontrolboksen}
+	\label{fig:IBDkontrolboks}
+\end{figure}
+
+\textbf{Signalbeskrivelser}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | l | Z | p{3 cm} |} \hline
+	\textbf{Signal} & \textbf{Type} & \textbf{Beskrivelse} & \textbf{Tolerance} \\ \hline
+	5VDC 	
+		& P1 	
+		& Forsyningspænding fra adaptor								
+		& 5VDC $\pm 10\%$					\\ \hline
+			
+	3.3VDC 	
+		& P2 	
+		& Forsyningsspænding fra strømforsyning $ V_{dd} $						
+		& 3.3VDC $\pm 10\%$ 				\\ \hline
+			
+	SPI 
+		& K1 	
+		& Kommunikation: HF-transceiver og mikroprocesor 	
+		& CMOS-logic: 						\newline 
+			Low:  $0V - 1/3V_{dd}$ 			\newline
+			High: $2/3V_{dd} - V_{dd} $		\\ \hline
+			 
+	I2C	 	
+		& K3 	
+		& Kommunikation: Display og mikroprocessor 		
+		& CMOS-logic: 						\newline 
+			Low:  $ 0V-1/3V_{dd} $ 			\newline
+			High: $ 2/3V_{dd}-V_{dd} $		\\ \hline
+	touch 	
+		& B1 	
+		& Bus indeholdende 5 forbindelser til tastaturet 			
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+			
+	openBreak 
+		& A1  
+		& Signal der åbner motorventilen. A2 holdes lav. 
+		  For at bremse motoren er begge signaler høje 			
+		& Analog logic:					 	\newline 
+		 	Low:  $ 0V-0.6V_{dd} $ 			\newline
+			High: $ 1V_{dd}-V_{dd} $		\\ \hline
+	closeBreak 
+		& A2 
+		& Signal der lukker for motorventilen.Det kræves at A1 samtidig går lav. 						
+		& Analog logic:					 	\newline 
+		 	Low:  $ 0V-0.6V_{dd} $ 			\newline
+			High: $ 1V_{dd}-V_{dd} $		\\ \hline
+	Open 	
+		& A3 	
+		& Signal som er høj når motorventilen er åben				
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	Close 	
+		& A4 	
+		& Signal som er høj når motorventilen er lukket				
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	HF 		
+		& HF1 	
+		& Luftbåret, højfrekvent signal	
+		& \\ \hline
+	IRQ 	
+		& A3 	
+		& Interrupt fra HF-transceiveren 
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	Data 	
+		& A4 	
+		& Analogt data-signal til HF-transceiveren
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	Reset 	
+		& A5 	
+		& Reset reset-signal til HF-transceiveren
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	RESET 	
+		& K4 	
+		& Reset signal til mikroprocessoren
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	PROG 	
+		& K3 	
+		& Programmerings interface til mikroprocessoren
+		& $ 0-V_{dd} \pm 10\%$				\\ \hline
+	\end{tabularx}
+	\caption{Signalbeskrivelse for \texttt{kontrolboks}}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/IBDsensor.pdf}
+	\caption{Internt blokdiagram af sensoren}
+	\label{fig:IBDsensor}
+\end{figure}
+
+\textbf{Signalbeskrivelser}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | l | Z | p{4 cm} |} \hline
+	\textbf{Signal} & \textbf{Type} & \textbf{Beskrivelse} & \textbf{Tolerance} \\ \hline
+		3VDC 	
+			& P1 
+			& Batterispænding $ V_{dd} $												
+			& 3.3V $ \pm 10\%$					\\ \hline
+		SPI  	
+			& K1 
+			& Kommunikation: HF-transceiver og Mikroprocesor
+			& CMOS-logic: 						\newline 
+				Low:  $ 0V - 1/3V_{dd} $ 		\newline
+				High: $ 2/3V_{dd} - V_{dd} $	\\ \hline
+		I2C	 	
+			& K2 
+			& Kommunikation: Temperaturføler og Mikroprocessor
+			& CMOS-logic: 						\newline 
+				Low:  $ 0V - 1/3V_{dd} $ 		\newline
+				High: $ 2/3V_{dd} - V_{dd} $	\\ \hline
+		light 	
+			& A1 
+			& Spændingsindikation af lysintensitet på kontrolboksen
+			& $ 0-V_{dd} $ 	\\ \hline
+		humidt 	
+			& A2 
+			& Spændingsindikation jordfugtighed		
+			& $ 0-V_{dd} $ 	\\ \hline
+		HF 		
+			& H1 
+			& Luftbåret, højfrekvent signal			
+			&  			\\ \hline
+		IRQ 	
+			& A3
+			& Interrupt fra HF-transceiveren				
+			& $ 0-V_{dd} $ 	\\ \hline
+		Data 	
+			& A4 
+			& Analogt signal til HF-transceiveren				
+			& $ 0-V_{dd} $ 	\\ \hline
+		Reset 	
+			& A5 
+			& Reset signal til HF-transceiveren				
+			& $ 0-V_{dd} $ 	\\ \hline
+		RESET 	
+			& K4 
+			& Reset signal til mikroprocessoren				
+			& $ 0-V_{dd} $ 	\\ \hline
+		PROG 	
+			& K3 
+			& Programmerings interface til mikroprocessoren
+			& $ 0-V_{dd} $ 	\\ \hline
+	\end{tabularx}
+	\caption{Signalbeskrivelse for \texttt{Sensor}}
+\end{table}
