@@ -77,7 +77,42 @@ Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
 \end{figure} 
  
 Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvilket må siges ikke at leve op til kravet om 5\% præcision. 
-\subsubsection{Kapasitiv måling}
+\subsubsection{Kapacitiv måling}
+Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
 
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Jordfugt/printkapasitet.png}
+    \caption{Tværsnit af jordspyd}
+    \label{fig:kap1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Jordfugt/printkapasitet_vad.png}
+    \caption{Tværsnit af jordspyd som der er i kontakt med vand}
+    \label{fig:kap2}
+  \end{minipage}
+\end{figure}
+
+For en kondensator gælder:
+
+\begin{equation}
+	C = \frac{\epsilon_0\cdot \epsilon_r \cdot A}{d}
+\end{equation}
+
+Hvor $\epsilon_0 = 8.854\cdot 10^{-12}F/m$ er permativiteten af vaccum, $\epsilon_r$ er permativiteten af materialet mellem kobberet som er 1 for luft og omkring 80 for vand. A er arealet af det kobber som kan se hinanden og d er diameteren mellem banerne. 
+
+Det vil sige at kapaciteten vil blive 80 gange større når jordspyddet er stukket ned i rent vand en hvis den var i tør luft. Hvis vi antager at der er 0.3mm mellem banerne, at de har en længde på 5cm, at kobbertykkelsen er 35$\mu m$ og at jordspyddet befinder sig i vaccum. Vil der være en kapacitet på:
+
+\begin{equation}
+	C = \frac{8.854\cdot 10^{-12}\cdot 1 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 0.05pF
+\end{equation} 
+
+Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gange størrer:
+
+\begin{equation}
+	C = \frac{8.854\cdot 10^{-12}\cdot 80 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 4.00pF
+\end{equation} 
 
 \clearpage
