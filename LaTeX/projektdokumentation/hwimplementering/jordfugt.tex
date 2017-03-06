@@ -78,7 +78,7 @@ Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
  
 Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvilket må siges ikke at leve op til kravet om 5\% præcision. 
 \subsubsection{Kapacitiv måling}
-Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
+Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
 
 \begin{figure}[H]
   \centering
@@ -90,7 +90,7 @@ Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden. På
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=1\textwidth]{../fig/Jordfugt/printkapasitet_vad.png}
-    \caption{Tværsnit af jordspyd som der er i kontakt med vand}
+    \caption{Tværsnit af jordspyd som der er i kontakt med vand. Her skal kobberbanerne dog være belagt med en elektrisk isolerende coating.}
     \label{fig:kap2}
   \end{minipage}
 \end{figure}
@@ -114,5 +114,26 @@ Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gang
 \begin{equation}
 	C = \frac{8.854\cdot 10^{-12}\cdot 80 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 4.00pF
 \end{equation} 
+
+Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude ændringen når der sættes et AC signal igennem eller at måle faseændringen. Se Figur \ref{fig:jdig1} og \ref{fig:jdig2}.     
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1.2\textwidth]{../fig/Jordfugt/diagram1.png}
+    \caption{Amplitudemåling af kondensator}
+    \label{fig:jdig1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1.2\textwidth]{../fig/Jordfugt/diagram2.png}
+    \caption{Amplitudemåling af kondensator med instrumentationsforstærker}
+    \label{fig:jdig2}
+  \end{minipage}
+\end{figure}
+
+På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. Det antages i det efterfølgende at kapaciteten vil variere i området 1pF til 60pF \cite{lib:cap_meas}.    
+
+  
 
 \clearpage
