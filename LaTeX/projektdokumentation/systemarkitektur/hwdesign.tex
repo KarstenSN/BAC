@@ -2,23 +2,23 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
-	\caption{Blokdiagram af det samlede system}
+	\includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+	\caption{Blokdiagram over det samlede system}
 	\label{fig:BDDsystem}
 \end{figure}
 
-I Figur \ref{fig:BDDsystem} ses et blok definitions diagram over det samlede system. Det samlede system indeholder en sensor og en kontrolboks. Seperate blokdiagramer over sensoren og kontrolboksen ses i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
+I Figur \ref{fig:BDDsystem} ses BDD over det samlede system indeholdende en sensor og en kontrolboks. Separate blokdiagrammer over sensoren og kontrolboksen ses i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
 
 \raggedbottom
 
 \subsection{Kontrolboks}
 
-Herunder opstilles der kravene til de enkelte blokke som udgør kontrolboksen.
+I dette underafsnit opstilles kravene til de enkelte blokke der udgør kontrolboksen på Figur \ref{fig:BDDkontrolboks}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDkontrolboks.pdf}
-	\caption{Blokdiagram af kontrolboksen}
+	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/BDDkontrolboks.pdf}
+	\caption{Blokdiagram over \texttt{Kontrolboks}}
 	\label{fig:BDDkontrolboks}
 \end{figure}
 
@@ -26,7 +26,7 @@ Herunder opstilles der kravene til de enkelte blokke som udgør kontrolboksen.
 Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge I/O-porte samt en analog reset pin. Den skal forsynes med 3.3VDC $ \pm 10\% $ og kunne programmeres eksternt. 
 
 \textbf{Motorventil} \\
-Motorventilen skal bestå af en motor som forsynes med 5VDC $ \pm 10\%$ og have to kontakter der afbrydes når ventilen er i hhv. en fuldt lukket eller åben position. Den skal kunne tilsluttes 1/2" vandrør og være lavet af et solidt materiale. Motorventilen skal monteres på kontrolboksen. 
+Motorventilen skal bestå af en DC-motor der skal forsynes med 5VDC $ \pm 10\%$ og have to kontakter der afbrydes når ventilen er i hhv. en fuldt lukket eller åben position. Den skal kunne tilsluttes 1/2" vandrør og være lavet af et solidt materiale. Motorventilen skal monteres på kontrolboksen. 
 
 \textbf{Display} \\
 Displayet skal forsynes med 3VDC $ \pm 10\%$ og skal kommunikere via I2C. Displayet skal bestå af 2x16 karakter og være i størrelsen 50mmx20mm $\pm 10\%$
@@ -38,43 +38,15 @@ HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inklude
 Strømforsyningen skal inkludere en DC-connector, monteret på kontrolboksen. Den skal have ESD beskyttelse og beskytte mod omvendt polarisation og strøm-overforbrug. Den skal kunne acceptere 5VDC $\pm 10\%$ inputspænding og herved indeholde en spændingsregulator som giver 3.3VDC $\pm 10\%$. 
 
 \textbf{Tastatur} \\
-Tastaturet skal bestå af 4 trykknapper samt en rød LED til indikation af fejl.  
+Tastaturet skal bestå af 4 trykknapper samt en rød LED til indikation af fejl. \\
 
 
-\subsection{Sensor}
-
-Herunder opstilles der kravende til de enkelte blokke som udgør sensoren i Figur \ref{fig:BDDsensor}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/BDDsensor.pdf}
-	\caption{Blokdiagram af sensoren}
-	\label{fig:BDDsensor}
-\end{figure}
-
-\textbf{Mikroprocessor} \\
-Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge porte, have en analog reset pin og den skal kunne programmeres eksternt. Den skal forsynes med 3.3VDC $ \pm 10\%$ samt indeholde en min. 10bits analog til digital konverter. 
-
-\textbf{Jordfugt måler} \\
-Jordfugt måleren skal inkludere et jordspyd som stikkes ned i jorden for at måle jordfugtigheden. Den skal give en analog spænding ud mellem 0-3.3VDC som indikerer fugtigheden. 
-
-\textbf{Temperaturføler}
-Temperaturføleren skal kommunikere via I2C og skal have en præcision på minimum $\pm 0.5^\circ$C og en decimalafstand på minimum $0.1^\circ$C.
-
-\textbf{HF-Transceiver} \\
-HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart. 
-
-\textbf{Batteriholder} \\
-Batteriholderen skal kunne indeholde 2 batterier af typen AAA med en spænding på 1.5VDC hver.  
-
-\textbf{Lysmåler} \\
-Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 2VDC $\pm 50\%$.
-
+På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger signalbeskrivelse i tabel \ref{tbl:SignalerKontrolboks}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/IBDkontrolboks.pdf}
-	\caption{Internt blokdiagram af kontrolboksen}
+	\caption{Internt blokdiagram over \texttt{Kontrolboks}}
 	\label{fig:IBDkontrolboks}
 \end{figure}
 
@@ -156,13 +128,45 @@ Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fast
 		& Programmerings interface til mikroprocessoren
 		& $ 0-V_{dd} \pm 10\%$				\\ \hline
 	\end{tabularx}
-	\caption{Signalbeskrivelse for \texttt{kontrolboks}}
+	\caption{Signalbeskrivelse for \texttt{Kontrolboks}}
+	\label{tbl:SignalerKontrolboks}
 \end{table}
+
+
+\subsection{Sensor}
+I dette underafsnit opstilles kravende til de enkelte blokke der udgør sensoren på Figur \ref{fig:BDDsensor}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\textwidth]{../fig/Systemarkitektur/IBDsensor.pdf}
-	\caption{Internt blokdiagram af sensoren}
+	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/BDDsensor.pdf}
+	\caption{Blokdiagram over \texttt{Sensor}}
+	\label{fig:BDDsensor}
+\end{figure}
+
+\textbf{Mikroprocessor} \\
+Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge porte, have en analog reset pin og den skal kunne programmeres eksternt. Den skal forsynes med 3.3VDC $ \pm 10\%$ samt indeholde en min. 10bits analog til digital konverter. 
+
+\textbf{Jordfugt måler} \\
+Jordfugt måleren skal inkludere et jordspyd som stikkes ned i jorden for at måle jordfugtigheden. Den skal give en analog spænding ud mellem 0-3.3VDC som indikerer fugtigheden. 
+
+\textbf{Temperaturføler}
+Temperaturføleren skal kommunikere via I2C og skal have en opløsning på minimum $\pm 0.5^\circ$C og en decimalafstand på minimum $0.1^\circ$C samt en præcision på 5 $\%$ jfv. krav PF\_05.
+
+\textbf{HF-Transceiver} \\
+HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart. 
+
+\textbf{Batteriholder} \\
+Batteriholderen skal kunne indeholde 2 batterier af typen AAA med en spænding på 1.5VDC hver.  
+
+\textbf{Lysmåler} \\
+Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 2VDC $\pm 50\%$.
+
+På Figur \ref{fig:IBDsensor} ses Internt blok diagram af kontrolboksen og herefter følger signalbeskrivelse i tabel \ref{tbl:SignalerSensor}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/IBDsensor.pdf}
+	\caption{Internt blokdiagram over \texttt{Sensor}}
 	\label{fig:IBDsensor}
 \end{figure}
 
@@ -220,4 +224,5 @@ Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fast
 			& $ 0-V_{dd} $ 	\\ \hline
 	\end{tabularx}
 	\caption{Signalbeskrivelse for \texttt{Sensor}}
+	\label{tbl:SignalerSensor}
 \end{table}
