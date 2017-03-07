@@ -80,4 +80,33 @@ af ligning \ref{eq:ant_R} ses det at ved den givne transmissionsfrekvens kan det
 
 For at finde den optimale antenne til systemet er der foretaget en teknologiundersøgelse af forskellige antennetyper samt deres performance. Der er ydermere foretaget en række beregninger i forbindelse med disse antenner, dette kan ses i Appendix \ref{appendix:antenne}. Tre typer antenner blev undersøgt: TH-monteret Helical antenne, microstrip antenne, samt SMD-monteret antenne. Derudover blev der også eksperimenteret med at implementere en loopantenne på indersiden af plasthuset, sidstnævnte blev dog hurtigt afskrevet pga. dens krævende monteringsprocess samt manglende mekaniske understøttelse der vil føre til et ustabilt produkt. 
 
-En antenne af typen W3127 ISM 433MHz fra \textit{Pulse Electronics} blev benyttet. Denne antenne er den mest isotropiske af kandidaterne med en Max Gain på $ G_{max}=-2.9 dBi$. jvf. Fig 3 i databladet \cite{lib:ant_W3127_datasheet}
+Til kontrolboksen er valgt at benytte en SMD-monteret 433 MHz ISM Antenna fra \textit{Johanson Technology} se datablad i bilag \cite{lib:ant_jt_datasheet}. Dette valg skyldes primært pladskravene til antennen på PCB'et, hvorfor en større antenne er udelukket. Den valgte antenne har en Max Gain på $ G_{max}=-4.0 dBi$ jvf. databladet.
+Antennes karakteristisk impedans er 50 $\Omega$ hvilket sætter kravet til den microstripline der føder antennen. Ved at benytte formel 9-39 på side 528 i \cite{lib:balanis} kan banebredden beregnes når følgende parametre for PCB'et kendes: 
+
+\begin{align} \label{eq:ant_trace}
+	Z_{c} = \frac{87}{\varepsilon_{r}+1.41} \times ln{\bigg( \frac{5.98h}{0.8w+t} \bigg)}
+\end{align}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{ m{1.5 cm}  m{8 cm}  Z } \\
+		$ Z_{c} $			& Karakteristisk impedans af microstripline	i $\Omega$ 	&	\\
+		$ \varepsilon_{r} $	& Epsilon-relativ for substratet						&	\\
+		$ h $ 				& Højde af substratet i $mm$							&	\\
+		$ w $ 				& Bredde af substratet i $mm$							&	\\
+		$ t $ 				& Tykkelse af microstripline i $mm$						&	\\
+	\end{tabularx}
+	\caption{Microstripline parametre}
+	\label{tbl:antTrace_param}
+\end{table}
+
+De givne parametre indsættes og ligning \ref{eq:ant_trace} løses for $w$
+
+\begin{align} \label{eq:ant_traceParam}
+	50 \Omega = \frac{87}{4.4+1.41} \times ln{\bigg( \frac{5.98 \times 1.57mm}{0.8\times w+ 0.035mm} \bigg)} = 2.89mm
+\end{align}
+
+Hermed kendes banebredde der skal føde antennen for at få optimal matching.
+
+
+Til sensoren er valgt at anvende en through-hole monteret helical antenne af typen W3127 ISM 433MHz fra \textit{Pulse Electronics}. Denne antenne er den mest isotropiske af kandidaterne med en Max Gain på $ G_{max}=-2.9 dBi$. jvf. Fig 3 i databladet i bilag. \cite{lib:ant_W3127_datasheet}. Dette valgt baserer sig på at udnytte pladsen på sensor-PB'et mest muligt for at kunne implementere den bedst mulige antenne, samt at denne antenne ved dens placering  og orientering på PCB'et når PCB'ets er placeret i jorden gør at der ydes optimal udstråling. 
+Antennes karakteristisk impedans er som på kontrolboksen 50 $\Omega$ hvorfor samme banebredde er benytte til at føde antennen. 
