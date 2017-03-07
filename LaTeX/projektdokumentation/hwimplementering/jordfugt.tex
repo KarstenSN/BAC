@@ -132,8 +132,74 @@ Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensa
   \end{minipage}
 \end{figure}
 
-På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. Det antages i det efterfølgende at kapaciteten vil variere i området 1pF til 60pF \cite{lib:cap_meas}.    
+På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. Det antages i det efterfølgende at kapaciteten vil variere i området 1pF til 60pF \cite{lib:cap_meas}. Ved at gøre denne antagelse kan vi nu udregne den optimale load af kondensatoren for at samlet give en faseændring på 90 grader. Overføringsfunktionen for et RC-højpas-led ses i ligning \ref{equ:j1}. 
 
+\begin{equation}
+	G(s) = \dfrac{R}{\dfrac{1}{s\cdot C} \cdot R}
+	 \label{equ:j1}
+\end{equation}  
+På Figur \ref{fig:jf1} ses der et plot af fase ændringen med en modstand som eksperimentelt er bestemt til 160k$\Omega$ og en frekvens på 100kHz. Dette kan dog justeres under implementeringen.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/fase_vs_cap.PNG}
+	\caption{Faseændring versus kapaciteten}
+	\label{fig:jf1}
+\end{figure}   
+For at måle kapacitetsændringen behøves der derfor en frekvens på 100kHz. Denne kan komme fra mikroprocessoren, men da det vil være en firkantspænding kræves det derfor en hård filtrering. Om filtreringen sker før eller efter kapaciteten, er ligegyldigt matematisk set. Men det vil give et bedre støjimmunt kredsløb ved at lave filtreringen efter. På Figur \ref{fig:jf2} ses diagrammet hvordan kredsløbet kan realiseres. U8B er en spændingsfølger som sidder for at give en høj indgangsimpedans, således fasen kan styrres med R25. Kredsløbet \cite{lib:bandpass} bestående af R22, R21, R16, C33, C34 er et båndpasfilter med øverføringsfunktion som ses i ligning \ref{equ:j2}. Udligning af denne ses i bilag \todo[inline]{reference}.   
+
+\begin{equation}
+	G(s) = -\dfrac{R2 C1 R3}{C1 C2 R1 R2 R3 s^2 + C1 R1 R2 s + C2 R1 R2 s + R1+ R2}
+	 \label{equ:j2}
+\end{equation} 
+
+Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et 2. ordens system og har derfor en dæmpningsfaktor som er tæt realateret til quality-factor eller Q. Q siger noget om hvor snæver båndbredden er i systemet. Komponentværdierne er bestemt via ligning  \ref{equ:j3}, \ref{equ:j4}, \ref{equ:j5}. Hvor A er forstærkningen $\omega_0$ er $2\pi f$ hvor $f$ er frekvensen og C er værdien af C1 og C2.
+
+\begin{equation}
+	R1 = \dfrac{Q}{A\cdot \omega _0 \cdot C}
+	 \label{equ:j3}
+\end{equation} 
+
+\begin{equation}
+	R2 = \dfrac{Q}{(2Q^2-A) \cdot \omega_0 \cdot C}
+	 \label{equ:j4}
+\end{equation} 
+
+\begin{equation}
+	R3 = \dfrac{2Q}{\omega _0 \cdot C}
+	 \label{equ:j5}
+\end{equation} 
   
+Sættes forstærkningen til A=2 og Q=10, $f$=100kHz og C=470pF. Fås komponentværdierne som på Figur \ref{fig:jf2}. På Figur \ref{fig:j6} ses der at forstærkningen ligger på 2 ved 100kHz som forventet og på Figur \ref{fig:j7} ses at der er en faseændring på 0 grader. Dog vil faseændringen være $180^\circ$ da det er en inverterende forstærker. Derfor sættes der en komporator på udgangen af U12A for at vende fasen til $^\circ$ igen. Dog vil der være et propagation delay som vil give en lille faseforskydelse. Ved at køre frekvensen fra mikroprocessoren og udgangen af U8A ind igennem en XOR gate (U10A) vil der blive opladet en DC på C26 som vil afhænge af faseforskydelsen. Ved en faseforskydelse på $180^\circ$ vil der ligge 3.3V og ved en faseforskydelse på $90^\circ$ vil der ligge 1.65V. Da vi kun skal detektere en faseforskydelse på maksimalt $90^\circ$ er der som det sidste led designet en ikke inverterende forstærker, med en forstærkning på 2, for at få fuldt dynamisk range. D5 og D6 sidder for at beskytte mod ESD. På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten.    
+ 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Jordfugt/diagram3.PNG}
+	\caption{Diagram over kredsløb til måling af faseændring}
+	\label{fig:jf2}
+\end{figure}  
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1.3\textwidth]{../fig/Jordfugt/system_respons.png}
+    \caption{Forstærkning vs. frekvens}
+    \label{fig:j6}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1.3\textwidth]{../fig/Jordfugt/system_faserespons.png}
+    \caption{Fasedrej vs. frekvens}
+    \label{fig:j7}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Jordfugt/udgangsvolt.PNG}
+	\caption{Udgangsspænding vs. kapacitet}
+	\label{fig:j8}
+\end{figure}
+ 
 
 \clearpage
