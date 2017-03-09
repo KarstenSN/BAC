@@ -1,0 +1,32 @@
+\newpage
+\section{PSU} \label{sec:psu}
+
+
+MCP1640CT-I/CHY fra Microchip \todo[inline]{lav henvisning til datablad på MCP1640} er valgt da den som udgangspunkt opfylder kravet om at levere min. 100mA ved 3.3VDC, dette krav holdes helt ned til en batterispænding på 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved standby mode trækkes kun 19$\mu$A men da vi er interesseret i udnytte batterilevetiden mest muligt, vælges at slutte helt for konverteren indtil der er brug for den. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med true disconnect og kan disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingsmodul. True disconnect virker ved at regulatordiode kobles ud af signalvejen, dette opnås via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu$A A. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pins'ne. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
+
+Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle referencer til komponenter efterfølgende henviser til dette diagram. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/psu/boostkonverter.png}
+	\caption{Diagram over boostkonverter}
+	\label{fig:boostkonverter}
+\end{figure}
+
+\subsection{Boost converter} \label{sec:psu_beregninger}
+
+\subsubsection{Udgangspæning} \label{sec:psu_Vout}
+
+For at fastlægge udgangsspændingen på 3.3VDC lægges en spændingsdeler fra $V_{out}$-pin til $V_{FB}$-pin via R30 og R31 i forhold til $V_{REF}$ på $V_{FB}$-pin'en. Når Vout er i reguleret tilstand er $V_{REF}$=1.21VDC, hvis der antages en værdi for R31=562k kan værdien for R30 bestemme på følgende måde:
+
+\begin{align} \label{eq:boostkonverter_VFB}
+	R30 &= R31 \times \bigg( \frac{V_{OUT}}{V_{REF}}-1 \bigg) \\
+		&= 562k\Omega \times \bigg( \frac{3.3V}{1.21V}-1 \bigg)=970k\Omega
+\end{align}
+
+Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne værdi er tilgængelig i E48, E96 samt E192 serierne. Det samme gør sig gældende for de resterende komponenter. Benyttes R31=976k$\Omega$ fås følgende udgangspænding. 
+
+\begin{align} \label{eq:boostkonverter_VFB}
+	V_{OUT} &= \frac{V_{REF} \times (R30+R31)}{R30} \\
+			&= \frac{1.21V \times (562k\Omega+976k\Omega)}{562k\Omega} = 3.311V 
+\end{align}
