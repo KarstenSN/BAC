@@ -15,7 +15,7 @@ Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle ref
 
 \subsection{Boost converter} \label{sec:psu_beregninger}
 
-\subsubsection{Udgangspæning} \label{sec:psu_Vout}
+\subsubsection{Udgangspænding} \label{sec:psu_Vout}
 
 For at fastlægge udgangsspændingen på 3.3VDC lægges en spændingsdeler fra $V_{out}$-pin til $V_{FB}$-pin via R30 og R31 i forhold til $V_{REF}$ på $V_{FB}$-pin'en. Når Vout er i reguleret tilstand er $V_{REF}$=1.21VDC, hvis der antages en værdi for R31=562k kan værdien for R30 bestemme på følgende måde:
 
@@ -30,3 +30,21 @@ Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne v�
 	V_{OUT} &= \frac{V_{REF} \times (R30+R31)}{R30} \\
 			&= \frac{1.21V \times (562k\Omega+976k\Omega)}{562k\Omega} = 3.311V 
 \end{align}
+
+Dette ses at være indenfor kravet på 3.3VDC $\pm$ 10 \%.
+
+\subsubsection{Indgangskondensator} \label{sec:psu_Cin}
+
+Indgangskondensatoren C31 vælges til en standard værdi på 4.7 $\mu F$ da der ikke er nogle omstændigheder der kalder på ekstra ordinær filtrering. Boost-spolen sørger for en god del filtrering, amt at afstanden til batteriterminalerne er relativ korte. Derudover forventes der ikke de store spændingsvariationer fra batteriet andet end den forventede afladningskurve. Det anbefales at bruge lav ESR X5R eller X7R for deres lave temperaturkoefficient.  
+
+\subsubsection{Udgangskondensator} \label{sec:psu_Cout}
+
+Udgangskondensatoren C36 sikre en jævn og stabil udgangsspænding, som for C31 anbefales det at bruge lav ESR X5R eller X7 keramiske kondensatorer.  Benyttes andre typer kondensatorer med højere ESR påvirkes konverterens udgangsspænding samt effektivitet. C36 vælges som udgangspunkt til en standard værdi på 10 $\mu F$
+
+\subsubsection{Spole} \label{sec:psu_ind}
+
+MCP1640 er designet til at fungere med SMD-monterede spoler. En værdi på 4.7 $\mu F$ anbefales, dog skal spoles være i stand til at håndterer den switching current systemet frembringer. Dette kan beregnes som følger. 
+
+\subsubsection{Termiske overvejelser} \label{sec:psu_term}
+
+\subsubsection{PCB-udlæg overvejelser} \label{sec:psu_PCB}
