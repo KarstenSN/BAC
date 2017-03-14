@@ -1,7 +1,5 @@
 \newpage
 \section{PSU} \label{sec:psu}
-
-
 MCP1640CT-I/CHY fra Microchip \todo[inline]{lav henvisning til datablad på MCP1640} er valgt da den som udgangspunkt opfylder kravet om at levere min. 100mA ved 3.3VDC, dette krav holdes helt ned til en batterispænding på 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved standby mode trækkes kun 19$\mu$A men da vi er interesseret i udnytte batterilevetiden mest muligt, vælges at slutte helt for konverteren indtil der er brug for den. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med true disconnect og kan disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingsmodul. True disconnect virker ved at regulatordiode kobles ud af signalvejen, dette opnås via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu$A A. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pins'ne. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
 
 Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle referencer til komponenter efterfølgende henviser til dette diagram. 
@@ -13,38 +11,93 @@ Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle ref
 	\label{fig:boostkonverter}
 \end{figure}
 
-\subsection{Boost converter} \label{sec:psu_beregninger}
+\subsection{Boost konverter} \label{sec:psu_beregninger}
+Alle beregninger kan ses i \todo[inline]{lav henvisning til appendix når dette er klar (pdf af Prime-udregninger)}
+
 
 \subsubsection{Udgangspænding} \label{sec:psu_Vout}
-
-For at fastlægge udgangsspændingen på 3.3VDC lægges en spændingsdeler fra $V_{out}$-pin til $V_{FB}$-pin via R30 og R31 i forhold til $V_{REF}$ på $V_{FB}$-pin'en. Når Vout er i reguleret tilstand er $V_{REF}$=1.21VDC, hvis der antages en værdi for R31=562k kan værdien for R30 bestemme på følgende måde:
+For at fastlægge og fastholde udgangsspændingen på 3.3VDC lægges en spændingsdeler fra $V_{out}$-pin til $V_{FB}$-pin via R30 og R31 i forhold til $V_{REF}$ på $V_{FB}$-pin'en. Når Vout er i reguleret tilstand er $V_{REF}$=1.21VDC. Der antages en værdi for R31=562k, denne værdi er en standard værdi som findes i de gængse serier E48, E96, E192. Værdien for R30 kan nu beregnes på følgende måde:
 
 \begin{align} \label{eq:boostkonverter_VFB}
-	R30 &= R31 \times \bigg( \frac{V_{OUT}}{V_{REF}}-1 \bigg) \\
+	R30 &= R31 \times \bigg( \frac{V_{OUT}}{V_{REF}}-1 \bigg) \\[6pt]
 		&= 562k\Omega \times \bigg( \frac{3.3V}{1.21V}-1 \bigg)=970k\Omega
 \end{align}
 
-Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne værdi er tilgængelig i E48, E96 samt E192 serierne. Det samme gør sig gældende for de resterende komponenter. Benyttes R31=976k$\Omega$ fås følgende udgangspænding. 
+Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne værdi er tilgængelig i E48, E96 samt E192 serierne. Benyttes R31=976k$\Omega$ fås følgende udgangsspænding. 
 
-\begin{align} \label{eq:boostkonverter_VFB}
-	V_{OUT} &= \frac{V_{REF} \times (R30+R31)}{R30} \\
+\begin{align} \label{eq:boostkonverter_VFB_real}
+	V_{OUT} &= \frac{V_{REF} \times (R30+R31)}{R31} \\[6pt]
 			&= \frac{1.21V \times (562k\Omega+976k\Omega)}{562k\Omega} = 3.311V 
 \end{align}
 
 Dette ses at være indenfor kravet på 3.3VDC $\pm$ 10 \%.
 
-\subsubsection{Indgangskondensator} \label{sec:psu_Cin}
 
-Indgangskondensatoren C31 vælges til en standard værdi på 4.7 $\mu F$ da der ikke er nogle omstændigheder der kalder på ekstra ordinær filtrering. Boost-spolen sørger for en god del filtrering, amt at afstanden til batteriterminalerne er relativ korte. Derudover forventes der ikke de store spændingsvariationer fra batteriet andet end den forventede afladningskurve. Det anbefales at bruge lav ESR X5R eller X7R for deres lave temperaturkoefficient.  
+\subsubsection{Indgangskondensator} \label{sec:psu_Cin}
+Indgangskondensatoren C31 vælges til en standard værdi på 4.7 $\mu F$ da der ikke er nogle omstændigheder der kalder på ekstra ordinær filtrering. Boost-spolen sørger for en god del filtrering, dertil kommer at afstanden til batteriterminalerne er relativt korte. Derudover forventes der ikke de store spændingsvariationer fra batteriet andet end den forventede afladningskurve. Det anbefales at bruge lav ESR X5R eller X7R for deres lave temperaturkoefficient. C31 vælges til en standard værdi som findes i de gængse serier E6, E12.  
+
 
 \subsubsection{Udgangskondensator} \label{sec:psu_Cout}
+Udgangskondensatoren C36 sikrer en jævn og stabil udgangsspænding, som for C31 anbefales det at bruge lav ESR X5R eller X7 keramiske kondensatorer. Benyttes andre typer kondensatorer med højere ESR påvirkes konverterens udgangsspænding samt effektivitet. En minimumsværdi beregnes på følgende måde:
 
-Udgangskondensatoren C36 sikre en jævn og stabil udgangsspænding, som for C31 anbefales det at bruge lav ESR X5R eller X7 keramiske kondensatorer.  Benyttes andre typer kondensatorer med højere ESR påvirkes konverterens udgangsspænding samt effektivitet. C36 vælges som udgangspunkt til en standard værdi på 10 $\mu F$
+\begin{align} \label{eq:boostkonverter_Cout}
+	C_{36_{min}} &= \frac{I_{OUT_{max}} \times (V_{OUT}-V_{IN_{min}})}{f \times V_{Ripple}\times V_{OUT}} \\[6pt]
+				 &= \frac{100mA \times (3.3V-1.2V)}{500kHz \times 50mV \times 3.3V} = 2.5 \mu F 
+\end{align}
+ 
+Da 2.5 $\mu F$ ikke findes i E6 eller E12 serierne vælges værdien til 3.3 $\mu F$
 
-\subsubsection{Spole} \label{sec:psu_ind}
+Det bemærkes at formlen for udregningen af $ C_{36_{min}} $ antager en ESR på 0, derfor er det vigtigt, som førnævnt at benytte kondensatorer med lav ESR. Derudover er C37 på 100nF sat på for at sikre god afkobling. 
 
-MCP1640 er designet til at fungere med SMD-monterede spoler. En værdi på 4.7 $\mu F$ anbefales, dog skal spoles være i stand til at håndterer den switching current systemet frembringer. Dette kan beregnes som følger. 
+
+\subsubsection{Switching Spole} \label{sec:psu_ind}
+MCP1640 er designet til at fungere med SMD-monterede spoler. Denne spole skal kunne modstå den maksimale switching strøm der kan opstå ved den laveste Vin. Igen vælges her en spole med lav ESR for at højne effektiviteten af konverteren. Værdien af L4 beregnes på følgende måde: 
+
+\begin{align} \label{eq:boostkonverter_inductor}
+	L_{4_{min}} &= \frac{V_{IN_{min}} \times (V_{OUT}-V_{IN_{min}})}{f \times I_{SW_{max}}\times V_{OUT}} \\[6pt]
+				&= \frac{1.2V \times (3.3V-1.2V)}{500kHz \times 398.75mA \times 3.3V} = 3.83 \mu H 
+\end{align}
+
+Hvor $ I_{SW_{max}} $ er beregnet på følgende måde: 
+
+\begin{align} \label{eq:boostkonverter_I_SW}
+	L_{4_{min}} &= \frac{\Delta I_{L}}{2}+ \frac{I_{OUT_{max}}}{1-D_{max}} \\[6pt]
+				&= \frac{110mA}{2}+ \frac{100mA}{1-0.709} = 398.75 mA 
+\end{align}
+
+De resterende beregniner for $ \Delta I_{L} $ og $ D_{max} $ findes i App. \todo[inline]{lav henvisning til appendix når dette er klar (pdf af Prime-udregninger)} 
 
 \subsubsection{Termiske overvejelser} \label{sec:psu_term}
+Der bør også lige ses på den effekt der afsættes i komponenten når konverteren yder sit maksimum for at sikre at temperaturkravene for konverteren overholdes. i Databladet er opgivet en max. continuous junction temp. på +125 $^\circ C$. For at se om dette krav overholdes kan temperaturen ved maksimal belastning (min. effektivitet) beregnes som følger: 
+
+\begin{align} \label{eq:boostkonverter_term1}
+	P_{Dissipated} &= \bigg( \frac{V_{OUT} \times I_{OUT}}{Efficiency} \bigg) - (V_{OUT} \times I_{OUT}) \\[6pt] 
+				   &= \bigg( \frac{3.3V \times 100mA}{80 \% } \bigg) - (3.3V \times 100mA) = 82.5mW
+\end{align}
+
+Herefter ganges op med $\theta_{JA}= 190.5^\circ C/W $ (Package terminal resistance) for at få den temperaturstigning der forsages. Denne lægges adderes med den ambienttemperatur som kredsløbet befinder sig i, her antaget til $T_{amb}= 60$ hvis sensorboksen er placeret i direkte sollys.
+
+ \begin{align} \label{eq:boostkonverter_term2}
+	T_{max} &= (P_{Dissipated} \times \theta_{JA} ) + T_{amb} \\[6pt] 
+			   &= (82.5mW \times 190.5^\circ C/W) + 60\circ C = 75.7 \circ C 
+\end{align}
+
 
 \subsubsection{PCB-udlæg overvejelser} \label{sec:psu_PCB}
+I Databladet anbefales et layout af konverteren med tilhørende eksterne komponenter, det er forsøgt fulgt bedst muligt,for at sikre størst mulig effektivitet af konverteren, samt mindst mulig støj. På Figur \ref{fig:boostkonverter_layout_datasheet} ses layout forslag og på Figur \ref{fig:boostkonverter_layout_PCB} ses det aktuelle layout fra sensor PCB'et. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/psu/PSU_Layout_datasheet.png}
+	\caption{Forslag til layout af Boostkonverter fra datablad}
+	\label{fig:boostkonverter_layout_datasheet}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/psu/PSU_Layout_PCB.png}
+	\caption{Aktuelt layout af Boostkonverter}
+	\label{fig:boostkonverter_layout_PCB}
+\end{figure}
+
+\clearpage
