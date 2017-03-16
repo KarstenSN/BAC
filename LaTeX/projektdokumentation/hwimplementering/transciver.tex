@@ -1,7 +1,7 @@
-\section{Transciver} \label{sec:transciver}
+\section{Transceiver} \label{sec:transceiver}
 Der er valgt at bruge transceiver en MRFX49A fra Microchip, da den er SPI-kompatibel og hellere ikke behøver at blive forprogrammeret som mange andre RF-kredse skal. 
 I stedet skal den sættes op via SPI kommunikationen. Chippen er som skræddersyet til dette system da den er designet til batteri applikationer. Den har en indbygget "low battery voltage detect" som kan give et interrupt til mikroprocessoren når batterispændingen når under et bestemt niveau, som sættes af mikroprocessoren. 
-Den har også en indbygget wake-up timer så mikroprocessoren kan ligges i sleep-mode og herved minimere strømforbruget til nogle få uA, indtil den vækkes op igen efter en forudbestemt tid. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte bruges i consumer elektronik. Dog er 915MHz mere rettet til den Amerikanske marked.   
+Den har også en indbygget wake-up timer så mikroprocessoren kan ligges i sleep-mode og herved minimere strømforbruget til nogle få uA, indtil den vækkes op igen efter en forudbestemt tid. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte bruges i consumer elektronik. Dog er 915MHz mere rettet til det Amerikanske marked.   
 
 \begin{figure}[ht]
 	\centering
