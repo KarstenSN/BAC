@@ -150,7 +150,7 @@ Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og 
 Jordfugt måleren skal inkludere et jordspyd som stikkes ned i jorden for at måle jordfugtigheden. Den skal give en analog spænding ud mellem 0-3.3VDC som indikerer fugtigheden. 
 
 \textbf{Temperaturføler}
-Temperaturføleren skal kommunikere via I2C og skal have en opløsning på minimum $\pm 0.5^\circ$C og en decimalafstand på minimum $0.1^\circ$C samt en præcision på 5 $\%$ jfv. krav PF\_05.
+Temperaturføleren skal kommunikere via I2C og skal have en opløsning på minimum $\pm 0.5^\circ$C og en decimalafstand på minimum $0.1^\circ$C samt en præcision på 5 $\%$ jfv. krav PF\_06.
 
 \textbf{HF-Transceiver} \\
 HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart.
@@ -159,15 +159,14 @@ HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inklude
 Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 2VDC $\pm 50\%$.
 
 \textbf{PSU} \\
-PSU'en består af en batteriholder der skal kunne rumme 2 batterier af typen AAA med en spænding på 1.5VDC hver. Derudover indeholder PSU'en en boostkonverter der, når batterispændingen bliver tilstrækkelig lav fastholder en udgangsspænding på 3.3VDC til de resterende kredsløb på sensoren. Da mikroprocessoren kun opererer ned til 2.7VDC og Transceiveren kun kan opererer ned til 2.2VDC er der stadig omkring 30\% power tilbage på batterierne når brugerne må udskifte dem. Boostkonverter sørger her for, fuldt ud at udnytte batterierne. \todo[inline]{krav om funktionalitet ned til 1.8VDC}
-Kravene til PSU'en kan samles til følgende: 
+PSU'en består af en batteriholder der skal kunne rumme 2 batterier af typen AAA med en spænding på 1.5VDC hver. Derudover indeholder PSU'en en boostkonverter der, når batterispændingen bliver tilstrækkelig lav fastholder en udgangsspænding på 3.3VDC til de resterende kredsløb på sensoren. Da mikroprocessoren kun opererer ned til 2.7VDC og Transceiveren kun kan opererer ned til 2.2VDC er der stadig omkring 30\% power tilbage på batterierne når brugerne må udskifte dem. Boostkonverter sørger her for, fuldt ud at udnytte batterierne ned til en spænding på 1.8 VDC jfv. krav PR\_03. Kravene til PSU'en kan samles til følgende: 
 
 \begin{itemize}
 	\setlength\itemsep{0em}
 	\item 	PSU'en skal forsynes med 2 x AAA alkaline batterier (1.8VDC - 3.4 VDC)
-	\item	PSU'en skal booste batterispændingen til at drive mikroprocessoren, transceiveren, temperaturføleren, jordfugtmålerkredsløbet samt lysmåleren ned til 1.8 VDC. Transceiverens IRO-pin benyttes som boostkonverter enable.
+	\item	PSU'en skal booste batterispændingen til at drive mikroprocessoren, transceiveren, temperaturføleren, jordfugtmålerkredsløbet samt lysmåleren ned til 1.8 VDC batterispænding. Transceiverens IRO-pin benyttes som boostkonverter enable.
 	\item	PSU'en skal sørge for en batterilevetid på min. 1 år. jfv. krav PF\_02.
-	\item	Derudover skal PSU'en skal levere en udgangsspænding på 3.3VDC $\pm$ 10\% og kunne levere min. 100mA ned til en batterispænding på 1.8VDC. 
+	\item	Derudover skal PSU'en skal levere en udgangsspænding på 3.3VDC $\pm$ 10\% og kunne levere min. 100mA ned til en batterispænding på 1.8VDC. jvf. krav PR\_03.
 \end{itemize}
 
 

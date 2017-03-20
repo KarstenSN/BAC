@@ -1,6 +1,6 @@
 \newpage
 \section{PSU} \label{sec:psu}
-MCP1640CT-I/CHY fra Microchip \todo[inline]{lav henvisning til datablad på MCP1640} er valgt da den som udgangspunkt opfylder kravet om at levere min. 100mA ved 3.3VDC, dette krav holdes helt ned til en batterispænding på 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved standby mode trækkes kun 19$\mu$A men da vi er interesseret i udnytte batterilevetiden mest muligt, vælges at slutte helt for konverteren indtil der er brug for den. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med true disconnect og kan disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingsmodul. True disconnect virker ved at regulatordiode kobles ud af signalvejen, dette opnås via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu$A A. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pins'ne. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
+MCP1640CT-I/CHY fra Microchip, se bilag \ref{lib:psu_MCP1640_datasheet} for datablad, er valgt da den som udgangspunkt opfylder kravet om at levere min. 100mA ved 3.3VDC, dette krav holdes helt ned til en batterispænding på 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved "input bypass" mode trækkes kun 1$\mu$A. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med input-bypass og kan enables/disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingskredsløb. Input bypass virker ved at output kobles direkte til input via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu$A A. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pins'ne. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
 
 Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle referencer til komponenter efterfølgende henviser til dette diagram. 
 
@@ -27,7 +27,7 @@ For at fastlægge og fastholde udgangsspændingen på 3.3VDC lægges en spændin
 		&= 562k\Omega \times \bigg( \frac{3.3V}{1.21V}-1 \bigg)=970k\Omega
 \end{align}
 
-Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne værdi er tilgængelig i E48, E96 samt E192 serierne. Benyttes R31=976k$\Omega$ fås følgende udgangsspænding. 
+Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne værdi er tilgængelig i E192 serien. Benyttes R31=976k$\Omega$ fås følgende udgangsspænding. 
 
 \begin{align} \label{eq:boostkonverter_VFB_real}
 	V_{OUT} &= \frac{V_{REF} \times (R30+R31)}{R31} \\[6pt]
@@ -69,7 +69,9 @@ Hvor $ I_{SW_{max}} $ er beregnet på følgende måde:
 				&= \frac{110mA}{2}+ \frac{100mA}{1-0.709} = 398.75 mA 
 \end{align}
 
-De resterende beregniner for $ \Delta I_{L} $ og $ D_{max} $ findes i App. \todo[inline]{lav henvisning til appendix når dette er klar (pdf af Prime-udregninger)} 
+De resterende beregniner for $ \Delta I_{L} $ og $ D_{max} $ findes i Appendix \ref{appendix:psu}. 
+
+Da 3.83$\mu$H ikke findes som standardværdi, vælges værdien for L4 til 4.7$\mu$H.
 
 \subsubsection{Termiske overvejelser} \label{sec:psu_term}
 Der bør også lige ses på den effekt der afsættes i komponenten når konverteren yder sit maksimum for at sikre at temperaturkravene for konverteren overholdes. i Databladet er opgivet en max. continuous junction temp. på +125 $^\circ C$. For at se om dette krav overholdes kan temperaturen ved maksimal belastning (min. effektivitet) beregnes som følger: 
@@ -81,7 +83,7 @@ Der bør også lige ses på den effekt der afsættes i komponenten når konverte
 
 Herefter ganges op med $\theta_{JA}= 190.5^\circ C/W $ (Package terminal resistance) for at få den temperaturstigning der forsages. Denne lægges adderes med den ambienttemperatur som kredsløbet befinder sig i, her antaget til $T_{amb}= 60$ hvis sensorboksen er placeret i direkte sollys.
 
- \begin{align} \label{eq:boostkonverter_term2}
+\begin{align} \label{eq:boostkonverter_term2}
 	T_{max} &= (P_{Dissipated} \times \theta_{JA} ) + T_{amb} \\[6pt] 
 			   &= (82.5mW \times 190.5^\circ C/W) + 60\circ C = 75.7 \circ C 
 \end{align}
@@ -107,7 +109,12 @@ I Databladet anbefales et layout af konverteren med tilhørende eksterne kompone
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %				BOOST KONVERTER MODULTEST
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Boost konverter modultest} \label{sec:psu_beregninger}
+\subsection{Boost konverter modultest} \label{sec:psu_modultest}
 
+\input{hwimplementering/modultests/psu_modultest01}
+
+Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke du beregnede værdier fra afsnit \ref{sec:psu_beregninger}. Denne test kan ses foretaget herunder.
+
+\todo[inline]{indsæt psu-modultest02 når denne er klar.}
 
 \clearpage
