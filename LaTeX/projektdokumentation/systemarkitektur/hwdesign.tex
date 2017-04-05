@@ -156,7 +156,7 @@ Temperaturføleren skal kommunikere via I2C og skal have en opløsning på minim
 HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart.
 
 \textbf{Lysmåler} \\
-Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 2VDC $\pm 50\%$.
+Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 2VDC $\pm 50\%$.Dette er den reference som mikroprocessoren arbejder med når der skal detekteres dag eller nat. 
 
 \textbf{PSU} \\
 PSU'en består af en batteriholder der skal kunne rumme 2 batterier af typen AAA med en spænding på 1.5VDC hver. Derudover indeholder PSU'en en boostkonverter der, når batterispændingen bliver tilstrækkelig lav fastholder en udgangsspænding på 3.3VDC til de resterende kredsløb på sensoren. Da mikroprocessoren kun opererer ned til 2.7VDC og Transceiveren kun kan opererer ned til 2.2VDC er der stadig omkring 30\% power tilbage på batterierne når brugerne må udskifte dem. Boostkonverter sørger her for, fuldt ud at udnytte batterierne ned til en spænding på 1.8 VDC jfv. krav PR\_03. Kravene til PSU'en kan samles til følgende: 
@@ -203,7 +203,7 @@ På Figur \ref{fig:IBDsensor} ses Internt blok diagram af sensoren og herefter f
 			& A1 
 			& Spændingsindikation af lysintensitet på kontrolboksen
 			& $ 0-V_{dd} $ 	\\ \hline
-		humidt 	
+		humid 	
 			& A2 
 			& Spændingsindikation jordfugtighed		
 			& $ 0-V_{dd} $ 	\\ \hline

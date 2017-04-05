@@ -1,15 +1,15 @@
 \section{Lysmåler} 
-Låsmåleren er blot en fototransistor som vil give en strøm afhængig af hvor meget lys der indstråles. Der er valgt at bruge typen BPW96C. Kurve over strøm vs. indstrålet effekt ses i Figur \ref{fig:fotokurve}.  
+Lysmåleren er implementeret ved hjælp af en fototransistor som vil afgive en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96C \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kurve over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}.  
 
 \begin{figure}[H]
   \centering
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.3\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/fototrans.jpg}
 	\caption{Fototransistor}
 	\label{fig:fototrans}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.5\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/kurve.png}
 	\caption{Strøm vs. Indstråling}
 	\label{fig:fotokurve}
@@ -33,6 +33,8 @@ Låsmåleren er blot en fototransistor som vil give en strøm afhængig af hvor 
   \end{minipage}
 \end{figure}
 
+Det er valgt at fastlægge referencepunktet ved skumringstid til 2VDC jfv. mikroprocessorens videre arbejde med signalet. Derfor skal kredsløbet designet således at der ved den denne lysintensitet afgives 2VDC. Diagram over kredsløbet ses på \ref{fig:lysdiagram}. og her ses det at modstanden R13, skal vælges således at der fremkommer de ønskede 2VDC ved skumringstid. Da lysintensiteten er lidt svært at fastlægge præcis måtte det gøres empirisk. Dog vides det at fototransistoren ikke opfanger alle frekvenser i det synlige lys lige effektivt, en graf over dette forhold ses på Figur \ref{fig:lysspectrum}. Sammenholdes denne med sollysets spektrum på Figur \ref{fig:solspectrum} ses at der må forventes en ringere effektivitet da fototransistorens relative følsomhed jfv. Figur \ref{fig:lysspectrum} er helt nede på en faktor 0.2 hvis der antages at der opfanges lys fra ca. 450nm-1080nm (fototransistorens spektrum jfv. databladet) hvis der fortages en integration over disse forhold, nås der frem til at ca. $1/4$ af energien kan omsættes i fototransistoren.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{../fig/Lysmaeler/solspektrum.jpg}
@@ -40,10 +42,10 @@ Låsmåleren er blot en fototransistor som vil give en strøm afhængig af hvor 
 	\label{fig:solspectrum}
 \end{figure} 
 
-I følge \cite{lib:wiki_sunlight} er definition på fuld solskind 120$W/M^2$ hvilket omregnet bliver til 12$mW/cm^2$. Men da fototransistoren ikke vil opfange lige meget energi i frekvensområdet fra solen, vil den tilsvarende strøm være mindre end hvad der vises i \ref{fig:fotokurve}. I Figur \ref{fig:solspectrum} ses der hvordan energien er fordelt i sollys, samlignes den med Figur \ref{fig:lysspectrum} ses der at der bliver omdannet mest energi til elektricitet, ved en bølgelængde på 850nM. Antages der at fotodioden skal give en spænding på 3.3V ved fuld solskind og at det kun er $1/4$ del af energien der bliver omdannet, aflæses der 10mA ved 2.5mW på Figur \ref{fig:fotokurve} og der vil være brug for en modstand i størrelsen:
+For at finde en passende værdi for R13, er der foretaget en række test for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. På baggrund af disse kan R13 beregnes på følgende måde. 
+
 
 \begin{equation}
-	R13=\dfrac{3.3V} {10mA}=330\Omega
+	R13=\dfrac{V_{skumring}} {I_{skumring}}= \dfrac{2VDC} {0.3mA} = 6.6 k\Omega
 \end{equation}
 
-Dog ønsker vi at detektere solopgang og solnedgang hvor effekten er mindre. R13 kan derfor med fordel ændres til en større værdi for at give en større spænding ved lav sol. En test skal laves for at bestemme den korrekte værdi. 

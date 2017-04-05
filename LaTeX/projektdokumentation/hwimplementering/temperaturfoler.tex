@@ -3,13 +3,13 @@ Der er blevet designet to typer temperaturføler. En med en analog udgang som gi
 
 \begin{figure}[H]
   \centering
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.3\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Temperatur/temp_Imt.png}
 	\caption{Diagram over den analoge temperaturføler}
 	\label{fig:atemp}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.3\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Temperatur/temp_i2c.png}
 	\caption{Diagram over den digitale temperaturføler}
 	\label{fig:dtemp}
@@ -30,9 +30,9 @@ Denne opløsning sætter begrænsningen af hvor mange decimaler temperaturen kan
 
 Hvilket ikke stemmer overens med krav: \textit{PF\_07}. For at få præcisionen ned til de to decimaler som kræves gøres der derfor brug af TMP74B som har et I2C interface og en opløsning på $ 0.0625^{\circ}C $ og en præcision på $ \pm 0.5^{\circ}C $. Se Figur \ref{fig:dtemp}. A0,A1,A2 bruges til at sætte en adresse, så man således kan have flere temperatur følere på en I2C bus. Dette er dog ikke nødvendigt i dette system og adressen er hermed sat til 0. AL kan bruges til at give et interrupt når temperaturen kommer over et bestemt niveau. Dette gør vi dog hellere ikke brug af i vores design.  
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{../fig/Temperatur/kurve.jpg}
+	\includegraphics[width=0.3\textwidth]{../fig/Temperatur/kurve.jpg}
 	\caption{Output vs temperatur for LMT86}
 	\label{fig:tempkurve}
 \end{figure}  
