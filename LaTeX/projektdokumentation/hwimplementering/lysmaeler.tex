@@ -1,51 +1,41 @@
 \section{Lysmåler} 
-Lysmåleren er implementeret ved hjælp af en fototransistor som vil afgive en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96C \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kurve over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}.  
+Lysmåleren er implementeret ved hjælp af en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.25\textwidth]{../fig/Lysmaeler/diagram.png}
+	\caption{Diagram over lysmåleren}
+	\label{fig:lysdiagram}
+\end{figure} 
+
+Afhængig af hvilken lysintensitet der opfanges af fototransistoren vil denne afgive en collectorstrøm i et området fra 2.5-7.$5mA$ jvf. databladet. Kurven over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}. Her skal det bemærkes at kurven baserer sig på en forsyningsspænding på 5VDC, der må derfor forventes en mindre collectorstrøm end den afbilledet. Derudover baserer grafen sig på en bølgelængde på 950nm, dette er fototransistorens mest effektive område. jfv. Figur \ref{fig:lysspectrum} derfor må der yderligere forventes en lavere collectorstrøm da fototransistoren opsætter en mindre effekt end afbilledet på grafan. 
 
 \begin{figure}[H]
   \centering
-  \begin{minipage}[b]{0.3\textwidth}
-	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/fototrans.jpg}
-	\caption{Fototransistor}
-	\label{fig:fototrans}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.5\textwidth}
+  \begin{minipage}[b]{0.45\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/kurve.png}
 	\caption{Strøm vs. Indstråling}
 	\label{fig:fotokurve}
   \end{minipage}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[H]
-  \centering
-  \begin{minipage}[b]{0.4\textwidth}
-	\includegraphics[width=0.5\textwidth]{../fig/Lysmaeler/diagram.png}
-	\caption{Diagram over lysmåleren}
-	\label{fig:lysdiagram}
-  \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.45\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/wavelength.png}
 	\caption{Fototransistorens sensitivitet vs. bølgelængde}
 	\label{fig:lysspectrum}
   \end{minipage}
 \end{figure}
 
-Det er valgt at fastlægge referencepunktet ved skumringstid til 2VDC jfv. mikroprocessorens videre arbejde med signalet. Derfor skal kredsløbet designet således at der ved den denne lysintensitet afgives 2VDC. Diagram over kredsløbet ses på \ref{fig:lysdiagram}. og her ses det at modstanden R13, skal vælges således at der fremkommer de ønskede 2VDC ved skumringstid. Da lysintensiteten er lidt svært at fastlægge præcis måtte det gøres empirisk. Dog vides det at fototransistoren ikke opfanger alle frekvenser i det synlige lys lige effektivt, en graf over dette forhold ses på Figur \ref{fig:lysspectrum}. Sammenholdes denne med sollysets spektrum på Figur \ref{fig:solspectrum} ses at der må forventes en ringere effektivitet da fototransistorens relative følsomhed jfv. Figur \ref{fig:lysspectrum} er helt nede på en faktor 0.2 hvis der antages at der opfanges lys fra ca. 450nm-1080nm (fototransistorens spektrum jfv. databladet) hvis der fortages en integration over disse forhold, nås der frem til at ca. $1/4$ af energien kan omsættes i fototransistoren.
+At fototransistoren opfanger en lavere effekt end den angivet ved 900nm, skyldes sollyset spektrale komposition. Her ligger det visuelle lys i området 400-700nm. jfv. Figur \ref{fig:lysspectrum}. Sammenholdes denne med sollysets spektrum på Figur \ref{fig:solspectrum} ses at der må forventes en ringere effektivitet da fototransistorens relative følsomhed jfv. Figur \ref{fig:lysspectrum} er helt nede på en faktor 0.2 hvis der antages at der opfanges lys fra ca. 450nm-1080nm (fototransistorens spektrum jfv. databladet) hvis der fortages en integration over disse forhold, nås der frem til at ca. $1/4$ af energien kan omsættes i fototransistoren.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../fig/Lysmaeler/solspektrum.jpg}
+	\includegraphics[width=0.6\textwidth]{../fig/Lysmaeler/solspektrum.png}
 	\caption{Spektrum over energien i sollys. Kilde: \cite{lib:wiki_sunlight}}
 	\label{fig:solspectrum}
-\end{figure} 
+\end{figure}
 
-For at finde en passende værdi for R13, er der foretaget en række test for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. På baggrund af disse kan R13 beregnes på følgende måde. 
-
+Det er valgt at fastlægge en referencespænding ved skumringstid til 1VDC, dette er halvdelen af mikroprocessorens egen reference på indgangen. Hermed opnås størst mulig dynamik i målingen. Dette betyder at en spænding på $<$1VDC detektere nat, og en spænding $>$1VDC detektere dag. Derfor skal kredsløbet designes således at der ved den denne lysintensitet afgives 1VDC over modstanden R20. For at finde en passende værdi for R20, er der foretaget en række empiriske tests for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. På baggrund af disse kan R20 beregnes på følgende måde. 
 
 \begin{equation}
 	R13=\dfrac{V_{skumring}} {I_{skumring}}= \dfrac{2VDC} {0.3mA} = 6.6 k\Omega
 \end{equation}
-
