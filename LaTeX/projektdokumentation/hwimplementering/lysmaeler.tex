@@ -1,5 +1,5 @@
 \section{Lysmåler} 
-Lysmåleren er implementeret ved hjælp af en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
+Lysmåleren er implementeret ved hjælp af en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
 
 \begin{figure}[H]
 	\centering
@@ -8,7 +8,7 @@ Lysmåleren er implementeret ved hjælp af en fototransistor som afgiver en str�
 	\label{fig:lysdiagram}
 \end{figure} 
 
-Afhængig af hvilken lysintensitet der opfanges af fototransistoren vil denne afgive en collectorstrøm i et området fra 2.5-7.$5mA$ jvf. databladet. Kurven over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}. Her skal det bemærkes at kurven baserer sig på en forsyningsspænding på 5VDC, der må derfor forventes en mindre collectorstrøm end den afbilledet. Derudover baserer grafen sig på en bølgelængde på 950nm, dette er fototransistorens mest effektive område. jfv. Figur \ref{fig:lysspectrum} derfor må der yderligere forventes en lavere collectorstrøm da fototransistoren opsætter en mindre effekt end afbilledet på grafan. 
+Afhængig af hvilken lysintensitet der opfanges af fototransistoren vil denne afgive en $I_{C}$ i et forventet område fra 2.5-7.$5mA$ jvf. databladet. Kurven over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}. Her skal det bemærkes at kurven baserer sig på en forsyningsspænding på 5VDC, der må derfor forventes en mindre $I_{C}$ end den afbilledet. Derudover baserer grafen sig på en bølgelængde på 950nm, dette er fototransistorens mest effektive område. jfv. Figur \ref{fig:lysspectrum} derfor må der yderligere forventes en lavere $I_{C}$ da fototransistoren omsætter en mindre effekt end afbilledet på grafen. 
 
 \begin{figure}[H]
   \centering
@@ -34,8 +34,36 @@ At fototransistoren opfanger en lavere effekt end den angivet ved 900nm, skyldes
 	\label{fig:solspectrum}
 \end{figure}
 
-Det er valgt at fastlægge en referencespænding ved skumringstid til 1VDC, dette er halvdelen af mikroprocessorens egen reference på indgangen. Hermed opnås størst mulig dynamik i målingen. Dette betyder at en spænding på $<$1VDC detektere nat, og en spænding $>$1VDC detektere dag. Derfor skal kredsløbet designes således at der ved den denne lysintensitet afgives 1VDC over modstanden R20. For at finde en passende værdi for R20, er der foretaget en række empiriske tests for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. På baggrund af disse kan R20 beregnes på følgende måde. 
+Det er valgt at fastlægge en referencespænding ved skumringstid til 1VDC, dette er halvdelen af mikroprocessorens egen reference på indgangen. Hermed opnås størst mulig dynamik i målingen. Dette betyder at en spænding på $<$1VDC skal detektere nat, og en spænding $>$1VDC skal detektere dag. Derfor skal kredsløbet designes således at der ved den denne lysintensitet afgives 1VDC over modstanden R20. For at finde en passende værdi for R20, er der foretaget en række empiriske tests for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. \\
+For at fastlægge $I_{C}$ ved skumring, sættes R20 = 4k7$\Omega$ som arbitrær værdi og der foretages 2 tests (solnedgang og solopgang) hvor data for hhv. spænding og strøm logges. Her efter findes dét punkt hvor referencespændingen ønskes fast, og modstandsværdien findes herudfra.
+På Figur \ref{fig:test_måling1}, \ref{fig:test_måling2} og \ref{fig:test_måling3} ses de 3 testmålinger. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/Maeling1_ch1.pdf}
+	\caption{Dataopsamling1: Dato: 08/04, kl.15.40-20.30, Vejr: overskyet, Solnedgang}
+	\label{fig:test_måling1}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/Maeling2_ch1.pdf}
+	\caption{Dataopsamling2: Dato: 10/04, kl.20.00-08.00, Vejr: klart, Solopgang}
+	\label{fig:test_måling2}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/Maeling2_ch2.pdf}
+	\caption{Dataopsamling2: Dato: 10/04, kl.20.00-08.00, Vejr: klart, Solopgang}
+	\label{fig:test_måling3}
+\end{figure} 
+
+På Figur \ref{fig:test_måling3} ses, at ved solopgang udvælges et punkt som reference for $I_{C}$ her fås at $I_{C}=20 \mu A$, dette verificeres med testen for solnedgang på Figur \ref{fig:test_måling1}. Sammenholdes disse, (begge med en spænding på 150mV) fås et passende referencepunkt.  
+Da der ønskes 1VDC ved en $I_{C}=20 \mu A$, kan R20 korrigerede værdi beregnes på følgende måde. 
 
 \begin{equation}
-	R13=\dfrac{V_{skumring}} {I_{skumring}}= \dfrac{2VDC} {0.3mA} = 6.6 k\Omega
+	R20=\dfrac{V_{skumring}} {I_{skumring}}= \dfrac{1VDC} {20 \mu A} = 50k\Omega
 \end{equation}
+
+En realistisk værdi R20 kan findes til $47k\Omega$, dette er derfor valgt. 
