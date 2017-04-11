@@ -1,6 +1,6 @@
 \newpage
 \section{PSU} \label{sec:psu}
-MCP1640CT-I/CHY fra Microchip, se bilag \ref{lib:psu_MCP1640_datasheet} for datablad, er valgt da den som udgangspunkt opfylder kravet om at levere min. 100mA ved 3.3VDC, dette krav holdes helt ned til en batterispænding på 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved "input bypass" mode trækkes kun 1$\mu$A. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med input-bypass og kan enables/disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingskredsløb. Input bypass virker ved at output kobles direkte til input via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu$A A. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pins'ne. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
+Som boostkonverter til PSU'en er modellen MCP1640CT-I/CHY\cite{lib:psu_MCP1640_datasheet} fra Microchip valgt da den som udgangspunkt opfylder krav PF\_03 om at levere min. 100mA ned til 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved "input bypass" mode trækkes kun 1$\mu$A. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med input-bypass og kan enables/disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingskredsløb. Input bypass virker ved at output kobles direkte til input via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu A$. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pin'en. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
 
 Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle referencer til komponenter efterfølgende henviser til dette diagram. 
 
@@ -15,7 +15,7 @@ Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle ref
 %				BOOST KONVERTER BEREGNINGER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Boost konverter} \label{sec:psu_beregninger}
+\subsection{Boost konverter beregninger} \label{sec:psu_beregninger}
 Alle beregninger kan findes i Appendix \ref{appendix:psu}.
 
 
@@ -90,6 +90,9 @@ Herefter ganges op med $\theta_{JA}= 190.5^\circ C/W $ (Package terminal resista
 
 
 \subsubsection{PCB-udlæg overvejelser} \label{sec:psu_PCB}
+
+\paragraph{Sensor ver2}
+
 I Databladet anbefales et layout af konverteren med tilhørende eksterne komponenter, det er forsøgt fulgt bedst muligt,for at sikre størst mulig effektivitet af konverteren, samt mindst mulig støj. På Figur \ref{fig:boostkonverter_layout_datasheet} ses layout forslag og på Figur \ref{fig:boostkonverter_layout_PCB} ses det aktuelle layout fra sensor PCB'et. 
 
 \begin{figure}[H]
@@ -106,6 +109,10 @@ I Databladet anbefales et layout af konverteren med tilhørende eksterne kompone
 	\label{fig:boostkonverter_layout_PCB}
 \end{figure}
 
+\paragraph{Sensor ver3}
+
+\todo[inline]{skriv note om nyt layout ver3}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %				BOOST KONVERTER MODULTEST
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,6 +122,6 @@ I Databladet anbefales et layout af konverteren med tilhørende eksterne kompone
 
 Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke du beregnede værdier fra afsnit \ref{sec:psu_beregninger}. Denne test kan ses foretaget herunder.
 
-\todo[inline]{indsæt psu-modultest02 når denne er klar.}
+\todo[inline]{indsæt psu-modultest02 (ver3) når denne er klar.}
 
 \clearpage
