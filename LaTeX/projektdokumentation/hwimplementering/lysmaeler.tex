@@ -67,3 +67,27 @@ Da der ønskes 1VDC ved en $I_{C}=20 \mu A$, kan R20 korrigerede værdi beregnes
 \end{equation}
 
 En realistisk værdi R20 kan findes til $47k\Omega$, dette er derfor valgt. 
+
+\subsection{Lysmåler modultest} 
+Der udføres en test fra kl. 15.00 d. 10/04 til kl.08.00 d. 11/04. får at verificere at den korrekte $V_{out}$ fås ved solopgang og solnedgang. Testen ses på Figur \ref{fig:test_måling4}. Her bemærkes det at $V_{out}=1VDC$ lige omkring solopgang og solnedgang. Ydermere bemærkes det at overgangene fra dag/nat og nat/dag er tilfredsstillende konkrete, så der ikke behøves at foretages yderligere for at få en god detektering. Overgangene kan ses på Figur \ref{fig:test_måling4_zoom1} og \ref{fig:test_måling4_zoom2}. Her ses det også at der er en smule afvigelse i af $V_{out}=1$ og $I_{out}=20 \mu A$ jfv. ovenfår så skyldes dette, at der er benyttet en $47k\Omega$, men beregningen kommer frem til $50k\Omega$. Deraf afvigelsen.    
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/testgraf.png}
+	\caption{Dataopsamling3: Dato: 10-11/04, kl.15.00-08.00, Vejr: klart, Solnedgang + solopgang}
+	\label{fig:test_måling4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/Lysmaeler/testgraf_zoom_solnedgang.png}
+	\caption{Zoom på overgang fra dag til nat detektion}
+	\label{fig:test_måling4_zoom1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/Lysmaeler/testgraf_zoom_solopgang.png}
+	\caption{Zoom på overgang fra nat til dag detektion}
+	\label{fig:test_måling4_zoom2}
+\end{figure}
