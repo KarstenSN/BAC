@@ -21,7 +21,7 @@ Hvor $m_w$ er massen af væske, $m_{wet}$ er massen af den fugtige jord og $\eta
 
 Det er derfor nu muligt at bestemme en jordfugtighed uden at skulle måle volumen af prøven. Til vejning af jordprøver er der blevet brugt en vægt af producenten \texttt{Sartorius} model \texttt{QUINTIX2102-1S} med en præcision på $\pm0.01g$.
 
-\subsubsection{Resistiv måling}
+\subsection{Resistiv måling}
 Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}.  
 
 
@@ -77,7 +77,9 @@ Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
 \end{figure} 
  
 Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvilket må siges ikke at leve op til kravet om 5\% præcision. 
-\subsubsection{Kapacitiv måling}
+
+
+\subsection{Kapacitiv måling}
 Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
 
 \begin{figure}[H]
@@ -115,7 +117,63 @@ Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gang
 	C = \frac{8.854\cdot 10^{-12}\cdot 80 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 4.00pF
 \end{equation} 
 
-Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude ændringen når der sættes et AC signal igennem eller at måle faseændringen. Se Figur \ref{fig:jdig1} og \ref{fig:jdig2}.     
+Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det viste sig at kapaciteten lå højere end det forventede. Dette skyldes at der er udstråling fra banerne som der er svære at tage med i beregningerne. Se figur \ref{fig:spyd1},\ref{fig:spyd2},\ref{fig:spyd3},\ref{fig:spyd4}. Type 1 og 2 er meget ens. De danner begge en kapacitet mellem stelplanet og midterbanen. Størstedelen af kapaciten vil ligge for enden af spyddet hvor banen er tykkest på Type 1 og gaffelformet på Type 2. Dog er det ikke ligegyldigt hvor dybt spyddes stikkes ned i jorden da der også vil dannes en kapacitet mellem fødebanen og stelplanet. For at undgå at spyddet skal stikkes ned i en bestemt højde er Type 2 og 3 blevet lavet. Type 3 fører en bane på oversiden af printet hvor der ligger en identisk bane på bagsiden. På den måde skulle kapaciteten ikke ændre sig når der kommer vand længere op end til "diamanten". Test viste dog at kapaciteten alligevel varierede. Type 4 er delt med et stelplan således at banerne ikke kan se hinanden. Dette print var dog det der performede dårligst da det kun virkede når der lå vand mellem banerne. Kom der først vand ud på stelplanet blev her dannet en kapacitet som var sammenligning med det der var mellem pladerne og virkningen blev herved reduceret. Der blev herefter testet i en så og prikle jord med Type 1,2 og 3 for sammenhæng mellem kapacitet og fugtighed. Se Figur \ref{fig:graffugt}.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.4\textwidth]{../fig/Jordfugt/type1.jpg}
+    \caption{Type 1 jordspyd}
+    \label{fig:spyd1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{../fig/Jordfugt/type2.jpg}
+    \caption{Type 2 jordspyd}
+    \label{fig:spyd2}
+  \end{minipage}
+\end{figure}
+
+
+
+\begin{figure}[H]
+  \centering
+  \hfill
+    \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{../fig/Jordfugt/type3.jpg}
+    \caption{Type 3 jordspyd}
+    \label{fig:spyd3}
+  \end{minipage}
+  \hfill
+    \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{../fig/Jordfugt/type4.jpg}
+    \caption{Type 4 jordspyd}
+    \label{fig:spyd4}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/moleopstilling.jpg}
+	\caption{Måleopstilling. Alle målinger er foretaget med LCR meter ESCORT ELC-133A ved 10kHz}
+	\label{fig:graffugt}
+\end{figure}  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/capVsSoil.PNG}
+	\caption{Kapacitet vs. jordfugtighed. Her er målt i en så og priklejord}
+	\label{fig:graffugt}
+\end{figure}  
+
+Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i deres udslag, men at Type 3 har et pænt lineært forhold op til omkring 40\%. Afvigelsen skyldes at ved 40\% bliver jorden så våd at der begynder at ligge mere vand på spyddet end hvad der er i jorden. Derfor bliver kapaciteten højere end hvad den burde. Der kan nu opstilles en formel til beregning af fugtigheden af jorden hvis kapaciten af spyddet er kendt for både tør og våd. 
+
+\begin{equation}
+	\theta = \frac{C_{weat} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
+\end{equation}
+
+
+Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude\cite{lib:cap_meas} ændringen når der sættes et AC signal igennem eller at måle faseændringen.  
 
 \begin{figure}[H]
   \centering
@@ -132,27 +190,40 @@ Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensa
   \end{minipage}
 \end{figure}
 
-På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. Det antages i det efterfølgende at kapaciteten vil variere i området 1pF til 60pF \cite{lib:cap_meas}. Ved at gøre denne antagelse kan vi nu udregne den optimale load af kondensatoren for at samlet give en faseændring på 90 grader. Overføringsfunktionen for et RC-højpas-led ses i ligning \ref{equ:j1}. 
+På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. Det er blevet valgt at designe et målekredsløb til Type 3 jordspyddet som har en kapacitet varierende fra 18pF til omkring 220pF. Opstilles overføringsfunktionen for et 1. ordens RC-højpasled kan den optimale load af kondensatoren udregnes. 
 
 \begin{equation}
 	G(s) = \dfrac{R}{\dfrac{1}{s\cdot C} \cdot R}
 	 \label{equ:j1}
 \end{equation}  
-På Figur \ref{fig:jf1} ses der et plot af fase ændringen med en modstand som eksperimentelt er bestemt til 160k$\Omega$ og en frekvens på 100kHz. Dette kan dog justeres under implementeringen.  
+
+På Figur \ref{fig:jf1} ses der et plot af fase ændringen med en modstand udregnet til 22k$\Omega$ og en frekvens på 100kHz. Det ses at fasen ændres totalt med omkring $55^\circ$. 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/fase_vs_cap.PNG}
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/fase_vs_cap.PNG}
 	\caption{Faseændring versus kapaciteten}
 	\label{fig:jf1}
-\end{figure}   
-For at måle kapacitetsændringen behøves der derfor en frekvens på 100kHz. Denne kan komme fra mikroprocessoren, men da det vil være en firkantspænding kræves det derfor en hård filtrering. Om filtreringen sker før eller efter kapaciteten, er ligegyldigt matematisk set. Men det vil give et bedre støjimmunt kredsløb ved at lave filtreringen efter. På Figur \ref{fig:jf2} ses diagrammet hvordan kredsløbet kan realiseres. U8B er en spændingsfølger som sidder for at give en høj indgangsimpedans, således fasen kan styrres med R25. Kredsløbet \cite{lib:bandpass} bestående af R22, R21, R16, C33, C34 er et båndpasfilter med øverføringsfunktion som ses i ligning \ref{equ:j2}. Udligning af denne ses i bilag \todo[inline]{reference}.   
+\end{figure} 
 
+Der er blevet designet et kredløb til at konvertere faseændringen om til en DC-spænding som hurtigt kan aflæses af mikroprocessorens ADC. Se Figur \ref{fig:jf2}. Kredsløbet virker ved at der sættes en 100kHz firkant spænding igennem jordspyddet som der loades af R25. Herefter sidder en spændingsfølger således R25 kan vælges uden forbehold. Firkanten bliver nu filtreret af et båndpass-filter  således der ligger en sinus på udgangen af U12A. Denne sinus bliver nu konverteret om til en firkant igen og kommer nu ind i XOR gaten U10A som giver en PWM afhængig af faseforskellen. På C26 vil der blive opladet en DC-spænding som herefter vil blive forstærket op af U12B for at give et bedere range til ADC'en. 
+  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Jordfugt/diagram3.PNG}
+	\caption{Diagram over kredsløb til måling af faseændring}
+	\label{fig:jf2}
+\end{figure}  
+
+Overføringsfunktionen for båndpass-filteret opstilles.
+ 
 \begin{equation}
 	G(s) = -\dfrac{R2 C1 R3}{C1 C2 R1 R2 R3 s^2 + C1 R1 R2 s + C2 R1 R2 s + R1+ R2}
 	 \label{equ:j2}
 \end{equation} 
 
-Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et 2. ordens system og har derfor en dæmpningsfaktor som er tæt realateret til quality-factor eller Q. Q siger noget om hvor snæver båndbredden er i systemet. Komponentværdierne er bestemt via ligning  \ref{equ:j3}, \ref{equ:j4}, \ref{equ:j5}. Hvor A er forstærkningen $\omega_0$ er $2\pi f$ hvor $f$ er frekvensen og C er værdien af C1 og C2.
+Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et 2. ordens og har derfor en dæmpningsfaktor som er tæt realateret til quality-factor eller Q. Q siger noget om hvor snæver båndbredden er i systemet. Komponentværdierne er bestemt via ligning  \ref{equ:j3}, \ref{equ:j4}, \ref{equ:j5}. Hvor A er forstærkningen $\omega_0$ er $2\pi f$ hvor $f$ er frekvensen og C er værdien af C1 og C2.
 
 \begin{equation}
 	R1 = \dfrac{Q}{A\cdot \omega _0 \cdot C}
@@ -169,15 +240,8 @@ Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et
 	 \label{equ:j5}
 \end{equation} 
   
-Sættes forstærkningen til A=2 og Q=10, $f$=100kHz og C=470pF. Fås komponentværdierne som på Figur \ref{fig:jf2}. På Figur \ref{fig:j6} ses der at forstærkningen ligger på 2 ved 100kHz som forventet og på Figur \ref{fig:j7} ses at der er en faseændring på 0 grader. Dog vil faseændringen være $180^\circ$ da det er en inverterende forstærker. Derfor sættes der en komporator på udgangen af U12A for at vende fasen til $^\circ$ igen. Dog vil der være et propagation delay som vil give en lille faseforskydelse. Ved at køre frekvensen fra mikroprocessoren og udgangen af U8A ind igennem en XOR gate (U10A) vil der blive opladet en DC på C26 som vil afhænge af faseforskydelsen. Ved en faseforskydelse på $180^\circ$ vil der ligge 3.3V og ved en faseforskydelse på $90^\circ$ vil der ligge 1.65V. Da vi kun skal detektere en faseforskydelse på maksimalt $90^\circ$ er der som det sidste led designet en ikke inverterende forstærker, med en forstærkning på 2, for at få fuldt dynamisk range. D5 og D6 sidder for at beskytte mod ESD. På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten.    
- 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{../fig/Jordfugt/diagram3.PNG}
-	\caption{Diagram over kredsløb til måling af faseændring}
-	\label{fig:jf2}
-\end{figure}  
+Sættes forstærkningen til A=2 og Q=10, $f$=100kHz og C=470pF. Fås komponentværdierne som på Figur \ref{fig:jf2}. På Figur \ref{fig:j6} ses der at forstærkningen ligger på 2 ved 100kHz som forventet og på Figur \ref{fig:j7} ses at der er en faseændring på 0 grader. Dog vil faseændringen være $180^\circ$ da det er en inverterende forstærker. Derfor sættes der en komporator på udgangen af U12A for at vende fasen til $0^\circ$ igen. Dog vil der være et propagation delay som vil give en lille faseforskydelse. Ved at køre frekvensen fra mikroprocessoren og udgangen af U8A ind igennem en XOR gate (U10A) vil der blive opladet en DC på C26 som vil afhænge af faseforskydelsen. Ved en faseforskydelse på $180^\circ$ vil der ligge 3.3V og ved en faseforskydelse på $90^\circ$ vil der ligge 1.65V. Da vi kun skal detektere en faseforskydelse på maksimalt $90^\circ$ er der som det sidste led designet en ikke inverterende forstærker, med en forstærkning på 2, for at få fuldt dynamisk range. På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten.    
+  
 
 \begin{figure}[H]
   \centering
@@ -201,5 +265,101 @@ Sættes forstærkningen til A=2 og Q=10, $f$=100kHz og C=470pF. Fås komponentv�
 	\label{fig:j8}
 \end{figure}
  
+ 
+Da kredsløbet blev monteret på et print (sensor\_3.brd som bruger type 4 jordspyd) stod det hurtigt klart at D5 var ødelæggende for signalet, da den klippede den negative del af pulsen under -0.6V. U8B var fejlagtigt en komporator og denne duede derfor ikke som spændingsfølger. Se figur \ref{fig:scopeU8B}. Endvidere var C35 monteret forkert da den burde sidde parallelt med R28. Det viste sig også at faseforsinkelsen igennem kredsløbet blev så stor, at indputtet til U1A ben A skulle have sin egen separate puls, som kunne forsinkes via software. 
 
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Jordfugt/scopeR25.jpg}
+    \caption{Måling over R25 ved tørt print}
+    \label{fig:scopeR25}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Jordfugt/scopeU8B.jpg}
+    \caption{Måling på udgang af U8B (øverste) og over R25. Støj skyldes der holdes en finger på jordspyddet}
+    \label{fig:scopeU8B}
+  \end{minipage}
+\end{figure}
+
+Designet blev herefter lavet om da der samtidig blev designet et nyt printudlæg til sensoren (sensor\_4.brd) grundet andre designfejl. Her er der brugt Type 3 jordspyd. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../fig/Jordfugt/diagram4.PNG}
+	\caption{Målekredsløb ver. 2}
+	\label{fig:j9}
+\end{figure}  
+
+Det nye design ses på Figur \ref{fig:j9}. Her er der indført en MOSFET transistor således at mikroprocessoren kan tænde og slukke for måle-ground. Dette gøres for at spare strøm når sensoren er lagt i sleep-mode. I mikroprocessoren er der en automatisk kalibrerings funktion som køres ved tryk på connect knappen. Kredsløbet voldte stadig problemer. Det første der blev iagttaget var at den ikke-inverterende forstærker U12B var inverterende men ikke gav udslag som den ville hvis benene 5 og 6 var vendt forkert. Der blev kigget i databladet for U12 og der burde ikke være nogle design fejl. Forstærkeren blev afmonteret således resten af kredsløbet kunne blive testet. Her viste det sig at kredsløbet allerede gav fuldt udslag ved 160pF hvilket er 50\% af fuld kapacitet og at udgangsspændingen herefter faldt en smule. Fuldt udslag burde ikke kunne opstå da der maksimalt burde være en faseforskydelse på omkring $55^\circ$ og at fuldt udslag opstår ved $90^\circ$. På Figur \ref{fig:j9} ses der et scopebillede ved 0\% fugtighed. Den automatiske kalibrerings-funktion er blevet kørt og der ligger 357mV rms på C26. At spændingen ikke kan komme ned på 0V skyldes propagation-delayed i U8A som gør at pulsen bliver bredere og at mikroprocessoren derfor ikke kan forskyde 100kHz\_delayed så den rammer præcis.   
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_2.PNG}
+	\caption{Scopebilled ved 0\% fugtighed. Rød er målt på C26, Grøn U10A ben 4, Gul 100kHz delayed og Grøn er U10A ben 2.}
+	\label{fig:j9}
+\end{figure}  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_3.PNG}
+	\caption{Scopebilled ved jordspyd stukket ca. halvt ned i vand. Her ses allerede fuldt udslag}
+	\label{fig:j10}
+\end{figure}  
+
+Det blev nu undersøgt om det kunne skyldes at R22 var udregnet forkert. Derfor blev overføringsfunktionen opskrevet endnu en gang for båndpass-filteret dog inkluderet med kapaciteten fra jordspydet. 
+
+\begin{footnotesize}
+\begin{equation}
+	G(s) = \frac{s^2 C_{soil} R2 C1 R3}{C1 C2 C_{soil} R1 R2 R3 S^3 + C1 C2 R2 R3 S^2 + C1 C_{soil} R1 R2 s^2 
+	+ C1 R2 s+ C2 R2 s + C_{soil} R1 s+ C_{soil} R2 s +1 }
+\end{equation} 
+\end{footnotesize}
+
+Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig:j6} og \ref{fig:j7}. Men blev frekvensen sat til 87kHz skete der noget som måske kunne forklare det observerede. Se Figur \ref{fig:j11}. Her ses der et pludseligt faseskift på $90^\circ$ ved omkring 160pF. Faseskiftet vil ikke kunne ses på udgangsspændingen da der ikke gives nogen indikation af positiv eller negativ forskydelse. Det passer fint med at spændingen falder ved en kapacitet større end 160pF. Herefter blev frekvensen fra mikroprocessoren målt og denne lå på 86kHz. Herefter blev knækfrekvensen i båndpass-filteret målt og denne lå på 88 kHz. Se figur \ref{fig:j12}. Afvigelsen skyldes at C33 og C34 var monteret med 10\% tolerance kondensatorer. Men da knækfrekvensen stemte fint overens med frekvensen fra mikroprocessoren kunne fejlen ikke være det. Det blev forsøgt at ændre Q-værdien både op og ned i filteret, men lige meget hjalp det.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/system_respons_87khz.PNG}
+	\caption{Faseændring ved 87kHz}
+	\label{fig:j11}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_8.PNG}
+	\caption{Måling af knækfrekvens i båndpass-filteret}
+	\label{fig:j12}
+\end{figure} 
+ 
 \clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
