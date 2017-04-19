@@ -206,15 +206,19 @@ På Figur \ref{fig:jf1} ses der et plot af fase ændringen med en modstand udreg
 	\label{fig:jf1}
 \end{figure} 
 
-Der er blevet designet et kredløb til at konvertere faseændringen om til en DC-spænding som hurtigt kan aflæses af mikroprocessorens ADC. Se Figur \ref{fig:jf2}. Kredsløbet virker ved at der sættes en 100kHz firkant spænding igennem jordspyddet som der loades af R25. Herefter sidder en spændingsfølger således R25 kan vælges uden forbehold. Firkanten bliver nu filtreret af et båndpass-filter  således der ligger en sinus på udgangen af U12A. Denne sinus bliver nu konverteret om til en firkant igen og kommer nu ind i XOR gaten U10A som giver en PWM afhængig af faseforskellen. På C26 vil der blive opladet en DC-spænding som herefter vil blive forstærket op af U12B for at give et bedere range til ADC'en. 
-  
+\subsection{Målerkredsløb ver.01}
+
+Der er designet et kredsløb der konverterer faseændringen om til en DC-spænding som herefter samples af mikroprocessorens ADC. Dette kredsløb ses på Figur \ref{fig:jf2}. Kredsløbet fungerer ved at der påtrykkes en 100kHz 3.3V firkant-spænding over jordspyddet som loades af R25. Dette efterfølges af en spændingsfølger således R25 kan vælges uden forbehold for det efterfølgende kredsløb. Firkant-spændingen filtreres herefter af et båndpass-filter således at der ligger en sinus på udgangen af U12A. Denne sinus er $180^\circ$ faseforskudt da U12A er koblet som en inverterende forstærkter, derfor sættes der en komparator på udgangen af U12A for at returnere fasen til $0^\circ$. Til orientering, vil der her blive introduceret et propagation delay som vil bidrage en smule til faseforskydelsen, der forventes i omegnen af $80ns$ \cite{lib:comp_MCP6561_datasheet} der kan derfor vælges at se bort fra dette i denne situation. Ved at køre frekvensen fra mikroprocessoren samt udgangen af U8A igennem en XOR-gate (U10A). U10A omdanner faseforskellen af de 2 signaler til et PWM signal, dette variere med faseforskellen således at der fås en lav duty-cycle ved lille faseforskel og $50\%$ duty cycle ved maksimal faseforskydning, dette signal vil oplade en DC-spænding på C26 som vil afhænge af faseforskydelsen. denne spænding forstærkes til slut op af U12B for at give en højere dynamisk range til ADC'en.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../fig/Jordfugt/diagram3.PNG}
-	\caption{Diagram over kredsløb til måling af faseændring}
+	\caption{Diagram over kredsløb til måling af faseændring ver.01.}
 	\label{fig:jf2}
-\end{figure}  
+\end{figure}
+
+\subsection{Målerkredsløb beregninger}
+\subsubsection{Båndpasfilter}
 
 Overføringsfunktionen for båndpass-filteret opstilles.
  
@@ -223,7 +227,7 @@ Overføringsfunktionen for båndpass-filteret opstilles.
 	 \label{equ:j2}
 \end{equation} 
 
-Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et 2. ordens og har derfor en dæmpningsfaktor som er tæt realateret til quality-factor eller Q. Q siger noget om hvor snæver båndbredden er i systemet. Komponentværdierne er bestemt via ligning  \ref{equ:j3}, \ref{equ:j4}, \ref{equ:j5}. Hvor A er forstærkningen $\omega_0$ er $2\pi f$ hvor $f$ er frekvensen og C er værdien af C1 og C2.
+Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et 2. ordens og har derfor en dæmpningsfaktor som er tæt relateret til quality-factor eller Q. Q siger noget om hvor snæver båndbredden er i systemet. Komponentværdierne er bestemt via ligning  \ref{equ:j3}, \ref{equ:j4}, \ref{equ:j5}. Hvor $A$ er forstærkningen, $\omega_0 = 2\pi f$ hvor $f$ er frekvensen og C er værdien af C1 og C2.
 
 \begin{equation}
 	R1 = \dfrac{Q}{A\cdot \omega _0 \cdot C}
@@ -240,8 +244,7 @@ Hvor R22 = R1, R21 = R2, R16 = R3, C33 = C1, C34 = C2. Det ses at filteret er et
 	 \label{equ:j5}
 \end{equation} 
   
-Sættes forstærkningen til A=2 og Q=10, $f$=100kHz og C=470pF. Fås komponentværdierne som på Figur \ref{fig:jf2}. På Figur \ref{fig:j6} ses der at forstærkningen ligger på 2 ved 100kHz som forventet og på Figur \ref{fig:j7} ses at der er en faseændring på 0 grader. Dog vil faseændringen være $180^\circ$ da det er en inverterende forstærker. Derfor sættes der en komporator på udgangen af U12A for at vende fasen til $0^\circ$ igen. Dog vil der være et propagation delay som vil give en lille faseforskydelse. Ved at køre frekvensen fra mikroprocessoren og udgangen af U8A ind igennem en XOR gate (U10A) vil der blive opladet en DC på C26 som vil afhænge af faseforskydelsen. Ved en faseforskydelse på $180^\circ$ vil der ligge 3.3V og ved en faseforskydelse på $90^\circ$ vil der ligge 1.65V. Da vi kun skal detektere en faseforskydelse på maksimalt $90^\circ$ er der som det sidste led designet en ikke inverterende forstærker, med en forstærkning på 2, for at få fuldt dynamisk range. På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten.    
-  
+Sættes forstærkningen til $A=2$, $Q=10$, $f=100kHz$ og $C=470pF$. Fås komponentværdierne som på Figur \ref{fig:jf2}. På Figur \ref{fig:j6} ses der at forstærkningen ligger på 2 ved 100kHz som forventet og på Figur \ref{fig:j7} ses at der er en faseændring på 0 grader, her må dog forventes en faseændringen på $180^\circ$ da U12A er koblet inverterende.
 
 \begin{figure}[H]
   \centering
@@ -258,15 +261,29 @@ Sættes forstærkningen til A=2 og Q=10, $f$=100kHz og C=470pF. Fås komponentv�
   \end{minipage}
 \end{figure}
 
+\subsubsection{U12A/B}
+
+\subsubsection{U8A/B}
+
+\subsubsection{U10A}
+
+\subsubsection{R22}
+
+\subsubsection{R25}
+
+\subsubsection{C26}
+Da der kun ønskes at kunne detektere en faseforskydelse på maksimalt $90^\circ$, er der som det sidste led designet placeret en ikke inverterende forstærkerkobling med en forstærkning på $A=2$, dette er gjort for at få fuld dynamisk range. På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten af C26.    
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../fig/Jordfugt/udgangsvolt.PNG}
 	\caption{Udgangsspænding vs. kapacitet}
 	\label{fig:j8}
 \end{figure}
+
  
- 
-Da kredsløbet blev monteret på et print (sensor\_3.brd som bruger type 4 jordspyd) stod det hurtigt klart at D5 var ødelæggende for signalet, da den klippede den negative del af pulsen under -0.6V. U8B var fejlagtigt en komporator og denne duede derfor ikke som spændingsfølger. Se figur \ref{fig:scopeU8B}. Endvidere var C35 monteret forkert da den burde sidde parallelt med R28. Det viste sig også at faseforsinkelsen igennem kredsløbet blev så stor, at indputtet til U1A ben A skulle have sin egen separate puls, som kunne forsinkes via software. 
+\subsection{Modultest - Målerkredsløb ver.01}
+Da kredsløbet, til test, blev monteret på et PCB (sensor\_3.brd som bruger type 4 jordspyd) stod det hurtigt klart at D5 var ødelæggende for signalet, da denne klipper den negative del af pulsen under -0.6V. U8B var fejlagtigt en komparator og duede derfor ikke som spændingsfølger, dette er tydeligt verificeret af Figur \ref{fig:scopeU8B}. Endvidere var C35 monteret forkert da denne bør sidde parallelt med R28 som båndbredde-begrænsning. Det viste sig ydermere at faseforsinkelsen igennem kredsløbet var så stor, at indputtet til U1A ben A skulle have sin egen separate puls hvor forsinkelsen kan styres via software. 
 
 \begin{figure}[H]
   \centering
@@ -283,30 +300,56 @@ Da kredsløbet blev monteret på et print (sensor\_3.brd som bruger type 4 jords
   \end{minipage}
 \end{figure}
 
-Designet blev herefter lavet om da der samtidig blev designet et nyt printudlæg til sensoren (sensor\_4.brd) grundet andre designfejl. Her er der brugt Type 3 jordspyd. 
+\subsection{Målerkredsløb ver.02}
+Efter modultesten af Målerkredsløb ver.01 blev der fortaget en del rettelser til designet hvilket resulterede i et nyt diagram da der samtidig blev designet nyt printudlæg til sensoren (sensor\_4.brd) grundet andre designfejl. I det nye design af målerkredsløbet benyttes der Type 3 jordspyd, designet ses på Figur \ref{fig:j9}.  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{../fig/Jordfugt/diagram4.PNG}
-	\caption{Målekredsløb ver. 2}
+	\caption{Målekredsløb ver.2}
 	\label{fig:j9}
 \end{figure}  
 
-Det nye design ses på Figur \ref{fig:j9}. Her er der indført en MOSFET transistor således at mikroprocessoren kan tænde og slukke for måle-ground. Dette gøres for at spare strøm når sensoren er lagt i sleep-mode. I mikroprocessoren er der en automatisk kalibrerings funktion som køres ved tryk på connect knappen. Kredsløbet voldte stadig problemer. Det første der blev iagttaget var at den ikke-inverterende forstærker U12B var inverterende men ikke gav udslag som den ville hvis benene 5 og 6 var vendt forkert. Der blev kigget i databladet for U12 og der burde ikke være nogle design fejl. Forstærkeren blev afmonteret således resten af kredsløbet kunne blive testet. Her viste det sig at kredsløbet allerede gav fuldt udslag ved 160pF hvilket er 50\% af fuld kapacitet og at udgangsspændingen herefter faldt en smule. Fuldt udslag burde ikke kunne opstå da der maksimalt burde være en faseforskydelse på omkring $55^\circ$ og at fuldt udslag opstår ved $90^\circ$. På Figur \ref{fig:j9} ses der et scopebillede ved 0\% fugtighed. Den automatiske kalibrerings-funktion er blevet kørt og der ligger 357mV rms på C26. At spændingen ikke kan komme ned på 0V skyldes propagation-delayed i U8A som gør at pulsen bliver bredere og at mikroprocessoren derfor ikke kan forskyde 100kHz\_delayed så den rammer præcis.   
+Her er indført en MOSFET-transistor, Q11 således at mikroprocessoren kan tænde og slukke for et separat måle-groundplan. Dette er gjort af strømbesparende årsager. Hermed kan der lukkes ned for hele målerkredsløbet når sensoren lægges i sleep-mode. I mikroprocessoren er der en automatisk kalibreringsfunktion som køres ved tryk på Connect-knappen. \todo[inline]{Ændring af alle henvisninger fra RESET-knap til Connect}
 
+\subsection{Målerkredsløb beregninger}
+
+\subsubsection{Båndpasfilter}
+
+\subsubsection{U12A/B}
+Der er valgt at erstatte den hidtil benyttede TL972 Operationsfortærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye opamp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere Quissent Current på $85 \mu A$.Derudover har den en slew rate på $0.6V/ \mu s$ der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}. Derudover opfylder chippen temperaturkravene.  
+
+\begin{equation}
+	Slew Rate = 2 \times \pi \times f \times V_{max} = 2 \times \pi \times 10kHz \times 3.3V = 0.207V/ \mu s   
+	 \label{equ:slewrate}
+\end{equation}
+
+\subsubsection{U8A/B}
+
+\subsubsection{U10A}
+
+\subsubsection{R22}
+
+\subsubsection{R25}
+
+\subsubsection{C26}
+
+
+\subsection{Modultest - Målerkredsløb ver.02}
+Kredsløbet viste sig dog stadig at volde problemer. Det første der blev iagttaget var at den ikke-inverterende forstærker U12B var inverterende men ikke gav udslag som den ville hvis benene 5 og 6 var vendt forkert. Der blev kigget i databladet for U12 og der burde ikke være nogle design fejl. Forstærkeren blev afmonteret således resten af kredsløbet kunne blive testet. Her viste det sig at kredsløbet allerede gav fuldt udslag ved 160pF hvilket er 50\% af fuld kapacitet og at udgangsspændingen herefter faldt en smule. Fuldt udslag burde ikke kunne opstå da der maksimalt burde være en faseforskydelse på omkring $55^\circ$ og at fuldt udslag opstår ved $90^\circ$. På Figur \ref{fig:j10} ses der et scopebillede ved 0\% fugtighed. Den automatiske kalibrerings-funktion er blevet kørt og der ligger 357mV rms på C26. At spændingen ikke kan komme ned på 0V skyldes propagation-delay'et i U8A som gør at pulsen bliver bredere og at mikroprocessoren derfor ikke kan forskyde 100kHz\_delayed så den rammer præcis.   
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_2.PNG}
 	\caption{Scopebilled ved 0\% fugtighed. Rød er målt på C26, Grøn U10A ben 4, Gul 100kHz delayed og Grøn er U10A ben 2.}
-	\label{fig:j9}
+	\label{fig:j10}
 \end{figure}  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_3.PNG}
 	\caption{Scopebilled ved jordspyd stukket ca. halvt ned i vand. Her ses allerede fuldt udslag}
-	\label{fig:j10}
+	\label{fig:j11}
 \end{figure}  
 
 Det blev nu undersøgt om det kunne skyldes at R22 var udregnet forkert. Derfor blev overføringsfunktionen opskrevet endnu en gang for båndpass-filteret dog inkluderet med kapaciteten fra jordspydet. 
@@ -318,20 +361,20 @@ Det blev nu undersøgt om det kunne skyldes at R22 var udregnet forkert. Derfor 
 \end{equation} 
 \end{footnotesize}
 
-Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig:j6} og \ref{fig:j7}. Men blev frekvensen sat til 87kHz skete der noget som måske kunne forklare det observerede. Se Figur \ref{fig:j11}. Her ses der et pludseligt faseskift på $90^\circ$ ved omkring 160pF. Faseskiftet vil ikke kunne ses på udgangsspændingen da der ikke gives nogen indikation af positiv eller negativ forskydelse. Det passer fint med at spændingen falder ved en kapacitet større end 160pF. Herefter blev frekvensen fra mikroprocessoren målt og denne lå på 86kHz. Herefter blev knækfrekvensen i båndpass-filteret målt og denne lå på 88 kHz. Se figur \ref{fig:j12}. Afvigelsen skyldes at C33 og C34 var monteret med 10\% tolerance kondensatorer. Men da knækfrekvensen stemte fint overens med frekvensen fra mikroprocessoren kunne fejlen ikke være det. Det blev forsøgt at ændre Q-værdien både op og ned i filteret, men lige meget hjalp det.  
+Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig:j6} og \ref{fig:j7}. Men blev frekvensen sat til 87kHz skete der noget som måske kunne forklare det observerede. Se Figur \ref{fig:j12}. Her ses der et pludseligt faseskift på $90^\circ$ ved omkring 160pF. Faseskiftet vil ikke kunne ses på udgangsspændingen da der ikke gives nogen indikation af positiv eller negativ forskydelse. Det passer fint med at spændingen falder ved en kapacitet større end 160pF. Herefter blev frekvensen fra mikroprocessoren målt og denne lå på 86kHz. Herefter blev knækfrekvensen i båndpass-filteret målt og denne lå på 88 kHz. Se figur \ref{fig:j13}. Afvigelsen skyldes at C33 og C34 var monteret med 10\% tolerance kondensatorer. Men da knækfrekvensen stemte fint overens med frekvensen fra mikroprocessoren kunne fejlen ikke være det. Det blev forsøgt at ændre Q-værdien både op og ned i filteret, men lige meget hjalp det.  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/system_respons_87khz.PNG}
 	\caption{Faseændring ved 87kHz}
-	\label{fig:j11}
+	\label{fig:j12}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_8.PNG}
 	\caption{Måling af knækfrekvens i båndpass-filteret}
-	\label{fig:j12}
+	\label{fig:j13}
 \end{figure} 
  
 \clearpage
