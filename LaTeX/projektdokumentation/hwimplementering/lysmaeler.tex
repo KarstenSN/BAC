@@ -66,7 +66,15 @@ Da der ønskes 1VDC ved en $I_{C}=20 \mu A$, kan R20 korrigerede værdi beregnes
 	R20=\dfrac{V_{skumring}} {I_{skumring}}= \dfrac{1VDC} {20 \mu A} = 50k\Omega
 \end{equation}
 
-En realistisk værdi R20 kan findes til $47k\Omega$, dette er derfor valgt. 
+En realistisk værdi R20 kan findes til $47k\Omega$, dette er derfor valgt.
+
+Når der står en spænding på 1VDC på ADC-indgangen, kan følgende værdi aflæses af systemet: 
+
+\begin{equation}
+	ADC=\dfrac{V_{IN} \times 1024}{V_{REF}}=\dfrac{1V \times 1024}{2.56V}= 400
+\end{equation}
+
+Decimal 400 svarer til \texttt{0x190}, derfor sættes dette som systemets threshold for dag og nat.
 
 \subsection{Lysmåler modultest} 
 Der udføres en test fra kl. 15.00 d. 10/04 til kl.08.00 d. 11/04. får at verificere at den korrekte $V_{out}$ fås ved solopgang og solnedgang. Testen ses på Figur \ref{fig:test_måling4}. Her bemærkes det at $V_{out}=1VDC$ lige omkring solopgang og solnedgang. Ydermere bemærkes det at overgangene fra dag/nat og nat/dag er tilfredsstillende konkrete, så der ikke behøves at foretages yderligere for at få en god detektering. Overgangene kan ses på Figur \ref{fig:test_måling4_zoom1} og \ref{fig:test_måling4_zoom2}. Her ses det også at der er en smule afvigelse i af $V_{out}=1$ og $I_{out}=20 \mu A$ jfv. ovenfår så skyldes dette, at der er benyttet en $47k\Omega$, men beregningen kommer frem til $50k\Omega$. Deraf afvigelsen.    

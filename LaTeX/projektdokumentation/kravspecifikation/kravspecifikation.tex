@@ -8,7 +8,7 @@ Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individu
 %---------------------------------------------------------------------------------------
 \clearpage
 \section{Funktionelle krav} \label{sec:funktionelle_krav}
-I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen textit{prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}.
+I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen \textit{Prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}.
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | L{1.9 cm}| m{2.9 cm} |} \hline
@@ -102,7 +102,7 @@ I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref
 \newpage
 \section{Ikke-Funktionelle krav} \label{sec:ikke_funktionelle_krav}
 \subsection{FURPS+} \label{sec:furps}
-De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard. \todo[inline]{find reference for FURPS+} Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
+De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard.Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
 Modellen inddeler kravsættet i følgende undergrupper.
 
 \begin{itemize}
@@ -136,8 +136,6 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
 		RI\_01		 & Systemfejl skal indikeres med rød LED på keypad						& \\ \hline
 		RI\_02		 & Systemfejlmelding skal vises på display 								& \\ \hline
-		RI\_03		 & Systemet skal ha en MTBF (MeanTime Between Failures) på ???			& \todo[inline]{lav måling}	\\ \hline
-		RI\_04		 & System skal ha en MTTR (MeanTime To Restore) på ???					& \todo[inline]{lav måling} \\ \hline
 	\end{tabularx}
 	\caption{Krav til driftsikkerhed}
 	\label{tbl:driftsikkerhed_krav}
@@ -150,7 +148,7 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 		PF\_01		 & Batteritype (Alkaline AAA) 											& \\ \hline
 		PF\_02		 & Sensorens batterilevetid (min 1 år)  								& \\ \hline
 		PF\_03		 & Sensoren skal fungerer ned til 1.8V batterispænding 					& \\ \hline		
-		PF\_04		 & Hvor mange instanser af systemet skal kunne køre samtidig			& \\ \hline
+		PF\_04		 & Flere instanser af systemet skal kunne køre samtidig			& \\ \hline
 		PF\_05		 & Temperatur range (1-70 graderC)										& \\ \hline
 		PF\_06		 & Målepræcision (5\%)													& \\ \hline
 		PF\_07		 & Systemrespons fra brugerinteraktion til aktuator skal være 1<sek		& \\ \hline

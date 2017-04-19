@@ -2,12 +2,12 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+	\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
 	\caption{Blokdiagram over det samlede system}
 	\label{fig:BDDsystem}
 \end{figure}
 
-I Figur \ref{fig:BDDsystem} ses BDD over det samlede system indeholdende en sensor og en kontrolboks. Separate blokdiagrammer over sensoren og kontrolboksen ses i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
+På Figur \ref{fig:BDDsystem} ses BDD over det samlede system indeholdende sensor og kontrolboks. Separate blokdiagrammer over sensoren og kontrolboksen ses i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
 
 \raggedbottom
 
@@ -22,8 +22,21 @@ I dette underafsnit opstilles kravene til de enkelte blokke der udgør kontrolbo
 	\label{fig:BDDkontrolboks}
 \end{figure}
 
+
+
 \textbf{Mikroprocessor} \\
-Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge I/O-porte samt en analog reset pin. Den skal forsynes med 3.3VDC $ \pm 10\% $ og kunne programmeres eksternt. 
+Det er som udgangspunkt valgt at ville benytte samme type og model Mikroprocessor til både kontrolboks og sensor, derfor kommer mikroprocessoren på kontrolboksen til at indeholde nogle interne moduler som ikke nødvendigvis vil blive brugt men som derimod skal bruges i forbindelse med sensorens funktionalitet. Af hensyn til overblikket er alle krav til modulerne beskrevet her. Mikroprocessoren skal indeholde perifere enheder til at kommunikere både over SPI og I2C. SPI er valgt at benytte da RF transceiveren benytter denne kommunikationsprotokol. I2C er valgt at benytte for at kunne kommunikere med hhv. den ønskede temperatursensor, samt display'et på kontrolboksen. Mikroprocessoren skal ydermere have minimum 6 analoge I/O-pins. 2 af disse ønskes brugt til 2 separate ADC-kanaler hhv. til måling af fugtighed, samt lysintensitet. 1 pin er valgt at bruge til transceiveren low battery detect-funktion, samt 1 pin til kontrol af det separate stelplan til målekredsløbet. Derudover skal der kunne sendes 2 separate firkant-spænding ud fra mikroprocessoren, disse kræver ligeledes hver 1 pin.
+
+
+
+
+
+% HERTIL
+
+
+
+
+at samt en analog reset pin. Den skal forsynes med 3.3VDC $ \pm 10\% $ og kunne programmeres eksternt. 
 
 \textbf{Motorventil} \\
 Motorventilen skal bestå af en DC-motor der skal forsynes med 5VDC $ \pm 10\%$ og have to kontakter der afbrydes når ventilen er i hhv. en fuldt lukket eller åben position. Den skal kunne tilsluttes 1/2" vandrør og være lavet af et solidt materiale. Motorventilen skal monteres på kontrolboksen. 
