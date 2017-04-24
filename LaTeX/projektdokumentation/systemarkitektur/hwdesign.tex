@@ -40,13 +40,33 @@ Mikroprocessoren skal vælges udfra et ønske om en forsyningsspænding på 3.3V
 Motorventilen skal bestå af en DC-motor der skal forsynes med 5VDC $ \pm 10\%$ og have to kontakter der afbrydes når ventilen er i hhv. en fuldt lukket eller åben position. Den skal kunne tilsluttes 1/2" vandrør og være lavet af et solidt materiale. Motorventilen skal monteres på kontrolboksen. 
 
 \textbf{Display} \label{designkrav:display} \\
-Displayet skal vælges til en forsyningsspænding på 3VDC $ \pm 10\%$ og skal kunne kommunikere via I2C. For at opfylde kravene US\_03 og US\_04 skal der vælges et display der kan vise 2x16 karakterer. Derudover skal størrelseskravet MC\_07 være opfyldt for at passe i formfaktor til kontrolboksen, krav MC\_06. Endeligt ønskes et baggrundsbelyst display, krav MC\_08 således at brugeren let kan aflæse display'et både i fuldt sollyst samt om natten. 
+Displayet skal vælges til en forsyningsspænding på 3VDC $ \pm 10\%$ og skal kunne kommunikere via I2C-protokollen. For at opfylde kravene US\_03 og US\_04 skal der vælges et display der kan vise 2x16 karakterer. Derudover skal størrelseskravet MC\_07 være opfyldt for at passe i formfaktor til kontrolboksen, krav MC\_06. Endeligt ønskes et baggrundsbelyst display, krav MC\_08 således at brugeren let kan aflæse display'et både i fuldt sollys samt om natten.
 
 \textbf{HF-Transceiver} \label{designkrav:transceiver} \\
 HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart. 
 
 \textbf{Strømforsyning} \label{designkrav:stromforsyning} \\
-Strømforsyningen skal inkludere en DC-connector, monteret på kontrolboksen. Den skal have ESD beskyttelse og beskytte mod omvendt polarisation og strøm-overforbrug. Den skal kunne acceptere 5VDC $\pm 10\%$ inputspænding og herved indeholde en spændingsregulator som giver 3.3VDC $\pm 10\%$. 
+Det er valgt at systemet skal kunne benytte 3.parts AC/DC Power Supplies. Følgende krav skal opfyldes til denne eksterne power Supply. 
+
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item	Den skal kunne levere en udgangsspænding på 5VDC $\pm 10\%$
+	\item	Den skal kunne levere en udgangsstrøm på min. 1A
+	\item	Sekundside-konnekteren skal være en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.50Ø mm $\pm 2mm$ center pin  
+\end{itemize}
+
+Strømforsyningen på kontrolboksen skal inkludere en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.5 mm center pin. Denne skal have en maksimum rated input current på min. 2A. For at sikre kontrolboksen optimalt skal strømforsyningen indeholde ESD-beskyttelse, beskytte mod omvendt-polarisation samt strøm-overforbrug. Strømforsyning skal kunne acceptere 5VDC $\pm 10\%$ inputspænding fra den eksterne power supply. Derudover skal den indeholde en spændingsregulator ned til 3.3VDC $\pm 10\%$ på udgangssiden. Kravene til Strømforsyningen på kontrolboksen kan samles til følgende: 
+
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item 	Strømforsyningen skal have en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.5 mm center pin
+	\item 	Strømforsyningen skal have en maksimum rated input current på min. 2A
+	\item 	Strømforsyningen skal ESD-beskyttelse
+	\item 	Strømforsyningen skal indeholde beskyttelse imod omvendt polarisation
+	\item 	Strømforsyningen skal indeholde beskyttelse imod strøm overforbrug
+	\item 	Strømforsyning skal kunne acceptere 5VDC $\pm 10\%$ inputspænding på DC jack-konnekter
+	\item 	Strømforsyningen skal indeholde 5VDC-3.3VDC spændingsregulator	
+\end{itemize}
 
 \textbf{Tastatur} \label{designkrav:tastetur} \\
 Tastaturet skal bestå af 4 trykknapper samt en rød LED til indikation af fejl.
@@ -68,13 +88,18 @@ På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger 
 	\textbf{Signal} & \textbf{Type} & \textbf{Beskrivelse} & \textbf{Tolerance} \\ \hline
 	5VDC 	
 		& P1 	
-		& Forsyningspænding fra adaptor								
+		& Forsyningspænding fra ekstern power supply								
 		& 5VDC $\pm 10\%$					\\ \hline
 			
 	3.3VDC 	
 		& P2 	
 		& Forsyningsspænding fra strømforsyning $ V_{dd} $						
 		& 3.3VDC $\pm 10\%$ 				\\ \hline
+		
+	5VDC 	
+		& P3 	
+		& Forsyningsspænding fra strømforsyning $ V_{dd} $						
+		& 5VDC $\pm 10\%$ 					\\ \hline
 			
 	SPI 
 		& K1 	
