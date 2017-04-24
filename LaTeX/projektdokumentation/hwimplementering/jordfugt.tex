@@ -80,7 +80,7 @@ Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvil
 
 
 \subsection{Kapacitiv måling}
-Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
+Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden\cite{lib:SoilModeling} \cite{lib:MultiSensorSystem} \cite{lib:DPHP} \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
 
 \begin{figure}[H]
   \centering
@@ -117,18 +117,20 @@ Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gang
 	C = \frac{8.854\cdot 10^{-12}\cdot 80 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 4.00pF
 \end{equation} 
 
-Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det viste sig at kapaciteten lå højere end det forventede. Dette skyldes at der er udstråling fra banerne som der er svære at tage med i beregningerne. Se figur \ref{fig:spyd1},\ref{fig:spyd2},\ref{fig:spyd3},\ref{fig:spyd4}. Type 1 og 2 er meget ens. De danner begge en kapacitet mellem stelplanet og midterbanen. Størstedelen af kapaciten vil ligge for enden af spyddet hvor banen er tykkest på Type 1 og gaffelformet på Type 2. Dog er det ikke ligegyldigt hvor dybt spyddes stikkes ned i jorden da der også vil dannes en kapacitet mellem fødebanen og stelplanet. For at undgå at spyddet skal stikkes ned i en bestemt højde er Type 2 og 3 blevet lavet. Type 3 fører en bane på oversiden af printet hvor der ligger en identisk bane på bagsiden. På den måde skulle kapaciteten ikke ændre sig når der kommer vand længere op end til "diamanten". Test viste dog at kapaciteten alligevel varierede. Type 4 er delt med et stelplan således at banerne ikke kan se hinanden. Dette print var dog det der performede dårligst da det kun virkede når der lå vand mellem banerne. Kom der først vand ud på stelplanet blev her dannet en kapacitet som var sammenligning med det der var mellem pladerne og virkningen blev herved reduceret. Der blev herefter testet i en så og prikle jord med Type 1,2 og 3 for sammenhæng mellem kapacitet og fugtighed. Se Figur \ref{fig:graffugt}.
+Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det viste sig at kapaciteten lå højere end det forventede. Dette skyldes at der er udstråling fra banerne som der er svære at tage med i beregningerne. Se figur \ref{fig:spyd1},\ref{fig:spyd2},\ref{fig:spyd3},\ref{fig:spyd4}. Type 1 og 2 er meget ens. De danner begge en kapacitet mellem stelplanet og midterbanen. Størstedelen af kapaciten vil ligge for enden af spyddet hvor banen er tykkest på Type 1 og gaffelformet på Type 2. Dog er det ikke ligegyldigt hvor dybt spyddes stikkes ned i jorden da der også vil dannes en kapacitet mellem fødebanen og stelplanet. For at undgå at spyddet skal stikkes ned i en bestemt højde er Type 2 og 3 blevet lavet. Type 3 fører en bane på oversiden af printet hvor der ligger en identisk bane på bagsiden. På den måde skulle kapaciteten ikke ændre sig når der kommer vand længere op end til "diamanten". Test viste dog at kapaciteten alligevel varierede. Det blev lagt et stelplan uden på banerne for at indkapsle dem, ved at skære et andet print til, og lime det på således der laves et 4-lags print. Dette viste sig at have gode egenskaber og derfor skal jordspyddet også laves i 4-lag hvis der en gang skal laves en produktion. Type 4 er delt med et stelplan således at banerne ikke kan se hinanden. Dette print var dog det der performede dårligst da det kun virkede når der lå vand mellem banerne. Kom der først vand ud på stelplanet blev her dannet en kapacitet som var sammenligning med det der var mellem pladerne og virkningen blev herved reduceret. Der blev herefter testet i en så og prikle jord med Type 1,2 og 3 for sammenhæng mellem kapacitet og fugtighed. Se Figur \ref{fig:graffugt}.
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
+  \centering
     \includegraphics[width=0.4\textwidth]{../fig/Jordfugt/type1.jpg}
     \caption{Type 1 jordspyd}
     \label{fig:spyd1}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=0.3\textwidth]{../fig/Jordfugt/type2.jpg}
+  \centering
+    \includegraphics[width=0.31\textwidth]{../fig/Jordfugt/type2.jpg}
     \caption{Type 2 jordspyd}
     \label{fig:spyd2}
   \end{minipage}
@@ -138,15 +140,16 @@ Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det vis
 
 \begin{figure}[H]
   \centering
-  \hfill
     \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=0.3\textwidth]{../fig/Jordfugt/type3.jpg}
+    \centering
+    \includegraphics[width=0.35\textwidth]{../fig/Jordfugt/type3.jpg}
     \caption{Type 3 jordspyd}
     \label{fig:spyd3}
   \end{minipage}
   \hfill
     \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=0.3\textwidth]{../fig/Jordfugt/type4.jpg}
+    \centering
+    \includegraphics[width=0.34\textwidth]{../fig/Jordfugt/type4.jpg}
     \caption{Type 4 jordspyd}
     \label{fig:spyd4}
   \end{minipage}
@@ -175,6 +178,8 @@ Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i d
 
 Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude\cite{lib:cap_meas} ændringen når der sættes et AC signal igennem eller at måle faseændringen.  
 
+\subsection{Målemetoder}
+
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
@@ -190,25 +195,11 @@ Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensa
   \end{minipage}
 \end{figure}
 
-På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. Det er blevet valgt at designe et målekredsløb til Type 3 jordspyddet som har en kapacitet varierende fra 18pF til omkring 220pF. Opstilles overføringsfunktionen for et 1. ordens RC-højpasled kan den optimale load af kondensatoren udregnes. 
-
-\begin{equation}
-	G(s) = \dfrac{R}{\dfrac{1}{s\cdot C} \cdot R}
-	 \label{equ:j1}
-\end{equation}  
-
-På Figur \ref{fig:jf1} ses der et plot af fase ændringen med en modstand udregnet til 22k$\Omega$ og en frekvens på 100kHz. Det ses at fasen ændres totalt med omkring $55^\circ$. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/fase_vs_cap.PNG}
-	\caption{Faseændring versus kapaciteten}
-	\label{fig:jf1}
-\end{figure} 
+På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Se Sektion \ref{sec:test_amplitudemoling} for bevis af denne påstand. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. 
 
 \subsection{Målerkredsløb ver.01}
 
-Der er designet et kredsløb der konverterer faseændringen om til en DC-spænding som herefter samples af mikroprocessorens ADC. Dette kredsløb ses på Figur \ref{fig:jf2}. Kredsløbet fungerer ved at der påtrykkes en 100kHz 3.3V firkant-spænding over jordspyddet som loades af R25. Dette efterfølges af en spændingsfølger således R25 kan vælges uden forbehold for det efterfølgende kredsløb. Firkant-spændingen filtreres herefter af et båndpass-filter således at der ligger en sinus på udgangen af U12A. Denne sinus er $180^\circ$ faseforskudt da U12A er koblet som en inverterende forstærkter, derfor sættes der en komparator på udgangen af U12A for at returnere fasen til $0^\circ$. Til orientering, vil der her blive introduceret et propagation delay som vil bidrage en smule til faseforskydelsen, der forventes i omegnen af $80ns$ \cite{lib:comp_MCP6561_datasheet} der kan derfor vælges at se bort fra dette i denne situation. Ved at køre frekvensen fra mikroprocessoren samt udgangen af U8A igennem en XOR-gate (U10A). U10A omdanner faseforskellen af de 2 signaler til et PWM signal, dette variere med faseforskellen således at der fås en lav duty-cycle ved lille faseforskel og $50\%$ duty cycle ved maksimal faseforskydning, dette signal vil oplade en DC-spænding på C26 som vil afhænge af faseforskydelsen. denne spænding forstærkes til slut op af U12B for at give en højere dynamisk range til ADC'en.
+Der er designet et kredsløb der konverterer faseændringen om til en DC-spænding som herefter samples af mikroprocessorens ADC. Dette kredsløb ses på Figur \ref{fig:jf2}. Kredsløbet fungerer ved at der påtrykkes en firkant-spænding på 100kHz over jordspyddet som bliver loaded af R25. Dette efterfølges af en spændingsfølger således R25 kan vælges uden forbehold for det efterfølgende kredsløb. Firkant-spændingen filtreres herefter af et båndpass-filter således at der ligger en sinus på udgangen af U12A. Denne sinus er $180^\circ$ faseforskudt da U12A er koblet som en inverterende forstærkter, derfor sættes der en komparator på udgangen af U12A for at returnere fasen til $0^\circ$ og samtisig sikre et hurtigt skift i XOR-gaten U10A. Til orientering, vil der her blive introduceret et propagation delay som vil bidrage en smule til faseforskydelsen, der forventes i omegnen af $80ns$ \cite{lib:comp_MCP6561_datasheet}. Ved at køre frekvensen fra mikroprocessoren samt udgangen af U8A igennem en XOR-gate (U10A). Bliver faseforskellen af de 2 signaler konverteret til et PWM-signal som efterfølgende filtreres således der ligger en spænding på C26 varierende fra 0V-Vcc/2. For at få et bedere dynamisk range er der indsat en inverterende forstærker med en forstærkning på 2.  
 
 \begin{figure}[H]
 	\centering
@@ -261,17 +252,23 @@ Sættes forstærkningen til $A=2$, $Q=10$, $f=100kHz$ og $C=470pF$. Fås kompone
   \end{minipage}
 \end{figure}
 
-\subsubsection{U12A/B}
+\subsubsection{Load af jordspyd}
 
-\subsubsection{U8A/B}
+Jordspyddet har en kapacitet varierende fra 18pF til omkring 220pF. Opstilles overføringsfunktionen for et 1. ordens RC-højpasled kan den optimale load af jordspyddet udregnes. 
 
-\subsubsection{U10A}
+\begin{equation}
+	G(s) = \dfrac{R}{\dfrac{1}{s\cdot C} \cdot R}
+	 \label{equ:j1}
+\end{equation}  
 
-\subsubsection{R22}
+På Figur \ref{fig:jf1} ses der et plot af fase ændringen med en modstand udregnet til R25 = 22k$\Omega$ og en frekvens på 100kHz. Det ses at fasen ændres totalt med omkring $55^\circ$. 
 
-\subsubsection{R25}
-
-\subsubsection{C26}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/fase_vs_cap.PNG}
+	\caption{Faseændring versus kapaciteten}
+	\label{fig:jf1}
+\end{figure} 
 
 På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten af C26.    
 
@@ -282,9 +279,22 @@ På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten af C26.
 	\label{fig:j8}
 \end{figure}
 
- 
+\subsubsection{U12}
+U12 er blevet valgt til typen TL972 da den har en båndbredde på 12MHz. Det skal dog nævens at ved valg af denne var der 
+usikkerhed på om målingen skulle foretages 1MHz \cite{lib:cap_meas} eller lavere. Pga. den store båndbredde bruger den desværre også meget tomgangs strøm som typisk ligger på 2mA pr forstærker. 
+
+\subsubsection{U10}
+U10 er valgt til typen SN74AHC86 da den har en lav pris og samtidig har et lavt propagation-delay på 8ns.
+
+\subsubsection{U8}
+U8 er valgt til typen MCP6562 da den har en push-pull udgang og en lav tomgangsstrøm på 130uA pr. forstærker, samt et lavt propagation-delay på 80ns og risetime på 20nS. 
+
+\subsubsection{D5 og D6}
+Er beskyttelsdioder til ESD. Er blevet valgt til typen BAT54 da de er billige og er meget brugte til netop dette formål.
+
+
 \subsection{Modultest - Målerkredsløb ver.01}
-Da kredsløbet, til test, blev monteret på et PCB (sensor\_3.brd som bruger type 4 jordspyd) stod det hurtigt klart at D5 var ødelæggende for signalet, da denne klipper den negative del af pulsen under -0.6V. U8B var fejlagtigt en komparator og duede derfor ikke som spændingsfølger, dette er tydeligt verificeret af Figur \ref{fig:scopeU8B}. Endvidere var C35 monteret forkert da denne bør sidde parallelt med R28 som båndbredde-begrænsning. Det viste sig ydermere at faseforsinkelsen igennem kredsløbet var så stor, at indputtet til U1A ben A skulle have sin egen separate puls hvor forsinkelsen kan styres via software. 
+Kredsløbet blev designet på PCB sensor\_3.brd som bruger type 4 jordspyd. Grunden til det var Type 4 jordspyd var at der på dette tidspunkt ikke var lavet test af disse. Ved måling stod det hurtigt klart at D5 var ødelæggende for signalet, da denne klipper den negative del af pulsen under -0.6V. U8B var fejlagtigt en komparator og duede derfor ikke som spændingsfølger, dette ses tydeligt på Figur \ref{fig:scopeU8B}. Endvidere var C35 monteret forkert da denne bør sidde parallelt med R28 som båndbredde-begrænsning. Det viste sig ydermere at faseforsinkelsen igennem kredsløbet var så stor, at indputtet til U1A ben A skulle have sin egen separate puls hvor forsinkelsen kan styres via software. Endvidere var forstærkningen i båndpass-filteret for stort således at signalet klippede ved en kapacitet på 160pF. 
 
 \begin{figure}[H]
   \centering
@@ -301,6 +311,13 @@ Da kredsløbet, til test, blev monteret på et PCB (sensor\_3.brd som bruger typ
   \end{minipage}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{../fig/Jordfugt/scope_klip.jpg}
+	\caption{Målt på udgangen af U12A. Her ses klipning ved 160pF. Scopet står i dual channel men kanal 2 er ikke koblet til noget}
+	\label{fig:j8}
+\end{figure}
+
 \subsection{Målerkredsløb ver.02}
 Efter modultesten af Målerkredsløb ver.01 blev der fortaget en del rettelser til designet hvilket resulterede i et nyt diagram da der samtidig blev designet nyt printudlæg til sensoren (sensor\_4.brd) grundet andre designfejl. I det nye design af målerkredsløbet benyttes der Type 3 jordspyd, designet ses på Figur \ref{fig:j9}.  
 
@@ -311,7 +328,7 @@ Efter modultesten af Målerkredsløb ver.01 blev der fortaget en del rettelser t
 	\label{fig:j9}
 \end{figure}  
 
-Her er indført en MOSFET-transistor, Q11 således at mikroprocessoren kan tænde og slukke for et separat måle-groundplan. Dette er gjort af strømbesparende årsager. Hermed kan der lukkes ned for hele målerkredsløbet når sensoren lægges i sleep-mode. I mikroprocessoren er der en automatisk kalibreringsfunktion som køres ved tryk på Connect-knappen. \todo[inline]{Ændring af alle henvisninger fra RESET-knap til Connect}
+Her er indført en MOSFET-transistor, Q11 således at mikroprocessoren kan tænde og slukke for et separat måle-groundplan. Dette er gjort af strømbesparende årsager. Hermed kan der lukkes ned for hele målerkredsløbet når sensoren lægges i sleep-mode. I mikroprocessoren er der en automatisk kalibreringsfunktion som køres ved tryk på Connect-knappen. \todo[inline]{Ændring af alle henvisninger fra RESET-knap til Connect} Spændingsfølgeren på indgangen er fjernet da den viste sig overflødig. Selvom at R22 ikke er ideelt 
 
 \subsection{Målerkredsløb beregninger}
 
@@ -383,29 +400,46 @@ Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvo
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_14.PNG}
-	\caption{Måling af ind og udgang af spændingsfølger. Gul er indgang og Grøn er udgang.}
+	\caption{Måling af ind og udgang af spændingsfølger. Gul er indgang og Grøn er udgang. Her ses at de skarpe kanter er filtreret fra.}
 	\label{fig:j14}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_15.PNG}
-	\caption{Faseforskydelse af indgang og udgang i båndpass-filteret ved 20pF}
+	\caption{Faseforskydelse af indgang og udgang i båndpass-filteret ved 20pF. Grøn er indgang og gul er udgang. Her ses ca. $90^\circ$ faseforskydelse. }
 	\label{fig:j15}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_16.PNG}
-	\caption{Faseforskydelse af indgang og udgang i båndpass-filteret ved 120pF}
+	\caption{Faseforskydelse af indgang og udgang i båndpass-filteret ved 120pF. Her ses ca. $180^\circ$ faseforskydelse.}
 	\label{fig:j16}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{../fig/Jordfugt/datablad1.PNG}
-	\caption{Fasemargin vs forsyningsspænding}
+	\caption{Fasemargin vs forsyningsspænding. Operationsforstærkeren bliver loadet med 470pF og 171$\Omega$ serielt.}
 	\label{fig:j17}
+\end{figure} 
+
+\subsection{Test af kredsløb til amplitudemåling af kondensator} \label{sec:test_amplitudemoling}
+ For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 hvis diodetab vil ændres med temperatur. 
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/scope_19.PNG}
+	\caption{Spænding målt over C1 ved en printkapacitet på 220pF. Her ses en stor mængde 50Hz støj}
+	\label{fig:j18}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/scope_17.PNG}
+	\caption{Stigetiden fra 20pF til 220pF.}
+	\label{fig:j19}
 \end{figure} 
  
 \clearpage
