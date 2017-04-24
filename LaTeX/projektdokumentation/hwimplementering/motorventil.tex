@@ -1,42 +1,42 @@
 \section{Motorventil}
-Der blev hos den kinesiske producent Flow-Control bestilt nogle motoventiler hjem. Disse havde en lav pris omkring 150kr stykket og har en tilslutning som er nem at bruge. Der er i alt 3 ledinger en blå, gul og rød. Den blå er stel, gul og rød tilsluttes hver i sær 3-6V for enten at åbne eller lukke ventilen. Når ventilen er fuldt åben eller fuldt lukket vil den ikke længere trække nogen strøm da der er en intern styrring. Der blev designet en relæ-styrring til at åbne eller lukke for ventilen fra mikroprocessoren i kontrolboksen. Se Figur \ref{fig:motorventilSamlet} for motorventil og Figur \ref{fig:relae} for diagram over relæ-styrringen. 
+Der blev hos den kinesiske producent Flow-Control bestilt nogle motorventiler hjem. Disse blev i første omgang valgt grundet deres lave pris, omkring 150kr stykket og har en tilslutning som som fylder kravene i afsnit \ref{designkrav:motorventil} på side \pageref{designkrav:motorventil}. 
+kontakten skabes via 3 seperater ledinger, blå, gul og rød. Blå er GND, gul og rød tilsluttes hver især 3-6V for når der ønskes at åbne eller lukke for ventilen. Når ventilen er i fuldt åben eller fuldt lukket position vil intern kontakt sørge for at koble fra, så der ikke trækkes unødig strøm. på Figur \ref{fig:delt} ses disse kontakter som de 4 grønne ledninger (disse blev først brugt i iteration 2 af motorstyringen). Se Figur \ref{fig:motorventilSamlet} for den valgte motorventil.
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=1\textwidth]{../fig/Motorventil/samlet.JPG}
-    \caption{Motorventil fra kinesisk producent}
+    \caption{Motorventil}
     \label{fig:motorventilSamlet}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.385\textwidth}
     \includegraphics[width=1\textwidth]{../fig/Motorventil/delt.JPG}
     \caption{Motorventil adskilt}
     \label{fig:delt}
   \end{minipage}
 \end{figure}
 
+Styringen af denne motorventil er udviklet over 2 iterationer. Første iteration blev implementeret med en specialdesignet relæ-styring. Dette design ses på Figur \ref{fig:relae} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/Motorventil/relae.png}
+	\caption{Diagram over relæ-styring til iteration 1}
+	\label{fig:relae}
+\end{figure}  
+
+Når der fra Mikroprocessoren tilsluttes 3.3V på R17 vil Q2 gå on og LS1 vil slutte kontakt til OPEN (rød ledning). Er der påtrykt 0V på R2 vil relæet slutte kontakt til CLOSE (gul ledning). O1,O2 og C1,C2 er de føromtalte kontakter til detektion af ventilens position. D1 og D2 sidder som ESD-beskyttelse. Kredsløbet virkede som forventet til iteration 1.
+
+Til iteration 2 blev det valgt at overgå fra relæstyring til styring via H-bro. Dette valg blev truffet af flere årsager, dels er relæ'er dyre sammenlignet med FET'erne i en H-Bro, og derudover blev det ved test fastlagt at der var mulighed for at få kontakt med de interne switch'ene O1,O2 og C1,C2 i Figur \ref{fig:relae}. Derfor er det nu muligt, software-mæssigt at teste på om ventilen er fuldt åben eller lukket. Dermed kan det hele styres via et H-Bro design, og lukkes ned når der detekteres en åben/lukket position, så der ikke trække unødvendig strøm. Dette design kan ses på Figur \ref{fig:hbro}. I tillæg til dette design, er der 4 separate loddeplads som er brugt til at få kontakt med de interne switche. 
+
 \begin{figure}[H]
   \centering
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=1.1\textwidth]{../fig/Motorventil/relae.png}
-    \caption{Diagram over relæ-styrringen}
-    \label{fig:relae}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=1.2\textwidth]{../fig/Motorventil/hbro.png}
+    \includegraphics[width=0.6\textwidth]{../fig/Motorventil/hbro.png}
     \caption{Diagram over H-bro'en}
     \label{fig:hbro}
-  \end{minipage}
 \end{figure}
 
-Når der tilsluttes 3.3V på R2 vil Q2 gå on og LS1 vil slutte kontakt til OPEN (rød ledning). Er der påtrykt 0V på R2 vil relæet slutte kontakt til CLOSE (gul ledning). O1,O2 og C1,C2 var bestemt til at være nogle kontakter som skulle detektere om ventilen var åben eller lukket for at mikroprocessoren kunne vide hvilken position ventilen stod i. D1 og D2 sidder for at beskytte for ESD. Kredsløbet virkede men det var ikke tilfredsstillende da et relæ er dyrt og bruger meget strøm når det er åbent. Der blev derfor undersøgt hvordan motorventilen var lavet indvendig for at se om det var muligt at finde noget mere brugbart. Det viste sig at her sad endnu et relæ og 2 kontakter til at detektere om ventilen var enten åben eller lukket. Printet blev fjernet og vi var nu i besiddelse af to ledninger til en motor og i alt fire ledninger til to kontakter. Se Figur \ref{fig:delt}.
+PAD1 og PAD2 er monterings pad's som bruges til at lodde ledningerne fra motoren fast på printet. Kontakterne som afbrydes af enten den fuldt åbne position eller fuldt lukkede position loddes ligeledes på printet og føres direkte op til mikroprocessoren. Når der sluttes 3.3V på H1 og 0V på H2 vil motorventilen åbne og omvendt for at lukke. Sluttes der 3.3V eller 0V på begge indgange vil motoren være i bremset position. Det blev bestemt at bruge standard transistoren BC847C da den er billig og nem at skaffe, af MOSFETS blev der fundet NTR4101 og NTR4501 da disse have en lav on resistance, gode switch karakterstikker og indbyggede beskyttelsesdioder mellem drain og source.
 
-Da det nu blot et en motor der skal styrers, er det bedste valg at bruge en H-bro. Se Figur \ref{fig:hbro} for diagram af H-bro'en. PAD1 og PAD2 er monterings pad's som bruges til at lodde ledningen fra motoren på printet. Kontakterne som afbrydes af enten den fuldt åbne position eller fuldt lukkede position loddes ligeledes på printet og føres direkte op til mikroprocessoren. Når det sluttes 3.3V på H1 og 0V på H2 vil motorventilen åbne og omvendt for at lukke. Sluttes der 3.3V eller 0V på begge indgange vil motoren være i bremse position. Det blev bestemt at bruge standard transistoren BC847C da den er billig og nem at skaffe, af MOSFETS blev der fundet NTR4101 og NTR4501 da disse have en lav on resistance, gode switch karakterstikker og indbyggede beskyttelsesdioder mellem drain og source. 
-
-
-
-
-
-
+\todo[inline]{referencer til komponenter}

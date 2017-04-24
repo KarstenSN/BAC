@@ -1,5 +1,5 @@
 \section{Strømforsyning}
-Ifølge krav EL\_03 skal kontrolboksen kunne forsynes med en ekstern 3. parts AC/DC adaptor, kravene til denne adaptor findes i sektion \ref{designkrav:stromforsyning} på side \pageref{designkrav:stromforsyning} under under afsnittet Strømforsyning, og disse vil som sådan ikke blive diskuteret yderligere, i afsnittet her tages design af strømforsyningen på kontrolboksen under behandling. Diagram over strømforsyningen ses på Figur \ref{fig:stromforsyning_digram1}. Alle reference i følgende afsnit referer til denne figur. 
+Ifølge krav EL\_03 skal kontrolboksen kunne forsynes med en ekstern 3. parts AC/DC adaptor, kravene til denne adaptor findes i sektion \ref{designkrav:stromforsyning} på side \pageref{designkrav:stromforsyning} under afsnittet Strømforsyning, og disse vil som sådan ikke blive diskuteret yderligere, i afsnittet her tages design af strømforsyningen på kontrolboksen under behandling. Diagram over strømforsyningen ses på Figur \ref{fig:stromforsyning_digram1}. Alle reference i følgende afsnit referer til denne figur. 
 
 \begin{figure}[H]
 	\centering
@@ -10,4 +10,35 @@ Ifølge krav EL\_03 skal kontrolboksen kunne forsynes med en ekstern 3. parts AC
 
 Herunder af valg af komponenterne i forhold til typer og tolerancer beskrevet.  
 \subsubsection{J4}
-J4 er strømforsyningens AC/DC jack-konnektor som mater med den eksterne power supply der ønskes brugt. Til konnektoren er valgt modellen PJ-002B fra CUI-INC.  
+J4 er strømforsyningens AC/DC jack-konnektor som mater med den eksterne power supply der ønskes brugt. Til konnektoren er valgt modellen PJ-002B fra CUI-INC \cite{lib:dc_connector_datasheet}. Denne model er valgt da den opfylder de givne designkrav i afsnit \ref{designkrav:stromforsyning} på side \pageref{designkrav:stromforsyning} under afsnittet Strømforsyning. Selve konnektoren er en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.5 mm center pin. Konnektoren har en maksimum input current rating på 2.5A.
+
+\subsubsection{D10}
+D10 er en zener-diode af typen SMAJ7.5A fra Vishay \cite{lib:zener_SMAJ75A_datasheet}, den er valgt specifikt for at sikre mod overspænding. 7.5V-modellen er valgt for ikke at risikere at belaste den eksterne power supply hvis denne eks. lever den maksimum tolerance ud hvorved en 5V-zener diode ville klippe udgangsspændingen til 5V og dermed belaste den eksterne power supply og afsætte unødvendig effekt. Det er verificeret at diode ikke efterfølgende kan skabe problemer for hverken U2: Spændingsregulatoren eller Motorventilen, da en inputspænding på 7.5VDC er indenfor begge absolut rating. 
+
+\subsubsection{F1}
+Fuseresistoren F1 sidder som primær sikring for kontrolboksen, da alt på printet, på nær motorventilen, forsynes herigennem. Den er valgt til en værdi på 250mA, da  !!!!!!!!!
+
+\subsubsection{F2}
+Fuseresistoren F2 sidder som sikring alene for forsyningen til motorventilen derfor er den valgt til en værdi på 1A, det er gjort på baggrund af følgende. Det vides fra test, at motorventilen trækker 100mA når ventilen åbnes og lukkes. Derfor er der valgt en faktor 10, først  sikringen springer.  
+
+\subsubsection{U2}
+Som spændingsregulator er der i første omgang valgt modellen UA78M33CDCYR fra Texas Instruments \cite{lib:reg_UA78M33CDCYR_datasheet}. Denne model blev valgt uden et konkret strømbudget for kontrolboksen og derfor er dens evne til at levere 500mA ud på Vout ved 3.3VDC lige til den gode side i forhold hvad der reelt set er behov for. Derfor kan der spares på omkostningerne hvis der vælges en model spec'et til at yde mindre. Et realistisk maksimum strømbudget for kontrolboksen kan beregnes som følger: De primære strømslugende moduler trækker ifølge deres datablade:
+
+\begin{tabular}{l l}
+	$\bullet$ Transceiver[TX-mode]			& 15mA 	 \\
+	$\bullet$ Mikroprocessor [Active-mode]	& 3.6mA	 \\
+	$\bullet$ Display [background]			& 20.5mA \\
+\end{tabular}
+
+Et overslag for maksimum strømforbrug bliver da: 
+
+\begin{align}
+		I_{max} &= I_{Tranceiver} + I_{Mikroprocessor} + I_{Display} \\
+				&= 15mA + 3.6mA + 20.5mA = 39.1mA
+\end{align}
+
+Derfor kan der med fordel vælges en spændingsregulator der kan nøjes med at levere minimum 50mA på Vout ved 3.3V. Fra valget af Zener Dioden D10 vides det at den ligeledes skal kunne tåle en indgangsspænding på 7.5VDC. \todo[inline]{mangler vi flere beregner til denne her?}
+
+\subsubsection{C3, C4, C8}
+
+Kondensatorene C3 og C4 sidder for at sikre stabil spænding til og fra  regulatoren, deres værdier er som første udkast anbefalet af databladet. C8 sidder som afkobling/støjdæmper direkte på indgangen fra den eksterne power supply. 
