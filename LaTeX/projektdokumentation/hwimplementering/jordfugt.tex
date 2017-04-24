@@ -272,7 +272,8 @@ Sættes forstærkningen til $A=2$, $Q=10$, $f=100kHz$ og $C=470pF$. Fås kompone
 \subsubsection{R25}
 
 \subsubsection{C26}
-Da der kun ønskes at kunne detektere en faseforskydelse på maksimalt $90^\circ$, er der som det sidste led designet placeret en ikke inverterende forstærkerkobling med en forstærkning på $A=2$, dette er gjort for at få fuld dynamisk range. På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten af C26.    
+
+På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten af C26.    
 
 \begin{figure}[H]
 	\centering
@@ -366,7 +367,7 @@ Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/system_respons_87khz.PNG}
-	\caption{Faseændring ved 87kHz}
+	\caption{Faseændring ved 87kHz vs. kapaciteten i jordspyddet}
 	\label{fig:j12}
 \end{figure} 
 
@@ -375,6 +376,36 @@ Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_8.PNG}
 	\caption{Måling af knækfrekvens i båndpass-filteret}
 	\label{fig:j13}
+\end{figure} 
+
+Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvom at overføringsfunktionen viste at faseforskydelsen i skulle ligge fast på $90^\circ$ blev det alligevel testes med en spændingsfølger på på indgangen koblet ligesom U8B på Figur \ref{fig:jf2}, dog blev den båndbredde-begrænset til 500kHz. Spændingsfølgeren blev forsynet med både en positiv og en negativ spænding på 3.3V og var af typen LM357. Se Figur \ref{fig:j14} for scopebillede af indgang og udgang. Herefter blev der målt på udgangen af spændingsfølgeren og udgangen af båndpasfilteret (U12A ben 1). Her blev det konstateret at ved 20pF var der en faseforskydelse på $90^\circ$ og ved en kapacitet på 120pF var der en faseforskydelse på $180^\circ$. Dette ses tydeligt på Figur \ref{fig:j15} og \ref{fig:j16}. Holdes dette resultet op med opservationen om at U12B koblet som inverterende forstærker gav en positiv forstærkning er der ingen tvivl om at operationsforstærkerne er i en ustabil kobling. Ses der i databladet for TL972 ses der at fasemarginen ved en load på udgangen ved en load på 250pF ligger omkring $40^\circ$. Ses der på diagrammet for båndpass-filteret kan der ses at udgangen af U12A bliver loadet med 470pF og 171$\Omega$ serielt. Dette kan muligvis resultere i ustabilitet. Filteret blev skaleret ned så kondensatorene C23 og 34 var 47pF. Dette gav desværre ikke noget bedere resultat. Tilbage var kun at skifte operationsforstærkeren ud til en anden type.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_14.PNG}
+	\caption{Måling af ind og udgang af spændingsfølger. Gul er indgang og Grøn er udgang.}
+	\label{fig:j14}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_15.PNG}
+	\caption{Faseforskydelse af indgang og udgang i båndpass-filteret ved 20pF}
+	\label{fig:j15}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_16.PNG}
+	\caption{Faseforskydelse af indgang og udgang i båndpass-filteret ved 120pF}
+	\label{fig:j16}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Jordfugt/datablad1.PNG}
+	\caption{Fasemargin vs forsyningsspænding}
+	\label{fig:j17}
 \end{figure} 
  
 \clearpage
