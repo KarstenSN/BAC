@@ -1,5 +1,5 @@
 \section{Måling af jordfugt}  \label{sec:jordfugt}
-Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste og billigste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling. Skalaen som der er brugt at at bestemme jordfugten er den volumetriske skala\cite{lib:wiki_waterContent}. 
+Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling. Skalaen som der er brugt at at bestemme jordfugten er den volumetriske skala\cite{lib:wiki_waterContent}. 
 
 \begin{equation}
 	\theta = \frac{V_w}{V_s + V_w +V_a} \cdot 100\%
@@ -22,7 +22,7 @@ Hvor $m_w$ er massen af væske, $m_{wet}$ er massen af den fugtige jord og $\eta
 Det er derfor nu muligt at bestemme en jordfugtighed uden at skulle måle volumen af prøven. Til vejning af jordprøver er der blevet brugt en vægt af producenten \texttt{Sartorius} model \texttt{QUINTIX2102-1S} med en præcision på $\pm0.01g$.
 
 \subsection{Resistiv måling}
-Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}.  
+Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}. Det blev derfor undersøgt om det ved hjælp af denne kunne gøre målingen mere præcis.
 
 
 \begin{figure}[H]
@@ -32,7 +32,7 @@ Den resistive målemetode er en metode til at måle den ohmske værdi af jorden.
 	\label{fig:maling1}
 \end{figure} 
 
-Udfra Figur\ref{fig:maling1} kan der opstilles et ækvivalentdiagram som ses på Figur\ref{fig:akvj1}. I det øjeblik der bliver sat en spænding på proben, vil C1 være totalt afladet og det vil derfor være muligt at aflæse værdien af R1 ved brug af spændingsdeler-formlen. C1 vil herefter begynde at oplade og derfor træder R2 mere og mere i kraft. Det blev  besluttet at modellere jorden som et førsteordens system med overføringsfunktionen:
+Udfra Figur \ref{fig:maling1} kan der opstilles et ækvivalentdiagram som ses på Figur \ref{fig:akvj1}. I det øjeblik der bliver sat en spænding på proben, vil C1 være totalt afladet og det vil derfor være muligt at aflæse værdien af R1 ved brug af spændingsdeler-formlen. C1 vil herefter begynde at oplade og derfor træder R2 mere og mere i kraft. Det blev  besluttet at modellere jorden som et førsteordens system med overføringsfunktionen:
 \begin{equation}
 	System = \dfrac{\alpha \cdot \beta}{S + \alpha}
 \end{equation}
@@ -45,7 +45,7 @@ Ved brug af denne overføringsfunktion ses R1 som værende 0 ohm.
 	\label{fig:akvj1}
 \end{figure} 
 
-I matlab blev der skrevet et script, som kan findes i bilagende, til at udregne overføringsfunktionen. Der blev i alt foretaget målinger på tre typer jord, en taget på Helgenæs, en i Randers samt en så og plantejord fra en plantesæk. Aflæsningen blev foretaget ved 3$\tau$ og ikke ved 1 $\tau$ som ellers er normalen. Dette skyldes at R1 er sat til 0 ohm. 
+I matlab blev der skrevet et script, som kan findes i bilagende, \todo[inline]{henvisning} til at udregne overføringsfunktionen. Der blev i alt foretaget målinger på tre typer jord, en taget på Helgenæs, en i Randers samt en så og plantejord fra en plantesæk. Aflæsningen blev foretaget ved 3$\tau$ og ikke ved 1 $\tau$ som ellers er normalen. Dette skyldes at R1 er sat til 0 ohm. 
 
 \begin{figure}[H]
 	\centering
@@ -54,7 +54,7 @@ I matlab blev der skrevet et script, som kan findes i bilagende, til at udregne 
 	\label{fig:msystem}
 \end{figure} 
 
-På figur \ref{fig:msystem} ses hvordan den approksimerende overføringsfunktion er blevet målt. Den grønne streg er start tidspunktet og den gule streg er stop tidspunket. i Intervallet herimellem aflæses tiden af tre tidskonstanter. Disse divideres med 3 således at $\alpha$ står tilbage. $\beta$ aflæses blot som forholdet mellem inputtet og outputtet lige før spændingen går negativ. Grunden til at spændingen går negativ skyldes at der med tiden vil opstå slitage på proben, denne slitage vendes således at hver enkelt spyd vil slides lige meget. Det ses at når spændingen fjernes fra proben aflades C1 langsomt. Der blev noteret overføringsfunktioner for alle tre typer jord ved forskellige fugtigheder og tilsidst blev der lavet en regression til at bestemme fugtigheden ud fra $\beta$. $\alpha$ kunne også bruges til at bestemmer fugtigheden, men det viste sig hurtigt at den var meget upræcis at bruge, da den afhang meget af tiden siden den foregående måling. På Figur\ref{fig:funcfit} ses regressionen og på Figur\ref{fig:resplot} ses et residual plot over regressionen. Regressionen blev bestemt via matlabs indbyggede funktion \textit{fit} til at være:
+På figur \ref{fig:msystem} ses hvordan den approksimerende overføringsfunktion er blevet målt. Den grønne streg er start tidspunktet og den gule streg er stop tidspunket. i Intervallet herimellem aflæses tiden af tre tidskonstanter. Disse divideres med 3 således at $\alpha$ står tilbage. $\beta$ aflæses blot som forholdet mellem inputtet og outputtet lige før spændingen går negativ. Grunden til at spændingen går negativ skyldes at der med tiden vil opstå slitage på proben, denne slitage vendes således at hver enkelt spyd vil slides lige meget. Det ses at når spændingen fjernes fra proben aflades C1 langsomt. Der blev noteret overføringsfunktioner for alle tre typer jord ved forskellige fugtigheder og tilsidst blev der lavet en regression til at bestemme fugtigheden ud fra $\beta$ og $\alpha$. $\alpha$ viste sig desværre afhænge meget af tiden siden den foregående måling og det var derfor ikke en fordel at inkludere den i en måling. På Figur\ref{fig:funcfit} ses regressionen af $\beta$ og på Figur\ref{fig:resplot} ses et residual plot over regressionen. Regressionen blev bestemt via matlabs indbyggede funktion \textit{fit} til at være:
 
 \begin{equation}
 	\theta = a \cdot exp(b\cdot x) + c \cdot exp(d\cdot x)
@@ -328,30 +328,7 @@ Efter modultesten af Målerkredsløb ver.01 blev der fortaget en del rettelser t
 	\label{fig:j9}
 \end{figure}  
 
-Her er indført en MOSFET-transistor, Q11 således at mikroprocessoren kan tænde og slukke for et separat måle-groundplan. Dette er gjort af strømbesparende årsager. Hermed kan der lukkes ned for hele målerkredsløbet når sensoren lægges i sleep-mode. I mikroprocessoren er der en automatisk kalibreringsfunktion som køres ved tryk på Connect-knappen. \todo[inline]{Ændring af alle henvisninger fra RESET-knap til Connect} Spændingsfølgeren på indgangen er fjernet da den viste sig overflødig. Selvom at R22 ikke er ideelt 
-
-\subsection{Målerkredsløb beregninger}
-
-\subsubsection{Båndpasfilter}
-
-\subsubsection{U12A/B}
-Der er valgt at erstatte den hidtil benyttede TL972 Operationsfortærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye opamp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere Quissent Current på $85 \mu A$.Derudover har den en slew rate på $0.6V/ \mu s$ der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}. Derudover opfylder chippen temperaturkravene.  
-
-\begin{equation}
-	Slew Rate = 2 \times \pi \times f \times V_{max} = 2 \times \pi \times 10kHz \times 3.3V = 0.207V/ \mu s   
-	 \label{equ:slewrate}
-\end{equation}
-
-\subsubsection{U8A/B}
-
-\subsubsection{U10A}
-
-\subsubsection{R22}
-
-\subsubsection{R25}
-
-\subsubsection{C26}
-
+Her er indført en MOSFET-transistor, Q11 således at mikroprocessoren kan tænde og slukke for et separat måle-groundplan.  Herved kan der lukkes ned for hele målerkredsløbet når sensoren lægges i sleep-mode. I mikroprocessoren er der en automatisk kalibreringsfunktion som køres ved tryk på Connect-knappen. \todo[inline]{Ændring af alle henvisninger fra RESET-knap til Connect} Spændingsfølgeren på indgangen er fjernet da den viste sig overflødig. Selvom at R22 ikke er 22k$\Omega$ giver 33k$\Omega$ ikke den store forskel. R22 er ændret til 33k$\Omega$ da forstærkningen er sænket til 1. 
 
 \subsection{Modultest - Målerkredsløb ver.02}
 Kredsløbet viste sig dog stadig at volde problemer. Det første der blev iagttaget var at den ikke-inverterende forstærker U12B var inverterende men ikke gav udslag som den ville hvis benene 5 og 6 var vendt forkert. Der blev kigget i databladet for U12 og der burde ikke være nogle design fejl. Forstærkeren blev afmonteret således resten af kredsløbet kunne blive testet. Her viste det sig at kredsløbet allerede gav fuldt udslag ved 160pF hvilket er 50\% af fuld kapacitet og at udgangsspændingen herefter faldt en smule. Fuldt udslag burde ikke kunne opstå da der maksimalt burde være en faseforskydelse på omkring $55^\circ$ og at fuldt udslag opstår ved $90^\circ$. På Figur \ref{fig:j10} ses der et scopebillede ved 0\% fugtighed. Den automatiske kalibrerings-funktion er blevet kørt og der ligger 357mV rms på C26. At spændingen ikke kan komme ned på 0V skyldes propagation-delay'et i U8A som gør at pulsen bliver bredere og at mikroprocessoren derfor ikke kan forskyde 100kHz\_delayed så den rammer præcis.   
@@ -395,7 +372,7 @@ Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig
 	\label{fig:j13}
 \end{figure} 
 
-Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvom at overføringsfunktionen viste at faseforskydelsen i skulle ligge fast på $90^\circ$ blev det alligevel testes med en spændingsfølger på på indgangen koblet ligesom U8B på Figur \ref{fig:jf2}, dog blev den båndbredde-begrænset til 500kHz. Spændingsfølgeren blev forsynet med både en positiv og en negativ spænding på 3.3V og var af typen LM357. Se Figur \ref{fig:j14} for scopebillede af indgang og udgang. Herefter blev der målt på udgangen af spændingsfølgeren og udgangen af båndpasfilteret (U12A ben 1). Her blev det konstateret at ved 20pF var der en faseforskydelse på $90^\circ$ og ved en kapacitet på 120pF var der en faseforskydelse på $180^\circ$. Dette ses tydeligt på Figur \ref{fig:j15} og \ref{fig:j16}. Holdes dette resultet op med opservationen om at U12B koblet som inverterende forstærker gav en positiv forstærkning er der ingen tvivl om at operationsforstærkerne er i en ustabil kobling. Ses der i databladet for TL972 ses der at fasemarginen ved en load på udgangen ved en load på 250pF ligger omkring $40^\circ$. Ses der på diagrammet for båndpass-filteret kan der ses at udgangen af U12A bliver loadet med 470pF og 171$\Omega$ serielt. Dette kan muligvis resultere i ustabilitet. Filteret blev skaleret ned så kondensatorene C23 og 34 var 47pF. Dette gav desværre ikke noget bedere resultat. Tilbage var kun at skifte operationsforstærkeren ud til en anden type.  
+Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvom at overføringsfunktionen viste at faseforskydelsen i skulle ligge fast på $0^\circ$ blev det alligevel testes med en spændingsfølger på indgangen, koblet ligesom U8B på Figur \ref{fig:jf2}, dog blev den båndbredde-begrænset til 500kHz. Spændingsfølgeren blev forsynet med både en positiv og en negativ spænding på 3.3V og var af typen LM357. Se Figur \ref{fig:j14} for scopebillede af indgang og udgang. Herefter blev der målt på udgangen af spændingsfølgeren og udgangen af båndpasfilteret (U12A ben 1). Her blev det konstateret at ved 20pF var der en faseforskydelse på $90^\circ$ og ved en kapacitet på 120pF var der en faseforskydelse på $180^\circ$. Dette ses tydeligt på Figur \ref{fig:j15} og \ref{fig:j16}. Holdes dette resultet op med opservationen om at U12B koblet som inverterende forstærker gav en positiv forstærkning er der ingen tvivl om at operationsforstærkerne er i en ustabil kobling. Ses der i databladet for TL972 ses der at fasemarginen ved en load på udgangen ved en load på 250pF ligger omkring $40^\circ$. Ses der på diagrammet for båndpass-filteret kan der ses at udgangen af U12A bliver loadet med 470pF og 171$\Omega$ serielt. Dette kan muligvis resultere i ustabilitet. Filteret blev skaleret ned så kondensatorene C23 og C34 var 47pF. Dette gav desværre ikke noget bedere resultat. Tilbage var kun at skifte operationsforstærkeren ud til en anden type.  
 
 \begin{figure}[H]
 	\centering
@@ -425,8 +402,16 @@ Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvo
 	\label{fig:j17}
 \end{figure} 
 
+\subsubsection{U12}
+Der er valgt at erstatte den hidtil benyttede TL972 Operationsfortærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye opamp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere tomgangs-strøm på $85 \mu A$.Derudover har den en slew rate på $0.6V/ \mu s$ der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}.  
+
+\begin{equation}
+	Slew Rate = 2 \times \pi \times f \times V_{max} = 2 \times \pi \times 10kHz \times 3.3V = 0.207V/ \mu s   
+	 \label{equ:slewrate}
+\end{equation}
+
 \subsection{Test af kredsløb til amplitudemåling af kondensator} \label{sec:test_amplitudemoling}
- For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 hvis diodetab vil ændres med temperatur. 
+ For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 da diodetabet vil ændres med temperatur. 
  
 \begin{figure}[H]
 	\centering
@@ -438,7 +423,7 @@ Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvo
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/scope_17.PNG}
-	\caption{Stigetiden fra 20pF til 220pF.}
+	\caption{Stigetiden fra 20pF til 220pF aflæses til 37ms}
 	\label{fig:j19}
 \end{figure} 
  
