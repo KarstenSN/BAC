@@ -13,7 +13,6 @@ I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opf
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | L{1.9 cm}| m{2.9 cm} |} \hline
 	\textbf{ID:} 		& \textbf{Krav:}		& \textbf{Prioritet:} 	& \textbf{Kommentarer:} 								\\ \hline
-	
 MC\_01	& Systemet skal bestå af en sensor samt en kontrolboks indeholdende mikroprocessor og en ventil.	& \textit{Must}	 & 	\\ \hline
 MC\_02	& Systemet skal kunne pre-indstilles til en specifik afgrøde 										& \textit{Could} &  \\ \hline
 MC\_03	& Systemet skal kunne betjenes fra en smartphone-applikation										& \textit{Would} &  \\ \hline
@@ -131,7 +130,7 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} 	\\ \hline
 		US\_01		 & Keypad'en skal bestå af 4 taktile trykknapper						&	\\ \hline
 		US\_02		 & Keypad'en skal indeholde 1 rød LED til indikation af fejl 			&	\\ \hline
-		US\_03		 & Displayet skal kunne vise jordfugtighed, temperatur					&	\\ \hline
+		US\_03		 & Displayet skal kunne vise jordfugtighed, temperatur samt lyintesitet	&	\todo[inline]{mangler vi mere her} \\ \hline
 		US\_04		 & Displayet skal kunne vise systemets menuer							&	\\ \hline
 	\end{tabularx}
 	\caption{Krav til brugervenlighed}
@@ -143,7 +142,7 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
 		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
 		RI\_01		 & Systemfejl skal indikeres med rød LED på keypad						& \\ \hline
-		RI\_02		 & Systemfejlmelding skal vises på display 								& \\ \hline
+		RI\_02		 & Systemfejlmelding skal vises på display 								& \todo[inline]{stadig?}\\ \hline
 	\end{tabularx}
 	\caption{Krav til driftsikkerhed}
 	\label{tbl:driftsikkerhed_krav}
@@ -154,13 +153,14 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
 		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
 		PF\_01		 & Batteritype (Alkaline AAA) 											& \\ \hline
-		PF\_02		 & Sensorens batterilevetid (min 1 år)  								& \\ \hline
+		PF\_02		 & Sensorens batterilevetid (min 1 år)  								& \todo[inline]{test??}\\ \hline
 		PF\_03		 & Sensoren skal fungerer ned til 1.8V batterispænding 					& \\ \hline		
-		PF\_04		 & Flere instanser af systemet skal kunne køre samtidig			& \\ \hline
-		PF\_05		 & Temperatur range (1-70 graderC)										& \\ \hline
-		PF\_06		 & Målepræcision (5\%)													& \\ \hline
-		PF\_07		 & Systemrespons fra brugerinteraktion til aktuator skal være 1<sek		& \\ \hline
+		PF\_04		 & Flere instanser af systemet skal kunne køre samtidig					& \todo[inline]{hvor mange?}\\ \hline
+		PF\_05		 & Temperatur range ($ 1-70 ^{\circ}C $)								& \\ \hline
+		PF\_06		 & Målepræcision (5\%)													& \todo[inline]{hvordan test vi?}\\ \hline
+		PF\_07		 & Systemrespons fra brugerinteraktion til aktuator skal være 1<sek		& \todo[inline]{hvordan test vi?}\\ \hline
 		PF\_08		 & Sensoren skal kunne måle temperatur med min. 1 decimals præcision	& \\ \hline
+		PF\_09		 & Sensoren skal være funktionsdygtig i temperaturintervallet ($ -20 - 70^{\circ}C $) 		& \\ \hline
 	\end{tabularx}
 	\caption{Krav til performance}
 	\label{tbl:performance_krav}
