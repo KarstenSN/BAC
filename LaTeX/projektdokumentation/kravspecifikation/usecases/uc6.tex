@@ -9,14 +9,25 @@
 \textbf{Aktører:} 					 & Bruger 										\\ \hline
 \textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding \\ \hline
 \textbf{Resultat:}					 & Ventilen er enten åbnet eller lukket 	\\ \hline
-\textbf{Hovedscenarie:}				 & \todo[inline]{Opdater i forhold til kode}
+\textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
-	\item Brugeren holder pil op, nede i 3 sekunder og ventilen vil herefter åbne. Ønskes der at lukke ventilen holdes knappen pil ned, nede i 3 sekunder og ventilen lukkes.
+	\item Brugeren trykker på \texttt{Pil-op} eller \texttt{Pil-ned} på tastaturet
+	\item Teksten "Open valve?" forekommer hvis der er trykket \texttt{Pil-op}. Er der trykket \texttt{Pil-ned} forekommer teksten "Close valve?"
+	\item Brugeren trykker på \texttt{OK} på tastaturet 
+	\item Ventilen åbner eller lukker afhængig af brugerens valg i punkt 1.
+		\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
+		\item {[}Ext 1 : Ventilen er allerede i den ønskede position{]}
+		\end{packed_item}
+	
 	
 \end{packed_enum} 																\\ \hline
 
 \textbf{Udvidelser:}				&  
+\textbf{{[}Ext 1 : Ventilen er allerede i den ønskede position{]}}
+	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
+		\item Teksten "Already open" eller "Already closed" vises på displayet.				
+	\end{packed_enum}
 
 %	\end{packed_enum}
 																				\\ \hline

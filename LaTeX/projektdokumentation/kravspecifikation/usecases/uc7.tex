@@ -4,18 +4,18 @@
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 
 \textbf{Navn:} 						 & UC7: Vælg automatisk vandingstidspunkt		\\ \hline
-\textbf{Formål:}					 & Her gives brugeren mulighed for at bestemme om der skal vandes om aftnen, morgnen, begge tidspunkter eller når fugtigheden er under det ønskede  \\ \hline
+\textbf{Formål:}					 & Her gives brugeren mulighed for at bestemme om der skal vandes om aftnen, morgnen, begge tidspunkter eller hele dagen hvis fugtigheden kommer under det ønskede. Der gives også mulighed for at køre på et tidsbaseret vandingsinterval  \\ \hline
 \textbf{Initiering:}				 & Bruger 										\\ \hline
 \textbf{Aktører:} 					 & Bruger 										\\ \hline
-\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensor er tilsluttet \\ \hline
+\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensor er tilsluttet batteri, samt parret via use-case 8 \\ \hline
 \textbf{Resultat:}					 & Der er indstillet et vandingstidspunkt 	\\ \hline
-\textbf{Hovedscenarie:}				 & \todo[inline]{Opdater i forhold til kode}
+\textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
-	\item Brugeren trykker på SET 4 gange 
+	\item Brugeren trykker på \texttt{SET} på tastaturet 5 gange 
 	\item Der vises nu hvad vandingstidspunktet i forven er instillet til
-	\item Brugeren trykker på pil op eller pil ned for at vælge et andet tidspunkt. Her kan vælges imellem aftnen, morgen, begge eller kontinuert
-	\item Bruger trykker på OK
+	\item Brugeren trykker på pil op eller pil ned for at vælge et andet tidspunkt. Her kan vælges imellem aftnen, morgen, begge, hele dagen, eller tidsbaseret.
+	\item Bruger trykker på \texttt{OK} på tastaturet
 	\item Der vises nu temperatur og fugtighed på displayet, målt i jorden hvor sensoren er placeret
 	
 \end{packed_enum} 																\\ \hline

@@ -7,15 +7,15 @@
 \textbf{Formål:}					 & Her gives brugeren mulighed for at instille den ønskede fugtighed i jorden 							\\ \hline
 \textbf{Initiering:}				 & Bruger 										\\ \hline
 \textbf{Aktører:} 					 & Bruger 										\\ \hline
-\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensoren er tilsluttet \\ \hline
+\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensoren er tilsluttet batteri, samt parret via use-case 8\\ \hline
 \textbf{Resultat:}					 & Systemet opretholder en bestemt fugtighed i jorden 	\\ \hline
-\textbf{Hovedscenarie:}				 & \todo[inline]{Opdater i forhold til kode}
+\textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
-	\item Brugeren trykker på SET knappen på taststuret 
+	\item Brugeren trykker på \texttt{SET} knappen på taststuret 
 	\item Der vises nu hvad systemet i forvejen er indstillet til
-	\item Brugeren trykker nu enten på pil op eller pil ned for at stille fugtigheden op eller ned
-	\item Brugeren trykker på OK
+	\item Brugeren trykker nu enten på pil op eller pil ned for at stille fugtigheden op eller ned. Denne kan indstilles fra 0 - 50\%
+	\item Brugeren trykker på \texttt{OK}
 	\item Der vises nu temperatur og fugtighed på displayet, målt i jorden hvor sensoren er placeret
 	
 \end{packed_enum} 																\\ \hline
