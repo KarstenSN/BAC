@@ -11,6 +11,12 @@ På Figur \ref{fig:BDDsystem} ses BDD over det samlede system indeholdende senso
 
 \raggedbottom
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%							Hardware Design - Kontrolboks
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Kontrolboks}
 
 I dette underafsnit opstilles kravene til de enkelte blokke der udgør kontrolboksen på Figur \ref{fig:BDDkontrolboks}.
@@ -23,8 +29,8 @@ I dette underafsnit opstilles kravene til de enkelte blokke der udgør kontrolbo
 \end{figure}
 
 \textbf{Mikroprocessor} \label{designkrav:mikroprocessor} \\
-Det er som udgangspunkt valgt at ville benytte samme type og model Mikroprocessor til både kontrolboks og sensor, dette valg er truffet primært af software-grunde, da kontrolboks og sensor-enhed benytter mange af de samme funktioner og derfor vil det være optimalt at benytte samme processor, dertil kommer stykprisen hvis der påtænkes et high-volumen-produkt. Derfor kommer mikroprocessoren på kontrolboksen til at indeholde nogle interne moduler som ikke vil blive udnyttet, men som derimod skal bruges i forbindelse med sensorens funktionalitet. Af hensyn til overblikket er alle krav til mikroprocessorens interne modulerne beskrevet her. Mikroprocessoren skal indeholde perifere enheder til at kommunikere både over SPI og I2C. SPI er valgt at benytte da RF transceiveren benytter sig af denne kommunikationsprotokol. I2C er valgt at benytte for at kunne kommunikere med hhv. den ønskede temperatursensor, samt display'et på kontrolboksen. Da alle blokke der kommunikeres imellem sidder på samme print og afstanden er derfor er yderst begrænset, kan det retfærdiggøres at benytte sig af disse 2 protokoller, da de er designet til at fungere over korte afstande. Mikroprocessoren skal indeholde min. 2 separate ADC-kanler til sampling af hhv. jordfugtmålinger og målinger for lysintensitet.  Der skal være minimum 6 analoge I/O-pins. 2 af disse benyttes til de 2 ADC-kanaler, 1 pin er valgt at bruge til transceiveren low battery detect-funktion, samt 1 pin til kontrol af det separate stelplan til målekredsløbet. Derudover skal der kunne sendes 2 separate firkant-spænding ud fra mikroprocessoren, disse kræver ligeledes hver 1 pin. Derudover skal 1 analog pin kunne kobles til CONNECT-knappen. 
-Mikroprocessoren skal vælges udfra et ønske om en forsyningsspænding på 3.3VDC $ \pm 10\% $, da dette egner sig godt til kravet EL\_01 om en batteridrevet sensor. Derudover skal der vælges en processor med så lavt strømforbrug som muligt, dertil ønskes mulighed for power down/sleep-mode for yderligere strømbesparelse og dermed forlængelse af batterilevetiden. Processoren skal kunne programmeres eksternt, så der er mulighed for at ændre dens funktionalitet. Kravene til Mikroprocessoren kan samles til følgende: 
+Det er som udgangspunkt valgt at ville benytte samme type og model Mikroprocessor til både kontrolboks og sensor, dette valg er truffet primært af software-grunde, da kontrolboks og sensor-enhed benytter mange af de samme funktioner og derfor vil det være optimalt at benytte samme processor, dertil kommer stykprisen hvis der påtænkes et high-volumen-produkt. Derfor kommer mikroprocessoren på kontrolboksen til at indeholde nogle interne moduler som ikke vil blive udnyttet, men som derimod skal bruges i forbindelse med sensorens funktionalitet. Af hensyn til overblikket er alle krav til mikroprocessorens interne modulerne beskrevet her. Mikroprocessoren skal indeholde perifere enheder til at kommunikere både over SPI og I2C. SPI er valgt at benytte da RF transceiveren benytter sig af denne kommunikationsprotokol. I2C er valgt at benytte for at kunne kommunikere med hhv. den ønskede temperatursensor, samt display'et på kontrolboksen. Da alle blokke der kommunikeres imellem sidder på samme print og afstanden er derfor er yderst begrænset, kan det retfærdiggøres at benytte sig af disse 2 protokoller, da de er designet til at fungere over korte afstande. Mikroprocessoren skal indeholde min. 2 separate ADC-kanler til sampling af hhv. jordfugtmålinger og målinger for lysintensitet \todo[inline]{krav til ADC}.  Der skal være minimum 6 analoge I/O-pins. 2 af disse benyttes til de 2 ADC-kanaler, 1 pin er valgt at bruge til transceiveren low battery detect-funktion, samt 1 pin til kontrol af det separate stelplan til målekredsløbet. Derudover skal der kunne sendes 2 separate firkant-spænding ud fra mikroprocessoren, disse kræver ligeledes hver 1 pin. Derudover skal 1 analog pin kunne kobles til CONNECT-knappen.
+Mikroprocessoren skal vælges ud fra et ønske om en forsyningsspænding på 3.3VDC $ \pm 10\% $, da dette egner sig godt til kravet EL\_01 om en batteridrevet sensor. Derudover skal der vælges en processor med så lavt strømforbrug som muligt, dertil ønskes mulighed for power down/sleep-mode for yderligere strømbesparelse og dermed forlængelse af batterilevetiden. Processoren skal kunne programmeres eksternt, så der er mulighed for at ændre dens funktionalitet. Kravene til Mikroprocessoren kan samles til følgende: 
 
 \begin{itemize}
 	\setlength\itemsep{0em}
@@ -43,7 +49,20 @@ Motorventilen skal bestå af en DC-motor der skal forsynes med 5VDC $ \pm 10\%$ 
 Displayet skal vælges til en forsyningsspænding på 3VDC $ \pm 10\%$ og skal kunne kommunikere via I2C-protokollen. For at opfylde kravene US\_03 og US\_04 skal der vælges et display der kan vise 2x16 karakterer. Derudover skal størrelseskravet MC\_07 være opfyldt for at passe i formfaktor til kontrolboksen, krav MC\_06. Endeligt ønskes et baggrundsbelyst display, krav MC\_08 således at brugeren let kan aflæse display'et både i fuldt sollys samt om natten.
 
 \textbf{HF-Transceiver} \label{designkrav:transceiver} \\
-HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen. Transceiverens indstillinger skal initieres af mikroprocessoren ved opstart. 
+HF-Transceiveren skal kommunikere med mikroprocessoren via SPI. Den skal inkludere en antenne som skal indbygges i kontrolboksen.
+
+
+
+
+% Krav til kommunikation
+% Krav til Frekvens - unlicensed 433 MHz
+% Krav til Datarate - 16 bytes pr. sekund (størstedatapakke) + responstid
+% Krav til Antenne
+
+
+
+
+
 
 \textbf{Strømforsyning} \label{designkrav:stromforsyning} \\
 Det er valgt at systemet skal kunne benytte 3.parts AC/DC Power Supplies. Følgende krav skal opfyldes til denne eksterne power Supply. 
@@ -52,7 +71,7 @@ Det er valgt at systemet skal kunne benytte 3.parts AC/DC Power Supplies. Følge
 	\setlength\itemsep{0em}	
 	\item	Den skal kunne levere en udgangsspænding på 5VDC $\pm 10\%$
 	\item	Den skal kunne levere en udgangsstrøm på min. 1A
-	\item	Sekundside-konnekteren skal være en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.50Ø mm $\pm 2mm$ center pin  
+	\item	Sekundærside-konnekteren skal være en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.50Ø mm $\pm 2mm$ center pin  
 \end{itemize}
 
 Strømforsyningen på kontrolboksen skal inkludere en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.5 mm center pin. Denne skal have en maksimum rated input current på min. 2A. For at sikre kontrolboksen optimalt skal strømforsyningen indeholde ESD-beskyttelse, beskytte mod omvendt-polarisation samt strøm-overforbrug. Strømforsyning skal kunne acceptere 5VDC $\pm 10\%$ inputspænding fra den eksterne power supply. Derudover skal den indeholde en spændingsregulator ned til 3.3VDC $\pm 10\%$ på udgangssiden. Kravene til Strømforsyningen på kontrolboksen kan samles til følgende: 
@@ -143,7 +162,7 @@ På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger 
 	HF 		
 		& HF1 	
 		& Luftbåret, højfrekvent signal	
-		& \\ \hline
+		& $ 433MHz $						\\ \hline
 	IRQ 	
 		& A3 	
 		& Interrupt fra HF-transceiveren 
@@ -170,6 +189,12 @@ På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger 
 \end{table}
 \newpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%							Hardware Design - Sensor
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Sensor}
 I dette underafsnit opstilles kravende til de enkelte blokke der udgør sensoren på Figur \ref{fig:BDDsensor}.
 
@@ -181,7 +206,7 @@ I dette underafsnit opstilles kravende til de enkelte blokke der udgør sensoren
 \end{figure}
 
 \textbf{Mikroprocessor} \\
-Mikroprocessoren skal indeholde perifere enheder til at kommunikere over SPI og I2C. Den skal have minimum 3 analoge porte, have en analog reset pin og den skal kunne programmeres eksternt. Den skal forsynes med 3.3VDC $ \pm 10\%$ samt indeholde en min. 10bits analog til digital konverter. 
+Mikroprocessoren er den samme som i kontrolboksen, derfor henvises til afsnit \ref{designkrav:mikroprocessor} på side \pageref{designkrav:mikroprocessor}.
 
 \textbf{Jordfugt måler} \\
 Jordfugt måleren skal inkludere et jordspyd som stikkes ned i jorden for at måle jordfugtigheden. Den skal give en analog spænding ud mellem 0-3.3VDC som indikerer fugtigheden. 

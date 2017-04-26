@@ -1,4 +1,32 @@
-\section{HF-Transceiver} 
+\subsubsection{HF-Transceiver} \label{sec:SWimp_transceiver_kontrolboks}
+
+\todo[inline]{første afsnit skal lige rettes til da det er kopieret direkte fra HW-imp (frem til klasse diagram)}
+MRF49XA har i alt 16 indbyggede registre som der benyttes til at konfigurere IC'en med. For et overblik over disse henvises der til databladet\cite{lib:trans_MRFX49A_datasheet}. Herunder gennemgås hvordan der skrives til og læses fra et enkelt register. \texttt{STSREG} er statusregistret og er det eneste register der kan læses fra. Når statusregistret læses er der oftest blevet givet et eksternt interrupt til mikroprocessoren, dette interrupt kan være forsaget af mange hændelser og disse aflæses i statusregistret. Hændelser der forsager interruptet kan eks. være, at der er for lav batterispænding på sensoren, at der er wake-up timer overflow, eller at der er modtaget en byte fra senderen osv. Overblik over \texttt{STSREG} kan ses i Figur \ref{fig:mrfx49a_stsreg} og strukturen for en fuld læsning ses i Figur \ref{fig:mrfx49a_read}. Hvis bit 10 er "1" når status registret læses betyder det "Low Battery Detected", for yderligere info om statusregistret henvises til databladet \cite{lib:trans_MRFX49A_datasheet}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_stsreg.PNG}
+	\caption{Overblik over \texttt{STSREG}}
+	\label{fig:mrfx49a_stsreg}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_read.PNG}
+	\caption{Læsning af \texttt{STSREG}}
+	\label{fig:mrfx49a_read}
+\end{figure}
+
+Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generelle konfigurations register. Her vælges hvilken frekvens transceiveren skal kommunikere ved, hvilken load kapacitet krystallet skal bruge, om TX-data registret skal aktiveres og om FIFO-registret skal aktiveres. Overblik over \texttt{GENCREG} kan ses på Figur \ref{fig:mrfx49a_gencreg}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_gencreg.PNG}
+	\caption{Overblik over \texttt{GENCREG}-registret}
+	\label{fig:mrfx49a_gencreg}
+\end{figure}
+
+\texttt{CBB<15:8>} indeholder den første byte som skal sendes til receiveren. Denne byte angiver hvilket register der ønskes skrevet til. For \texttt{GENCREG} er andressen \texttt{0x80H}. Funktionaliteten sættes i bits 7-0. Ønskes der at loade krystallet med $10pF$, at kommunikere ved 433MHz, aktivering af FIFO samt TX registret, skal denne byte indeholde \texttt{0xD3H}. En komplet skrivning skal derfor indeholde \texttt{0x80D3H}. Den eneste forskel fra læsesekvensen i Figur \ref{fig:mrfx49a_read} er at \texttt{SDI} nu indeholder data i stedet for \texttt{SDO}. 
 
 \begin{figure}[H]
 	\centering

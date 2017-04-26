@@ -1,4 +1,4 @@
-\section{Display} 
+\subsubsection{Display} \label{sec:HWimp_display}
 Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus og have 16X2 karakterer, samt opfylde størrelsekrav MC\_07. Derudover skal MC\_08 være opfyldt vedrørende baggrundbelysning. Ved undersøgelse af flere displays blev Newheaven's display \textit{NHD-C0216CiZ-FSW-FBW-3V3} \cite{lib:display_datasheet} udvalgt. Dette skyldes primært at display'et har indbygget DC-DC step-up converter således at displayet kan forsynes ned til 3V. Normalt kører LCD displays på 5V, hvilket er over forsyningskravet i afsnit \ref{designkrav:display} på side \pageref{designkrav:display}. Opsætning og kommunikation sker via I2C som kravet foreskriver. Diagrammet for display'et ses på Figur 
 
 \begin{figure}[H]

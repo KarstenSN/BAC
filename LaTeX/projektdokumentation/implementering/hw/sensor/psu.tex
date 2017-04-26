@@ -1,5 +1,4 @@
-\newpage
-\section{PSU} \label{sec:psu}
+\subsubsection{PSU} \label{sec:HWimp_psu}
 Som boostkonverter til PSU'en er modellen MCP1640CT-I/CHY\cite{lib:psu_MCP1640_datasheet} fra Microchip valgt da den som udgangspunkt opfylder krav PF\_03 om at levere min. 100mA ned til 1.8VDC, dertil arbejder den med en switching frekvens på 500kHz $\pm$ 25Hz, hvilket er langt under de 433Mhz som transceiveren arbejder med hvorved der sikres god adskillelse og minimal inteferens. Switcher'en er en fixed frequency, fuldt integreret synkron-mode switcher, hvilket betyder lavere strømforbrug og bedre stabilitet, samt et min. af eksterne komponenter. Ved "input bypass" mode trækkes kun 1$\mu$A. MCP1640C er designet således at den, under opstartet ikke trækker en stor inrush-strøm samt at der næsten ingen overshoot kommer på Vout, dette sikrer at en jævn overgangsspænding opnås når switcher'en tændes ved den forprogrammerede spænding. Den arbejder med input-bypass og kan enables/disable's via den separate EN-pin, hvorved on/off status kan styres fra Transceiverens lavspændingskredsløb. Input bypass virker ved at output kobles direkte til input via en low resistans P-FET. Dette sikre at der i disconnect'ed tilstand trækkes under 1$\mu A$. Udgangsspændingen sættes ved en simpel spændingsdeler imellem Vout og VFB-pin'en. Switcher'en har derudover Short circuit protection samt overtemperature-protection.
 
 Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle referencer til komponenter efterfølgende henviser til dette diagram. 
@@ -15,11 +14,11 @@ Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle ref
 %				BOOST KONVERTER BEREGNINGER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Boost konverter beregninger} \label{sec:psu_beregninger}
+\textbf{Boost konverter beregninger} \\ \label{sec:psu_beregninger}
 Alle beregninger kan findes i Appendix \ref{appendix:psu}.
 
 
-\subsubsection{Udgangspænding} \label{sec:psu_Vout}
+\textbf{Udgangspænding} \label{sec:psu_Vout} \\
 For at fastlægge og fastholde udgangsspændingen på 3.3VDC lægges en spændingsdeler fra $V_{out}$-pin til $V_{FB}$-pin via R30 og R31 i forhold til $V_{REF}$ på $V_{FB}$-pin'en. Når Vout er i reguleret tilstand er $V_{REF}$=1.21VDC. Der antages en værdi for R31=562k, denne værdi er en standard værdi som findes i de gængse serier E48, E96, E192. Værdien for R30 kan nu beregnes på følgende måde:
 
 \begin{align} \label{eq:boostkonverter_VFB}
@@ -37,11 +36,11 @@ Da 970k$\Omega$ ikke findes som standard værdi vælges 976k$\Omega$ da denne v�
 Dette ses at være indenfor kravet på 3.3VDC $\pm$ 10 \%.
 
 
-\subsubsection{Indgangskondensator} \label{sec:psu_Cin}
+\textit{Indgangskondensator} \label{sec:psu_Cin} \\
 Indgangskondensatoren C31 vælges til en standard værdi på 4.7 $\mu F$ da der ikke er nogle omstændigheder der kalder på ekstra ordinær filtrering. Boost-spolen sørger for en god del filtrering, dertil kommer at afstanden til batteriterminalerne er relativt korte. Derudover forventes der ikke de store spændingsvariationer fra batteriet andet end den forventede afladningskurve. Det anbefales at bruge lav ESR X5R eller X7R for deres lave temperaturkoefficient. C31 vælges til en standard værdi som findes i de gængse serier E6, E12.  
 
 
-\subsubsection{Udgangskondensator} \label{sec:psu_Cout}
+\textit{Udgangskondensator} \label{sec:psu_Cout} \\
 Udgangskondensatoren C36 sikrer en jævn og stabil udgangsspænding, som for C31 anbefales det at bruge lav ESR X5R eller X7 keramiske kondensatorer. Benyttes andre typer kondensatorer med højere ESR påvirkes konverterens udgangsspænding samt effektivitet. En minimumsværdi beregnes på følgende måde:
 
 \begin{align} \label{eq:boostkonverter_Cout}
@@ -54,7 +53,7 @@ Da 2.5 $\mu F$ ikke findes i E6 eller E12 serierne vælges værdien til 3.3 $\mu
 Det bemærkes at formlen for udregningen af $ C_{36_{min}} $ antager en ESR på 0, derfor er det vigtigt, som førnævnt at benytte kondensatorer med lav ESR. Derudover er C37 på 100nF sat på for at sikre god afkobling. 
 
 
-\subsubsection{Switching Spole} \label{sec:psu_ind}
+\textit{Switching Spole} \label{sec:psu_ind} \\
 MCP1640 er designet til at fungere med SMD-monterede spoler. Denne spole skal kunne modstå den maksimale switching strøm der kan opstå ved den laveste Vin. Igen vælges her en spole med lav ESR for at højne effektiviteten af konverteren. Værdien af L4 beregnes på følgende måde: 
 
 \begin{align} \label{eq:boostkonverter_inductor}
@@ -69,11 +68,11 @@ Hvor $ I_{SW_{max}} $ er beregnet på følgende måde:
 				&= \frac{110mA}{2}+ \frac{100mA}{1-0.709} = 398.75 mA 
 \end{align}
 
-De resterende beregniner for $ \Delta I_{L} $ og $ D_{max} $ findes i Appendix \ref{appendix:psu}. 
+De resterende beregninger for $ \Delta I_{L} $ og $ D_{max} $ findes i Appendix \ref{appendix:psu}. 
 
 Da 3.83$\mu$H ikke findes som standardværdi, vælges værdien for L4 til 4.7$\mu$H.
 
-\subsubsection{Termiske overvejelser} \label{sec:psu_term}
+\textit{Termiske overvejelser} \label{sec:psu_term} \\
 Der bør også lige ses på den effekt der afsættes i komponenten når konverteren yder sit maksimum for at sikre at temperaturkravene for konverteren overholdes. i Databladet er opgivet en max. continuous junction temp. på +125 $^\circ C$. For at se om dette krav overholdes kan temperaturen ved maksimal belastning (min. effektivitet) beregnes som følger: 
 
 \begin{align} \label{eq:boostkonverter_term1}
@@ -89,9 +88,9 @@ Herefter ganges op med $\theta_{JA}= 190.5^\circ C/W $ (Package terminal resista
 \end{align}
 
 
-\subsubsection{PCB-udlæg overvejelser} \label{sec:psu_PCB}
+\textit{PCB-udlæg overvejelser} \label{sec:psu_PCB} \\
 
-\paragraph{Sensor ver2}
+\texttt{Sensor ver2:} \\
 
 I Databladet anbefales et layout af konverteren med tilhørende eksterne komponenter, det er forsøgt fulgt bedst muligt,for at sikre størst mulig effektivitet af konverteren, samt mindst mulig støj. På Figur \ref{fig:boostkonverter_layout_datasheet} ses layout forslag og på Figur \ref{fig:boostkonverter_layout_PCB} ses det aktuelle layout fra sensor PCB'et. 
 
@@ -109,16 +108,16 @@ I Databladet anbefales et layout af konverteren med tilhørende eksterne kompone
 	\label{fig:boostkonverter_layout_PCB}
 \end{figure}
 
-\paragraph{Sensor ver3}
+\texttt{Sensor ver3:} \\
 
 \todo[inline]{skriv note om nyt layout ver3}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %				BOOST KONVERTER MODULTEST
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Boost konverter modultest} \label{sec:psu_modultest}
+\subsubsection{Boost konverter modultest} \label{sec:psu_modultest}
 
-\input{hwimplementering/modultests/psu_modultest01}
+\input{implementering/hw/modultests/psu_modultest01}
 
 Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke du beregnede værdier fra afsnit \ref{sec:psu_beregninger}. Denne test kan ses foretaget herunder.
 
