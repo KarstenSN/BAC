@@ -1,12 +1,1 @@
-\subsubsection{Main}
-
-På Figur \ref{fig:sd_main_kb} ses der et sekvens diagram over main-funktionen i mikroprocessoren på kontrolboksen.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_main.pdf}
-	\caption{Sekvensdiagram over Main funktionen i kontrolboksen}
-	\label{fig:sd_main_kb}
-\end{figure} 
-
-Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund for den gør andet. Dette er for at sikre at spændingerne på boardet er stabiliseret. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware og give funktionspointere videre til diverse struct's. For at sikre mikroprocessoren aldrig ender med at stå i en låst tilstand skal dens watch-dog-timer enables. Mikroprocessoren skal altid være parat til at tage input fra brugeren og derfor skal den stå i et loop og altid aflæse om der er trykket på en tast på keypad'en eller om der er modtaget nyt data fra sensoren. Er der blevet trykket på en knap skal lyset i displayet begynde at lyse og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal eeprom'en opdateres med de nye indstillinger brugeren har lavet. Er der blevet modtaget nyt data skal sensoren have besked om at data succesfult er blevet modtaget og herefter skal displayet opdateres med de nye værdier. Som sidst i loop'et resettes watch-dog-timeren.   
+ 

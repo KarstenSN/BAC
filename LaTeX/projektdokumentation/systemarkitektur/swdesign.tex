@@ -43,8 +43,73 @@ Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikropr
 \textbf{Domain: Sensor Package} \\
 \texttt{Sensor Package}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SEKVENSDIAGRAM MAIN%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Sekvensdiagrammer kontrolboks}
+\textbf{Main}
+\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+På Figur \ref{fig:sd_main_kb} ses der et sekvens diagram over main-funktionen i mikroprocessoren på kontrolboksen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_main.pdf}
+	\caption{Sekvensdiagram over Main funktionen i kontrolboksen}
+	\label{fig:sd_main_kb}
+\end{figure} 
+
+Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund for den gør andet. Dette er for at sikre at spændingerne på boardet er stabiliseret. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware og give funktionspointere videre til diverse struct's, samt indlæse indstillingerne fra EEPROM'en. For at sikre mikroprocessoren aldrig ender med at stå i en låst tilstand skal dens watch-dog-timer enables. Mikroprocessoren skal altid være parat til at tage input fra brugeren og derfor skal den stå i et loop og altid aflæse om der er trykket på en tast på keypad'en eller om der er modtaget nyt data fra sensoren. Er der blevet trykket på en knap skal lyset i displayet begynde at lyse og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal EEPROM'en opdateres med de nye indstillinger brugeren har lavet. Er der blevet modtaget nyt data skal sensoren have besked om at data succesfult er blevet modtaget og herefter skal displayet opdateres med de nye værdier. Som sidst i loop'et resettes watch-dog-timeren og lyset i displayet slukkes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SD UC3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Use-case 3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc3.pdf}
+	\caption{Sekvensdiagram over UC3: Indstil ønsket fugtighed i jorden}
+	\label{fig:sd_uc3_kb}
+\end{figure} 
+På Figur \ref{fig:sd_uc3_kb} ses et sekvensdiagram over use-case 3. For at denne usecase aktiveres skal brugeren have trykket på SET-knappen på keypad'en 1 gang. Funktionen skal implementeres i en while løkke og skal som det første cleare displayet og skrive teksten "Soil humidity" på linje 1 og "Humidity:" på linje 2 efterfult af værdien af \texttt{soilHumidity}. Efterfølgende skal der ventes indtil der trykkes på en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{soilHumidity} i structen \texttt{settings} tælles én op. Der skal implementeres grænseværdier således at fugtigheden kun kan indstilles fra 0-50\%. Trykkes der på \texttt{Pil-ned} skal \texttt{soilHumidity} tælles én ned. Trykkes der på \texttt{OK} skal der returneres til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til use-case 4. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SD UC4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Use-case 4}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc4.pdf}
+	\caption{Sekvensdiagram over UC4: Indstil åbningstid for ventil}
+	\label{fig:sd_uc4_kb}
+\end{figure} 
+På Figur \ref{fig:sd_uc4_kb} ses et sekvensdiagram over use-case 4. For at denne usecase aktiveres skal brugeren have trykket på SET-knappen på keypad'en 2 gange. Funktionen skal implementeres i en while løkke og skal som det første cleare displayet og skrive teksten "Watering time" på linje 1 og "Time:" på linje 2 efterfult af værdien af \texttt{valveTime}. Efterfølgende skal der ventes indtil der trykkes på en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{valveTime} i structen \texttt{settings} tælles én op. Der skal implementeres grænseværdier således at åbningstiden kun kan indstilles fra 0-15 min. Trykkes der på \texttt{Pil-ned} skal \texttt{valveTime} tælles én ned. Trykkes der på \texttt{OK} skal der returneres til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til use-case 5. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SD UC5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Use-case 5}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc5.pdf}
+	\caption{Sekvensdiagram over UC5: Indstil tidsbaseret vandingsinterval}
+	\label{fig:sd_uc5_kb}
+\end{figure} 
+På Figur \ref{fig:sd_uc5_kb} ses et sekvensdiagram over use-case 5. For at denne usecase aktiveres skal brugeren have trykket på SET-knappen på keypad'en 3 gange. Funktionen skal implementeres i en while løkke og skal som det første cleare displayet og skrive teksten "Time base" på linje 1 og "Open:" på linje 2 efterfult af værdien af \texttt{openTime}. Efterfølgende skal der ventes indtil der trykkes på en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{openTime} i structen \texttt{settings} tælles én op. Der skal implementeres grænseværdier således at åbningstiden kun kan indstilles fra 0-60 min. Trykkes der på \texttt{Pil-ned} skal \texttt{valveTime} tælles én ned. Trykkes der på \texttt{OK} skal der returneres til hovedmenuen. Trykkes der på \texttt{SET} skal \texttt{byte} sættes til 1 og løkken startes forfra. Er \texttt{byte} sat til 1 skal teksten på linje 2 på displayet ændres til "Close:" efterfult af værdien af \texttt{closeTime}. Trykkes der på \texttt{Pil-op} skal variablen \texttt{closeTime} i structen \texttt{settings} tælles én op. Der skal implementeres grænseværdier således at lukketiden kun kan indstilles fra 0-23 timer. Trykkes der på \texttt{Pil-ned} skal \texttt{closeTime} tælles én ned. Trykkes der på \texttt{OK} skal der returneres til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til use-case 7.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SD UC6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Use-case 6}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc6.pdf}
+	\caption{Sekvensdiagram over UC6: Åbn/luk ventil manuelt}
+	\label{fig:sd_uc6_kb}
+\end{figure} 
+På Figur \ref{fig:sd_uc6_kb} ses et sekvensdiagram over use-case 6. For at aktivere denne use-case skal der trykkes enten på \texttt{Pil-op} eller \texttt{Pil-ned} når brugeren befinder sig i hovedmenuen. Trykkes der på \texttt{Pil-op} skal der på displayet linje 1 udskrives "Open valve?". Trykkes der efterfølgende på \texttt{OK} skal motorventilen åbnes. Trykkes der på \texttt{SET} skal der returneres til hovedmenuen. Trykkes der på \texttt{Pil-ned} skal der på displayet linje 1 udskrives "Close valve?". Trykkes der efterfølgende på \texttt{OK} skal motorventilen lukkes. Trykkes der på \texttt{SET} skal der returneres til hovedmenuen. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SD UC7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Use-case 7}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc7.pdf}
+	\caption{Sekvensdiagram over UC7: Vælg automatisk vandingstidspunkt}
+	\label{fig:sd_uc7_kb}
+\end{figure} 
+På Figur \ref{fig:sd_uc7_kb} ses et sekvensdiagram over use-case 7. For at aktivere denne use-case skal der trykkes på \texttt{SET} på keypad'en 5 gange. Funktionen skal implementeres i en while løkke og skal som det første cleare displayet og skrive teksten "Watering period" på linje 1 og "Time:" på linje 2 efterfult af settings-teksten af \texttt{waterTime}. Efterfølgende skal der ventes indtil der trykkes på en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{waterTime} i structen \texttt{settings} tælles én op. Der skal implementeres grænseværdier således at åbningstiden kun kan indstilles fra 1-5, hvilket vil tilsvare \texttt{ALLDAY}, \texttt{MORNING}, \texttt{EVENING},  \texttt{MORNINGANDEVENING} eller \texttt{AUTOTIME}. Trykkes der på \texttt{Pil-ned} skal \texttt{waterTime} tælles én ned. Trykkes der på \texttt{OK} skal der returneres til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til use-case 8.
+%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %							Software Design - Sensor
 %
@@ -87,7 +152,5 @@ Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikropr
 \textbf{Domain: Sensor Package} \\
 \texttt{Sensor Package}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
 
-\section{Sekvensdiagrammer over kontrolboks}
-\input{swdesign/sekvensdiagrammer/kontrolboks/sd_main}
 
 
