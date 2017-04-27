@@ -65,11 +65,22 @@ På Figur \ref{fig:sd_main_kb} ses sekvensdiagram over \texttt{main()}-funktione
 	\label{fig:sd_main_kb}
 \end{figure} 
 
-Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund før der foretages noget. Dette er til for at sikre at spændingerne på boardet har stabiliseret sig. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware, give funktionspointere videre til diverse struct's, samt indlæse indstillingerne fra EEPROM'en. For at sikre at mikroprocessoren aldrig ender i en låst sløjfe, enables watch-dog-timer'en. Mikroprocessoren skal altid være parat til at tage input fra brugeren, derfor skal den befinde i et loop og kontinuerligt aflæse om der påtrykket en tast på tasteturet, eller om der er modtaget ny data fra sensoren. Påtrykkes en knap skal lyset i displayet begynde tænde og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal EEPROM'en opdateres med de nye indstillinger som brugeren har konfigureret. Er der blevet modtaget ny data fra sensoren,  skal denne have besked om at data'en er modtaget med succes, og herefter skal displayet opdateres med de seneste værdier. Som sidste led i loop'et reset'es watch-dog-timeren og lyset i displayet slukkes.
+Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund før der foretages noget. Dette er til for at sikre at spændingerne på boardet har stabiliseret sig. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware, give funktionspointere videre til diverse struct's, samt indlæse indstillingerne fra EEPROM'en. For at sikre at mikroprocessoren aldrig ender i en låst sløjfe, enables watch-dog-timer'en. Mikroprocessoren skal altid være parat til at tage input fra brugeren, derfor skal den befinde i et loop og kontinuerligt aflæse om der påtrykket en tast på tasteturet, eller om der er modtaget ny data fra sensoren. Påtrykkes en knap skal lyset i displayet begynde tænde og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal EEPROM'en opdateres med de nye indstillinger som brugeren har konfigureret. Er der blevet modtaget ny data fra sensoren,  skal denne have besked om at data'en er modtaget med succes, og herefter skal displayet opdateres med de seneste værdier. Som sidste led i loop'et reset'es watch-dog-timeren og lyset i displayet slukkes.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD ISR   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Interrupt rutine} \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_isr.pdf}
+	\caption{Sekvensdiagram over interrupt-rutinen}
+	\label{fig:sd_isr_kb}
+\end{figure} 
+
+På Figur \ref{fig:sd_isr_kb} ses sekvendiagrammet over interrupt rutinen. Bliver det eksterne interrupt INT0 aktiveret skal rutinen læse status-registeret i transceiveren. Er der givet et interrupt om at der er lavt batteri skal brugeren informeres ved at skrive teksten "Low battery" ud på displayet samtidig med at LED'en på tastaturet aktiveres. Herefter skal der ventes i en uendelig while løkke, for at undgå at motorventilen åbnes og kontrolboksen herefter løber tør for strøm. Er TXRXFIFO interruptet givet er det fordi at transciveren har modtaget en byte som ligger klar i RXFIRO. Funktionen \texttt{receiveSensorPackage(sensor\_Package*)} kaldes og læser denne byte til \texttt{sensorPackage}. Er TIMER1\_COMPA interruptet aktiveret skal kontrolboksens klok tælles en op. Dette sker hvert sekund. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC3   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Use Case 3: Indstil ønsket fugtighed i jorden}
+\textbf{Use Case 3: Indstil ønsket fugtighed i jorden}\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc3.pdf}
@@ -172,6 +183,55 @@ På Figur \ref{fig:sd_uc7_kb} ses sekvensdiagram over Use Case 7. For at aktiver
 
 \textbf{Domain: Sensor Package} \\
 \texttt{Sensor Package}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%							Sekvensdiagrammer - Sensor
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsubsection{Sekvensdiagrammer sensor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SD MAIN   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Main} \\
+
+På Figur \ref{fig:sd_main_s} ses sekvensdiagrammet over \texttt{main()}-funktionen i mikroprocessoren på sensoren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/sensor/sd_main.pdf}
+	\caption{Sekvensdiagram over \texttt{main()} i sensoren}
+	\label{fig:sd_main_s}
+\end{figure} 
+
+Når batterierne er sat i batteriholderen, vi mikroprocessoren vente i 1 sekund før den gør andet. Dette er for at skire spændingen har stabiliseret sig på hele boardet. Efterfølgende skal hardwaren initieres og funktionspointere gives videre til diverse struct's. Efter \texttt{init()} skal wake-up-timeren i transceiveren aktiveres til 15 minutter. Herefter indlæses data fra temperatursensoren, lyssensoren og jordfugtsensoren. Disse data indlæses i \texttt{sensorPackage} som efterfølgende opdaterer check-summen. \texttt{sensorPackage} sende nu til kontrolboksen og denne sendes 10 gange eller indtil at kontrolboksen svarer tilbage. Som slut disables watch-dog-timeren og mikroprocessoren ligges i standbymode. Når der kommer et interrupt på INT0 fra transceiveren vågner mikroprocessoren op igen og watch-dog-timeren enables. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SD ISR   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Interrupt rutine} \\
+
+På Figur \ref{fig:sd_isr_s} ses sekvensdiagrammet over interrupt-rutinen i mikroprocessoren på sensoren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/sensor/sd_isr.pdf}
+	\caption{Sekvensdiagram over interrupt rutinen i sensoren}
+	\label{fig:sd_isr_s}
+\end{figure} 
+
+Når det eksterne interrupt INT0 aktiveres er det fordi at transceiveren har en ændring i dens statusregister. Dette register læses som det første. Er der lavt batteri sættes variablen \texttt{batteryStatus} til 1. Er wake-up-timer interruptet MRF\_WUTINT givet skal wake-up-timeren resettes. Dette gøres ved først at disable den og herefter enable den. Er interruptet MRF\_TXRXFIFO givet skal der efterfølgende læses en byte i RXFIFO'en i transceiveren fordi at kontrolboksen er ved at sende en pakke. Bliver INT1 vektoren aktiveret er det fordi at brugeren har trykket på connect knappen og funktionen \texttt{parring()} skal herefter eksekveres. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
