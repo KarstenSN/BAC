@@ -1,22 +1,22 @@
-\subsubsection{Use Case 3: Indstil ønsket fugtighed i jorden}
+\subsubsection{Use Case 3: Indstil ønsket fugtighed}
 %-------------------- UC3 --------------------
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 
-\textbf{Navn:} 						 & UC3: Indstil ønsket fugtighed i jorden						\\ \hline
-\textbf{Formål:}					 & Her gives brugeren mulighed for at instille den ønskede fugtighed i jorden 							\\ \hline
-\textbf{Initiering:}				 & Bruger 										\\ \hline
-\textbf{Aktører:} 					 & Bruger 										\\ \hline
-\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensoren er tilsluttet batteri, samt parret via use-case 8\\ \hline
-\textbf{Resultat:}					 & Systemet opretholder en bestemt fugtighed i jorden 	\\ \hline
+\textbf{Navn:} 						 & UC3: Indstil ønsket fugtighed												\\ \hline
+\textbf{Formål:}					 & Her gives Brugeren mulighed for at indstille den ønskede fugtighed i jorden 	\\ \hline
+\textbf{Initiering:}				 & Bruger 																		\\ \hline
+\textbf{Aktører:} 					 & Bruger 																		\\ \hline
+\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding, sensoren er tilsluttet batteri, samt UC:8 (par sensor og kontrolboks) er kørt med succes \\ \hline
+\textbf{Resultat:}					 & Systemet opretholder en bestemt fugtighed i jorden 							\\ \hline
 \textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
-	\item Brugeren trykker på \texttt{SET} knappen på taststuret 
-	\item Der vises nu hvad systemet i forvejen er indstillet til
-	\item Brugeren trykker nu enten på pil op eller pil ned for at stille fugtigheden op eller ned. Denne kan indstilles fra 0 - 50\%
+	\item Brugeren trykker på \texttt{SET} knappen på tastaturet 
+	\item Systemets nuværende indstillinger vises nu på display'et
+	\item Brugeren trykker nu enten på \texttt{Pil op} eller \texttt{Pil ned} for at stille fugtigheden op eller ned. Fugtigheden kan indstilles i intervallet fra 0 - 50\%
 	\item Brugeren trykker på \texttt{OK}
-	\item Der vises nu temperatur og fugtighed på displayet, målt i jorden hvor sensoren er placeret
+	\item Den nuværende temperatur og fugtighed vises på displayet
 	
 \end{packed_enum} 																\\ \hline
 
@@ -24,8 +24,7 @@
 
 %	\end{packed_enum}
 																				\\ \hline
-
 \end{tabularx}
-\caption{UC3: Indstil ønsket fugtighed i jorden	}
+\caption{UC3: Indstil ønsket fugtighed}
 \label{tbl:UC3}
 \end{table}

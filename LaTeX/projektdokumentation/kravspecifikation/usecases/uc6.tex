@@ -3,30 +3,30 @@
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 
-\textbf{Navn:} 						 & UC6: Åbn/luk ventil manuelt						\\ \hline
-\textbf{Formål:}					 & Her gives brugeren mulighed for manuelt at åbne eller lukke ventilen  \\ \hline
-\textbf{Initiering:}				 & Bruger 										\\ \hline
-\textbf{Aktører:} 					 & Bruger 										\\ \hline
-\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding \\ \hline
-\textbf{Resultat:}					 & Ventilen er enten åbnet eller lukket 	\\ \hline
+\textbf{Navn:} 						 & UC6: Åbn/luk ventil manuelt												\\ \hline
+\textbf{Formål:}					 & Her gives brugeren mulighed for manuelt at åbne eller lukke ventilen  	\\ \hline
+\textbf{Initiering:}				 & Bruger 																	\\ \hline
+\textbf{Aktører:} 					 & Bruger 																	\\ \hline
+\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding 							\\ \hline
+\textbf{Resultat:}					 & Ventilen er enten åbnet eller lukket 									\\ \hline
 \textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
 	\item Brugeren trykker på \texttt{Pil-op} eller \texttt{Pil-ned} på tastaturet
-	\item Teksten "Open valve?" forekommer hvis der er trykket \texttt{Pil-op}. Er der trykket \texttt{Pil-ned} forekommer teksten "Close valve?"
+	\item Teksten "\texttt{Open valve?}" fremkommer hvis der er trykket \texttt{Pil-op}. Er der trykket \texttt{Pil-ned} fremkommer vises teksten "\texttt{Close valve?}"
 	\item Brugeren trykker på \texttt{OK} på tastaturet 
-	\item Ventilen åbner eller lukker afhængig af brugerens valg i punkt 1.
+	\item Ventilen åbner eller lukker afhængig af Brugerens valg i punkt 1.
 		\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
 		\item {[}Ext 1 : Ventilen er allerede i den ønskede position{]}
 		\end{packed_item}
-	
+	\item Der returneres til hovedmenu og den nuværende temperatur og fugtighed vise på display'et
 	
 \end{packed_enum} 																\\ \hline
 
 \textbf{Udvidelser:}				&  
 \textbf{{[}Ext 1 : Ventilen er allerede i den ønskede position{]}}
 	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
-		\item Teksten "Already open" eller "Already closed" vises på displayet.				
+		\item Teksten "\texttt{Already open}" eller "\texttt{Already closed}" vises på display'et.				
 	\end{packed_enum}
 
 %	\end{packed_enum}

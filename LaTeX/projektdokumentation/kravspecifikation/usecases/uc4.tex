@@ -1,22 +1,22 @@
-\subsubsection{Use Case 4: Indstil åbningstid for ventil}
-%-------------------- UC3 --------------------
+\subsubsection{Use Case 4: Indstil åbningstid}
+%-------------------- UC4 --------------------
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 
-\textbf{Navn:} 						 & UC4: Indstil åbningstid for ventil						\\ \hline
-\textbf{Formål:}					 & Her gives brugeren mulighed for at instille åbningstiden for ventilen. Åbningstiden er nødvendig at indstille da kontrolboksen kun modtager data fra sensoren hvert 15. minut.  Åbningstiden kan indstilles fra 1 til 15 minutter  							\\ \hline
+\textbf{Navn:} 						 & UC4: Indstil åbningstid						\\ \hline
+\textbf{Formål:}					 & Her gives Brugeren mulighed for at indstille åbningstiden for ventilen. Åbningstiden er nødvendig at indstille da kontrolboksen kun modtager data fra sensoren hvert 15. minut.  Åbningstiden kan indstilles fra 1 til 15 minutter\\ \hline
 \textbf{Initiering:}				 & Bruger 										\\ \hline
 \textbf{Aktører:} 					 & Bruger 										\\ \hline
-\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensoren er tilsluttet batteri, samt parret via use-case 8 \\ \hline
-\textbf{Resultat:}					 & Åbningstiden for ventilen er sat 	\\ \hline
+\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensoren er tilsluttet batteri, samt UC:8 (par sensor og kontrolboks) er kørt med succes \\ \hline
+\textbf{Resultat:}					 & Åbningstiden for ventilen er sat 			\\ \hline
 \textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
-	\item Brugeren trykker 2 gange på \texttt{SET} knappen på taststuret 
-	\item Der vises nu hvad åbningstiden i forvejen er indstillet til
-	\item Brugeren trykker nu enten på pil op eller pil ned for at stille åbningstiden op eller ned. Denne kan stilles i et interval fra 0-15 min
+	\item Brugeren trykker 2 gange på \texttt{SET} knappen på tastaturet 
+	\item Den nuværende åbningstid vises på display'et
+	\item Brugeren trykker nu enten på \texttt{Pil op} eller \texttt{Pil ned} for at stille åbningstiden op eller ned. Denne værdi kan stilles i intervallet fra 0-15 minutter
 	\item Brugeren trykker på \texttt{OK}
-	\item Der vises nu temperatur og fugtighed på displayet, målt i jorden hvor sensoren er placeret
+	\item Den nuværende temperatur og fugtighed vises på displayet
 \end{packed_enum} 																\\ \hline
 
 \textbf{Udvidelser:}				&  
@@ -24,6 +24,6 @@
 %	\end{packed_enum}
 																				\\ \hline
 \end{tabularx}
-\caption{UC4: Indstil åbningstid for ventil	}
+\caption{UC4: Indstil åbningstid}
 \label{tbl:UC4}
 \end{table}

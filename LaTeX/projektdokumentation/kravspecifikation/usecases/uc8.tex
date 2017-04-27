@@ -1,37 +1,39 @@
 \subsubsection{Use Case 8: Par sensor og kontrolboks}
-%-------------------- UC6 --------------------
+%-------------------- UC8 --------------------
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 
-\textbf{Navn:} 						 & UC8: Par sensor og kontrolboks		\\ \hline
-\textbf{Formål:}					 & Her gives brugeren mulighed for at parre kontrolboks og sensor  \\ \hline
-\textbf{Initiering:}				 & Bruger 										\\ \hline
-\textbf{Aktører:} 					 & Bruger 										\\ \hline
-\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensor er tilsluttet batteri \\ \hline
-\textbf{Resultat:}					 & Der er forbindelse mellem sensor og kontrolboks 	\\ \hline
+\textbf{Navn:} 						 & UC8: Par sensor og kontrolboks															\\ \hline
+\textbf{Formål:}					 & Her gives brugeren mulighed for at parre kontrolboks og sensor  							\\ \hline
+\textbf{Initiering:}				 & Bruger 																					\\ \hline
+\textbf{Aktører:} 					 & Bruger 																					\\ \hline
+\textbf{Forudsætning:} 				 & Kontrolboksen er tilsluttet forsyningsspænding og sensor er tilsluttet batteri 			\\ \hline
+\textbf{Resultat:}					 & Der er forbindelse mellem sensor og kontrolboks 											\\ \hline
 \textbf{Hovedscenarie:}				 & 
 
 \begin{packed_enum}
 	\item Brugeren trykker på \texttt{SET} på tastaturet 6 gange 
-	\item Teksten "Connect sensor?" vises nu på displayet
+	\item Teksten "\texttt{Connect sensor?}" vises nu på display'et
 	\item Brugeren trykker på \texttt{OK} på tastaturet
 	\item Kontrolboksen skaber forbindelse til sensoren
-	\item Teksten "Connection established" vises på displayet.
+	\item Teksten "\texttt{Connection established}" vises på display'et.
 		\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
 		\item {[}Ext 1 : Der kunne ikke oprettes forbindelse{]}
 		\end{packed_item}
+	\item Der returneres til hovedmenu og den nuværende temperatur og fugtighed vise på display'et
 	
-\end{packed_enum} 																\\ \hline
+\end{packed_enum} 		\\ \hline
 
-\textbf{Udvidelser:}				&  
+\textbf{Udvidelser:}	&  
 \textbf{{[}Ext 1 : Der kunne ikke oprettes forbindelse{]}}
 	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
-		\item Teksten "Connection failed" vises på displayet.				
+		\item Teksten "\texttt{Connection failed}" vises på display'et
+		\item Der returneres til hovedmenu og den nuværende temperatur og fugtighed vise på display'et				
 	\end{packed_enum}
 
 %	\end{packed_enum}
-																				\\ \hline
+						\\ \hline
 \end{tabularx}
-\caption{UC7: Vælg automatisk vandingstidspunkt}
-\label{tbl:UC7}
+\caption{UC8: Par sensor og kontrolboks}
+\label{tbl:UC8}
 \end{table}
