@@ -35,7 +35,7 @@ Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generel
 	\label{fig:class_rftransciver}
 \end{figure} 
 
-På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.Koden er skrevet i C og det er derfor svært at give en korrekt  standardiseret beskrivelse af klassen som en traditionel C++ klasse, der er i stedet benyttet at realiseret klassen ved en struct. Det vil sige at struct'en oprettes med funktionspointere til alle public funktioner, disse er markeret med + foran funktionen. Ved private members er der sat - foran funktionen. Alle funktioner er implementeret i en .c fil hvor struct'en er implementeret i en .h fil. Det er derfor kun muligt at se de funktioner som struct'en initieres med i init-funktionen. Denne funktionen er en ekstern funktion da den ligger uden for struct'en og bliver kaldt med \texttt{rfTransceiver} som parameter. Funktionen giver pointere fra .c filen videre til struct'en. Private members er funktioner som kun kan ses af selve .c filen selv og disse funktioner kan derfor ikke ses i .h filen.
+På Figur \ref{fig:class_rftransciver} ses klassediagram over \texttt{transceiver}.Koden er skrevet i C og det er derfor svært at give en korrekt standardiseret beskrivelse af klassen som en traditionel C++ klasse. Funktionerne er i stedet implementeret i en en struct. Det vil sige at struct'en oprettes med funktionspointere til alle public funktioner, disse er markeret med + foran funktionen. Ved private members er der sat - foran funktionen. Alle funktioner er implementeret i en .c fil hvor struct'en er implementeret i en .h fil. Det er derfor kun muligt at se de funktioner som struct'en initieres med i init-funktionen. Denne funktionen er en ekstern funktion da den ligger uden for struct'en og bliver kaldt med \texttt{transceiver} som parameter. Funktionen giver pointere fra .c filen videre til struct'en. Private members er funktioner som kun kan ses af selve .c filen selv og disse funktioner kan derfor ikke ses i .h filen.
 
 \textbf{Variabel beskrivelse}
 	\begin{table}[H]
@@ -54,7 +54,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 			Funktion 	& \texttt{SendByte} 	\\ \hline
 			Parametre 	& \_byte: uint16\_t 	\\ \hline
 			Returværdi 	& void					\\ \hline
-			Beskrivelse & Kan bruges til at sende en enkelt byte til transceiveren over SPI bussen. Denne funktion er til rådighed for programmøren under udvikling af software og 							bliver derfor ikke brugt direkte. Den bliver oftest kaldt af andre funktioner. \\ \hline
+			Beskrivelse & Sender en enkelt byte til \texttt{TXBREG} i transceiveren. Som efterfølgende moduleres ud på antennen. \\ \hline
 		\end{tabularx}
 		\caption{Metodebeskrivelse for \texttt{Sendbyte}}
 \end{table}
@@ -65,7 +65,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{enableReceiver} \\\hline
 		Parametre 	& Ingen \\\hline
 		Returværdi 	& void\\\hline
-		Beskrivelse & Bruges til at gøre transceiveren funktionel efter den har været disablet. \\\hline
+		Beskrivelse & Enabler modtageren i transceiveren. \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{enableTransceiver}}
 \end{table}
@@ -76,7 +76,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{disableReceiver} \\\hline
 		Parametre 	& Ingen \\\hline
 		Returværdi 	& void\\\hline
-		Beskrivelse & Bruges til at disable transciveren således den ikke har nogen funktion og derved ikke bruger unødig strøm. \\\hline
+		Beskrivelse & Disabler modtageren i transceiveren. \\\hline
 		\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{disableTransceiver}}
 \end{table}
@@ -87,7 +87,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{getFifo} 			\\ \hline
 		Parametre 	& Ingen 					\\ \hline
 		Returværdi 	& uint8\_t					\\ \hline
-		Beskrivelse & Modtager hvad der står i FOFOREG når transciveren har givet et interrupt om at registreret er fuldt. \\\hline
+		Beskrivelse & Læser hvad der står i \texttt{FIFOREG}\\\hline
 		\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{getFifo}}
 \end{table}
@@ -126,6 +126,54 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
+		Funktion 	& \texttt{sleep} 			\\\hline
+		Parametre 	& Ingen 					\\\hline
+		Returværdi 	& void 						\\\hline
+		Beskrivelse & Ligger transceiveren i sleep mode \\\hline
+		\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{sleep}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
+		Funktion 	& \texttt{wakeup} 			\\\hline
+		Parametre 	& Ingen 					\\\hline
+		Returværdi 	& void 						\\\hline
+		Beskrivelse & Sæter transceiveren i IDLE-mode \\\hline
+		\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{wakeup}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
+		Funktion 	& \texttt{wakeUpTimerOn} 			\\\hline
+		Parametre 	& \_WTEV:uint8\_t, \_WTMV:uint8\_t 					\\\hline
+		Returværdi 	& void 						\\\hline
+		Beskrivelse & Enabler wake-up-timeren på transceiveren. \_WTEV og \_WTMV skrives direkte til \texttt{WTSREG} i transceiveren. Se Figur \ref{fig:wake-up} for beregning af disse. \\\hline
+		\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{wakeUpTimerOn}}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Klassebeskrivelser/rfTransciver/wake-up.PNG}
+	\caption{Beregning af \_WTEV:uint8\_t, \_WTMV:uint8\_t}
+	\label{fig:wake-up}
+\end{figure}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
+		Funktion 	& \texttt{wakeUpTimerOff} 			\\\hline
+		Parametre 	& ingen					\\\hline
+		Returværdi 	& void 						\\\hline
+		Beskrivelse & Disabler wake-up-timeren. \\\hline
+		\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{wakeUpTimerOff}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
 		Funktion 	& \texttt{resetOff} 		\\\hline
 		Parametre 	& Ingen  					\\\hline
 		Returværdi 	& void 						\\\hline
@@ -159,7 +207,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{lowBatDetOn} 		\\\hline
 		Parametre 	& voltage: char  			\\\hline
 		Returværdi 	& void 						\\\hline
-		Beskrivelse & Enabler batterispændings overvågnings funktionen i transceiveren. Den medgivende parameter er spændingen som der sættes for grænsen af hvad 					batterispændingen minimum må være. Når spændingen kommer under dette niveau giver transceiveren et interrupt. \\\hline	
+		Beskrivelse & Enabler batterispændings overvågnings kredsløbet i transceiveren. Den medgivende parameter er spændingen som der sættes for grænsen af hvad batterispændingen minimum må være. Når spændingen kommer under dette niveau giver transceiveren et interrupt som kan læses i \texttt{STSREG} \\\hline	
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{lowBatDetOn}}
 \end{table}
@@ -169,7 +217,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{lowBatDetOff} 	\\\hline
 		Parametre 	& Ingen  					\\\hline
 		Returværdi 	& void 						\\\hline
-		Beskrivelse & Disabler batterispændings overvågnings funktionen i transceiveren. \\\hline
+		Beskrivelse & Disabler batterispændings overvågnings kredsløbet i transceiveren. \\\hline
 		\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{lowBatDetOff}}
 \end{table}
@@ -178,9 +226,9 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| l | Z |} \hline
 		Funktion 	& \texttt{extClockOn} 		\\\hline
-		Parametre 	& Ingen  					\\\hline
+		Parametre 	& char  					\\\hline
 		Returværdi 	& void 						\\\hline
-		Beskrivelse & Enabler den eksterne clock udgang på transceiveren. \\\hline
+		Beskrivelse & Enabler den eksterne clock udgang på transceiveren. Den ønskede frekvens gives med som parameter. \\\hline
 		\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{extCloclOn}}
 \end{table}
@@ -199,10 +247,10 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| l | Z |} \hline
-		Funktion 	& \texttt{sendControlPackage} \\\hline
+		Funktion 	& \texttt{sendControlBoxPackage} \\\hline
 		Parametre 	& \_package: struct control\_package*   \\\hline
 		Returværdi 	& void 									\\\hline
-		Beskrivelse & Sender kontrolboks-pakken til sensoren. Som parameter er en pointer til pakken.  \\\hline
+		Beskrivelse & Sender kontrolboks-pakken til sensoren. Funktionen sender en byte og venter herefter på \texttt{TXRXFIFO} interruptet fra transceiveren. Når dette er blevet giver sendes den næste byte. Dette gentages indtil hele pakken er sendt.   \\\hline
 		\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{sendControlPackage}}
 \end{table}
@@ -212,7 +260,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{receiveSensorPackage} \\\hline
 		Parametre 	& \_package: struct sensor\_package* \\\hline
 		Returværdi 	& void \\\hline
-		Beskrivelse & Modtager pakken fra sensoren. Kaldes når der er blevet givet et interrupt om at der er en pakke på vej. \\\hline
+		Beskrivelse & Modtager pakken fra sensoren. Funktionen modtager en byte af gangen og returnerer herefter. Funktionen skal derfor kaldes i en interrupt-rutine. \\\hline
 		\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{receiveSensorPackage}}
 \end{table}
@@ -300,7 +348,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{mrf\_resetSynchByteRecognition} \\\hline
 		Parametre 	& ingen \\\hline	
 		Returværdi 	& void \\\hline	
-		Beskrivelse & Resetter den synkrone byte genkendelse når der er blevet modtaget en pakke. På den måde ved transceiveren at den skal have et start word inden den skal modtage 	noget igen. \\\hline
+		Beskrivelse & Resetter den synkrone byte genkendelse når der er blevet modtaget en pakke. På den måde ved transceiveren at den skal have et start word inden den skal modtage noget igen. \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{mrf\_resetSynchByteRecognition}}
 \end{table}
@@ -312,7 +360,7 @@ På Figur \ref{fig:class_rftransciver} ses klassediagram over HF-transceiveren.K
 		Funktion 	& \texttt{rfTransceiverInit} \\\hline
 		Parametre 	& \_transceiver: struct rfTransceiver* \\\hline
 		Returværdi 	& void \\\hline
-		Beskrivelse & Initierer rfTransceiver structen og giver funktionspointere fra .c filen videre. Funktionen initierer også selve transciveren og sætter den op til at køre på det 	frekvensbånd og med de indstillinger som det er blevet besluttet. \\\hline
+		Beskrivelse & Initierer \texttt{transceiver} structen og giver funktionspointere fra .c filen videre. Funktionen initierer også selve transciveren og sætter den op til 433MHz. Funktionen sætter også krystal-load-kapaciteterne til 10pF, båndbredden til 270kHz, FIFO interrupt ved 8 bit og datarate til 1200bps.  \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{rfTransceiverInit}}
 \end{table}

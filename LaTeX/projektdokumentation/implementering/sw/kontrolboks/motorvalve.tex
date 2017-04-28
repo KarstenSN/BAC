@@ -12,8 +12,8 @@
 		\begin{tabularx}{\textwidth}{| l | Z |} \hline
 		Funktion 	& \texttt{open} 			\\\hline
 		Parametre 	& Ingen 					\\\hline
-		Returværdi 	& uint8\_t 					\\\hline
-		Beskrivelse & Åbner for motorventilen. Funktionen aflæser om ventilen er åbnet eller lukket inden den fortager sig mere. Er ventilen lukket vil funktionen herefter åbne 	ventilen og returnere 0. Er ventilen i forvejen åben vil funktionen returnere 1. \\\hline
+		Returværdi 	& void 					\\\hline
+		Beskrivelse & Åbner for motorventilen. Funktionen aflæser  først om ventilen er åben eller lukket. Er ventilen lukket vil funktionen herefter åbne ventilen og returnere. Er ventilen i forvejen åbnet returneres der med det samme.  \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{open}}
 \end{table}
@@ -23,8 +23,8 @@
 	\begin{tabularx}{\textwidth}{| l | Z |} 	\hline
 		Funktion 	& \texttt{close} 			\\\hline
 		Parametre	& Ingen 					\\\hline
-		Returværdi 	& uint8\_t 					\\\hline
-		Beskrivelse & Lukker for motorventilen. Funktionen aflæser om ventilen er åbnet eller lukket inden den fortager sig mere. Er ventilen åben vil funktionen herefter lukke 	ventilen og returnere 0. Er ventilen i forvejen lukket vil funktionen returnere 1. \\\hline
+		Returværdi 	& void 					\\\hline
+		Beskrivelse & Lukker for motorventilen. Funktionen aflæser  først om ventilen er åben eller lukket. Er ventilen åben vil funktionen herefter lukke ventilen og returnere. Er ventilen i forvejen lukket returneres der med det samme. 
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{close}}
 \end{table}
@@ -46,19 +46,19 @@
 		Funktion 	& \texttt{getStatus} \\\hline
 		Parametre 	& Ingen \\\hline
 		Returværdi 	& uint8\_t \\\hline
-		Beskrivelse & Returnerer posotionen for motorventilen. Er ventilen lukket vil den returnere 0, er ventilen åben vil funktionen returnere 1.  \\\hline
+		Beskrivelse & Returnerer positionen for motorventilen. Er ventilen lukket vil den returnere \texttt{VALVE\_CLOSED}. Er ventilen åben vil funktionen returnere \texttt{VALVE\_OPEN}. Er ingen af disse stadier opfyldt returneres \texttt{VALVE\_ERROR}.  \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{getStatus}}
 \end{table}
 
 
-\textbf{Ekstern funktion}
+\textbf{Init funktion}
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| l | Z |} \hline
 		Funktion 	& \texttt{motorvalveInit} \\\hline
 		Parametre 	& \_motorvalve: struct motorvalve* \\\hline
 		Returværdi 	& void \\\hline
-		Beskrivelse & Giver funktionspointere fra .c filen til structen. \\\hline
+		Beskrivelse & Giver funktionspointere fra .c filen til structen, samt initier PC2 og PC3 som indgange og PD0 og PD1 som udgang. De interne pull-up modstande enables på PD0 og PD1. \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{motorvalveInit}}
 \end{table}
