@@ -1,6 +1,6 @@
 \chapter{Kravspecifikation} \label{ch:kravspecifikation}
 I det følgende afsnit opstilles de funktionelle og ikke-funktionelle krav til systemt. De funktionelle krav er prioriteret efter MoSCoW-modellen. 
-Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individuelt krav tildeles en prioritering, hermed kan opnås størst fokus på de mest systemkritiske krav, metoden er beskrevet nærmere i afsnit \ref{sec:moscow}. De ikke-funktionelle krav er arrangeret efter FURPS+ modellen.
+Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individuelt krav tildeles en prioritering, hermed kan opnås størst fokus på de mest systemkritiske krav, metoden er beskrevet nærmere i afsnit \ref{sec:moscow}. De ikke-funktionelle krav er arrangeret efter FURPS+ modellen, nærmere beskrevet i afsnit \ref{sec:furps}. 
 
 
 %---------------------------------------------------------------------------------------
@@ -8,12 +8,16 @@ Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individu
 %---------------------------------------------------------------------------------------
 \clearpage
 \section{Funktionelle krav} \label{sec:funktionelle_krav}
-I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen \textit{Prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}.
+I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen \textit{Prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}.
+
+\newpage
+
+\todo[inline]{opdatere MUST krav}
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | L{1.9 cm}| m{2.9 cm} |} \hline
 	\textbf{ID:} 		& \textbf{Krav:}		& \textbf{Prioritet:} 	& \textbf{Kommentarer:} 								\\ \hline
-MC\_01	& Systemet skal bestå af en sensor samt en kontrolboks indeholdende mikroprocessor og en ventil.	& \textit{Must}	 & 	\\ \hline
+MC\_01	& Systemet skal bestå af en sensor samt en kontrolboks												& \textit{Must}	 & 	\\ \hline
 MC\_02	& Systemet skal kunne pre-indstilles til en specifik afgrøde 										& \textit{Could} &  \\ \hline
 MC\_03	& Systemet skal kunne betjenes fra en smartphone-applikation										& \textit{Would} &  \\ \hline
 MC\_04	& Systemet skal kunne tilsluttes flere sensorer														& \textit{Would} &  \\ \hline
@@ -22,9 +26,10 @@ MC\_06	& Kontrolboks og sensor skal kunne passe i plasthus (B:83mmm H:59mm, D:34
 MC\_07	& Display'et må have maksimal mål på (B:53mmm H:22mm)												& \textit{Must}  & 	\\ \hline
 MC\_08	& Display'et skal være baggrundsbelyst																& \textit{Must}  & 	\\ \hline
 MC\_09	& Tasteturet må have maksimal mål på (B:70mmm H:23mm)												& \textit{Must}  & 	\\ \hline
+MC\_10	& Motorventilen skal kunne tilsluttes 1/2" vandrør													& \textit{Must}  & 	\\ \hline
 EL\_01	& Sensoren skal være batteridrevet																	& \textit{Must}	 & 	\\ \hline
 EL\_02	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet					& \textit{Must}	 & 	\\ \hline
-EL\_03	& Kontrolboksen skal kunne forsynes med en 3. parts AC/DC adaptor									& \textit{Must}	 & 	\\ \hline
+EL\_03	& Kontrolboksen skal kunne forsynes med en 3. parts 5V AC/DC adaptor								& \textit{Must}	 & 	\\ \hline
 CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse					& \textit{Must}	 & 	\\ \hline
 CM\_02	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m								& \textit{Should}& 	\\ \hline
 CM\_03	& Sensor og kontrolboks skal parres automatisk 														& \textit{Must}	 & 	\\ \hline
@@ -45,20 +50,21 @@ UX\_08	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. morgen, aft
 
 \newpage
 \subsection{MoSCoW} \label{sec:moscow}
-I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref{tbl:funk_krav}, dog er de her arrangeret efter MoSCoW-modellen. Under \textit{Must} placeres de krav som skal være opfyldt for at systemet kan siges at være minimum funktionsdygtigt. \textit{Should} indeholder de krav der bør være implementeret for at systemet kan kaldes fuldt funktionsdygtigt, disse krav implementeres hvis tid og ressourcer tillader det. \textit{Could} indeholder de krav som systemet ville ha kunne opfylde hvis tid og ressourcer ikke er en begrænsning. textit{Would} er fremtidige krav til systemets efterfølgende iterationer, disse er derfor ikke implementeret i denne prototype.   
+I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref{tbl:funk_krav}, dog er de her arrangeret efter MoSCoW-modellen. Under \textit{Must} placeres de krav som skal være opfyldt for at systemet kan siges at være minimum funktionsdygtigt. \textit{Should} indeholder de krav der bør være implementeret for at systemet kan kaldes fuldt funktionsdygtigt, disse krav implementeres hvis tid og ressourcer tillader det. \textit{Could} indeholder de krav som systemet ville ha kunne opfylde hvis tid og ressourcer ikke er en begrænsning. \textit{Would} er fremtidige krav til systemets efterfølgende iterationer, disse er derfor ikke implementeret i denne prototype.   
 
 \textbf{Must}
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
-		MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks indeholdende mikroprocessor og en motorventil.  	\\
+		MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks  												\\
 		MC\_05	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet										\\
 		MC\_06	& Kontrolboks og sensor skal kunne passe i plasthus (B:83mmm H:59mm, D:34mm)							\\		
 		MC\_07	& Display'et må have maksimal mål på (B:53mmm H:22mm)													\\
 		MC\_08	& Display'et skal være baggrundsbelyst																	\\
 		MC\_09	& Tasteturet må have maksimal mål på (B:70mmm H:23mm)													\\
+		MC\_10	& Motorventilen skal kunne tilsluttes 1/2" vandrør														\\
 		EL\_01	& Sensoren skal være batteridrevet																		\\
 		EL\_02	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet						\\
-		EL\_03	& Kontrolboksen skal kunne forsynes med en 3. parts AC/DC adaptor										\\
+		EL\_03	& Kontrolboksen skal kunne forsynes med en 3. parts 5V AC/DC adaptor									\\
 		CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse 						\\
 		CM\_03	& Sensor og kontrolboks skal parres automatisk 															\\
 		CM\_04	& Systemets parring skal nulstilles ved udtagelse af batteri i sensor									\\
@@ -157,10 +163,10 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 		PF\_02		 & Sensorens batterilevetid (min 1 år)  								& \todo[inline]{test??}\\ \hline
 		PF\_03		 & Sensoren skal fungerer ned til 1.8V batterispænding 					& \\ \hline		
 		PF\_04		 & Minimum 10 instanser af systemet skal kunne køre samtidig			& \\ \hline
-		PF\_05		 & Temperaturmåler skal kunne måle fra ($ 1-70 ^{\circ}C $)								& \\ \hline
+		PF\_05		 & Temperaturmåleren skal kunne måle fra ($ -20 - 70 ^{\circ}C $)								& \\ \hline
 		PF\_06		 & Målepræcision (5\%)													& \todo[inline]{hvordan test vi?}\\ \hline
 		PF\_07		 & Systemrespons fra brugerinteraktion til aktuator skal være 1<sek		& \todo[inline]{hvordan test vi?}\\ \hline
-		PF\_08		 & Sensoren skal kunne måle temperatur med min. 1 decimals præcision	& \\ \hline
+		PF\_08		 & Sensoren skal kunne måle temperatur og jordfugtighed med min. 1 decimals præcision	& \\ \hline
 		PF\_09		 & Sensoren skal være funktionsdygtig i temperaturintervallet ($ -20 - 70^{\circ}C $) 		& \\ \hline
 	\end{tabularx}
 	\caption{Krav til performance}
@@ -200,6 +206,7 @@ Ud fra de funktionelle krav i sektion \ref{sec:funktionelle_krav} opstilles føl
 
 % UC2:  Aflæs data
 \input{Kravspecifikation/usecases/uc2}
+\newpage
 
 % UC3:  Indstil ønsket fugtighed i jorden
 \input{Kravspecifikation/usecases/uc3}
@@ -219,8 +226,9 @@ Ud fra de funktionelle krav i sektion \ref{sec:funktionelle_krav} opstilles føl
 
 % UC7:Vælg automatisk vandingstidspunkt 
 \input{Kravspecifikation/usecases/uc7}
+\newpage
 
 % UC8:Par sensor og kontrolboks 
 \input{Kravspecifikation/usecases/uc8}
 
-\clearpage
+\cleartorightpage

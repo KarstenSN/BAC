@@ -9,52 +9,52 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/klassediagramKontrolboks.pdf}
+	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/klassediagramKontrolboks.pdf}
 	\caption{Klassediagram over kontrolboksen}
 	\label{fig:cdKontrolboks}
 \end{figure}
 
 \textbf{Controller: mikroprocessor} \\
-\texttt{Mikroprocessor}: Klasse der behandler data fra de resterende klasser. \newline
-Den opdaterer data i \texttt{controlbox-package} som herefter sendes til \texttt{HF-transceiver}. \texttt{Mikroprocessor} kommunikerer direkte med \texttt{HF-transceiver} i forbindelse med initiering og parring. \texttt{Mikroprocessor} kommunikerer herudover med \texttt{Keypad}, \texttt{Display} og \texttt{Motorvalve}. \\
-
-
-\textbf{Controller: motorvalve} \\
-\todo[inline]{Beskrivelsen af klassen motorvalve}
-
-
-\textbf{Controller: clock} \\
-\todo[inline]{Beskrivelsen af klassen clock}
-
-
-\textbf{Controller: isr} \\
-\todo[inline]{Beskrivelsen af klassen isr}
+\texttt{mikroprocessor}: Klasse der behandler data fra de resterende klasser. \newline
+Den opdaterer data i \texttt{controlboxPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{keypad}, \texttt{display}, \texttt{motorvalve}, samt \texttt{clock}, \texttt{isr} og \texttt{settings}. \\
 
 
 \textbf{Boundary: transceiver} \\
-\texttt{HF-transceiver}: Driver der styrer kommunikation med HF-transceiveren. \newline
-Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikroprocessor}. Den transmitterer \texttt{controlbox-package} til sensoren. 
+\texttt{transceiver}: Driver der skal håndtere kommunikation med \texttt{transceiveren}. \newline
+Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sensor'en. Den initeres af \texttt{mikroprocessoren} ved start up. Her skal opsættes kommunikationsfrekvens, krystal-load, datarate samt low battery-thredshold.
 
 
 \textbf{Boundary: keypad} \\
-\texttt{Keypad}: Driver der styrer brugerinterfacet til tastaturets 4 trykknapper, samt LED til fejlindikation. \\
+\texttt{keypad}: Driver der skal håndtere brugerinterfacet til tastaturets 4 trykknapper, samt LED til fejlindikation. \\
 
 
 \textbf{Boundary: i2cDisplay} \\
-\texttt{Display}: Driver der styrer kommunikation med I2C Display’et, herunder også baggrundsbelysning. \\
+\texttt{i2cDisplay}: Driver der skal håndtere kommunikation med I2C Display'et, herunder også baggrundsbelysning. \\
+
+
+\textbf{Boundary: motorvalve} \\
+\texttt{motorvalve}: Driver der skal kunne åbne og lukke for motorventilen samt aflæse status for positionen.
+
+
+\textbf{Domain: clock} \\
+\texttt{clock}: Data-struct som indeholder intern tidsreference. Denne clock startes når kontrolboksen tilsluttes forsyningsspænding og benyttes eks. som refernce til \textit{UC5: Indtil vandingsinterval}, samt de generelle tider i system. 
+
+
+\textbf{Domain: isr} \\
+\texttt{isr}: Interrupt-rutine der skal behandle interrupts fra transceiveren. Når der modtages en pakke fra sensoren skal rutinen modtage en byte af gangen som lægges i \texttt{sensorPackage}. Modtages der interrupt om for lav forsyningsspænding skal der reageres herpå. Endvidere skal rutinen tælle \texttt{clock} op hvert sekund.
 
 
 \textbf{Domain: settings} \\
-\todo[inline]{Beskrivelsen af klassen settings}
+\texttt{settings}: Data-struct som skal indeholde brugerens opsætning af systemet fra Use cases herunder, fugtighed, åbningstid og tidsbaseret vandingssekvens.   
 
 
-%\textbf{Domain: controlboxPackage} \\
-%\texttt{Controlbox Package}: Datapakke på 4 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt checksum. \\
+\textbf{Domain: controlboxPackage} \\
+\texttt{Controlbox Package}: Datapakke på 5 bytes som skal indeholde følgende: 2 startbytes, Kontrolboksens ID samt 2 bytes checksum. \\
 
 
-%\textbf{Domain: sensorPackage} \\
-%\texttt{Sensor Package}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
-
+\textbf{Domain: sensorPackage} \\
+\texttt{Sensor Package}: Datapakke på 11 bytes som skal indeholde følgende: 2 startbytes, Sensor ID, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes, en byte til lysstyrke, samt 2 bytes checksum.
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -63,7 +63,7 @@ Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikropr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsubsection{Sekvensdiagrammer kontrolboks}
+\subsubsection{Sekvensdiagrammer Kontrolboks}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SD MAIN   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Main} \\
@@ -77,7 +77,7 @@ På Figur \ref{fig:sd_main_kb} ses sekvensdiagram over \texttt{main()}-funktione
 	\label{fig:sd_main_kb}
 \end{figure} 
 
-Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund før der foretages noget. Dette er til for at sikre at spændingerne på boardet har stabiliseret sig. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware, give funktionspointere videre til diverse struct's, samt indlæse indstillingerne fra EEPROM'en. For at sikre at mikroprocessoren aldrig ender i en låst sløjfe, enables watch-dog-timer'en. Mikroprocessoren skal altid være parat til at tage input fra brugeren, derfor skal den befinde i et loop og kontinuerligt aflæse om der påtrykket en tast på tasteturet, eller om der er modtaget ny data fra sensoren. Påtrykkes en knap skal lyset i displayet begynde tænde og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal EEPROM'en opdateres med de nye indstillinger som brugeren har konfigureret. Er der blevet modtaget ny data fra sensoren,  skal denne have besked om at data'en er modtaget med succes, og herefter skal displayet opdateres med de seneste værdier. Som sidste led i loop'et reset'es watch-dog-timeren og lyset i displayet slukkes.\\
+Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund før der foretages noget. Dette er til for at sikre at spændingerne på boardet har stabiliseret sig. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware, give funktionspointere videre til diverse struct's, samt indlæse indstillingerne fra EEPROM'en. For at sikre at mikroprocessoren aldrig ender i en låst sløjfe, enables watch-dog-timer'en. Mikroprocessoren skal altid være parat til at tage input fra brugeren, derfor skal den befinde i et loop og kontinuerligt aflæse om der påtrykket en tast på tasteturet, eller om der er modtaget ny data fra sensoren. Påtrykkes en knap skal lyset i displayet tændes og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal EEPROM'en opdateres med de nye indstillinger som brugeren har konfigureret. Er der blevet modtaget ny data fra sensoren,  skal denne have besked om at data'en er modtaget med succes, og herefter skal displayet opdateres med de seneste værdier. Som sidste led i loop'et skal lyset i displayet slukkes og watch-dog-timeren reset'es.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD ISR   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \textbf{Interrupt rutine} \\
@@ -88,10 +88,10 @@ Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1
 	\label{fig:sd_isr_kb}
 \end{figure} 
 
-På Figur \ref{fig:sd_isr_kb} ses sekvendiagrammet over interrupt rutinen. Bliver det eksterne interrupt INT0 aktiveret skal rutinen læse status-registeret i transceiveren. Er der givet et interrupt om at der er lavt batteri skal brugeren informeres ved at skrive teksten "Low battery" ud på displayet samtidig med at LED'en på tastaturet aktiveres. Herefter skal der ventes i en uendelig while løkke, for at undgå at motorventilen åbnes og kontrolboksen herefter løber tør for strøm. Er TXRXFIFO interruptet givet er det fordi at transciveren har modtaget en byte som ligger klar i RXFIRO. Funktionen \texttt{receiveSensorPackage(sensor\_Package*)} kaldes og læser denne byte til \texttt{sensorPackage}. Er TIMER1\_COMPA interruptet aktiveret skal kontrolboksens klok tælles en op. Dette sker hvert sekund. 
+På Figur \ref{fig:sd_isr_kb} ses sekvendiagrammet over interruptrutinen. Bliver det eksterne interrupt INT0 aktiveret skal rutinen læse status-registeret i transceiveren. Er der givet interrupt om lav batterispænding skal brugeren informeres ved at teksten "Low battery" skrives ud på display'et samtidig med at LED'en på tastaturet tændes. Herefter skal der ventes i en uendelig while-løkke, for at undgå at motorventilen åbnes og kontrolboksen herefter løber tør for strøm. Er TXRXFIFO interruptet givet er det fordi at transceiveren har modtaget en byte som ligger klar i RXFIRO. Funktionen \texttt{receiveSensorPackage(sensor\_Package*)} kaldes og læser denne byte til \texttt{sensorPackage}. Er TIMER1\_COMPA interruptet aktiveret skal kontrolboksens clock tælles én op. Dette sker hvert sekund. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC3   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \textbf{Use Case 3: Indstil ønsket fugtighed i jorden}\\
 \begin{figure}[H]
 	\centering
@@ -100,10 +100,10 @@ På Figur \ref{fig:sd_isr_kb} ses sekvendiagrammet over interrupt rutinen. Blive
 	\label{fig:sd_uc3_kb}
 \end{figure} 
 
-På Figur \ref{fig:sd_uc3_kb} ses sekvensdiagram over Use Case 3. For at denne Use Case aktiveres skal brugeren have trykket på SET-knappen på tastaturet 1 gang. Funktionen skal implementeres i en while løkke og skal som det første clear'e displayet og skrive teksten "\textit{Soil humidity}" på linje 1 og "\textit{Humidity:}" på linje 2 efterfulgt af værdien af \texttt{soilHumidity}. Efterfølgende afventes der at brugeren påtrykker en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{soilHumidity} i struct'en \texttt{settings} tælles én op. Trykkes der på \texttt{Pil-ned} skal \texttt{soilHumidity} tælles én ned. Der skal implementeres grænseværdier således at fugtigheden kun kan indstilles fra 0-50\%. Trykkes der på \texttt{OK} returneres der til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til Use Case 4. 
+På Figur \ref{fig:sd_uc3_kb} ses sekvensdiagram over Use Case 3. For at denne Use Case aktiveres skal brugeren have trykket på SET-knappen på tastaturet 1 gang. Funktionen skal implementeres i en while løkke og skal som det første clear'e display'	et og skrive teksten "\textit{Soil humidity}" på linje 1 og "\textit{Humidity:}" på linje 2 efterfulgt af værdien af \texttt{soilHumidity}. Efterfølgende afventes der at brugeren påtrykker en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{soilHumidity} i struct'en \texttt{settings} tælles én op. Trykkes der på \texttt{Pil-ned} skal \texttt{soilHumidity} tælles én ned. Der skal implementeres grænseværdier således at fugtigheden kun kan indstilles fra 0-50\%. Trykkes der på \texttt{OK} returneres der til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til Use Case 4. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC4   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \textbf{Use Case 4: Indstil åbningstid for ventil}
 \begin{figure}[H]
 	\centering
@@ -116,7 +116,7 @@ På Figur \ref{fig:sd_uc4_kb} ses sekvensdiagram over Use Case 4. For at denne U
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC5   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \textbf{Use Case 5: Indstil tidsbaseret vandingsinterval}
 \begin{figure}[H]
 	\centering
@@ -129,7 +129,7 @@ På Figur \ref{fig:sd_uc5_kb} ses sekvensdiagram over Use Case 5. For at denne U
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC6   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \textbf{Use Case 6: Åbn/luk ventil manuelt}
 \begin{figure}[H]
 	\centering
@@ -142,7 +142,7 @@ På Figur \ref{fig:sd_uc6_kb} ses sekvensdiagram over Use Case 6. For at aktiver
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC7   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \textbf{Use Case 7: Vælg automatisk vandingstidspunkt}
 \begin{figure}[H]
 	\centering
@@ -152,6 +152,19 @@ På Figur \ref{fig:sd_uc6_kb} ses sekvensdiagram over Use Case 6. For at aktiver
 \end{figure}
 
 På Figur \ref{fig:sd_uc7_kb} ses sekvensdiagram over Use Case 7. For at aktivere denne Use Case skal der trykkes på \texttt{SET} på tasteturet 5 gange. Funktionen skal implementeres i en while løkke og skal som det første clear'e displayet og skrive teksten "\textit{Watering period}" på linje 1 og "\textit{Time:}" på linje 2 efterfulgt af settings-teksten af \texttt{waterTime}. Efterfølgende afventes der tryk på en tast. Trykkes der på \texttt{Pil-op} skal variablen \texttt{waterTime} i struct'en \texttt{settings} tælles én op. Trykkes der på \texttt{Pil-ned} skal \texttt{waterTime} tælles én ned. Der skal implementeres grænseværdier således at åbningstiden kun kan indstilles fra 1-5, hvilket vil tilsvare \texttt{ALLDAY}, \texttt{MORNING}, \texttt{EVENING},  \texttt{MORNINGANDEVENING} eller \texttt{AUTOTIME}. Trykkes der på \texttt{OK} returneres til hovedmenuen. Trykkes der på \texttt{SET} skal løkken brydes således der navigeres videre til Use Case 8.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   SD UC8   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\textbf{Use Case 8: Par sensor og kontrolboks}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_uc8.pdf}
+	\caption{Sekvensdiagram over UC8: Par sensor og kontrolboks}
+	\label{fig:sd_uc8_kb}
+\end{figure}
+
+På Figur \ref{fig:sd_uc8_kb} ses sekvensdiagram over Use Case 8. For at aktivere denne Use Case skal der trykkes på \texttt{SET} 6 gange. Funktionen skal implementeres i en while løkke og skal som det første clear'e displayet og skrive teksten "\textit{Connect sensor?}" på linje 1. Trykkes der på \texttt{OK} skal der oprettes forbindelse til sensoren ellers hvis der trykkes på alt andet skal der returneres til hovedmenuen. 
 
 
 %%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,41 +177,43 @@ På Figur \ref{fig:sd_uc7_kb} ses sekvensdiagram over Use Case 7. For at aktiver
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/klassediagramSensor.pdf}
+	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/klassediagramSensor.pdf}
 	\caption{Klassediagram over sensor}
 	\label{fig:cdSensor}
 \end{figure}
 
-\textbf{Controller: Microprocessor} \\
-\texttt{Mikroprocessor}: Klasse der behandler data fra de resterende klasser. Den opdaterer data i \texttt{Sensor-package} som herefter sendes til \texttt{HF-transceiver}. \texttt{Mikroprocessor} kommunikerer direkte med \texttt{HF-transceiver} i forbindelse med initiering og parring. \texttt{Mikroprocessor} kommunikerer herudover med \texttt{Soil Probe}, \texttt{temperature Sensor} og \texttt{Light Sensor}. \\
+\textbf{Controller: microprocessor} \\
+\texttt{mikroprocessor}: Klasse der behandler data fra de resterende klasser. Den opdaterer data i \texttt{sensorPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{soilProbe}, \texttt{temperatureSensor} og \texttt{lightSensor}. \\
 
 
-\textbf{Controller: isr} \\
-\todo[inline]{Beskrivelsen af klassen isr}
-
-
-\textbf{Boundary: transcevier} \\
-\texttt{HF-transceiver}: Driver der styrer kommunikation med HF-transceiveren. Den opdaterer \texttt{Sensor-package} og transmittere pakken til \texttt{Mikroprocessor}. Den transmitterer \texttt{Sensor-package} til kontrolboksen. 
+\textbf{Boundary: transceiver} \\
+\texttt{transceiver}: Driver der styrer kommunikation imellem kontrolboks og sensor. Den håndterer afsendelse af hhv. \texttt{controlboxPackage} og \texttt{sensorPackage}
 
 
 \textbf{Boundary: soilSensor} \\
-\texttt{SoilSensor}: Driver der styrer hardwarekredsløbet til jordfugtighedsmåling. \\
-\todo[inline]{Beskrivelsen af klassen Soilsensor}
+\texttt{soilSensor}: Driver der styrer hardwarekredsløbet til jordfugtmåling. \\
+
+
 
 \textbf{Boundary: temperatureSensor} \\
-\texttt{Temperature Sensor}: Driver til temperatursensor \\
-\todo[inline]{Beskrivelsen af klassen TemperatureSensor}
+\texttt{temperatureSensor}: Driver til temperatursensor \\
+
 
 \textbf{Boundary: lightSensor} \\
-\texttt{Light Sensor}: Driver der styrer hardwarekredsløbet til lysmåling. \\
-\todo[inline]{Beskrivelsen af klassen LightSensor}
+\texttt{lightSensor}: Driver der styrer hardwarekredsløbet til lysmåling. \\
 
-%\textbf{Domain: Controlbox Package} \\
-%\texttt{Controlbox Package}: Datapakke på 4 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt checksum \\
+
+\textbf{Domain: isr} \\
+\texttt{isr}: Interrupt-rutine der skal behandle interrupts fra transceiveren. Når der modtages en pakke fra kontrolboksen skal rutinen modtage en byte af gangen som lægges i \texttt{controlboxPackage}. Modtages der interrupt om for lav batterispænding skal der reageres herpå, ved at sætte \texttt{batteryStatus} til 1 i \texttt{sensorPackage}.
+
+
+\textbf{Domain: controlboxPackage} \\
+\texttt{controlboxPackage}: Datapakke på 5 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt 2 bytes checksum \\
 
 
 \textbf{Domain: sensorPackage} \\
-\texttt{sensorPackage}: Datapakke på 10 bytes som indeholder følgende: 2 startbytes, Sensorens ID, checksum, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes samt lysstyrke. \\
+\texttt{sensorPackage}: Datapakke på 11 bytes som indeholder følgende: 2 startbytes, Sensorens ID, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes, lysstyrke samt checksum.
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -221,11 +236,11 @@ På Figur \ref{fig:sd_main_s} ses sekvensdiagrammet over \texttt{main()}-funktio
 	\label{fig:sd_main_s}
 \end{figure} 
 
-Når batterierne er sat i batteriholderen, vi mikroprocessoren vente i 1 sekund før den gør andet. Dette er for at skire spændingen har stabiliseret sig på hele boardet. Efterfølgende skal hardwaren initieres og funktionspointere gives videre til diverse struct's. Efter \texttt{init()} skal wake-up-timeren i transceiveren aktiveres til 15 minutter. Herefter indlæses data fra temperatursensoren, lyssensoren og jordfugtsensoren. Disse data indlæses i \texttt{sensorPackage} som efterfølgende opdaterer check-summen. \texttt{sensorPackage} sende nu til kontrolboksen og denne sendes 10 gange eller indtil at kontrolboksen svarer tilbage. Som slut disables watch-dog-timeren og mikroprocessoren ligges i standbymode. Når der kommer et interrupt på INT0 fra transceiveren vågner mikroprocessoren op igen og watch-dog-timeren enables. 
+Når batterierne er sat i batteriholderen vil mikroprocessoren vente i 1 sekund før den starter op. Dette er for at skire spændingen på hele boardet har stabiliseret sig. Efterfølgende skal hardwaren initieres og funktionspointere gives videre til diverse struct's. Efter \texttt{init()} skal wake-up-timeren i transceiveren aktiveres til 15 minutter. Herefter indlæses data fra temperatursensoren, lyssensoren og jordfugtsensoren. Disse data indlæses i \texttt{sensorPackage} som efterfølgende opdaterer checksummen. \texttt{sensorPackage} sendes nu til kontrolboksen, denne forsøges sendt 10 gange, eller indtil at kontrolboksen svarer tilbage om korrekt modtagelse. Til slut disables watch-dog-timeren og mikroprocessoren ligges i standby-mode. Når der kommer et interrupt på INT0 fra transceiveren vågner mikroprocessoren op igen og watch-dog-timeren enables. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SD ISR   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\textbf{Interrupt rutine} \\
+\newpage
+\textbf{ISR} \\
 
 På Figur \ref{fig:sd_isr_s} ses sekvensdiagrammet over interrupt-rutinen i mikroprocessoren på sensoren.
 
@@ -236,7 +251,7 @@ På Figur \ref{fig:sd_isr_s} ses sekvensdiagrammet over interrupt-rutinen i mikr
 	\label{fig:sd_isr_s}
 \end{figure} 
 
-Når det eksterne interrupt INT0 aktiveres er det fordi at transceiveren har en ændring i dens statusregister. Dette register læses som det første. Er der lavt batteri sættes variablen \texttt{batteryStatus} til 1. Er wake-up-timer interruptet MRF\_WUTINT givet skal wake-up-timeren resettes. Dette gøres ved først at disable den og herefter enable den. Er interruptet MRF\_TXRXFIFO givet skal der efterfølgende læses en byte i RXFIFO'en i transceiveren fordi at kontrolboksen er ved at sende en pakke. Bliver INT1 vektoren aktiveret er det fordi at brugeren har trykket på connect knappen og funktionen \texttt{parring()} skal herefter eksekveres. 
+Når det eksterne interrupt INT0 aktiveres er det fordi at transceiveren har en ændring i dens statusregister. Dette register læses som det første. Er der lavt batteri, sættes variablen \texttt{batteryStatus} til 1. Er wake-up-timer interruptet MRF\_WUTINT givet skal wake-up-timeren reset'es. Dette gøres ved først at disable den og herefter enable den. Er interruptet MRF\_TXRXFIFO givet skal der efterfølgende læses en byte i RXFIFO'en i transceiveren fordi at kontrolboksen er ved at sende en pakke. Bliver INT1 vektoren aktiveret er det fordi at brugeren har trykket på connect knappen og funktionen \texttt{parring()} skal herefter eksekveres. 
 
 
 
