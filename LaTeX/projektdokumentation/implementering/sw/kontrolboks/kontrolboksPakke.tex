@@ -1,6 +1,6 @@
 \subsubsection{Kontrolboks Pakke} \label{sec:SWimp_kontrolboksPakke}
 
-\todo[inline]{Beskrivelse af kontrolboks Pakke fra Sysark - SW design}
+Som det ses på Figur \ref{fig:kbpakke1} skal kontrolboks-pakken bestå af i alt 5 byte. To byte som tilsammen udgør et startword til \texttt{transceiver}. Et Id og et cheksum-word. 
 
 \begin{figure}[H]
 	\centering
@@ -8,6 +8,8 @@
 	\caption{Kontrolbokspakke}
 	\label{fig:kbpakke1}
 \end{figure}
+
+Implementeringen ses på Figur \ref{fig:kbpakke2}. 
 
 \begin{figure}[H]
 	\centering
@@ -19,5 +21,69 @@
 
 \textit{Variable-beskrivelser} \\
 
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{startWord}	& \texttt{uint16\_t}	& Variabel som indeholder start-word'et til transceiveren. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{startWord}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{Id}	& \texttt{uint8\_t}	& Variabel som indeholder Id'et på kontrolboksen. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{Id}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{checksum}	& \texttt{uint16\_t}	& Variabel som indeholder checksummen af hele pakken. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{checksum}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{receivedChecksum}	& \texttt{uint16\_t}	& Variabel som indeholder checksummen af den modtagende pakken. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{receivedChecksum}}
+\end{table}
+
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{newDataReady}	& \texttt{uint16\_t}	& Variabel som sættes til 1 når \texttt{transceiver} har modtaget en fuld pakke. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{newDataReady}}
+\end{table}
+
+
 
 \textit{Funktions-beskrivelse} \\
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{testChecksum} \\\hline
+		Parametre 	& \_package: struct controlBox\_package* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Udregner checksummen i den nuværende pakke og sammenligner den med \texttt{receivedChecksum}. Er de ens returneres 1 ellers returneres 0. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{testChecksum}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{updateChecksum} \\\hline
+		Parametre 	& \_package: struct controlBox\_package* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Opdaterer \texttt{checksum} \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{updateChecksum}}
+\end{table}
+
+

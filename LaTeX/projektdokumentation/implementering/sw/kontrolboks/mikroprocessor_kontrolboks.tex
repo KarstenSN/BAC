@@ -1,9 +1,170 @@
 \subsubsection{Mikroprocessor} \label{sec:SWimp_mikroprocessor_kontrolboks}
 
-\todo[inline]{Beskrivelse af Mikroprocessorklassen fra Sysark - SW design}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Klassebeskrivelser/mikroprocessor/mikroprocessor_kontrol.pdf}
+	\caption{Klassediagram over mikroprocessor}
+	\label{fig:class_rftransciver}
+\end{figure} 
 
 \textit{Variable-beskrivelser} \\
 
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{display}	& \texttt{i2cDisp}	& Driver til displayet som er monteret på kontrolboksen \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af structen \texttt{display}}
+\end{table}
 
-\textit{Funktions-beskrivelse} \\
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{valve}	& \texttt{motorvalve}	& Driver til motorventilen \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af structen \texttt{valve}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{keypad}	& \texttt{kaypad}	& Driver til tastaturet \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af structen \texttt{keypad}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{transceiver}	& \texttt{transceiver}	& Driver til transceiveren \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af structen \texttt{transceiver}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{sensorPackage}	& \texttt{sensor\_package}	& struct som indeholder data fra sensoren \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af structen \texttt{sensorPackage}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{controlBoxPackage}	& \texttt{controlbox\_package}	& struct som indeholder data fra kontrolboksen \\ \hline
+		\end{tabularx}
+		\caption{Attributter for klassen \texttt{controlBoxPackage}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{settings}	& \texttt{settingsage}	& struct som indeholder indstillinger lavet af brugeren. Disse sætted ved at kalde funktionen \texttt{menu()}. \\ \hline
+		\end{tabularx}
+		\caption{Attributter for klassen \texttt{settings}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{clock}	& \texttt{clock}	& struct som indeholder system klokken. Denne tælles op hvert sekund af \texttt{ISR(TIMER1\_COMPA\_vect)}. \\ \hline
+		\end{tabularx}
+		\caption{Attributter for klassen texttt{clock}}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Funktions beskrivelser%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{menu} 	\\ \hline
+			Parametre 	& ingen 	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Kaldes når brugeren trykker på en vilkårlig tast på tastaturet. Funktionen giver mulighed for brugeren at navigere rundt i systemets use-cases og herved indstille systemet til det ønskede.    \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{menu}}
+\end{table}
+
+\textit{Funktions-beskrivelser} \\
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{delaySec} 	\\ \hline
+			Parametre 	& uint8\_t sec	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & venter i x antal sekunder angivet at \texttt{sec}.   \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{delaySec}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{enableCounter1Sek} 	\\ \hline
+			Parametre 	& ingen	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Enabler \texttt{TIMER1} til at give et interrupt hvert sekund.   \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{enableCounter1Sek}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{updateDataToDisp} 	\\ \hline
+			Parametre 	& ingen	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Opdaterer hoved-menuen på kontrolboksen. Fugtighed og temperatur udskrives således brugeren kan aflæse det.   \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{updateDataToDisp}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{menu} 	\\ \hline
+			Parametre 	& ingen 	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Kaldes når brugeren trykker på en vilkårlig tast på tastaturet. Funktionen giver mulighed for brugeren at navigere rundt i systemets use-cases og herved indstille systemet til det ønskede.    \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{menu}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{control} 	\\ \hline
+			Parametre 	& ingen 	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Kaldes hvert minut af \texttt{ISR(TIMER1\_COMPA\_vect)}. Funktionen aflæser \texttt{settings} og     sørger for at åbne eller lukke for \texttt{valve} når det passer med brugerens indstillinger.\\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{control}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{main} 	\\ \hline
+			Parametre 	& void 	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Er selve hovedfunktionen som først sørger for at initiere alt hardware og give give funktionspoitere videre via \texttt{init}. Efterfølgende læses brugerens indstillinger fra EEPROM'en. Er det første gang funktionen kører læses der ikke fra EEPROM'en. Herefter kaldes funktionen \texttt{enableCounter1Sek()} og der ventes i en uendelig while-løkke hvor der aflæses om der trykkes på tastaturet eller om der er modtaget data fra sensoren. Er der trykket på tastaturet startes \texttt{TIMER1} og funktionen \texttt{menu()} kaldes. Er der modtaget nyt data kaldes funktionen \texttt{updateDataToDisp()}.   \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{main}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{ISR(INT0\_vect)} 	\\ \hline
+			Parametre 	& INT0\_vect	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Interrupt som kaldes når der eksterne interrupt INT0 forekommer. Rutinen aflæser statusregisteret i \texttt{transceiver}. Er der interrupt om lavt batteri informeres brugeren herom, eller er der nyt data klar modtages der en byte i \texttt{sensorPackage}.\\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{ISR(INT0\_vect)}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{ISR(TIMER1\_COMPA\_vect)} 	\\ \hline
+			Parametre 	& TIMER1\_COMPA\_vect	\\ \hline
+			Returværdi 	& void					\\ \hline
+			Beskrivelse & Interrupt som kaldes på \texttt{TIMER1} compare-match. Dette sker hvert sekund. \texttt{clock} tælles én op og hvert minut kaldes \texttt{control()}.\\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{ISR(TIMER1\_COMPA\_vect)}}
+\end{table}
+
 

@@ -1,8 +1,35 @@
 \subsubsection{Clock} \label{sec:SWimp_clock_kontrolboks}
 
-\todo[inline]{Beskrivelse af clock fra Sysark - SW design}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Klassebeskrivelser/clock/clock.pdf}
+	\caption{Klassediagram over \texttt{clock}}
+\end{figure} 
+
+
 
 \textit{Variable-beskrivelser} \\
 
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{second}	& \texttt{uint8\_t}	& Variabel som tælles op hvert sekund. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{second}}
+\end{table}
 
-\textit{Funktions-beskrivelse} \\
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{minute}	& \texttt{uint8\_t}	& Variabel som tælles op hvert minut. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{minute}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{hour}	& \texttt{uint8\_t}	& Variabel som tælles op hver time. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{hour}}
+\end{table}

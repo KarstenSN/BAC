@@ -1,8 +1,72 @@
 \subsubsection{Settings} \label{sec:SWimp_settings_kontrolboks}
 
-\todo[inline]{Beskrivelse af Settings fra Sysark - SW design}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Klassebeskrivelser/settings/settings.pdf}
+	\caption{Klassediagram over \texttt{clock}}
+\end{figure} 
 
 \textit{Variable-beskrivelser} \\
 
 
-\textit{Funktions-beskrivelse} \\
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{soilHumidity}	& \texttt{uint8\_t}	& Variabel som indeholder den fugtighed som brugeren har valgt at systemet skal opretholde. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{soilHumidity}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{valveTime}	& \texttt{uint8\_t}	& Variabel som indeholder åbningstiden for ventilen. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{valveTime}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{openTime}	& \texttt{uint8\_t}	& Variabel som indeholder åbningstiden for det tidsbaserede vandingsinterval. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{openTime}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{closeTime}	& \texttt{uint8\_t}	& Variabel som indeholder lukketiden for det tidsbaserede vandingsinterval. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{closeTime}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{waterTime}	& \texttt{uint8\_t}	& Variabel som indeholder tiden som der skal vandes på. Tiden kan være \texttt{MORNING},\texttt{EVENING}, \texttt{MORNINGANDEVENING}, \texttt{ALLDAY}. Se sektion \ref{sec:SWimp_mikroprocessor_kontrolboks}. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{waterTime}}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
