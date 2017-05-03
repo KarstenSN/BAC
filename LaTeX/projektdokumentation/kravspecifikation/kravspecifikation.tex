@@ -8,7 +8,14 @@ Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individu
 %---------------------------------------------------------------------------------------
 \clearpage
 \section{Funktionelle krav} \label{sec:funktionelle_krav}
-I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen \textit{Prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}.
+I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen \textit{Prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}. Kravene er typebenævnt i forhold til følgende konvention.
+
+\begin{itemize} \itemsep0em
+\item	\texttt{MC}: \textit{Mechanical Contraints:} Dette er de mekaniske krav til systemet
+\item	\texttt{EL}: \textit{Electrical Contraints:} Dette er de elektriske krav til systemet
+\item	\texttt{CM}: \textit{Communications Contraints:} Dette er de krav der vedrører kommunikation i systemet
+\item 	\texttt{UX}: \textit{User Experience:} Dette er de bruger-relaterede krav til systemet
+\end{itemize} 
 
 \newpage
 
@@ -50,7 +57,7 @@ UX\_08	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. morgen, aft
 
 \newpage
 \subsection{MoSCoW} \label{sec:moscow}
-I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref{tbl:funk_krav}, dog er de her arrangeret efter MoSCoW-modellen. Under \textit{Must} placeres de krav som skal være opfyldt for at systemet kan siges at være minimum funktionsdygtigt. \textit{Should} indeholder de krav der bør være implementeret for at systemet kan kaldes fuldt funktionsdygtigt, disse krav implementeres hvis tid og ressourcer tillader det. \textit{Could} indeholder de krav som systemet ville ha kunne opfylde hvis tid og ressourcer ikke er en begrænsning. \textit{Would} er fremtidige krav til systemets efterfølgende iterationer, disse er derfor ikke implementeret i denne prototype.   
+I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref{tbl:funk_krav}, dog er de her arrangeret efter MoSCoW-modellen. Under \textit{Must} placeres de krav som skal være opfyldt for at systemet kan siges at være minimum funktionsdygtigt. \textit{Should} indeholder de krav der bør være implementeret for at systemet kan kaldes fuldt funktionsdygtigt, disse krav implementeres hvis tid og ressourcer tillader det. \textit{Could} indeholder de krav som systemet ville ha kunne opfylde hvis tid og ressourcer ikke er en begrænsning. \textit{Would} er fremtidige krav til systemets efterfølgende iterationer, disse er derfor ikke implementeret i denne prototype. 
 
 \textbf{Must}
 \begin{table}[H]
@@ -120,7 +127,7 @@ I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref
 De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard.Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
 Modellen inddeler kravsættet i følgende undergrupper.
 
-\begin{itemize}
+\begin{itemize} \itemsep0em
 	\item 	Functionality (funktionalitet)
 	\item	Usability (Brugervenlighed)
 	\item	Reliability (Driftsikkerhed)
@@ -129,7 +136,14 @@ Modellen inddeler kravsættet i følgende undergrupper.
 	\item	+ (Design and Fysiske begrænsninger, Interfaces)
 \end{itemize}
 
-Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav}. De ikke funktionelle krav er indekseret som det ses på de følgende tabeller, som med de funktionelle krav tildeles her unik krav ID. 
+Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav}. De ikke funktionelle krav er indekseret som det ses på de følgende tabeller, som med de funktionelle krav tildeles her unik krav ID. Kravene er typebenævnt i forhold til følgende konvention.
+
+\begin{itemize} \itemsep0em
+\item	\texttt{US}: \textit{Usability Contraints:} Dette er de krav der relaterer sig til Brugervenlighed
+\item	\texttt{RI}: \textit{Reliablity Contraints:} Dette er de krav der relaterer sig til Driftsikkerhed
+\item	\texttt{PF}: \textit{Performance Contraints:} Dette er de krav der relaterer sig til Performance
+\item 	\texttt{SP}: \textit{Supportability contraints:} Dette er de krav der relaterer sig til Vedligeholdelse
+\end{itemize} 
 
 \newpage
 \textbf{Brugervenlighed}

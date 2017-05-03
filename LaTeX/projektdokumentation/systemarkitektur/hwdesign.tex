@@ -63,7 +63,15 @@ Tastaturet skal bestå af 4 trykknapper samt en rød LED til indikation af fejl,
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger signalbeskrivelse i tabel \ref{tbl:SignalerKontrolboks}.
+På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger signalbeskrivelse i tabel \ref{tbl:SignalerKontrolboks}. De interne signaler i kontrolboksen er typebenævnt efter følgende konvention: Tallene efter typebetegnelsen er fortløbende: 
+
+\begin{itemize} \itemsep0em
+	\item	\texttt{P}: Dette er systemets power-signaler. 
+	\item 	\texttt{K}: Dette er signaler der relaterer sig til kommunikation. 
+	\item 	\texttt{B}: Dette er Bus-signaler. 
+	\item 	\texttt{A}: Dette er analoge spændinger. 
+	\item 	\texttt{H}: Dette er luftbåret højfrekvente signaler.
+\end{itemize}
 
 \begin{figure}[H]
 	\centering
@@ -93,7 +101,7 @@ På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger 
 		& 5VDC $\pm 10\%$ 					\\ \hline
 			
 	SPI 
-		& K1 	
+		& K2 	
 		& Kommunikation: HF-transceiver og mikroprocesor 	
 		& CMOS-logic: 						\newline 
 			Low:  $0V - 1/3V_{dd}$ 			\newline
@@ -132,7 +140,7 @@ På Figur \ref{fig:IBDkontrolboks} ses IBD af kontrolboksen og herefter følger 
 		& Signal som er høj når motorventilen er lukket				
 		& $ 0-V_{dd} \pm 10\%$				\\ \hline
 	HF 		
-		& HF1 	
+		& H1 	
 		& Luftbåret, højfrekvent signal	
 		& $ 433MHz $						\\ \hline
 	IRQ 	
@@ -207,7 +215,15 @@ PSU'en består af en batteriholder der skal kunne rumme 2 batterier af typen AAA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-På Figur \ref{fig:IBDsensor} ses Internt blok diagram af sensoren og herefter følger signalbeskrivelse i tabel \ref{tbl:SignalerSensor}.
+På Figur \ref{fig:IBDsensor} ses Internt blok diagram af sensoren og herefter følger signalbeskrivelse i tabel \ref{tbl:SignalerSensor}. De interne signaler i sensoren er typebenævnt efter følgende konvention: Tallene efter typebetegnelsen er fortløbende: 
+
+\begin{itemize} \itemsep0em
+	\item	\texttt{P}: Dette er systemets power-signaler. 
+	\item 	\texttt{K}: Dette er signaler der relaterer sig til kommunikation. 
+	\item 	\texttt{B}: Dette er Bus-signaler. 
+	\item 	\texttt{A}: Dette er analoge spændinger. 
+	\item 	\texttt{H}: Dette er luftbåret højfrekvente signaler.
+\end{itemize}
 
 \begin{figure}[H]
 	\centering
