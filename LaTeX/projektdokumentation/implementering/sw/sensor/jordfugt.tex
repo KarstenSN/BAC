@@ -1,4 +1,92 @@
 \subsubsection{Jordfugtmåler} \label{sec:SWimp_jordfugtmoler}
 
-\todo[inline]{Beskrivelse af Soil Probe klassen fra Sysark - SW design Sensor}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Klassebeskrivelser/soilsensor/soilsensor.pdf}
+	\caption{Klassediagram over \texttt{soilsensor}}
+\end{figure} 
+
+\textit{Variable-beskrivelser} \\
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{adcMin}	& \texttt{uint8\_t}	& Indeholder den minimale værdi som kan samples af ADC'en når sensoren er placeret i tør luft. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{adcMin}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{adcMax}	& \texttt{uint8\_t}	& Indeholder den maksimale værdi som kan samples af ADC'en når sensoren er placeret rent vand. \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{adcMax}}
+\end{table}
+
+
+\textit{Funktions-beskrivelse} \\
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{enableCounter100khz} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Enabler \texttt{TIMER1} til at give en firkant-spænding ud på både \texttt{PB1} og \texttt{PB2}. Firkanten på \texttt{PB2} er forskudt $90\circ$ i forhold til \texttt{PB1} som standard. Denne forsinkelse kan justeres af funktionen \texttt{calibrate()}.    \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{enableCounter100khz}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{disableCounter100khz} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Disabler \texttt{TIMER1} således firkant-spændingen stopper.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{disableCounter100khz}}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{adcGetResult} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint16\_t \\\hline
+		Beskrivelse & Initierer ADC kanal 2 med en prescale på 128. Herefter tages der 100 målinger som efterfølgende midles og returneres.   \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{adcGetResult}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{getHumidity} \\\hline
+		Parametre 	& \_humidity1: uint8\_t*, \_humidity2: uint8\_t* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & returnerer fugtigheden i procent. \_humidity1 er heltallet og \_humidity 2 er kommatallet. Fugtigheden udregnes ved brug af formlen
+		$a\cdot exp(b\cdot x) + c\cdot exp(d\cdot x)$ hvor x er resultatet fra funktionen \texttt{adcGetResult()}. a, b, c og d er statiske variabler.   \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{getHumidity}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{calibrate} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Kalibrer \texttt{TIMER1} således at faseforskellen mellem \texttt{PB1} og \texttt{PB2} giver den mindst mulige værdi der kan samples af ADC'en. Funktionen opdaterer \texttt{adcMin}. Funktionen forudsætter at sensoren er placeret i tør luft.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{calibrate}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{soilSensorInit} \\\hline
+		Parametre 	& \_soilSensor: struct soilSensor* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Giver funktionspointere videre og kalder funktionen \texttt{enableCounter100khz()}.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{soilSensorInit}}
+\end{table}
+
+
 

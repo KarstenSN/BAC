@@ -1,4 +1,38 @@
 \subsubsection{lysmåler} \label{sec:SWimp_lysmoler}
 
-\todo[inline]{Beskrivelse af light sensor klassen fra Sysark - SW design Sensor}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/lysmoler/lysmoler.pdf}
+	\caption{Klassediagram over \texttt{lightdet}}
+\end{figure}
 
+\textit{Variable-beskrivelse} \\
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{oldIntensity}	& \texttt{uint18\_t}	& Indeholder værdien af intensiteten som blev målt sidste gang funktionen \texttt{getIntensity} blev kaldt \\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{oldIntensity}}
+\end{table}
+
+\textit{Funktions-beskrivelse} \\
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{getIntensity} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Opstætter ADC kanal 3 og måler intensiteten fra lysdioden. Er spændingen over 1V antages det at være dag. Er spændingen under 1V antages det at være nat. Er \texttt{oldIntensity} lig med \texttt{LIGHTDET\_DAYTIME} og bliver der målt at det nu er nat returneres \texttt{LIGHTDET\_MORNING}. Har det været nat og bliver det nu dag returneres \texttt{LIGHTDET\_MORNING}. Ellers returneres \texttt{LIGHTDET\_DAYTIME} eller \texttt{LIGHTDET\_NIGHTTIME}.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{getIntensity}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{lightDetInit} \\\hline
+		Parametre 	& \_lightDet: struct lightDet* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Giver funktionspointere videre til structen.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{lightDetInit}}
+\end{table}

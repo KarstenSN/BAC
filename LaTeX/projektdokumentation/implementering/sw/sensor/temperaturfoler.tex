@@ -1,4 +1,92 @@
 \subsubsection{Temperaturmåler} \label{sec:SWimp_tempfoler}
 
-\todo[inline]{Beskrivelse af Temperatur sensor klassen fra Sysark - SW design Sensor}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/tmp75/tmp75.pdf}
+	\caption{Klassediagram over \texttt{temperaturSensor}}
+\end{figure}
+
+\textit{Funktions-beskrivelse} \\
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75\_i2cStart} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Initialiserer de perifere I2C enheder på mikroprocessoren og sender en start condistion ud til temperaturføleren. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75\_i2cStart}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75\_i2cStop} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Sender en stop condistion ud til temperaturføleren. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75\_i2cStop}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75\_i2cWriteByte} \\\hline
+		Parametre 	& \_data: uint8\_t \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Skriver en byte ud på i2C bussen \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75\_writeByte}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75\_i2cReadACK} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Læser en byte fra I2C bussen og giver herefter et acknowledge \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75\_ReadACK}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75\_i2cReadNACK} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Læser en byte fra I2C bussen og giver herefter et not-acknowledge \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75\_ReadNACK}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75\_setup} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Opstætter temperatursensoren til at køre med 4Hz convertion-rate og single-shot mode. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75\_setup}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{getTemp} \\\hline
+		Parametre 	& \_temph: uint8\_t*, \_templ: uint8\_t* \\\hline
+		Returværdi 	& uint8\_t \\\hline
+		Beskrivelse & Læser temperaturen fra temperatursensoren. \_temph er temperaturen i heltal og \_templ er temperaturen i kommatal.  \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{getTemp}}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{tmp75Init} \\\hline
+		Parametre 	& \_sensor: struct temperatureSensor* \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Giver funkstionspointere videre til structen. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{tmp75Init}}
+\end{table}
+
 

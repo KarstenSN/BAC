@@ -1,4 +1,175 @@
 \subsubsection{Mikroprocessor} \label{sec:SWimp_mikroprocessor_sensor}
 
-\todo[inline]{Beskrivelse af Mikroprocessorklassen fra Sysark - SW design Sensor}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Klassebeskrivelser/mikroprocessor/mikroprocessor_sensor.pdf}
+	\caption{Klassediagram over \texttt{mikroprocessor}}
+\end{figure}
+
+\textit{Variable-beskrivelser} \\
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{transceiver}	& \texttt{transceiver}	& Driver til transceiveren.\\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{transceiver}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{sensorPackage}	& \texttt{sensor\_package}	& Struct som indeholder sensor-pakken.\\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{sensorPackage}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{controlBoxPackage}	& \texttt{controlbox\_package}	& Struct som indeholder kontrolboks-pakken.\\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{controlBocPackage}}
+\end{table}
+
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{temperaturSensor}	& \texttt{temperaturSensor}	& Driver til temperatur sensoren.\\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{temperaturSensor}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{lightSensor}	& \texttt{lightDet}	& Driver til lyssensoren.\\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{lightSensor}}
+\end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
+			Navn 					& Type 				& Beskrivelse \\ \hline
+			\texttt{soilSensor}	& \texttt{soilSensor}	& Driver til jordfugt-måleren.\\ \hline
+		\end{tabularx}
+		\caption{Beskrivelse af variablen \texttt{soilSensor}}
+\end{table}
+
+\textit{Funktions-beskrivelser} \\
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{delaySec} \\\hline
+		Parametre 	& sec double \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Venter i x antal sekunder angivet af \texttt{sec}. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{delaySec}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{standbyMode} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Ligger mikroprocessoren i power-down-mode således der bruges minimal strøm. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{standbyMode}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{updateMeasurementData} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Updaterer måledata i structen \texttt{sensorPackage}. Funktionen aflæser temperatur, jordfugtighed og lysintensitet. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{updateMeasurementData}}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{parring} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Sørger for at skabe kontakt til kontrolboksen. Funktionen venter indtil at der modtages en pakke fra kontrolboksen. Når der modtages en pakke gives Id'et videre til \texttt{sensorPackage} som efterfølgende sende til kontrolboksen. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{parring}}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{measurementGroundOn} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Tænder for ground-planet til målekredsløbet til jordfugt-kredsløbet. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{measurementGroundOn}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{measurementGroundOff} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Slukker for ground-planet til målekredsløbet til jordfugt-kredsløbet. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{measurementGroundOff}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{enableBoostCon} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Enabler boostconverteren. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{enableBoostCon}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{main} \\\hline
+		Parametre 	& Ingen \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Er selve hoved-funktionen på sensoren. Funktionen initierer først alt hardware hvorefter den sætter \texttt{transceiver} til at give et wake-up interrupt hvert kvarter og ellers ligge mikroprocessoren i power-down-mode ved at kalde funktionen \texttt{standbyMode()}. Når \texttt{transceiver} giver et wake-up-interrupt vågner mikroprocessoren og aflæser måledata som efterfølgende sendes til kontrolboksen. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{main}}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{ISR(INT0\_vect)} \\\hline
+		Parametre 	& INT0\_vect \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Kalder funktionen \texttt{parring()} når det eksterne interrupt \texttt{INT0} bliver aktiveret ved at brugeren trykker på connect-knappen. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{ISR(INT0\_vect}}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| l | Z |} \hline
+		Funktion 	& \texttt{ISR(INT1\_vect)} \\\hline
+		Parametre 	& INT1\_vect \\\hline
+		Returværdi 	& void \\\hline
+		Beskrivelse & Aflæser statusregisteret på transceiveren og reagerer herpå. Er der givet interrupt om at der er nyt data klat i \texttt{FIFOREG} aflæses denne byte til \texttt{controlBoxPackage}. Er der for lav batterispænding sættes variablen \texttt{batteryStatus} lig 1 i \texttt{sensorPackage} og funktionen \texttt{enableBoostCon()} kaldes. \\\hline
+	\end{tabularx}
+	\caption{Metodebeskrivelse for \texttt{ISR(INT1\_vect}}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
 
