@@ -1,0 +1,36 @@
+\subsubsection{Sekvensdiagrammer sensor} \label{sec:sd_kontrolboks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%							Sekvensdiagrammer - Sensor
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SD MAIN   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Main} \\
+
+På Figur \ref{fig:sd_main_s} ses sekvensdiagrammet over \texttt{main()}-funktionen i mikroprocessoren på sensoren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/sensor/sd_main.pdf}
+	\caption{Sekvensdiagram over \texttt{main()} i sensoren}
+	\label{fig:sd_main_s}
+\end{figure} 
+
+Når batterierne er sat i batteriholderen vil mikroprocessoren vente i 1 sekund før den starter op. Dette er for at skire spændingen på hele boardet har stabiliseret sig. Efterfølgende skal hardwaren initieres og funktionspointere gives videre til diverse struct's. Efter \texttt{init()} skal wake-up-timeren i transceiveren aktiveres til 15 minutter. Herefter indlæses data fra temperatursensoren, lyssensoren og jordfugtsensoren. Disse data indlæses i \texttt{sensorPackage} som efterfølgende opdaterer checksummen. \texttt{sensorPackage} sendes nu til kontrolboksen, denne forsøges sendt 10 gange, eller indtil at kontrolboksen svarer tilbage om korrekt modtagelse. Til slut disables måle-ground og watch-dog-timeren og mikroprocessoren ligges i standby-mode. Når der kommer et interrupt på INT0 fra transceiveren vågner mikroprocessoren op igen og watch-dog-timeren enables samt måle-ground enables. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SD ISR   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\textbf{ISR} \\
+
+På Figur \ref{fig:sd_isr_s} ses sekvensdiagrammet over interrupt-rutinen i mikroprocessoren på sensoren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/sensor/sd_isr.pdf}
+	\caption{Sekvensdiagram over interrupt rutinen i sensoren}
+	\label{fig:sd_isr_s}
+\end{figure} 
+
+Når det eksterne interrupt INT0 aktiveres er det fordi at transceiveren har en ændring i dens statusregister. Dette register læses som det første. Er der lavt batteri, sættes variablen \texttt{batteryStatus} til 1. Er wake-up-timer interruptet MRF\_WUTINT givet skal wake-up-timeren reset'es. Dette gøres ved først at disable den og herefter enable den. Er interruptet MRF\_TXRXFIFO givet skal der efterfølgende læses en byte i RXFIFO'en i transceiveren fordi at kontrolboksen er ved at sende en pakke. Bliver INT1 vektoren aktiveret er det fordi at brugeren har trykket på connect knappen og funktionen \texttt{parring()} skal herefter eksekveres.
