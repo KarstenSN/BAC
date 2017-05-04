@@ -1,9 +1,27 @@
-\subsubsection{Mikroprocessor}
-Mikroprocessoren som der er blevet valgt at bruge til systemet er en ATMEGA8 i TQFP pakke fra Atmel. Den kan forsynes fra 2.7V og optil 5.5V. Vores forsyningsspænding er sat til 3.3V. Af perifere enheder skal vi bruge SPI, I2C og analog til digital converter. ATMEGA8 er et godt valg da den er billig (omkring 15kr), den kommer med nogle gode biblioteker skrevet i C og så har den en intern RC-oscillator som gør at der ikke behøves at bruges et krystal. Der kunne også være valgt en PIC processor fra Mircochip, men da der var mest erfaring med Atmel, var det, det der blev valgt. 
+\subsubsection{Mikroprocessor} \label{sec:HWimp_mikroprocessor_kontrolboks}
+Som mikroprocessoren i kontrolboks og sensor er er valgt at benytte en ATMEGA8L i TQFP pakke fra Atmel \cite{lib:mikro_ATMEGA8L_datasheet}. Denne er valgt da den opfylder designkravene i afsnit \ref{designkrav:mikroprocessor} og side \pageref{designkrav:mikroprocessor} samt kravene i afsnit \ref{ch:kravspecifikation} fra side \pageref{ch:kravspecifikation}. \texttt{L}-typen er valgt da den kan forsynes i intervallet fra 2.7VDC  - 5.5VDC hvilket både egner sig til adaptor-forsyning på kontrolboksen, samt batteriforsyning på sensoren. Processoren kan køre med en clockfrekvens fra 0-8MHz. Her er valgt at kører med 8MHz til de første iterationer, grundet SPI og I2C kommunikationen, men denne frekvens kan med fordel nedjusteres til 4MHz for ydeligere strømbesparelse iht. sensorens batterilevetid.
 
-\begin{figure}[ht]
+\todo[inline]{Note omkring clockfrekens - evt. prøve med 4MHz}  
+
+Af perifere enheder skal der på kontrolboksen benyttes SPI, I2C, samt et antal analoge pins til kontrol af hhv. motorventil og keypad, herunder error-LED. ATMEGA8L rummer derudover en del forprogrammerede biblioteker skrevet i C således at disse ikke skal skrives fra ny.
+Desuden har mokroprocessoren en intern RC-oscillator som gør at der ikke behøves at benytte et eksternt krystal. Af andre mulige processore kan nævnes PIC processorserien fra Mircochip, men da der i projektgruppen var mest erfaring med Atmel blev denne valgt til de første iterationer af udviklingen. Mikroprocessorens pinout samt den benyttede pakke kan ses på Figur \ref{fig:atmega8L_pinout} herunder. 
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{../fig/Mikroprocessor/mikroprocessor.jpg}
-	\caption{Overblik over portene på ATMEGA8}
-	\label{fig:atmega8}
-\end{figure} 
+	\includegraphics[width=0.4\textwidth]{../fig/Mikroprocessor/mikroprocessor.png}
+	\caption{ATMEGA8L pinout diagram}
+	\label{fig:atmega8L_pinout}
+\end{figure}
+
+TQFP-pakken er valgt da alt på PCB'et håndloddes og denne pakkes benytter "gull wing"-ben som letter denne process. Der vil der med fordel kunne vælges MLF-pakken til en serieproduktion da denne kan opnå bedre mekanisk stabilisering via en underliggende GND-pad. Dette kræver dog en anelse rettelser til PCB layout fra den nuværende iteration grundet denne GND-pad der skal loddes eller limes fast på PCB'et. Hvorfor de nuværende baner skal omarrangeres.
+
+Det grundlæggende diagram for opkobling af mikroprocessoren kan ses på Figur \ref{fig:atmega8L_kontrolboks_diagram}. opkobling af de perifere kredsløb vil blive diskuteret under deres respektive afsnit. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Mikroprocessor/kontrolboks_diagram_2.png}
+	\caption{ATMEGA8L Kontrolboks diagram}
+	\label{fig:atmega8L_kontrolboks_diagram}
+\end{figure}
+
+Som det ses på Figur \ref{fig:atmega8L_kontrolboks_diagram} er mikroprocessoren afkoblet med C11 på $1 \mu F$. Denne værdier er valgt efter databladets anbefaling. Selvom ADC'en ikke benyttes i kontrolboksen er databladet anbefaling om at forbindelse \texttt{AVCC} til \texttt{VCC} og afkoble denne blevet fuldt, deraf C12 på $1 \mu F$. 
