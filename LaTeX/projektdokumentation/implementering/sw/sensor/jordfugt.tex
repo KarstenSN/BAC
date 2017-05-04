@@ -6,23 +6,14 @@
 	\caption{Klassediagram over \texttt{soilsensor}}
 \end{figure} 
 
-\textit{Variable-beskrivelser} \\
+\textit{Variable-beskrivelse} \\
 \begin{table}[H]
 		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
 			Navn 					& Type 				& Beskrivelse \\ \hline
-			\texttt{adcMin}	& \texttt{uint8\_t}	& Indeholder den minimale værdi som kan samples af ADC'en når sensoren er placeret i tør luft. \\ \hline
+			\texttt{adcCalibrate}	& \texttt{uint8\_t}	& Indeholder kalibrerings-værdien af jordfugt-sensoren. Variablen bliver udregnet af funktionen \texttt{calibrate()}. \\ \hline
 		\end{tabularx}
-		\caption{Beskrivelse af variablen \texttt{adcMin}}
+		\caption{Beskrivelse af variablen \texttt{adcCalibrate}}
 \end{table}
-
-\begin{table}[H]
-		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
-			Navn 					& Type 				& Beskrivelse \\ \hline
-			\texttt{adcMax}	& \texttt{uint8\_t}	& Indeholder den maksimale værdi som kan samples af ADC'en når sensoren er placeret rent vand. \\ \hline
-		\end{tabularx}
-		\caption{Beskrivelse af variablen \texttt{adcMax}}
-\end{table}
-
 
 \textit{Funktions-beskrivelse} \\
 
@@ -31,7 +22,7 @@
 		Funktion 	& \texttt{enableCounter100khz} \\\hline
 		Parametre 	& Ingen \\\hline
 		Returværdi 	& void \\\hline
-		Beskrivelse & Enabler \texttt{TIMER1} til at give en firkant-spænding ud på både \texttt{PB1} og \texttt{PB2}. Firkanten på \texttt{PB2} er forskudt $90\circ$ i forhold til \texttt{PB1} som standard. Denne forsinkelse kan justeres af funktionen \texttt{calibrate()}.    \\\hline
+		Beskrivelse & Enabler \texttt{TIMER1} til at give en firkant-spænding ud på \texttt{PB1} på 100kHz.   \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{enableCounter100khz}}
 \end{table}
@@ -63,7 +54,7 @@
 		Parametre 	& \_humidity1: uint8\_t*, \_humidity2: uint8\_t* \\\hline
 		Returværdi 	& void \\\hline
 		Beskrivelse & returnerer fugtigheden i procent. \_humidity1 er heltallet og \_humidity 2 er kommatallet. Fugtigheden udregnes ved brug af formlen
-		$a\cdot exp(b\cdot x) + c\cdot exp(d\cdot x)$ hvor x er resultatet fra funktionen \texttt{adcGetResult()}. a, b, c og d er statiske variabler.   \\\hline
+		$a\cdot exp(b\cdot x) + c\cdot exp(d\cdot x)$ hvor x er resultatet fra funktionen \texttt{adcGetResult()} ganget med \texttt{adcCalibrate}. a, b, c og d er statiske variabler. Se Figur \ref{fig:j20} på side \pageref{fig:j20} for overblik over disse.   \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{getHumidity}}
 \end{table}
@@ -73,7 +64,7 @@
 		Funktion 	& \texttt{calibrate} \\\hline
 		Parametre 	& Ingen \\\hline
 		Returværdi 	& uint8\_t \\\hline
-		Beskrivelse & Kalibrer \texttt{TIMER1} således at faseforskellen mellem \texttt{PB1} og \texttt{PB2} giver den mindst mulige værdi der kan samples af ADC'en. Funktionen opdaterer \texttt{adcMin}. Funktionen forudsætter at sensoren er placeret i tør luft.  \\\hline
+		Beskrivelse & Gemmer kalibreringsværdien i variablen \texttt{adcCalibrate}. Værdien udregnes ved at dividere 0.916 med funktionen \texttt{adcGetResult()}. Funktionen skal kun kaldes når sensoren er placeret i tør luft.   \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{calibrate}}
 \end{table}

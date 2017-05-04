@@ -397,33 +397,53 @@ Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvo
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{../fig/Jordfugt/datablad1.PNG}
-	\caption{Fasemargin vs forsyningsspænding. Operationsforstærkeren bliver loadet med 470pF og 171$\Omega$ serielt.}
+	\caption{Fasemargin vs forsyningsspænding. Operationsforstærkeren bliver loadet med 470pF og 171$\Omega$ serielt. Hvilket muligvis kan være årsag til ustabilitet}
 	\label{fig:j17}
 \end{figure} 
 
-\textit{U12} \\
-Der er valgt at erstatte den hidtil benyttede TL972 Operationsfortærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye opamp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere tomgangs-strøm på $85 \mu A$.Derudover har den en slew rate på $0.6V/ \mu s$ der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}.  
+\textit{Skift af U12} \\
+Det blev valt at erstatte den hidtil benyttede TL972 Operationsfortærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye opamp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere tomgangs-strøm på $85 \mu A$ samt en slew rate på $0.6V/ \mu s$, der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}.  
 
 \begin{equation}
 	Slew Rate = 2 \times \pi \times f \times V_{max} = 2 \times \pi \times 10kHz \times 3.3V = 0.207V/ \mu s   
 	 \label{equ:slewrate}
 \end{equation}
 
+Operationsforstærkerens passer med det gamle footprint og det var derfor nemt at erstatte den på printet. Men det viste sig at kredsløbet nu begyndte at oscillere se Figur \ref{fig:jnyopamp}. Det blev som før forsøgt at ændre størrelserne på komponentværdierne i filteret således C1 og C1 var 47pF. Dette hjalp intet. Det blev også forsøgt at ændre filterets Q ned til 5. Dette løste dog hellere ikke problemet. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/scope_nyopamp.PNG}
+	\caption{Oscilloscope billede af udgangen på U12A. Her ses tydelig oscillation}
+	\label{fig:jnyopamp}
+\end{figure} 
+
+Pga. af tidspres blev det valgt ikke at bruge mere tid på at finde fejlen. Det blev derfor testet om kredsløbet i Figur \ref{fig:jdig1} kunne bruges som midlertidig løsning.  
+
 \textbf{Test af kredsløb til amplitudemåling af kondensator}  \\ \label{sec:test_amplitudemoling}
- For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 da diodetabet vil ændres med temperatur. 
+ For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. En anden løsning er at sample over en periodetid på 20ms og herefter returnere gennemsnittet af målingerne. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF som aflæses til 37ms. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 da diodetabet vil ændres med temperatur og strømtræk. Kredsløbet blev implementeret på sensoren som en midlertidig løsning da det ikke var muligt at finde på en løsning til problemet med kredsløbet til fasedetektion. På Figur \ref{fig:j20} ses et plot over kapaciteten versus udgangsspændingen på kredsløbet. Funktionen er blevet implementeret i mikroprocessoren. 
  
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/scope_19.PNG}
+	\includegraphics[width=0.7\textwidth]{../fig/Jordfugt/scope_19.PNG}
 	\caption{Spænding målt over C1 ved en printkapacitet på 220pF. Her ses en stor mængde 50Hz støj}
 	\label{fig:j18}
 \end{figure} 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/scope_17.PNG}
+	\includegraphics[width=0.7\textwidth]{../fig/Jordfugt/scope_17.PNG}
 	\caption{Stigetiden fra 20pF til 220pF aflæses til 37ms}
 	\label{fig:j19}
 \end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/Jordfugt/funch_dc_charge.PNG}
+	\caption{Kapacitet vs. udgangspænding i forhold til forsyningsspændingen}
+	\label{fig:j20}
+\end{figure} 
+
+
  
 \clearpage
