@@ -16,17 +16,16 @@
 
 På Figur \ref{fig:FlowdiagramKontrolboks} ses flowdiagram over softwaren i kontrolboksen. Ved efter power-up vises hovedmenuen, hvor der vises "No data" hvis der endnu ikke er forbindelse til en sensor. Når der er opnået forbindelse vises de seneste sensordata på display'et. Efter start-up er det muligt for brugeren at opsætte systemet som ønsket, samt tilgå systemets indstillinger som beskrevet i Use Case'ne i afsnit \ref{sec:use_cases} fra sidde \pageref{sec:use_cases}. Herefter entres en while-løkke hvor der søges efter ny data fra sensoren. På baggrund af det modtaget data kan kontrolboksen åbne eller lukke for ventilen. systemet befinder sig i denne løkke indtil at brugeren vælger at frakoble forsyningsspændende til kontrolboksen. 
 
-
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/klassediagramKontrolboks.pdf}
+	\includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/klassediagramKontrolboks.pdf}
 	\caption{Klassediagram over kontrolboksen}
 	\label{fig:cdKontrolboks}
 \end{figure}
 
 \textbf{Controller: mikroprocessor} \\
 \texttt{mikroprocessor}: Klasse der behandler data fra de resterende klasser. \newline
-Den opdaterer data i \texttt{controlboxPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{keypad}, \texttt{display}, \texttt{motorvalve}, samt \texttt{clock}, \texttt{isr} og \texttt{settings}. \\
+Den opdaterer data i \texttt{controlboxPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{keypad}, \texttt{display}, \texttt{motorvalve}, samt \texttt{clock}, \texttt{isr} og \texttt{settings}. Mikroprocessoren skal have defineret en intern clock.  \\
 
 
 \textbf{Boundary: transceiver} \\
@@ -64,10 +63,9 @@ Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sen
 \textbf{Domain: sensorPackage} \\
 \texttt{Sensor Package}: Datapakke på 11 bytes som skal indeholde følgende: 2 startbytes, Sensor ID, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes, en byte til lysstyrke, samt 2 bytes checksum.
 
-\todo[inline]{Definer EKSTERNE variable (interface) til SW-blokke i Kontrolboks}
+
 
 \newpage
-
 
 %%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -89,7 +87,7 @@ På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../fig/Systemarkitektur/klassediagramSensor.pdf}
+	\includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/klassediagramSensor.pdf}
 	\caption{Klassediagram over sensor}
 	\label{fig:cdSensor}
 \end{figure}
