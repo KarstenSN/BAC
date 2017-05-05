@@ -34,3 +34,15 @@ På Figur \ref{fig:sd_isr_s} ses sekvensdiagrammet over interrupt-rutinen i mikr
 \end{figure} 
 
 Når det eksterne interrupt INT0 aktiveres er det fordi at transceiveren har en ændring i dens statusregister. Dette register læses som det første. Er der lavt batteri, sættes variablen \texttt{batteryStatus} til 1. Er wake-up-timer interruptet MRF\_WUTINT givet skal wake-up-timeren reset'es. Dette gøres ved først at disable den og herefter enable den. Er interruptet MRF\_TXRXFIFO givet skal der efterfølgende læses en byte i RXFIFO'en i transceiveren fordi at kontrolboksen er ved at sende en pakke. Bliver INT1 vektoren aktiveret er det fordi at brugeren har trykket på connect knappen og funktionen \texttt{parring()} skal herefter eksekveres.
+
+
+
+
+
+
+
+
+
+
+
+

@@ -75,16 +75,6 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Funktions beskrivelser%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[H]
-		\begin{tabularx}{\textwidth}{| l | Z |} \hline
-			Funktion 	& \texttt{menu} 	\\ \hline
-			Parametre 	& ingen 	\\ \hline
-			Returværdi 	& void					\\ \hline
-			Beskrivelse & Kaldes når brugeren trykker på en vilkårlig tast på tastaturet. Funktionen giver mulighed for brugeren at navigere rundt i systemets use-cases og herved indstille systemet til det ønskede.    \\ \hline
-		\end{tabularx}
-		\caption{Metodebeskrivelse for \texttt{menu}}
-\end{table}
-
 \textit{Funktions-beskrivelser} \\
 
 \begin{table}[H]
@@ -116,6 +106,23 @@
 		\end{tabularx}
 		\caption{Metodebeskrivelse for \texttt{updateDataToDisp}}
 \end{table}
+
+\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| l | Z |} \hline
+			Funktion 	& \texttt{findSensorAndPair} 	\\ \hline
+			Parametre 	& ingen	\\ \hline
+			Returværdi 	& char					\\ \hline
+			Beskrivelse & Funktion tildeler et tilfældigt Id til sensoren. Se Figur \ref{fig:parring} for overblik over parringssekvensen. Når denne funktion eksekveres vil kontrolboksen stoppe \texttt{TIMER2} som blev startet i det øjeblik brugeren trykkede på en tast på tastaturet og give dens værdi som Id til \texttt{controlBoxPackage}. Herefter sendes \texttt{controlBoxPackage} til sensoren og sensoren svarer tilbage med samme Id i \texttt{sensorPackage}. Går parringen godt returneres 1 ellers returneres 0. \\ \hline
+		\end{tabularx}
+		\caption{Metodebeskrivelse for \texttt{findSensorAndPair}}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Kommunikation/parring3.pdf}
+	\caption{Parringssekvens}
+	\label{fig:parring}
+\end{figure} 
 
 \begin{table}[H]
 		\begin{tabularx}{\textwidth}{| l | Z |} \hline
