@@ -1,0 +1,64 @@
+\begin{longtable}{| l | >{\raggedright}X | >{\raggedright}X | >{\raggedright}X | >{\raggedright\arraybackslash}p{2.3cm} |} \hline
+	\multicolumn{2}{|l|}{\textbf{Use case under test}} & 
+	\multicolumn{3}{l|}{UC3: Indstil ønsket fugtighed i jorden} \\ \hline
+	
+	\multicolumn{2}{|l|}{\textbf{Scenarie}} & 
+	\multicolumn{3}{l|}{Hovedscenarie} \\ \hline
+	
+	\multicolumn{2}{|l|}{\textbf{Forudsætning}} & 
+	\multicolumn{3}{p{10.2cm}|}{UC1 er gennemført og vandingstidspuktet er indstillet til \texttt{All-day} i UC7. Åbningstiden er indstillet til 1 min i UC4 og sensoren er placeret i en jord med en fugtighed under 10\% \hfill} \\ \hline
+	%\multicolumn{5}{|l|}{}\\ \hline
+	\textbf{Step} & \textbf{Handling} & \textbf{Forventet Resultat} & \textbf{Resultat} & \textbf{Godkendt / Kommentar} \\ \hline
+ 
+	1   & Der trykkes på \texttt{SET} knappen på tastaturet 1 gang 
+		& Der vises nu hvad fugtigheden er sat til
+		& resultat
+		& resultat\\ \hline
+
+	2   & Det trykkes \texttt{Pil op} indtil at fugtigheden rammer 50\% 
+		& Fugtigheden står på 50\%
+		& resultat
+		& resultat\\ \hline
+		
+	3   & Det trykkes \texttt{Pil op} én gang 
+		& Fugtigheden står på 50\%
+		& resultat
+		& resultat\\ \hline
+		
+	4   & Der trykkes \texttt{Pil ned} indtil at fugtigheden rammer 0\% 
+		& Fugtigheden står til 0\%
+		& resultat
+		& resultat\\ \hline
+		
+	5   & Der trykkes \texttt{Pil ned} én gang 
+		& Fugtigheden står til 0\%
+		& resultat
+		& resultat\\ \hline
+		
+	6   & Der trykkes \texttt{Pil op} 10 gange
+		& Fugtigheden står til 10\%
+		& resultat
+		& resultat\\ \hline
+		
+	7   & Der trykkes \texttt{Ok} 
+		& Der returneres til hovedmenuen
+		& resultat
+		& resultat\\ \hline
+		
+	8   & Der ventes i op til 15 min 
+		& Ventilen åbner og lukker igen 1 min senere
+		& resultat
+		& resultat\\ \hline
+		
+	9   & Sensoren placeres i en jord med en fugtighed over 10\%
+		& Sensoren er placeret i en jord.
+		& resultat
+		& resultat\\ \hline
+		
+	10  & Der ventes i op til 15 min 
+		& Ventilen forbliver lukket
+		& resultat
+		& resultat\\ \hline
+		
+\caption{Accepttest for UC3: Indstil ønsket fugtighed i jorden}\label{tbl:acceptuc3}
+\end{longtable}
