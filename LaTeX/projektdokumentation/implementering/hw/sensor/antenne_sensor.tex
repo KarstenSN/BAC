@@ -1,4 +1,29 @@
 \newpage
 \subsubsection{Antenne} \label{sec:HWimp_antenne_sensor}
 
-\todo[inline]{Beskrivelse af Antenne specifik for SENSOR fra Sysark - HW design Sensor}
+Til sensoren er valgt at anvende en through-hole monteret helical antenne af typen W3127 ISM 433MHz fra \textit{Pulse Electronics}\cite{lib:ant_W3127_datasheet}. Denne antenne er den mest isotropiske af kandidaterne med en Max Gain på $ G_{max}=-2.9 dBi$. jvf. Figur \ref{fig:ant_maxGain_sensor}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/antenner/datablad_fig2.png}
+	\caption{W3127 MaxGain}
+	\label{fig:ant_maxGain_sensor}
+\end{figure}
+
+
+Valgtet af denne antenne og antennetype baserer sig på at udnytte pladsen på sensor-PCB'et bedst muligt for at kunne implementere den bedst mulige antenne. Dog skal det bemærkes  at denne antenne ved dens placering  og orientering på PCB'et når PCB'ets er placeret i jorden, fås at sensorboksen gerne skal rettes imod kontrolboksens placering for at opnå optimale gain. jfv. Figur \ref{fig:ant_maxGain_sensor}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/antenner/datablad_fig3_sensor.png}
+	\caption{W3127 Gain i ZY-planet}
+	\label{fig:ant_GainZY_sensor}
+\end{figure}
+
+Den optimale placering af antennen på PCB'et ville være horisontalt jfv. Fig 3 på side i databladet, da dette giver den optimale udstråling langs langs med jorden (XY-planet). Men desværre muliggør pladsen på sensoren ikke dette. Derfor er antennen placeret hvor den er i denne iteration af sensoren.
+
+Antennes karakteristisk impedans er som på kontrolboksen 50 $\Omega$, dog er denne microstrip-bane beregnet som coplaner, da den delvist er omgivet af GND-plan på begge side. Derfor bliver banebredden anderledes end på kontrolboksen, beregning af den er som følger.
+
+\todo[inline]{færdigskrive co-planar beregninger af mikrostriplinie på sensoren}
+
+\newpage

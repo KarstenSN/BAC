@@ -1,10 +1,28 @@
 \subsubsection{HF Transceiver} \label{sec:HWimp_transceiver_kontrolboks}
-Der er valgt at benytte en transceiver af typen MRFX49A\cite{lib:trans_MRFX49A_datasheet} fra Microchip, da denne model er SPI-kompatibel og ikke behøver at blive forprogrammeret som mange andre RF-kredse skal. 
-Den initialiseres i stedet via SPI-kommunikationen. Chippen er som skræddersyet til dette system da den er designet til batteri-applikationer. Den har en indbygget "low battery voltage detect" som afgive et interrupt til mikroprocessoren når batterispændingen når under et forudbestemt niveau som sættes internt i transceiveren. Den har også en indbygget wake-up timer så chippen kan sættes i sleep-mode og herved minimere strømforbruget til nogle få $\mu A$ indtil den vækkes op igen efter en forudbestemt tid. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte bruges i consumer elektronik. Dog er 915MHz mere rettet til det Amerikanske marked.   
+Der er valgt at benytte en transceiver af typen MRFX49A\cite{lib:trans_MRFX49A_datasheet} fra Microchip, denne er valgt da den opfylder designkravene i afsnit \ref{designkrav:transceiver} og side \pageref{designkrav:transceiver} samt kravene i afsnit \ref{ch:kravspecifikation} fra side \pageref{ch:kravspecifikation}. Derudover skal denne processor ikke forprogrammeres som mange andre RF-kredse skal, den kan derimod sættes op ved initialisering fra mikroprocessoren som krævet af systemet. Chippen er som skræddersyet til dette system da den er designet til batteri-applikationer. Den har en indbygget "low battery voltage detection" som afgiver et interrupt til mikroprocessoren når batterispændingen når under et forudindstillet threshold som sættes internt i transceiveren. Dette interrupt bliver brugt på sensoren til at enable boostkonverteren, mere info kan finde i implementeringsafsnittet for transceiveren på sensoren. Derudover har den også en indbygget wake-up timer således at chippen kan sættes i sleep-mode, herved minimeres strømforbruget til nogle få $\mu A$, den kan herefter vækkes op igen efter en forudindstillet tidsperiode. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte benyttes i consumer-elektronik, mere info om den valgte sendefrekvens i antenneafsnittet. Endnu en fordel ved denne processor er at den modulerer signal via FSK (\textbf{F}requency \textbf{S}hift \textbf{K}eying) hvor carrier-frekvensen moduleres i stedet for at modulere på amplituden. Dette gør denne metode mindre støjfølsom hvilket der kan drages nytte af specielt ved denne transmissionsfrekvens som beskrevet herunder. På Figur \ref{fig:mrfx49a_cir} ses applikationsdiagram fra databladet for Transceiveren.    
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_circuit.PNG}
+	\includegraphics[width=0.7 \textwidth]{../fig/transciver/mrfx49a_circuit.PNG}
 	\caption{Application circuit af MRF49XA}
 	\label{fig:mrfx49a_cir}
 \end{figure}
+
+På Figur \ref{fig:mrfx49a_diagram_kontrolboks} ses implementering af transceiveren på kontrolboksen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_diagream2_kontrolboks.PNG}
+	\caption{Diagram af MRF49XA på kontrolboksen}
+	\label{fig:mrfx49a_diagram_kontrolboks}
+\end{figure}
+
+Som udgangspunkt er databladets anbefalinger fulgt. Dog er C19, C20, C21, valgt på baggrund af den givne transmissionsfrekvens, Se figur 2.2 i \cite{lib:trans_MRFX49A_datasheet}. Balun-kredsløbet er designet på baggrund af figur 4.2 i \cite{lib:trans_MRFX49A_datasheet} og er designet til den specifikke transmissionsfrekvens. Her er det vigtigt at holde sig til at lavtolerance-komponenter for at holde sig tæt på de 50 $\Omega$.
+
+\todo[inline]{evt. lav note omkring BOM/schematic mismatch}
+
+\textbf{Valg af transimissionfrekvens} \\
+Som transmissionsfrekvens for systemet er valgt til 433MHz, % Lave note om (ETSI EN 300 220) 
+dette valg baserer sig primært på 2 faktorer: rækkevidde for systemet og licensfrihed. Rækkevidde som følge af frekvens vil blive diskuteret i næste afsnit, \ref{sec:HWimp_antenne_kontrolboks} om antennen. I forhold til at kunne sende frit på den givne frekvens er det ønsket at finde en frekvens indenfor ISM-båndene \cite{lib:ism} (\textbf{I}ndustrial, \textbf{S}cientific og \textbf{M}edical radio bånd). Disse bånd er "frie" bånd der kan tilgås uden licens og dermed skal brugeren ikke købe sig adgang. Disse bånd benyttes typisk til bluetooth, trådløse telefoner og andre nærfelts-kommunikations systemer. Derfor kan disse bånd være meget støjfyldte og tolerance-kravene til produkter der benytter disse er derfor også højere.
+
+Transmitter- og receiver-modulerne benytter sig hhv. af \textit{direct conversion} og \textit{Zero-IF} arkitektur. Denne metode modulerer og demodulerer signalet direkte uden brug af IF (\textbf{I}ntermidiate \textbf{F}requency). hvilket simplificerer det interne kresløb i transceiveren i modsætning til \textit{Super heterodyne modtagen} der benytter IF under modulation og demodulation af baseband-signalet. Den interne PLL synthesizer styres af krystallet Y2, der sikre en fast stabil 10MHz.

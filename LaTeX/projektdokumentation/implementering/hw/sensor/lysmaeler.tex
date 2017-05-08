@@ -1,5 +1,5 @@
 \subsubsection{Lysmåler} \label{sec:HWimp_lysmoler}
-Lysmåleren er implementeret ved hjælp af en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
+Lysmåleren er implementeret ved via af en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
 
 \begin{figure}[H]
 	\centering

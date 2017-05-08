@@ -1,3 +1,13 @@
 \subsubsection{Mikroprocessor} \label{sec:HWimp_mikroprocessor_sensor}
 
-\todo[inline]{Beskrivelse af Mikroprocessoren specifik for SENSOR fra Sysark - HW design Sensor}
+Implementeringen af Mikroprocessoren på Sensor-PCB'et er meget lig implementering på kontrolboksen, så der kan med fordel henvises til afsnit \ref{sec:HWimp_mikroprocessor_kontrolboks} på side \pageref{sec:HWimp_mikroprocessor_kontrolboks} for grundopsætningen. Der er dog forskelle, eks. benytter mikroprocessoren her ADC-kanaler til at sample data fra hhv. jordfugtmåler-kredsløbet samt lyssensoren. Dette medfører nogle ændringer på komponentsiden. Diagram over mikroprocessoren ses på Figur \ref{fig:atmega8L_sensor_diagram}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../fig/Mikroprocessor/sensor_diagram_4.png}
+	\caption{ATMEGA8L Kontrolboks diagram}
+	\label{fig:atmega8L_sensor_diagram}
+\end{figure}
+
+Jfv. Figur \ref{fig:atmega8L_sensor_diagram} er der følgende ændring. C6 er tilføjet for at afkoble AREFF og sørge for den interne reference på 2.56VDC til Lyssensoren. Jordfugtmåleren er koblet ind på ADC2
+
