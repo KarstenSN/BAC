@@ -1,0 +1,40 @@
+
+\begin{longtable}{| l | >{\raggedright}X | >{\raggedright}X | >{\raggedright}X | >{\raggedright\arraybackslash}p{2.3cm} |} \hline
+	\multicolumn{2}{|l|}{\textbf{Use case under test}} & \multicolumn{3}{l|}{UC4: Indstil åbningstid} \\ \hline
+	\multicolumn{2}{|l|}{\textbf{Scenarie}} & \multicolumn{3}{l|}{Hovedscenarie} \\ \hline
+	\multicolumn{2}{|l|}{\textbf{Forudsætning}} & \multicolumn{3}{p{10.2cm}|}{UC1 er gennemført og kontrolboksen befinder sig i hovedmenuen og sensoren er placeret i tør luft. Fugtigheden er indstillet til 10\% i UC3 og vandingstidspunktet er indstillet til \texttt{All-day} i UC7.\hfill} \\ \hline
+	%\multicolumn{5}{|l|}{}\\ \hline
+	\textbf{Step} & \textbf{Handling} & \textbf{Forventet Resultat} & \textbf{Resultat} & \textbf{Godkendt / Kommentar} \\ \hline
+	
+	1  & Der trykkes 2 gange på \texttt{SET}
+		& Teksen "Water timer" forekommer på displayet linje 1 og "time:" efterfulgt at åbningstiden på linje 2
+		& resultat 
+		& resultat \\ \hline
+
+	2   & Der trykkes på \texttt{Pil op} indstil at åbningstiden er 15 min. Herefter trykkes der \texttt{Pil op} en gang mere
+		& Åbningstiden står på 15 min
+		& resultat 
+		& resultat \\ \hline	
+		
+	3   & Der trykkes på \texttt{Pil ned} indstil at åbningstiden er 0 min. Herefter trykkes der \texttt{Pil ned} en gang mere
+		& Åbningstiden står på 0 min
+		& resultat 
+		& resultat \\ \hline	
+		
+	4   & Der trykkes på \texttt{Pil op} to gange
+		& Åbningstiden står på 2 min
+		& resultat 
+		& resultat \\ \hline
+		
+	5   & Der trykkes \texttt{OK}
+		& Der returneres til hovedmenuen
+		& resultat 
+		& resultat \\ \hline
+		
+	6   & Der ventes i op til 15 min
+		& Ventilen åbner og lukker efterfølgende 2 min senere. 
+		& resultat 
+		& resultat \\ \hline		
+
+\caption{Accepttest for UC4: Undvig forhindring}\label{tbl:acceptuc4}
+\end{longtable}

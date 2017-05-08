@@ -1,0 +1,54 @@
+\begin{longtable}{| l | >{\raggedright}X | >{\raggedright}X | >{\raggedright}X | >{\raggedright\arraybackslash}p{2.3cm} |} \hline
+	\multicolumn{2}{|l|}{\textbf{Use case under test}} & 
+	\multicolumn{3}{l|}{UC6: Åbn/luk ventil manuelt} \\ \hline
+	
+	\multicolumn{2}{|l|}{\textbf{Scenarie}} & 
+	\multicolumn{3}{l|}{Hovedscenarie} \\ \hline
+	
+	\multicolumn{2}{|l|}{\textbf{Forudsætning}} & 
+	\multicolumn{3}{p{10.2cm}|}{UC1 er gennemført og kontrolboksen befinder sig i hoved-meunen samt ventilen er lukket\hfill} \\ \hline
+	%\multicolumn{5}{|l|}{}\\ \hline
+	\textbf{Step} & \textbf{Handling} & \textbf{Forventet Resultat} & \textbf{Resultat} & \textbf{Godkendt / Kommentar} \\ \hline
+
+	1   & Der trykkes på \texttt{Pil-op}
+		& Teksten "Open valve?" forekommer på displayet
+		& resultat
+		& resultat \\ \hline
+		
+	2   & Der trykkes på \texttt{Ok}
+		& Teksten "Opening valve" forekommer på displayet og ventilen åbner
+		& resultat
+		& resultat \\ \hline
+		
+	3   & Der trykkes på \texttt{Pil-op}
+		& Teksten "Open valve?" forekommer på displayet
+		& resultat
+		& resultat \\ \hline
+		
+	4   & Der trykkes på \texttt{Ok}
+		& Teksten "Valve already open" forekommer på displayet
+		& resultat
+		& resultat \\ \hline
+	
+	5   & Der trykkes på \texttt{Pil-ned}
+		& Teksten "Close valve?" forekommer på displayet
+		& resultat
+		& resultat \\ \hline
+		
+	6   & Der trykkes på \texttt{Ok}
+		& Teksten "Closing valve" forekommer på displayet og ventilen åbner
+		& resultat
+		& resultat \\ \hline
+		
+	7   & Der trykkes på \texttt{Pil-ned}
+		& Teksten "Close valve?" forekommer på displayet
+		& resultat
+		& resultat \\ \hline
+		
+	8   & Der trykkes på \texttt{Ok}
+		& Teksten "Valve already closed" forekommer på displayet
+		& resultat
+		& resultat \\ \hline
+				
+\caption{Accepttest for UC6: Drej bil til højre/venstre}\label{tbl:acceptuc6}
+\end{longtable}
