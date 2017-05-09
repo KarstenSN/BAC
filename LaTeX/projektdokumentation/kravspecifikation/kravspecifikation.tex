@@ -6,9 +6,9 @@ Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individu
 %---------------------------------------------------------------------------------------
 %									FUNKTIONELLE KRAV
 %---------------------------------------------------------------------------------------
-\clearpage
+
 \section{Funktionelle krav} \label{sec:funktionelle_krav}
-I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. I tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} listes de funktionelle krav med unik ID så der i systemet er fuld traceability. kolonnen \textit{Prioritet} henviser til MoSCoW-prioriteringen der er beskrevet i afsnit \ref{sec:moscow}. Kravene er typebenævnt i forhold til følgende konvention.
+I det følgende afsnit opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. Kravende listes med et unik ID således de kan spores tilbage igennem hele dokumentationen. Kravenes ID er givet ved:
 
 \begin{itemize} \itemsep0em
 \item	\texttt{MC}: \textit{Mechanical Contraints:} Dette er de mekaniske krav til systemet
@@ -17,10 +17,10 @@ I denne sektion opstilles de funktionelle krav til systemet. Disse krav skal opf
 \item 	\texttt{UX}: \textit{User Experience:} Dette er de bruger-relaterede krav til systemet
 \end{itemize} 
 
-\newpage
 
-\todo[inline]{opdatere MUST krav}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%TABEL udkommenterer%%%%%%%%%%%%%%%%%%%
+\iffalse 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | L{1.9 cm}| m{2.9 cm} |} \hline
 	\textbf{ID:} 		& \textbf{Krav:}		& \textbf{Prioritet:} 	& \textbf{Kommentarer:} 								\\ \hline
@@ -51,33 +51,32 @@ UX\_07	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. morgen, aft
 	\caption{Funktionelle krav}
 	\label{tbl:funk_krav}
 \end{table}
-
-
 \newpage
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
 \subsection{MoSCoW} \label{sec:moscow}
-I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref{tbl:funk_krav}, dog er de her arrangeret efter MoSCoW-modellen. Under \textit{Must} placeres de krav som skal være opfyldt for at systemet kan siges at være minimum funktionsdygtigt. \textit{Should} indeholder de krav der bør være implementeret for at systemet kan kaldes fuldt funktionsdygtigt, disse krav implementeres hvis tid og ressourcer tillader det. \textit{Could} indeholder de krav som systemet ville ha kunne opfylde hvis tid og ressourcer ikke er en begrænsning. \textit{Would} er fremtidige krav til systemets efterfølgende iterationer, disse er derfor ikke implementeret i denne prototype. 
-\todo[inline]{opdater funktionelle ikke funktionelle krav}
+
 \textbf{Must}
+
 \begin{table}[H]
-	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
-		MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks  												\\
-		MC\_05	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet										\\
-		MC\_06	& Kontrolboks og sensor skal kunne passe i plasthus (B:83mmm H:59mm, D:34mm)							\\		
-		MC\_07	& Display'et må have maksimal mål på (B:53mmm H:22mm)													\\
-		MC\_08	& Display'et skal være baggrundsbelyst																	\\
-		MC\_09	& Tastaturet må have maksimal mål på (B:70mmm H:23mm)													\\
-		MC\_10	& Motorventilen skal kunne tilsluttes 1/2" vandrør														\\
-		EL\_01	& Sensoren skal være batteridrevet																		\\
-		EL\_02	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet						\\
-		EL\_03	& Kontrolboksen skal kunne forsynes med en 3. parts 5V AC/DC adaptor									\\
-		CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse 						\\
-		CM\_03	& Sensor og kontrolboks skal parres manuelt 															\\
-		UX\_01	& Kontrolboksen skal indeholde UI i form af keypad og display											\\ 
-		UX\_03	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen					\\
-		UX\_04	& Brugeren skal kunne indstille et ønsket vandingsinterval												\\
-		UX\_05	& Brugeren skal kunne indstille en ønsket jordfugtighed på kontrolboksen								\\
-		UX\_06	& Brugeren skal kunne indstille en tidsbaseret vandingssekvens											\\
-		UX\_07	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. morgen, aften, begge eller uafhængig		\\
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														 & \textbf{Kommentarer:} 	\\ \hline
+		MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks                              &	\\ \hline
+		MC\_02	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet	                &	\\ \hline
+		MC\_03	& Kontrolboksen skal vise jordfugtighed og temperatur på et display				    &	\\ \hline
+		MC\_04	& Kontrolboksen skal indeholde et tastatur										    &	\\ \hline
+		MC\_05	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet	&	\\ \hline
+		EL\_01	& Sensoren skal være batteridrevet									                &	\\ \hline
+		EL\_02	& Kontrolboksen skal kunne forsynes med en 3. parts 5V AC/DC adaptor				&	\\ \hline
+		CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse 	&	\\ \hline
+		CM\_02	& Sensor og kontrolboks skal parres manuelt 										&	\\ \hline
+		UX\_01	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen &	\\ \hline
+		UX\_02	& Brugeren skal kunne indstille en ønsket jordfugtighed på kontrolboksen			&	\\ \hline
+		UX\_03	& Brugeren skal kunne indstille en åbningstid for ventilen   						&	En tid som ventilen er åben i, hver gang der vandes\\ \hline
+		UX\_04	& Brugeren skal kunne vælge automatisk vandingstidsrum								&	Eks. morgen, aften, begge eller uafhængig\\ \hline
 	\end{tabularx}
 	\caption{Must krav}
 	\label{tbl:must_krav}
@@ -85,10 +84,11 @@ I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref
 
 \textbf{Should}
 \begin{table}[H]
-	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
-		CM\_02	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m				\\
-		UX\_02	& Kontrolboksen skal kunne måle om slangen er sprunget fra, og give fejlmelding 	\\
-		UX\_09	& Brugeren skal kunne indstille en tidsbaseret vandingssekvens						\\
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														 & \textbf{Kommentarer:} 	\\ \hline
+		CM\_03	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m				&	\\ \hline
+		UX\_05	& Kontrolboksen skal kunne måle om slangen er sprunget fra, og give fejlmelding 	&	\\ \hline
+		UX\_06	& Brugeren skal kunne indstille en tidsbaseret vandingssekvens						&	Eks. 25 min hver 3. time\\ \hline
 	\end{tabularx}
 	\caption{Should krav}
 	\label{tbl:should_krav}
@@ -96,18 +96,23 @@ I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref
 
 \textbf{Could}
 \begin{table}[H]
-	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
-		MC\_02	& Systemet skal kunne pre-indstilles til en specifik afgrøde 	\\
-	\end{tabularx}
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														 & \textbf{Kommentarer:} 	\\ \hline
+		MC\_02	& Systemet skal kunne pre-indstilles til en specifik afgrøde 	&	\\ \hline
+		MC\_03  & Systemet skal kunne måle PH-værdien i jorden					&	\\ \hline
+ 	\end{tabularx}
 	\caption{Could krav}
 	\label{tbl:could_krav}
 \end{table}
 
+\pagebreak
+
 \textbf{Would}
 \begin{table}[H]
-	\begin{tabularx}{\textwidth}{ m{1.5 cm}  Z  L{1.9 cm} m{2.9 cm} }
-		MC\_03	& Systemet skal kunne betjenes fra en smartphone-applikation	\\
-		MC\_04	& Systemet skal kunne tilsluttes flere sensorer					\\
+	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
+		\textbf{ID:} & \textbf{Krav:}														 & \textbf{Kommentarer:} 	\\ \hline
+		MC\_03	& Systemet skal kunne betjenes fra en smartphone-applikation	&	\\ \hline
+		MC\_04	& Systemet skal kunne tilsluttes flere sensorer					&	\\ \hline
 	\end{tabularx}
 	\caption{Would krav}
 	\label{tbl:would_krav}
@@ -117,7 +122,7 @@ I de følgende tabeller herunder ses de samme funktionelle krav som i tabel \ref
 %---------------------------------------------------------------------------------------
 %									IKKE-FUNKTIONELLE KRAV
 %---------------------------------------------------------------------------------------
-\newpage
+
 \section{Ikke-Funktionelle krav} \label{sec:ikke_funktionelle_krav}
 \subsection{FURPS+} \label{sec:furps}
 De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard.Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
@@ -132,7 +137,7 @@ Modellen inddeler kravsættet i følgende undergrupper.
 	\item	+ (Design and Fysiske begrænsninger, Interfaces)
 \end{itemize}
 
-Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav}. De ikke funktionelle krav er indekseret som det ses på de følgende tabeller, som med de funktionelle krav tildeles her unik krav ID. Kravene er typebenævnt i forhold til følgende konvention.
+Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav}. De ikke funktionelle krav listes i de efterfølgende tabeller. Ligesom de funktionelle krav tildeles disse også et ID. Disse er givet ved:
 
 \begin{itemize} \itemsep0em
 \item	\texttt{US}: \textit{Usability Contraints:} Dette er de krav der relaterer sig til Brugervenlighed
@@ -146,15 +151,20 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
 		\textbf{ID:} & \textbf{Krav:}														 & \textbf{Kommentarer:} 	\\ \hline
-		US\_01		 & Keypad'en skal bestå af 4 taktile trykknapper						 &	\\ \hline
-		US\_02		 & Keypad'en skal indeholde 1 rød LED til indikation af fejl 			 &	\\ \hline
-		US\_03		 & Displayet skal kunne vise jordfugtighed samt temperatur				 &	\\ \hline
-		US\_04		 & Displayet skal kunne vise systemets menuer							 &	\\ \hline
+		US\_01		 & Tastaturet skal bestå af 4 taktile trykknapper						 &	\\ \hline
+		US\_02		 & Tastaturet skal indeholde 1 rød LED til indikation af fejl 			 &	\\ \hline
+		US\_03		 & Tastaturet skal have et størrelse på B:70mmm H:23mm					 &	\\ \hline
+		US\_04		 & Displayet skal kunne vise jordfugtighed samt temperatur				 &	\\ \hline
+		US\_05		 & Displayet skal kunne vise systemets menuer							 &	\\ \hline
+		US\_06       & Displayet skal have en størrelse på B:53mmm H:22mm					 &  \\ \hline
+		US\_07       & Displayet skal være baggrundsbelyst			     					 &  \\ \hline
+		US\_08		 & Motorventilen skal kunne tilsluttes 1/2" vandrør						 &  \\ \hline
+		US\_09		 & Printplader til kontrolboks og sensor skal monteres i et plasthus med en størrelse på B:83mmm H:59mm, D:34mm						 & Ventil og jordfugtsensor må dog gerne stikke uden for plasthuset \\ \hline
 	\end{tabularx}
 	\caption{Krav til brugervenlighed}
 	\label{tbl:brugervenlighed_krav}
 \end{table}
-
+	
 \textbf{Driftsikkerhed}
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
