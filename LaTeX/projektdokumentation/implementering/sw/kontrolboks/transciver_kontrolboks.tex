@@ -32,7 +32,7 @@ Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generel
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Klassebeskrivelser/rfTransciver/rfTransciver.pdf}
 	\caption{Klassediagram over RF-Transciveren}
-	\label{fig:class_rftransciver}
+	\label{fig:class_rftransciver_kontrolboks}
 \end{figure} 
 
 På Figur \ref{fig:class_rftransciver} ses klassediagram over \texttt{transceiver}.Koden er skrevet i C og det er derfor svært at give en korrekt standardiseret beskrivelse af klassen som en traditionel C++ klasse. Funktionerne er i stedet implementeret i en en struct. Det vil sige at struct'en oprettes med funktionspointere til alle public funktioner, disse er markeret med + foran funktionen. Ved private members er der sat - foran funktionen. Alle funktioner er implementeret i en .c fil hvor struct'en er implementeret i en .h fil. Det er derfor kun muligt at se de funktioner som struct'en initieres med i init-funktionen. Denne funktionen er en ekstern funktion da den ligger uden for struct'en og bliver kaldt med \texttt{transceiver} som parameter. Funktionen giver pointere fra .c filen videre til struct'en. Private members er funktioner som kun kan ses af selve .c filen selv og disse funktioner kan derfor ikke ses i .h filen.

@@ -1,0 +1,6310 @@
+%PDF-1.5
+%âãÏÓ
+6 0 obj
+<<
+/Title (Main)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (180313232_133538448_0)
+/Parent 5 0 R
+>>
+endobj
+5 0 obj
+<<
+/Title (Root [SCHEMATIC1])
+/C [0.2 0.4 0.25]
+/F 3
+/Dest (180313232_133538448_0)
+/Count 1
+/First 6 0 R
+/Last 6 0 R
+/Parent 7 0 R
+>>
+endobj
+9 0 obj
+<<
+/Title (ANT1)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647309120)
+/Parent 34 0 R
+/Next 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Title (C12)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647277792)
+/Parent 34 0 R
+/Prev 9 0 R
+/Next 11 0 R
+>>
+endobj
+11 0 obj
+<<
+/Title (C13)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647310864)
+/Parent 34 0 R
+/Prev 10 0 R
+/Next 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Title (C14)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647280480)
+/Parent 34 0 R
+/Prev 11 0 R
+/Next 13 0 R
+>>
+endobj
+13 0 obj
+<<
+/Title (C15)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647293136)
+/Parent 34 0 R
+/Prev 12 0 R
+/Next 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Title (C18)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647271984)
+/Parent 34 0 R
+/Prev 13 0 R
+/Next 15 0 R
+>>
+endobj
+15 0 obj
+<<
+/Title (C19)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647304992)
+/Parent 34 0 R
+/Prev 14 0 R
+/Next 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Title (C20)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647281312)
+/Parent 34 0 R
+/Prev 15 0 R
+/Next 17 0 R
+>>
+endobj
+17 0 obj
+<<
+/Title (C21)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647270416)
+/Parent 34 0 R
+/Prev 16 0 R
+/Next 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Title (C23)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647307024)
+/Parent 34 0 R
+/Prev 17 0 R
+/Next 19 0 R
+>>
+endobj
+19 0 obj
+<<
+/Title (C39)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647299968)
+/Parent 34 0 R
+/Prev 18 0 R
+/Next 20 0 R
+>>
+endobj
+20 0 obj
+<<
+/Title (C6)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647306256)
+/Parent 34 0 R
+/Prev 19 0 R
+/Next 21 0 R
+>>
+endobj
+21 0 obj
+<<
+/Title (J6)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647296720)
+/Parent 34 0 R
+/Prev 20 0 R
+/Next 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Title (L1)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647298704)
+/Parent 34 0 R
+/Prev 21 0 R
+/Next 23 0 R
+>>
+endobj
+23 0 obj
+<<
+/Title (L2)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647301808)
+/Parent 34 0 R
+/Prev 22 0 R
+/Next 24 0 R
+>>
+endobj
+24 0 obj
+<<
+/Title (L3)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647291840)
+/Parent 34 0 R
+/Prev 23 0 R
+/Next 25 0 R
+>>
+endobj
+25 0 obj
+<<
+/Title (R1)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647300880)
+/Parent 34 0 R
+/Prev 24 0 R
+/Next 26 0 R
+>>
+endobj
+26 0 obj
+<<
+/Title (R14)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647288816)
+/Parent 34 0 R
+/Prev 25 0 R
+/Next 27 0 R
+>>
+endobj
+27 0 obj
+<<
+/Title (R15)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647303680)
+/Parent 34 0 R
+/Prev 26 0 R
+/Next 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Title (R34)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647310032)
+/Parent 34 0 R
+/Prev 27 0 R
+/Next 29 0 R
+>>
+endobj
+29 0 obj
+<<
+/Title (SW1)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647294032)
+/Parent 34 0 R
+/Prev 28 0 R
+/Next 30 0 R
+>>
+endobj
+30 0 obj
+<<
+/Title (U4)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 34 0 R
+/Prev 29 0 R
+/Next 31 0 R
+>>
+endobj
+31 0 obj
+<<
+/Title (U6)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 34 0 R
+/Prev 30 0 R
+/Next 32 0 R
+>>
+endobj
+32 0 obj
+<<
+/Title (U7)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 34 0 R
+/Prev 31 0 R
+/Next 33 0 R
+>>
+endobj
+33 0 obj
+<<
+/Title (Y2)
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647295184)
+/Parent 34 0 R
+/Prev 32 0 R
+>>
+endobj
+35 0 obj
+<<
+/Title (C18.1 \(C18.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647271984)
+/Parent 57 0 R
+/Next 36 0 R
+>>
+endobj
+36 0 obj
+<<
+/Title (C21.2 \(C21.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647270416)
+/Parent 57 0 R
+/Prev 35 0 R
+/Next 37 0 R
+>>
+endobj
+37 0 obj
+<<
+/Title (C20.2 \(C20.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647281312)
+/Parent 57 0 R
+/Prev 36 0 R
+/Next 38 0 R
+>>
+endobj
+38 0 obj
+<<
+/Title (U6.VSS \(U6.11\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 57 0 R
+/Prev 37 0 R
+/Next 39 0 R
+>>
+endobj
+39 0 obj
+<<
+/Title (C12.2 \(C12.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647277792)
+/Parent 57 0 R
+/Prev 38 0 R
+/Next 40 0 R
+>>
+endobj
+40 0 obj
+<<
+/Title (U4.GND1 \(U4.3\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 57 0 R
+/Prev 39 0 R
+/Next 41 0 R
+>>
+endobj
+41 0 obj
+<<
+/Title (U4.GND2 \(U4.5\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 57 0 R
+/Prev 40 0 R
+/Next 42 0 R
+>>
+endobj
+42 0 obj
+<<
+/Title (U4.GND3 \(U4.21\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 57 0 R
+/Prev 41 0 R
+/Next 43 0 R
+>>
+endobj
+43 0 obj
+<<
+/Title (C14.1 \(C14.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647280480)
+/Parent 57 0 R
+/Prev 42 0 R
+/Next 44 0 R
+>>
+endobj
+44 0 obj
+<<
+/Title (U7.GND \(U7.4\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 57 0 R
+/Prev 43 0 R
+/Next 45 0 R
+>>
+endobj
+45 0 obj
+<<
+/Title (U7.A2 \(U7.5\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 57 0 R
+/Prev 44 0 R
+/Next 46 0 R
+>>
+endobj
+46 0 obj
+<<
+/Title (U7.A1 \(U7.6\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 57 0 R
+/Prev 45 0 R
+/Next 47 0 R
+>>
+endobj
+47 0 obj
+<<
+/Title (U7.A0 \(U7.7\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 57 0 R
+/Prev 46 0 R
+/Next 48 0 R
+>>
+endobj
+48 0 obj
+<<
+/Title (SW1.2 \(SW1.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647294032)
+/Parent 57 0 R
+/Prev 47 0 R
+/Next 49 0 R
+>>
+endobj
+49 0 obj
+<<
+/Title (J6.GND \(J6.6\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647296720)
+/Parent 57 0 R
+/Prev 48 0 R
+/Next 50 0 R
+>>
+endobj
+50 0 obj
+<<
+/Title (Y2.2 \(Y2.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647295184)
+/Parent 57 0 R
+/Prev 49 0 R
+/Next 51 0 R
+>>
+endobj
+51 0 obj
+<<
+/Title (Y2.3 \(Y2.3\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647295184)
+/Parent 57 0 R
+/Prev 50 0 R
+/Next 52 0 R
+>>
+endobj
+52 0 obj
+<<
+/Title (Y2.4 \(Y2.4\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647295184)
+/Parent 57 0 R
+/Prev 51 0 R
+/Next 53 0 R
+>>
+endobj
+53 0 obj
+<<
+/Title (C39.2 \(C39.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647299968)
+/Parent 57 0 R
+/Prev 52 0 R
+/Next 54 0 R
+>>
+endobj
+54 0 obj
+<<
+/Title (C23.2 \(C23.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647307024)
+/Parent 57 0 R
+/Prev 53 0 R
+/Next 55 0 R
+>>
+endobj
+55 0 obj
+<<
+/Title (C6.2 \(C6.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647306256)
+/Parent 57 0 R
+/Prev 54 0 R
+/Next 56 0 R
+>>
+endobj
+56 0 obj
+<<
+/Title (C19.2 \(C19.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647304992)
+/Parent 57 0 R
+/Prev 55 0 R
+>>
+endobj
+59 0 obj
+<<
+/Title (U4.PB1 OC1A \(U4.13\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 60 0 R
+>>
+endobj
+61 0 obj
+<<
+/Title (U4.PB2 SS \(U4.14\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 62 0 R
+>>
+endobj
+63 0 obj
+<<
+/Title (C18.2 \(C18.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647271984)
+/Parent 78 0 R
+/Next 64 0 R
+>>
+endobj
+64 0 obj
+<<
+/Title (C21.1 \(C21.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647270416)
+/Parent 78 0 R
+/Prev 63 0 R
+/Next 65 0 R
+>>
+endobj
+65 0 obj
+<<
+/Title (C20.1 \(C20.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647281312)
+/Parent 78 0 R
+/Prev 64 0 R
+/Next 66 0 R
+>>
+endobj
+66 0 obj
+<<
+/Title (U6.VDD \(U6.14\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 78 0 R
+/Prev 65 0 R
+/Next 67 0 R
+>>
+endobj
+67 0 obj
+<<
+/Title (C12.1 \(C12.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647277792)
+/Parent 78 0 R
+/Prev 66 0 R
+/Next 68 0 R
+>>
+endobj
+68 0 obj
+<<
+/Title (U4.VCC1 \(U4.4\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 78 0 R
+/Prev 67 0 R
+/Next 69 0 R
+>>
+endobj
+69 0 obj
+<<
+/Title (U4.VCC2 \(U4.6\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 78 0 R
+/Prev 68 0 R
+/Next 70 0 R
+>>
+endobj
+70 0 obj
+<<
+/Title (U4.AVCC \(U4.18\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 78 0 R
+/Prev 69 0 R
+/Next 71 0 R
+>>
+endobj
+71 0 obj
+<<
+/Title (U7.VCC \(U7.8\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 78 0 R
+/Prev 70 0 R
+/Next 72 0 R
+>>
+endobj
+72 0 obj
+<<
+/Title (R14.2 \(R14.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647288816)
+/Parent 78 0 R
+/Prev 71 0 R
+/Next 73 0 R
+>>
+endobj
+73 0 obj
+<<
+/Title (L1.2 \(L1.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647298704)
+/Parent 78 0 R
+/Prev 72 0 R
+/Next 74 0 R
+>>
+endobj
+74 0 obj
+<<
+/Title (R1.2 \(R1.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647300880)
+/Parent 78 0 R
+/Prev 73 0 R
+/Next 75 0 R
+>>
+endobj
+75 0 obj
+<<
+/Title (C23.1 \(C23.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647307024)
+/Parent 78 0 R
+/Prev 74 0 R
+/Next 76 0 R
+>>
+endobj
+76 0 obj
+<<
+/Title (C19.1 \(C19.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647304992)
+/Parent 78 0 R
+/Prev 75 0 R
+/Next 77 0 R
+>>
+endobj
+77 0 obj
+<<
+/Title (R15.2 \(R15.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647303680)
+/Parent 78 0 R
+/Prev 76 0 R
+>>
+endobj
+79 0 obj
+<<
+/Title (R34.1 \(R34.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647310032)
+/Parent 80 0 R
+>>
+endobj
+81 0 obj
+<<
+/Title (U4.PC3 ADC3 \(U4.26\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 82 0 R
+>>
+endobj
+83 0 obj
+<<
+/Title (U4.PD1 TXD \(U4.31\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 84 0 R
+>>
+endobj
+85 0 obj
+<<
+/Title (U4.PD4 XCK \(U4.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 86 0 R
+>>
+endobj
+87 0 obj
+<<
+/Title (U4.PC2 ADC2 \(U4.25\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 90 0 R
+/Next 88 0 R
+>>
+endobj
+88 0 obj
+<<
+/Title (C39.1 \(C39.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647299968)
+/Parent 90 0 R
+/Prev 87 0 R
+/Next 89 0 R
+>>
+endobj
+89 0 obj
+<<
+/Title (R34.2 \(R34.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647310032)
+/Parent 90 0 R
+/Prev 88 0 R
+>>
+endobj
+91 0 obj
+<<
+/Title (U6.RFP \(U6.12\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 95 0 R
+/Next 92 0 R
+>>
+endobj
+92 0 obj
+<<
+/Title (C14.2 \(C14.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647280480)
+/Parent 95 0 R
+/Prev 91 0 R
+/Next 93 0 R
+>>
+endobj
+93 0 obj
+<<
+/Title (L3.1 \(L3.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647291840)
+/Parent 95 0 R
+/Prev 92 0 R
+/Next 94 0 R
+>>
+endobj
+94 0 obj
+<<
+/Title (L2.1 \(L2.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647301808)
+/Parent 95 0 R
+/Prev 93 0 R
+>>
+endobj
+96 0 obj
+<<
+/Title (U6.RFN \(U6.13\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 100 0 R
+/Next 97 0 R
+>>
+endobj
+97 0 obj
+<<
+/Title (L1.1 \(L1.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647298704)
+/Parent 100 0 R
+/Prev 96 0 R
+/Next 98 0 R
+>>
+endobj
+98 0 obj
+<<
+/Title (L2.2 \(L2.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647301808)
+/Parent 100 0 R
+/Prev 97 0 R
+/Next 99 0 R
+>>
+endobj
+99 0 obj
+<<
+/Title (C13.1 \(C13.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647310864)
+/Parent 100 0 R
+/Prev 98 0 R
+>>
+endobj
+101 0 obj
+<<
+/Title (L3.2 \(L3.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647291840)
+/Parent 104 0 R
+/Next 102 0 R
+>>
+endobj
+102 0 obj
+<<
+/Title (C15.1 \(C15.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647293136)
+/Parent 104 0 R
+/Prev 101 0 R
+/Next 103 0 R
+>>
+endobj
+103 0 obj
+<<
+/Title (C13.2 \(C13.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647310864)
+/Parent 104 0 R
+/Prev 102 0 R
+>>
+endobj
+105 0 obj
+<<
+/Title (U6.NIRQ \(U6.5\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 107 0 R
+/Next 106 0 R
+>>
+endobj
+106 0 obj
+<<
+/Title (U4.PD2 INT0 \(U4.32\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 107 0 R
+/Prev 105 0 R
+>>
+endobj
+108 0 obj
+<<
+/Title (U4.PC6 RESET \(U4.29\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 112 0 R
+/Next 109 0 R
+>>
+endobj
+109 0 obj
+<<
+/Title (SW1.1 \(SW1.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647294032)
+/Parent 112 0 R
+/Prev 108 0 R
+/Next 110 0 R
+>>
+endobj
+110 0 obj
+<<
+/Title (J6.RESET \(J6.5\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647296720)
+/Parent 112 0 R
+/Prev 109 0 R
+/Next 111 0 R
+>>
+endobj
+111 0 obj
+<<
+/Title (R1.1 \(R1.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647300880)
+/Parent 112 0 R
+/Prev 110 0 R
+>>
+endobj
+113 0 obj
+<<
+/Title (U6.SCK \(U6.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 116 0 R
+/Next 114 0 R
+>>
+endobj
+114 0 obj
+<<
+/Title (U4.PB5 SCK \(U4.17\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 116 0 R
+/Prev 113 0 R
+/Next 115 0 R
+>>
+endobj
+115 0 obj
+<<
+/Title (J6.SCK \(J6.3\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647296720)
+/Parent 116 0 R
+/Prev 114 0 R
+>>
+endobj
+117 0 obj
+<<
+/Title (U6.SDI \(U6.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 120 0 R
+/Next 118 0 R
+>>
+endobj
+118 0 obj
+<<
+/Title (U4.PB3 MOSI \(U4.15\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 120 0 R
+/Prev 117 0 R
+/Next 119 0 R
+>>
+endobj
+119 0 obj
+<<
+/Title (J6.MOSI \(J6.4\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647296720)
+/Parent 120 0 R
+/Prev 118 0 R
+>>
+endobj
+121 0 obj
+<<
+/Title (U6.SDO \(U6.4\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 124 0 R
+/Next 122 0 R
+>>
+endobj
+122 0 obj
+<<
+/Title (U4.PB4 MISO \(U4.16\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 124 0 R
+/Prev 121 0 R
+/Next 123 0 R
+>>
+endobj
+123 0 obj
+<<
+/Title (J6.MISO \(J6.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647296720)
+/Parent 124 0 R
+/Prev 122 0 R
+>>
+endobj
+125 0 obj
+<<
+/Title (C15.2 \(C15.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647293136)
+/Parent 127 0 R
+/Next 126 0 R
+>>
+endobj
+126 0 obj
+<<
+/Title (ANT1.In \(ANT1.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647309120)
+/Parent 127 0 R
+/Prev 125 0 R
+>>
+endobj
+128 0 obj
+<<
+/Title (U6.NCS \(U6.3\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 130 0 R
+/Next 129 0 R
+>>
+endobj
+129 0 obj
+<<
+/Title (U4.PB0 ICP1 \(U4.12\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 130 0 R
+/Prev 128 0 R
+>>
+endobj
+131 0 obj
+<<
+/Title (U6.NRESET \(U6.10\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 133 0 R
+/Next 132 0 R
+>>
+endobj
+132 0 obj
+<<
+/Title (U4.PD6 AIN0 \(U4.10\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 133 0 R
+/Prev 131 0 R
+>>
+endobj
+134 0 obj
+<<
+/Title (U6.EXTREF \(U6.9\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 136 0 R
+/Next 135 0 R
+>>
+endobj
+135 0 obj
+<<
+/Title (Y2.1 \(Y2.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647295184)
+/Parent 136 0 R
+/Prev 134 0 R
+>>
+endobj
+137 0 obj
+<<
+/Title (U4.AREF \(U4.20\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 139 0 R
+/Next 138 0 R
+>>
+endobj
+138 0 obj
+<<
+/Title (C6.1 \(C6.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647306256)
+/Parent 139 0 R
+/Prev 137 0 R
+>>
+endobj
+140 0 obj
+<<
+/Title (U4.PC4 ADC4 SDA \(U4.27\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 143 0 R
+/Next 141 0 R
+>>
+endobj
+141 0 obj
+<<
+/Title (U7.SDA \(U7.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 143 0 R
+/Prev 140 0 R
+/Next 142 0 R
+>>
+endobj
+142 0 obj
+<<
+/Title (R14.1 \(R14.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647288816)
+/Parent 143 0 R
+/Prev 141 0 R
+>>
+endobj
+144 0 obj
+<<
+/Title (U4.PC5 ADC5 SCL \(U4.28\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 147 0 R
+/Next 145 0 R
+>>
+endobj
+145 0 obj
+<<
+/Title (U7.SCL \(U7.2\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647287696)
+/Parent 147 0 R
+/Prev 144 0 R
+/Next 146 0 R
+>>
+endobj
+146 0 obj
+<<
+/Title (R15.1 \(R15.1\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647303680)
+/Parent 147 0 R
+/Prev 145 0 R
+>>
+endobj
+148 0 obj
+<<
+/Title (U6.DATA \(U6.6\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 150 0 R
+/Next 149 0 R
+>>
+endobj
+149 0 obj
+<<
+/Title (U4.PD7 AIN1 \(U4.11\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 150 0 R
+/Prev 148 0 R
+>>
+endobj
+151 0 obj
+<<
+/Title (U6.CLK OUT \(U6.8\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647276880)
+/Parent 153 0 R
+/Next 152 0 R
+>>
+endobj
+152 0 obj
+<<
+/Title (U4.PB6 XTAL1 \(U4.7\))
+/C [0 0 1]
+/F 1
+/Action /GoTo
+/Dest (Dest_637765840_647279232)
+/Parent 153 0 R
+/Prev 151 0 R
+>>
+endobj
+57 0 obj
+<<
+/Count 22
+/First 35 0 R
+/Last 56 0 R
+/Title (0)
+/Parent 58 0 R
+/Next 60 0 R
+>>
+endobj
+60 0 obj
+<<
+/Count 1
+/First 59 0 R
+/Last 59 0 R
+/Title (100KHZ)
+/Parent 58 0 R
+/Prev 57 0 R
+/Next 62 0 R
+>>
+endobj
+62 0 obj
+<<
+/Count 1
+/First 61 0 R
+/Last 61 0 R
+/Title (100KHZ_DELAYED)
+/Parent 58 0 R
+/Prev 60 0 R
+/Next 78 0 R
+>>
+endobj
+78 0 obj
+<<
+/Count 15
+/First 63 0 R
+/Last 77 0 R
+/Title (3.3V)
+/Parent 58 0 R
+/Prev 62 0 R
+/Next 80 0 R
+>>
+endobj
+80 0 obj
+<<
+/Count 1
+/First 79 0 R
+/Last 79 0 R
+/Title (HUMIDITY)
+/Parent 58 0 R
+/Prev 78 0 R
+/Next 82 0 R
+>>
+endobj
+82 0 obj
+<<
+/Count 1
+/First 81 0 R
+/Last 81 0 R
+/Title (LIGHTDET)
+/Parent 58 0 R
+/Prev 80 0 R
+/Next 84 0 R
+>>
+endobj
+84 0 obj
+<<
+/Count 1
+/First 83 0 R
+/Last 83 0 R
+/Title (LOWBAT)
+/Parent 58 0 R
+/Prev 82 0 R
+/Next 86 0 R
+>>
+endobj
+86 0 obj
+<<
+/Count 1
+/First 85 0 R
+/Last 85 0 R
+/Title (MES)
+/Parent 58 0 R
+/Prev 84 0 R
+/Next 90 0 R
+>>
+endobj
+90 0 obj
+<<
+/Count 3
+/First 87 0 R
+/Last 89 0 R
+/Title (N132515)
+/Parent 58 0 R
+/Prev 86 0 R
+/Next 95 0 R
+>>
+endobj
+95 0 obj
+<<
+/Count 4
+/First 91 0 R
+/Last 94 0 R
+/Title (N84269)
+/Parent 58 0 R
+/Prev 90 0 R
+/Next 100 0 R
+>>
+endobj
+100 0 obj
+<<
+/Count 4
+/First 96 0 R
+/Last 99 0 R
+/Title (N84277)
+/Parent 58 0 R
+/Prev 95 0 R
+/Next 104 0 R
+>>
+endobj
+104 0 obj
+<<
+/Count 3
+/First 101 0 R
+/Last 103 0 R
+/Title (N84313)
+/Parent 58 0 R
+/Prev 100 0 R
+/Next 107 0 R
+>>
+endobj
+107 0 obj
+<<
+/Count 2
+/First 105 0 R
+/Last 106 0 R
+/Title (N84457)
+/Parent 58 0 R
+/Prev 104 0 R
+/Next 112 0 R
+>>
+endobj
+112 0 obj
+<<
+/Count 4
+/First 108 0 R
+/Last 111 0 R
+/Title (N84577)
+/Parent 58 0 R
+/Prev 107 0 R
+/Next 116 0 R
+>>
+endobj
+116 0 obj
+<<
+/Count 3
+/First 113 0 R
+/Last 115 0 R
+/Title (N84669)
+/Parent 58 0 R
+/Prev 112 0 R
+/Next 120 0 R
+>>
+endobj
+120 0 obj
+<<
+/Count 3
+/First 117 0 R
+/Last 119 0 R
+/Title (N84681)
+/Parent 58 0 R
+/Prev 116 0 R
+/Next 124 0 R
+>>
+endobj
+124 0 obj
+<<
+/Count 3
+/First 121 0 R
+/Last 123 0 R
+/Title (N84697)
+/Parent 58 0 R
+/Prev 120 0 R
+/Next 127 0 R
+>>
+endobj
+127 0 obj
+<<
+/Count 2
+/First 125 0 R
+/Last 126 0 R
+/Title (N84853)
+/Parent 58 0 R
+/Prev 124 0 R
+/Next 130 0 R
+>>
+endobj
+130 0 obj
+<<
+/Count 2
+/First 128 0 R
+/Last 129 0 R
+/Title (N85071)
+/Parent 58 0 R
+/Prev 127 0 R
+/Next 133 0 R
+>>
+endobj
+133 0 obj
+<<
+/Count 2
+/First 131 0 R
+/Last 132 0 R
+/Title (N85107)
+/Parent 58 0 R
+/Prev 130 0 R
+/Next 136 0 R
+>>
+endobj
+136 0 obj
+<<
+/Count 2
+/First 134 0 R
+/Last 135 0 R
+/Title (N85151)
+/Parent 58 0 R
+/Prev 133 0 R
+/Next 139 0 R
+>>
+endobj
+139 0 obj
+<<
+/Count 2
+/First 137 0 R
+/Last 138 0 R
+/Title (N85407)
+/Parent 58 0 R
+/Prev 136 0 R
+/Next 143 0 R
+>>
+endobj
+143 0 obj
+<<
+/Count 3
+/First 140 0 R
+/Last 142 0 R
+/Title (N87620)
+/Parent 58 0 R
+/Prev 139 0 R
+/Next 147 0 R
+>>
+endobj
+147 0 obj
+<<
+/Count 3
+/First 144 0 R
+/Last 146 0 R
+/Title (N87630)
+/Parent 58 0 R
+/Prev 143 0 R
+/Next 150 0 R
+>>
+endobj
+150 0 obj
+<<
+/Count 2
+/First 148 0 R
+/Last 149 0 R
+/Title (N88969)
+/Parent 58 0 R
+/Prev 147 0 R
+/Next 153 0 R
+>>
+endobj
+153 0 obj
+<<
+/Count 2
+/First 151 0 R
+/Last 152 0 R
+/Title (N93764)
+/Parent 58 0 R
+/Prev 150 0 R
+>>
+endobj
+154 0 obj
+<<
+/Type /ExtGState
+/OPM 1
+>>
+endobj
+156 0 obj
+<<
+/Type /Encoding
+/Differences [229 /aring 248 /oslash]
+>>
+endobj
+155 0 obj
+<<
+/BaseFont /Helvetica
+/Type /Font
+/Encoding 156 0 R
+/Subtype /Type1
+>>
+endobj
+157 0 obj
+<<
+/Type /Annot
+/Rect [414 317 415 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84201 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+158 0 obj
+<<
+/Type /Annot
+/Rect [494 367 415 368]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84213 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+159 0 obj
+<<
+/Type /Annot
+/Rect [455 383 407 384]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84269 : N84269 \(Wire ID = 84269 \)" , "-" , "Name=N84269" \);)
+>>
+/Subtype /Link
+>>
+endobj
+160 0 obj
+<<
+/Type /Annot
+/Rect [455 383 456 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84269 : N84269 \(Wire ID = 84273 \)" , "-" , "Name=N84269" \);)
+>>
+/Subtype /Link
+>>
+endobj
+161 0 obj
+<<
+/Type /Annot
+/Rect [398 317 399 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84277 : N84277 \(Wire ID = 84277 \)" , "-" , "Name=N84277" \);)
+>>
+/Subtype /Link
+>>
+endobj
+162 0 obj
+<<
+/Type /Annot
+/Rect [398 399 390 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84277 : N84277 \(Wire ID = 84281 \)" , "-" , "Name=N84277" \);)
+>>
+/Subtype /Link
+>>
+endobj
+163 0 obj
+<<
+/Type /Annot
+/Rect [406 399 399 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84277 : N84277 \(Wire ID = 84285 \)" , "-" , "Name=N84277" \);)
+>>
+/Subtype /Link
+>>
+endobj
+164 0 obj
+<<
+/Type /Annot
+/Rect [279 550 280 562]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84289 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+165 0 obj
+<<
+/Type /Annot
+/Rect [398 399 399 417]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84277 : N84277 \(Wire ID = 84309 \)" , "-" , "Name=N84277" \);)
+>>
+/Subtype /Link
+>>
+endobj
+166 0 obj
+<<
+/Type /Annot
+/Rect [398 440 399 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84313 : N84313 \(Wire ID = 84313 \)" , "-" , "Name=N84313" \);)
+>>
+/Subtype /Link
+>>
+endobj
+167 0 obj
+<<
+/Type /Annot
+/Rect [406 457 399 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84313 : N84313 \(Wire ID = 84333 \)" , "-" , "Name=N84313" \);)
+>>
+/Subtype /Link
+>>
+endobj
+168 0 obj
+<<
+/Type /Annot
+/Rect [455 399 456 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84269 : N84269 \(Wire ID = 84337 \)" , "-" , "Name=N84269" \);)
+>>
+/Subtype /Link
+>>
+endobj
+169 0 obj
+<<
+/Type /Annot
+/Rect [496 457 489 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84365 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+170 0 obj
+<<
+/Type /Annot
+/Rect [463 457 456 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84269 : N84269 \(Wire ID = 84369 \)" , "-" , "Name=N84269" \);)
+>>
+/Subtype /Link
+>>
+endobj
+171 0 obj
+<<
+/Type /Annot
+/Rect [398 457 399 482]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84313 : N84313 \(Wire ID = 84381 \)" , "-" , "Name=N84313" \);)
+>>
+/Subtype /Link
+>>
+endobj
+172 0 obj
+<<
+/Type /Annot
+/Rect [209 435 202 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 84401 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+173 0 obj
+<<
+/Type /Annot
+/Rect [235 353 95 354]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84457 : N84457 \(Wire ID = 84457 \)" , "-" , "Name=N84457" \);)
+>>
+/Subtype /Link
+>>
+endobj
+174 0 obj
+<<
+/Type /Annot
+/Rect [127 176 111 177]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84481 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+175 0 obj
+<<
+/Type /Annot
+/Rect [110 176 111 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84485 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+176 0 obj
+<<
+/Type /Annot
+/Rect [102 135 95 136]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 84533 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+177 0 obj
+<<
+/Type /Annot
+/Rect [94 135 87 136]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 84553 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+178 0 obj
+<<
+/Type /Annot
+/Rect [279 477 120 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84577 : N84577 \(Wire ID = 84577 \)" , "-" , "Name=N84577" \);)
+>>
+/Subtype /Link
+>>
+endobj
+179 0 obj
+<<
+/Type /Annot
+/Rect [119 342 120 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84577 : N84577 \(Wire ID = 84645 \)" , "-" , "Name=N84577" \);)
+>>
+/Subtype /Link
+>>
+endobj
+180 0 obj
+<<
+/Type /Annot
+/Rect [258 369 251 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 84665 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+181 0 obj
+<<
+/Type /Annot
+/Rect [242 342 218 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84669 : N84669 \(Wire ID = 84669 \)" , "-" , "Name=N84669" \);)
+>>
+/Subtype /Link
+>>
+endobj
+182 0 obj
+<<
+/Type /Annot
+/Rect [242 276 243 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84669 : N84669 \(Wire ID = 84673 \)" , "-" , "Name=N84669" \);)
+>>
+/Subtype /Link
+>>
+endobj
+183 0 obj
+<<
+/Type /Annot
+/Rect [291 276 243 277]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84669 : N84669 \(Wire ID = 84677 \)" , "-" , "Name=N84669" \);)
+>>
+/Subtype /Link
+>>
+endobj
+184 0 obj
+<<
+/Type /Annot
+/Rect [209 184 210 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84681 : N84681 \(Wire ID = 84681 \)" , "-" , "Name=N84681" \);)
+>>
+/Subtype /Link
+>>
+endobj
+185 0 obj
+<<
+/Type /Annot
+/Rect [260 184 210 185]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84681 : N84681 \(Wire ID = 84685 \)" , "-" , "Name=N84681" \);)
+>>
+/Subtype /Link
+>>
+endobj
+186 0 obj
+<<
+/Type /Annot
+/Rect [260 184 261 269]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84681 : N84681 \(Wire ID = 84689 \)" , "-" , "Name=N84681" \);)
+>>
+/Subtype /Link
+>>
+endobj
+187 0 obj
+<<
+/Type /Annot
+/Rect [291 268 261 269]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84681 : N84681 \(Wire ID = 84693 \)" , "-" , "Name=N84681" \);)
+>>
+/Subtype /Link
+>>
+endobj
+188 0 obj
+<<
+/Type /Annot
+/Rect [291 293 252 294]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84697 : N84697 \(Wire ID = 84697 \)" , "-" , "Name=N84697" \);)
+>>
+/Subtype /Link
+>>
+endobj
+189 0 obj
+<<
+/Type /Annot
+/Rect [251 193 218 194]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84697 : N84697 \(Wire ID = 84701 \)" , "-" , "Name=N84697" \);)
+>>
+/Subtype /Link
+>>
+endobj
+190 0 obj
+<<
+/Type /Annot
+/Rect [251 193 252 294]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84697 : N84697 \(Wire ID = 84705 \)" , "-" , "Name=N84697" \);)
+>>
+/Subtype /Link
+>>
+endobj
+191 0 obj
+<<
+/Type /Annot
+/Rect [398 504 399 507]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84853 : N84853 \(Wire ID = 84853 \)" , "-" , "Name=N84853" \);)
+>>
+/Subtype /Link
+>>
+endobj
+192 0 obj
+<<
+/Type /Annot
+/Rect [398 506 399 513]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84853 : N84853 \(Wire ID = 84871 \)" , "-" , "Name=N84853" \);)
+>>
+/Subtype /Link
+>>
+endobj
+193 0 obj
+<<
+/Type /Annot
+/Rect [373 184 374 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84681 : N84681 \(Wire ID = 84883 \)" , "-" , "Name=N84681" \);)
+>>
+/Subtype /Link
+>>
+endobj
+194 0 obj
+<<
+/Type /Annot
+/Rect [373 184 261 185]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84681 : N84681 \(Wire ID = 84887 \)" , "-" , "Name=N84681" \);)
+>>
+/Subtype /Link
+>>
+endobj
+195 0 obj
+<<
+/Type /Annot
+/Rect [381 201 382 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84669 : N84669 \(Wire ID = 84891 \)" , "-" , "Name=N84669" \);)
+>>
+/Subtype /Link
+>>
+endobj
+196 0 obj
+<<
+/Type /Annot
+/Rect [381 201 243 202]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84669 : N84669 \(Wire ID = 84895 \)" , "-" , "Name=N84669" \);)
+>>
+/Subtype /Link
+>>
+endobj
+197 0 obj
+<<
+/Type /Annot
+/Rect [242 201 243 277]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84669 : N84669 \(Wire ID = 84899 \)" , "-" , "Name=N84669" \);)
+>>
+/Subtype /Link
+>>
+endobj
+198 0 obj
+<<
+/Type /Annot
+/Rect [398 193 399 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84697 : N84697 \(Wire ID = 84903 \)" , "-" , "Name=N84697" \);)
+>>
+/Subtype /Link
+>>
+endobj
+199 0 obj
+<<
+/Type /Annot
+/Rect [398 193 252 194]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84697 : N84697 \(Wire ID = 84915 \)" , "-" , "Name=N84697" \);)
+>>
+/Subtype /Link
+>>
+endobj
+200 0 obj
+<<
+/Type /Annot
+/Rect [389 176 185 177]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85071 : N85071 \(Wire ID = 85071 \)" , "-" , "Name=N85071" \);)
+>>
+/Subtype /Link
+>>
+endobj
+201 0 obj
+<<
+/Type /Annot
+/Rect [389 176 390 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85071 : N85071 \(Wire ID = 85075 \)" , "-" , "Name=N85071" \);)
+>>
+/Subtype /Link
+>>
+endobj
+202 0 obj
+<<
+/Type /Annot
+/Rect [94 135 95 185]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85079 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+203 0 obj
+<<
+/Type /Annot
+/Rect [291 260 280 261]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84577 : N84577 \(Wire ID = 85087 \)" , "-" , "Name=N84577" \);)
+>>
+/Subtype /Link
+>>
+endobj
+204 0 obj
+<<
+/Type /Annot
+/Rect [279 260 280 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84577 : N84577 \(Wire ID = 85091 \)" , "-" , "Name=N84577" \);)
+>>
+/Subtype /Link
+>>
+endobj
+205 0 obj
+<<
+/Type /Annot
+/Rect [422 317 423 359]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85107 : N85107 \(Wire ID = 85107 \)" , "-" , "Name=N85107" \);)
+>>
+/Subtype /Link
+>>
+endobj
+206 0 obj
+<<
+/Type /Annot
+/Rect [430 317 431 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85151 : N85151 \(Wire ID = 85151 \)" , "-" , "Name=N85151" \);)
+>>
+/Subtype /Link
+>>
+endobj
+207 0 obj
+<<
+/Type /Annot
+/Rect [406 169 236 170]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84457 : N84457 \(Wire ID = 85159 \)" , "-" , "Name=N84457" \);)
+>>
+/Subtype /Link
+>>
+endobj
+208 0 obj
+<<
+/Type /Annot
+/Rect [135 184 136 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85167 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+209 0 obj
+<<
+/Type /Annot
+/Rect [235 169 236 354]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84457 : N84457 \(Wire ID = 85175 \)" , "-" , "Name=N84457" \);)
+>>
+/Subtype /Link
+>>
+endobj
+210 0 obj
+<<
+/Type /Annot
+/Rect [406 169 407 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84457 : N84457 \(Wire ID = 85179 \)" , "-" , "Name=N84457" \);)
+>>
+/Subtype /Link
+>>
+endobj
+211 0 obj
+<<
+/Type /Annot
+/Rect [389 317 390 326]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85183 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+212 0 obj
+<<
+/Type /Annot
+/Rect [357 325 341 326]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85187 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+213 0 obj
+<<
+/Type /Annot
+/Rect [389 325 374 326]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85207 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+214 0 obj
+<<
+/Type /Annot
+/Rect [373 325 358 326]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85211 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+215 0 obj
+<<
+/Type /Annot
+/Rect [357 350 341 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85247 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+216 0 obj
+<<
+/Type /Annot
+/Rect [373 350 358 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85251 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+217 0 obj
+<<
+/Type /Annot
+/Rect [340 325 333 326]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85271 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+218 0 obj
+<<
+/Type /Annot
+/Rect [258 435 251 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85375 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+219 0 obj
+<<
+/Type /Annot
+/Rect [209 342 210 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85379 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+220 0 obj
+<<
+/Type /Annot
+/Rect [225 435 210 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 85383 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+221 0 obj
+<<
+/Type /Annot
+/Rect [448 334 431 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85151 : N85151 \(Wire ID = 85387 \)" , "-" , "Name=N85151" \);)
+>>
+/Subtype /Link
+>>
+endobj
+222 0 obj
+<<
+/Type /Annot
+/Rect [480 325 481 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85391 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+223 0 obj
+<<
+/Type /Annot
+/Rect [480 334 481 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85395 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+224 0 obj
+<<
+/Type /Annot
+/Rect [494 334 481 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85399 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+225 0 obj
+<<
+/Type /Annot
+/Rect [406 317 407 384]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84269 : N84269 \(Wire ID = 85403 \)" , "-" , "Name=N84269" \);)
+>>
+/Subtype /Link
+>>
+endobj
+226 0 obj
+<<
+/Type /Annot
+/Rect [192 342 193 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85407 : N85407 \(Wire ID = 85407 \)" , "-" , "Name=N85407" \);)
+>>
+/Subtype /Link
+>>
+endobj
+227 0 obj
+<<
+/Type /Annot
+/Rect [225 369 193 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85407 : N85407 \(Wire ID = 85411 \)" , "-" , "Name=N85407" \);)
+>>
+/Subtype /Link
+>>
+endobj
+228 0 obj
+<<
+/Type /Annot
+/Rect [414 350 374 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85415 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+229 0 obj
+<<
+/Type /Annot
+/Rect [414 350 415 368]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85419 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+230 0 obj
+<<
+/Type /Annot
+/Rect [184 342 185 403]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85423 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+231 0 obj
+<<
+/Type /Annot
+/Rect [258 402 185 403]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 85427 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+232 0 obj
+<<
+/Type /Annot
+/Rect [143 342 144 403]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "LightDet : LIGHTDET \(Wire ID = 85465 \)" , "-" , "Name=LIGHTDET" \);)
+>>
+/Subtype /Link
+>>
+endobj
+233 0 obj
+<<
+/Type /Annot
+/Rect [69 477 62 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 86370 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+234 0 obj
+<<
+/Type /Annot
+/Rect [127 494 111 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 87620 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+235 0 obj
+<<
+/Type /Annot
+/Rect [127 494 128 528]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 87624 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+236 0 obj
+<<
+/Type /Annot
+/Rect [135 510 111 511]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 87630 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+237 0 obj
+<<
+/Type /Annot
+/Rect [135 510 136 528]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 87634 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+238 0 obj
+<<
+/Type /Annot
+/Rect [77 494 70 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87640 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+239 0 obj
+<<
+/Type /Annot
+/Rect [69 477 70 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87642 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+240 0 obj
+<<
+/Type /Annot
+/Rect [77 477 70 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87646 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+241 0 obj
+<<
+/Type /Annot
+/Rect [77 510 70 511]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87671 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+242 0 obj
+<<
+/Type /Annot
+/Rect [69 494 70 511]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87673 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+243 0 obj
+<<
+/Type /Annot
+/Rect [176 527 152 528]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 87851 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+244 0 obj
+<<
+/Type /Annot
+/Rect [127 609 70 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87911 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+245 0 obj
+<<
+/Type /Annot
+/Rect [69 510 70 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 87913 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+246 0 obj
+<<
+/Type /Annot
+/Rect [151 584 152 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 87971 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+247 0 obj
+<<
+/Type /Annot
+/Rect [143 584 144 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 87977 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+248 0 obj
+<<
+/Type /Annot
+/Rect [151 592 144 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 87981 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+249 0 obj
+<<
+/Type /Annot
+/Rect [176 527 177 560]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 87991 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+250 0 obj
+<<
+/Type /Annot
+/Rect [184 559 177 560]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 87993 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+251 0 obj
+<<
+/Type /Annot
+/Rect [176 592 152 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 88115 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+252 0 obj
+<<
+/Type /Annot
+/Rect [176 559 177 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 88117 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+253 0 obj
+<<
+/Type /Annot
+/Rect [127 584 128 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 88212 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+254 0 obj
+<<
+/Type /Annot
+/Rect [176 609 161 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 88264 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+255 0 obj
+<<
+/Type /Annot
+/Rect [176 592 177 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 88266 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+256 0 obj
+<<
+/Type /Annot
+/Rect [135 609 128 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 88475 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+257 0 obj
+<<
+/Type /Annot
+/Rect [135 584 136 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 88838 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+258 0 obj
+<<
+/Type /Annot
+/Rect [143 592 136 593]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 88840 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+259 0 obj
+<<
+/Type /Annot
+/Rect [414 160 415 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N88969 : N88969 \(Wire ID = 88969 \)" , "-" , "Name=N88969" \);)
+>>
+/Subtype /Link
+>>
+endobj
+260 0 obj
+<<
+/Type /Annot
+/Rect [414 160 177 161]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N88969 : N88969 \(Wire ID = 88973 \)" , "-" , "Name=N88969" \);)
+>>
+/Subtype /Link
+>>
+endobj
+261 0 obj
+<<
+/Type /Annot
+/Rect [176 160 177 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N88969 : N88969 \(Wire ID = 88975 \)" , "-" , "Name=N88969" \);)
+>>
+/Subtype /Link
+>>
+endobj
+262 0 obj
+<<
+/Type /Annot
+/Rect [422 358 268 359]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85107 : N85107 \(Wire ID = 88986 \)" , "-" , "Name=N85107" \);)
+>>
+/Subtype /Link
+>>
+endobj
+263 0 obj
+<<
+/Type /Annot
+/Rect [267 151 268 359]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85107 : N85107 \(Wire ID = 88991 \)" , "-" , "Name=N85107" \);)
+>>
+/Subtype /Link
+>>
+endobj
+264 0 obj
+<<
+/Type /Annot
+/Rect [267 151 169 152]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85107 : N85107 \(Wire ID = 89020 \)" , "-" , "Name=N85107" \);)
+>>
+/Subtype /Link
+>>
+endobj
+265 0 obj
+<<
+/Type /Annot
+/Rect [168 151 169 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85107 : N85107 \(Wire ID = 89022 \)" , "-" , "Name=N85107" \);)
+>>
+/Subtype /Link
+>>
+endobj
+266 0 obj
+<<
+/Type /Annot
+/Rect [430 143 431 228]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N93764 : N93764 \(Wire ID = 93764 \)" , "-" , "Name=N93764" \);)
+>>
+/Subtype /Link
+>>
+endobj
+267 0 obj
+<<
+/Type /Annot
+/Rect [430 143 144 144]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N93764 : N93764 \(Wire ID = 93768 \)" , "-" , "Name=N93764" \);)
+>>
+/Subtype /Link
+>>
+endobj
+268 0 obj
+<<
+/Type /Annot
+/Rect [143 143 144 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N93764 : N93764 \(Wire ID = 94444 \)" , "-" , "Name=N93764" \);)
+>>
+/Subtype /Link
+>>
+endobj
+269 0 obj
+<<
+/Type /Annot
+/Rect [127 176 128 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 94557 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+270 0 obj
+<<
+/Type /Annot
+/Rect [119 184 95 185]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 94988 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+271 0 obj
+<<
+/Type /Annot
+/Rect [119 184 120 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 95034 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+272 0 obj
+<<
+/Type /Annot
+/Rect [135 184 120 185]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V : 3.3V \(Wire ID = 95038 \)" , "-" , "Name=3.3V" \);)
+>>
+/Subtype /Link
+>>
+endobj
+273 0 obj
+<<
+/Type /Annot
+/Rect [127 135 128 177]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 95068 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+274 0 obj
+<<
+/Type /Annot
+/Rect [135 135 128 136]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 95136 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+275 0 obj
+<<
+/Type /Annot
+/Rect [192 125 193 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "100kHz : 100KHZ \(Wire ID = 99724 \)" , "-" , "BiasValue Voltage=3.300V" , "Name=100KHZ" \);)
+>>
+/Subtype /Link
+>>
+endobj
+276 0 obj
+<<
+/Type /Annot
+/Rect [292 561 280 562]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 102259 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+277 0 obj
+<<
+/Type /Annot
+/Rect [217 193 218 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84697 : N84697 \(Wire ID = 102896 \)" , "-" , "Name=N84697" \);)
+>>
+/Subtype /Link
+>>
+endobj
+278 0 obj
+<<
+/Type /Annot
+/Rect [300 233 282 234]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 103207 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+279 0 obj
+<<
+/Type /Annot
+/Rect [281 233 282 253]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 103209 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+280 0 obj
+<<
+/Type /Annot
+/Rect [291 252 282 253]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0 : 0 \(Wire ID = 103398 \)" , "-" , "Name=0" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+281 0 obj
+<<
+/Type /Annot
+/Rect [143 402 91 403]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "LightDet : LIGHTDET \(Wire ID = 105633 \)" , "-" , "Name=LIGHTDET" \);)
+>>
+/Subtype /Link
+>>
+endobj
+282 0 obj
+<<
+/Type /Annot
+/Rect [151 435 91 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "Humidity : HUMIDITY \(Wire ID = 105643 \)" , "-" , "Name=HUMIDITY" \);)
+>>
+/Subtype /Link
+>>
+endobj
+283 0 obj
+<<
+/Type /Annot
+/Rect [94 342 95 354]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84457 : N84457 \(Wire ID = 106002 \)" , "-" , "Name=N84457" \);)
+>>
+/Subtype /Link
+>>
+endobj
+284 0 obj
+<<
+/Type /Annot
+/Rect [119 477 111 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84577 : N84577 \(Wire ID = 106948 \)" , "-" , "Name=N84577" \);)
+>>
+/Subtype /Link
+>>
+endobj
+285 0 obj
+<<
+/Type /Annot
+/Rect [398 512 399 515]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84853 : N84853 \(Wire ID = 114438 \)" , "-" , "Name=N84853" \);)
+>>
+/Subtype /Link
+>>
+endobj
+286 0 obj
+<<
+/Type /Annot
+/Rect [279 477 280 485]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N84577 : N84577 \(Wire ID = 120207 \)" , "-" , "Name=N84577" \);)
+>>
+/Subtype /Link
+>>
+endobj
+287 0 obj
+<<
+/Type /Annot
+/Rect [102 342 103 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "LowBat : LOWBAT \(Wire ID = 120320 \)" , "-" , "Name=LOWBAT" \);)
+>>
+/Subtype /Link
+>>
+endobj
+288 0 obj
+<<
+/Type /Annot
+/Rect [102 369 91 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "LowBat : LOWBAT \(Wire ID = 120324 \)" , "-" , "Name=LOWBAT" \);)
+>>
+/Subtype /Link
+>>
+endobj
+289 0 obj
+<<
+/Type /Annot
+/Rect [124 472 130 473]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 126237 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+290 0 obj
+<<
+/Type /Annot
+/Rect [135 472 136 511]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 126239 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+291 0 obj
+<<
+/Type /Annot
+/Rect [127 341 128 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 126264 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+292 0 obj
+<<
+/Type /Annot
+/Rect [127 342 128 473]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 126268 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+293 0 obj
+<<
+/Type /Annot
+/Rect [135 472 128 473]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87630 : N87630 \(Wire ID = 126272 \)" , "-" , "Name=N87630" \);)
+>>
+/Subtype /Link
+>>
+endobj
+294 0 obj
+<<
+/Type /Annot
+/Rect [135 341 136 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 126282 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+295 0 obj
+<<
+/Type /Annot
+/Rect [135 342 136 462]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 126286 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+296 0 obj
+<<
+/Type /Annot
+/Rect [143 461 136 462]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 126291 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+297 0 obj
+<<
+/Type /Annot
+/Rect [143 461 144 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 126299 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+298 0 obj
+<<
+/Type /Annot
+/Rect [143 494 128 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N87620 : N87620 \(Wire ID = 126301 \)" , "-" , "Name=N87620" \);)
+>>
+/Subtype /Link
+>>
+endobj
+299 0 obj
+<<
+/Type /Annot
+/Rect [102 188 103 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "MES : MES \(Wire ID = 129391 \)" , "-" , "Name=MES" \);)
+>>
+/Subtype /Link
+>>
+endobj
+300 0 obj
+<<
+/Type /Annot
+/Rect [102 188 83 189]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "MES : MES \(Wire ID = 129393 \)" , "-" , "Name=MES" \);)
+>>
+/Subtype /Link
+>>
+endobj
+301 0 obj
+<<
+/Type /Annot
+/Rect [151 342 152 385]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N132515 : N132515 \(Wire ID = 132515 \)" , "-" , "Name=N132515" \);)
+>>
+/Subtype /Link
+>>
+endobj
+302 0 obj
+<<
+/Type /Annot
+/Rect [151 384 152 403]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N132515 : N132515 \(Wire ID = 132519 \)" , "-" , "Name=N132515" \);)
+>>
+/Subtype /Link
+>>
+endobj
+303 0 obj
+<<
+/Type /Annot
+/Rect [184 176 185 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "N85071 : N85071 \(Wire ID = 133543 \)" , "-" , "Name=N85071" \);)
+>>
+/Subtype /Link
+>>
+endobj
+304 0 obj
+<<
+/Type /Annot
+/Rect [201 91 193 92]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "100kHz_delayed : 100KHZ_DELAYED \(Wire ID = 133566 \)" , "-" , "Name=100KHZ_DELAYED" \);)
+>>
+/Subtype /Link
+>>
+endobj
+305 0 obj
+<<
+/Type /Annot
+/Rect [201 91 202 203]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "100kHz_delayed : 100KHZ_DELAYED \(Wire ID = 133568 \)" , "-" , "Name=100KHZ_DELAYED" \);)
+>>
+/Subtype /Link
+>>
+endobj
+306 0 obj
+<<
+/Type /Annot
+/Rect [278 394 259 411]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+307 0 obj
+<<
+/Type /Annot
+/Rect [513 325 495 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+308 0 obj
+<<
+/Type /Annot
+/Rect [513 358 495 376]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+309 0 obj
+<<
+/Type /Annot
+/Rect [516 449 497 466]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+310 0 obj
+<<
+/Type /Annot
+/Rect [201 426 185 444]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V" , "-" , "Name=3.3V" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+311 0 obj
+<<
+/Type /Annot
+/Rect [340 391 325 409]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V" , "-" , "Name=3.3V" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+312 0 obj
+<<
+/Type /Annot
+/Rect [278 361 259 378]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+313 0 obj
+<<
+/Type /Annot
+/Rect [61 469 46 487]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V" , "-" , "Name=3.3V" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+314 0 obj
+<<
+/Type /Annot
+/Rect [311 553 293 570]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+315 0 obj
+<<
+/Type /Annot
+/Rect [155 127 136 144]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "NODENAME=0" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" \);)
+>>
+/Subtype /Link
+>>
+endobj
+316 0 obj
+<<
+/Type /Annot
+/Rect [86 127 70 144]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V" , "-" , "Name=3.3V" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+317 0 obj
+<<
+/Type /Annot
+/Rect [332 317 317 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3.3V" , "-" , "Name=3.3V" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+318 0 obj
+<<
+/Type /Annot
+/Rect [278 426 259 444]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+319 0 obj
+<<
+/Type /Annot
+/Rect [320 225 301 242]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+320 0 obj
+<<
+/Type /Annot
+/Rect [90 394 74 423]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "LightDet" , "-" , "Name=LightDet" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+321 0 obj
+<<
+/Type /Annot
+/Rect [204 551 185 569]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+322 0 obj
+<<
+/Type /Annot
+/Rect [90 426 74 459]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "Humidity" , "-" , "Name=Humidity" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+323 0 obj
+<<
+/Type /Annot
+/Rect [192 113 174 139]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "100kHz" , "-" , "Name=100kHz" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+324 0 obj
+<<
+/Type /Annot
+/Rect [90 361 74 386]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "LowBat" , "-" , "Name=LowBat" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+325 0 obj
+<<
+/Type /Annot
+/Rect [82 180 66 198]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "MES" , "-" , "Name=MES" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+326 0 obj
+<<
+/Type /Annot
+/Rect [196 376 177 393]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "0" , "-" , "Name=0" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\PSPICE\\\\SOURCE.OLB" , "Source Symbol=0" , "PSpiceOnly=TRUE" , "NODENAME=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+327 0 obj
+<<
+/Type /Annot
+/Rect [192 46 173 104]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "100kHz_delayed" , "-" , "Name=100kHz_delayed" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=VCC" \);)
+>>
+/Subtype /Link
+>>
+endobj
+328 0 obj
+<<
+/Type /Annot
+/Rect [584 492 509 789]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "TitleBlock0 : TitleBlock0" , "-" , "Path Name=TitleBlock0" , "Schematic Path=/" , "ID=1" , "OrgAddr4=" , "OrgAddr3=" , "OrgAddr2=" , "OrgAddr1=" , "OrgName=" , "Cage Code=" , "RevCode=S4" , "Title=Prototype for jordfugt Sensor print V4 - Main" , "Name=TitleBlock0" , "Design Name=SENSOR" , "Design File Name=C:\\\\USERS\\\\KENNHEDEGAARD\\\\DROPBOX\\\\IHA\\\\6. SEMESTER\\\\E6BAC\\\\BAC-PROJEKTGRUPPE\\\\PROJEKT\\\\PRINT\\\\SENSOR_4\\\\SENSOR.DSN" , "Design Create Date=Saturday, June 11, 2016" , "Design Modify Date=Wednesday, May 10, 2017" , "Design Create Time=08:55:36" , "Design Modify Time=09:35:15" , "Schematic Name=SCHEMATIC1" , "Schematic Create Date=Saturday, June 11, 2016" , "Schematic Modify Date=Wednesday, May 10, 2017" , "Schematic Create Time=08:55:38" , "Schematic Modify Time=09:35:16" , "Schematic Page Count=0" , "Schematic Page Number=0" , "Page Size=A" , "Page Create Date=Saturday, June 11, 2016" , "Page Modify Date=Wednesday, May 10, 2017" , "Page Create Time=08:55:36" , "Page Modify Time=09:35:15" , "Source Library=C:\\\\CADENCE\\\\SPB_16.6\\\\TOOLS\\\\CAPTURE\\\\LIBRARY\\\\CAPSYM.OLB" , "Source Symbol=TitleBlock0" , "Page Name=Main" , "Doc=" , "Page Number=1" , "Page Count=1" \);)
+>>
+/Subtype /Link
+>>
+endobj
+329 0 obj
+<<
+/Type /Annot
+/Rect [119 127 111 144]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85041 : C18" , "-" , "Name=INS85041" , "ID=1128" , "Reference=C18" , "Designator=" , "Part Reference=C18" , "Value=1u" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0805" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+330 0 obj
+<<
+/Type /Annot
+/Rect [127 135 120 136]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C18/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+331 0 obj
+<<
+/Type /Annot
+/Rect [110 135 103 136]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C18/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+332 0 obj
+<<
+/Type /Annot
+/Rect [348 334 333 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85229 : C21" , "-" , "Name=INS85229" , "ID=1148" , "Reference=C21" , "Designator=" , "Part Reference=C21" , "Value=220pF" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+333 0 obj
+<<
+/Type /Annot
+/Rect [340 325 341 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C21/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+334 0 obj
+<<
+/Type /Annot
+/Rect [340 342 341 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C21/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+335 0 obj
+<<
+/Type /Annot
+/Rect [365 334 349 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85213 : C20" , "-" , "Name=INS85213" , "ID=1131" , "Reference=C20" , "Designator=" , "Part Reference=C20" , "Value=10nF" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+336 0 obj
+<<
+/Type /Annot
+/Rect [357 325 358 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C20/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+337 0 obj
+<<
+/Type /Annot
+/Rect [357 342 358 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C20/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+338 0 obj
+<<
+/Type /Annot
+/Rect [439 235 366 310]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84131 : U6" , "-" , "Name=INS84131" , "ID=1157" , "Reference=U6" , "Designator=" , "Part Reference=U6" , "Value=MRF49XA" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=tssop16" \);)
+>>
+/Subtype /Link
+>>
+endobj
+339 0 obj
+<<
+/Type /Annot
+/Rect [373 227 374 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "SDI : U6/SDI" , "-" , "Name=SDI" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84681" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+340 0 obj
+<<
+/Type /Annot
+/Rect [381 227 382 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "SCK : U6/SCK" , "-" , "Name=SCK" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84669" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+341 0 obj
+<<
+/Type /Annot
+/Rect [389 227 390 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "NCS : U6/NCS" , "-" , "Name=NCS" , "Number=3" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85071" , "Order=2" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+342 0 obj
+<<
+/Type /Annot
+/Rect [398 227 399 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "SDO : U6/SDO" , "-" , "Name=SDO" , "Number=4" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84697" , "Order=3" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+343 0 obj
+<<
+/Type /Annot
+/Rect [406 227 407 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "NIRQ : U6/NIRQ" , "-" , "Name=NIRQ" , "Number=5" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84457" , "Order=4" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+344 0 obj
+<<
+/Type /Annot
+/Rect [414 227 415 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "DATA : U6/DATA" , "-" , "Name=DATA" , "Number=6" , "Swap Id=-1" , "Type=Passive" , "Net Name=N88969" , "Order=5" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+345 0 obj
+<<
+/Type /Annot
+/Rect [422 227 423 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "FCAP : U6/FCAP" , "-" , "Name=FCAP" , "Number=7" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=6" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+346 0 obj
+<<
+/Type /Annot
+/Rect [430 227 431 236]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "CLK OUT : U6/CLK OUT" , "-" , "Name=CLK OUT" , "Number=8" , "Swap Id=-1" , "Type=Passive" , "Net Name=N93764" , "Order=7" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+347 0 obj
+<<
+/Type /Annot
+/Rect [430 309 431 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "EXTREF : U6/EXTREF" , "-" , "Name=EXTREF" , "Number=9" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85151" , "Order=8" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+348 0 obj
+<<
+/Type /Annot
+/Rect [422 309 423 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "NRESET : U6/NRESET" , "-" , "Name=NRESET" , "Number=10" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85107" , "Order=9" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+349 0 obj
+<<
+/Type /Annot
+/Rect [414 309 415 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "VSS : U6/VSS" , "-" , "Name=VSS" , "Number=11" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=10" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+350 0 obj
+<<
+/Type /Annot
+/Rect [406 309 407 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "RFP : U6/RFP" , "-" , "Name=RFP" , "Number=12" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84269" , "Order=11" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+351 0 obj
+<<
+/Type /Annot
+/Rect [398 309 399 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "RFN : U6/RFN" , "-" , "Name=RFN" , "Number=13" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84277" , "Order=12" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+352 0 obj
+<<
+/Type /Annot
+/Rect [389 309 390 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "VDD : U6/VDD" , "-" , "Name=VDD" , "Number=14" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=13" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+353 0 obj
+<<
+/Type /Annot
+/Rect [381 309 382 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "RSSIO : U6/RSSIO" , "-" , "Name=RSSIO" , "Number=15" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=14" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+354 0 obj
+<<
+/Type /Annot
+/Rect [373 309 374 318]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "NINT/DIO : U6/NINT/DIO" , "-" , "Name=NINT/DIO" , "Number=16" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=15" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+355 0 obj
+<<
+/Type /Annot
+/Rect [242 426 234 444]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85349 : C12" , "-" , "Name=INS85349" , "ID=1213" , "Reference=C12" , "Designator=" , "Part Reference=C12" , "Value=1u" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0805" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+356 0 obj
+<<
+/Type /Annot
+/Rect [233 435 226 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C12/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+357 0 obj
+<<
+/Type /Annot
+/Rect [250 435 243 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C12/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+358 0 obj
+<<
+/Type /Annot
+/Rect [225 211 87 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85273 : U4" , "-" , "Name=INS85273" , "ID=1083" , "Reference=U4" , "Designator=" , "Part Reference=U4" , "Value=ATMEGA8L-8AUR" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=tqfp32" \);)
+>>
+/Subtype /Link
+>>
+endobj
+359 0 obj
+<<
+/Type /Annot
+/Rect [94 202 95 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD3 INT1 : U4/PD3 INT1" , "-" , "Name=PD3 INT1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=0" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+360 0 obj
+<<
+/Type /Annot
+/Rect [102 202 103 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD4 XCK : U4/PD4 XCK" , "-" , "Name=PD4 XCK" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=MES" , "Order=1" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+361 0 obj
+<<
+/Type /Annot
+/Rect [110 202 111 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "GND1 : U4/GND1" , "-" , "Name=GND1" , "Number=3" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=2" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+362 0 obj
+<<
+/Type /Annot
+/Rect [119 202 120 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "VCC1 : U4/VCC1" , "-" , "Name=VCC1" , "Number=4" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=3" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+363 0 obj
+<<
+/Type /Annot
+/Rect [127 202 128 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "GND2 : U4/GND2" , "-" , "Name=GND2" , "Number=5" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=4" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+364 0 obj
+<<
+/Type /Annot
+/Rect [135 202 136 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "VCC2 : U4/VCC2" , "-" , "Name=VCC2" , "Number=6" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=5" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+365 0 obj
+<<
+/Type /Annot
+/Rect [143 202 144 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB6 XTAL1 : U4/PB6 XTAL1" , "-" , "Name=PB6 XTAL1" , "Number=7" , "Swap Id=-1" , "Type=Passive" , "Net Name=N93764" , "Order=6" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+366 0 obj
+<<
+/Type /Annot
+/Rect [151 202 152 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB7 XTAL2 : U4/PB7 XTAL2" , "-" , "Name=PB7 XTAL2" , "Number=8" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=7" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+367 0 obj
+<<
+/Type /Annot
+/Rect [160 202 161 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD5 T1 : U4/PD5 T1" , "-" , "Name=PD5 T1" , "Number=9" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=8" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+368 0 obj
+<<
+/Type /Annot
+/Rect [168 202 169 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD6 AIN0 : U4/PD6 AIN0" , "-" , "Name=PD6 AIN0" , "Number=10" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85107" , "Order=9" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+369 0 obj
+<<
+/Type /Annot
+/Rect [176 202 177 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD7 AIN1 : U4/PD7 AIN1" , "-" , "Name=PD7 AIN1" , "Number=11" , "Swap Id=-1" , "Type=Passive" , "Net Name=N88969" , "Order=10" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+370 0 obj
+<<
+/Type /Annot
+/Rect [184 202 185 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB0 ICP1 : U4/PB0 ICP1" , "-" , "Name=PB0 ICP1" , "Number=12" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85071" , "Order=11" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+371 0 obj
+<<
+/Type /Annot
+/Rect [192 202 193 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB1 OC1A : U4/PB1 OC1A" , "-" , "Name=PB1 OC1A" , "Number=13" , "Swap Id=-1" , "Type=Passive" , "Net Name=100kHz" , "Order=12" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+372 0 obj
+<<
+/Type /Annot
+/Rect [201 202 202 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB2 SS : U4/PB2 SS" , "-" , "Name=PB2 SS" , "Number=14" , "Swap Id=-1" , "Type=Passive" , "Net Name=100kHz_delayed" , "Order=13" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+373 0 obj
+<<
+/Type /Annot
+/Rect [201 334 202 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "ADC6 : U4/ADC6" , "-" , "Name=ADC6" , "Number=19" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=14" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+374 0 obj
+<<
+/Type /Annot
+/Rect [192 334 193 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "AREF : U4/AREF" , "-" , "Name=AREF" , "Number=20" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85407" , "Order=15" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+375 0 obj
+<<
+/Type /Annot
+/Rect [184 334 185 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "GND3 : U4/GND3" , "-" , "Name=GND3" , "Number=21" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=16" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+376 0 obj
+<<
+/Type /Annot
+/Rect [176 334 177 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "ADC7 : U4/ADC7" , "-" , "Name=ADC7" , "Number=22" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=17" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+377 0 obj
+<<
+/Type /Annot
+/Rect [168 334 169 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC0 ADC0 : U4/PC0 ADC0" , "-" , "Name=PC0 ADC0" , "Number=23" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=18" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+378 0 obj
+<<
+/Type /Annot
+/Rect [160 334 161 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC1 ADC1 : U4/PC1 ADC1" , "-" , "Name=PC1 ADC1" , "Number=24" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=19" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+379 0 obj
+<<
+/Type /Annot
+/Rect [151 334 152 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC2 ADC2 : U4/PC2 ADC2" , "-" , "Name=PC2 ADC2" , "Number=25" , "Swap Id=-1" , "Type=Passive" , "Net Name=N132515" , "Order=20" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+380 0 obj
+<<
+/Type /Annot
+/Rect [143 334 144 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC3 ADC3 : U4/PC3 ADC3" , "-" , "Name=PC3 ADC3" , "Number=26" , "Swap Id=-1" , "Type=Passive" , "Net Name=LightDet" , "Order=21" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+381 0 obj
+<<
+/Type /Annot
+/Rect [135 334 136 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC4 ADC4 SDA : U4/PC4 ADC4 SDA" , "-" , "Name=PC4 ADC4 SDA" , "Number=27" , "Swap Id=-1" , "Type=Passive" , "Net Name=N87620" , "Order=22" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+382 0 obj
+<<
+/Type /Annot
+/Rect [127 334 128 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC5 ADC5 SCL : U4/PC5 ADC5 SCL" , "-" , "Name=PC5 ADC5 SCL" , "Number=28" , "Swap Id=-1" , "Type=Passive" , "Net Name=N87630" , "Order=23" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+383 0 obj
+<<
+/Type /Annot
+/Rect [119 334 120 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PC6 RESET : U4/PC6 RESET" , "-" , "Name=PC6 RESET" , "Number=29" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84577" , "Order=24" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+384 0 obj
+<<
+/Type /Annot
+/Rect [110 334 111 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD0 RXD : U4/PD0 RXD" , "-" , "Name=PD0 RXD" , "Number=30" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=25" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+385 0 obj
+<<
+/Type /Annot
+/Rect [102 334 103 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD1 TXD : U4/PD1 TXD" , "-" , "Name=PD1 TXD" , "Number=31" , "Swap Id=-1" , "Type=Passive" , "Net Name=LowBat" , "Order=26" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+386 0 obj
+<<
+/Type /Annot
+/Rect [94 334 95 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PD2 INT0 : U4/PD2 INT0" , "-" , "Name=PD2 INT0" , "Number=32" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84457" , "Order=27" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+387 0 obj
+<<
+/Type /Annot
+/Rect [209 202 210 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB3 MOSI : U4/PB3 MOSI" , "-" , "Name=PB3 MOSI" , "Number=15" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84681" , "Order=28" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+388 0 obj
+<<
+/Type /Annot
+/Rect [217 202 218 212]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB4 MISO : U4/PB4 MISO" , "-" , "Name=PB4 MISO" , "Number=16" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84697" , "Order=29" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+389 0 obj
+<<
+/Type /Annot
+/Rect [209 334 210 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "AVCC : U4/AVCC" , "-" , "Name=AVCC" , "Number=18" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=30" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+390 0 obj
+<<
+/Type /Annot
+/Rect [217 334 218 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "PB5 SCK : U4/PB5 SCK" , "-" , "Name=PB5 SCK" , "Number=17" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84669" , "Order=31" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+391 0 obj
+<<
+/Type /Annot
+/Rect [480 449 472 466]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84347 : C14" , "-" , "Name=INS84347" , "ID=1204" , "Reference=C14" , "Designator=" , "Part Reference=C14" , "Value=5.1pF" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+392 0 obj
+<<
+/Type /Annot
+/Rect [488 457 481 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C14/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+393 0 obj
+<<
+/Type /Annot
+/Rect [471 457 464 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C14/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84269" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+394 0 obj
+<<
+/Type /Annot
+/Rect [160 535 120 577]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS87532 : U7" , "-" , "Name=INS87532" , "ID=1278" , "Reference=U7" , "Designator=" , "Part Reference=U7" , "Value=TMP75B" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=8VSSOP" \);)
+>>
+/Subtype /Link
+>>
+endobj
+395 0 obj
+<<
+/Type /Annot
+/Rect [127 527 128 536]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "SDA : U7/SDA" , "-" , "Name=SDA" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N87620" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+396 0 obj
+<<
+/Type /Annot
+/Rect [135 527 136 536]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "SCL : U7/SCL" , "-" , "Name=SCL" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N87630" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+397 0 obj
+<<
+/Type /Annot
+/Rect [143 527 144 536]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "AL : U7/AL" , "-" , "Name=AL" , "Number=3" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=2" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+398 0 obj
+<<
+/Type /Annot
+/Rect [151 527 152 536]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "GND : U7/GND" , "-" , "Name=GND" , "Number=4" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=3" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+399 0 obj
+<<
+/Type /Annot
+/Rect [151 576 152 585]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "A2 : U7/A2" , "-" , "Name=A2" , "Number=5" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=4" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+400 0 obj
+<<
+/Type /Annot
+/Rect [143 576 144 585]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "A1 : U7/A1" , "-" , "Name=A1" , "Number=6" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=5" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+401 0 obj
+<<
+/Type /Annot
+/Rect [135 576 136 585]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "A0 : U7/A0" , "-" , "Name=A0" , "Number=7" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=6" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+402 0 obj
+<<
+/Type /Annot
+/Rect [127 576 128 585]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "VCC : U7/VCC" , "-" , "Name=VCC" , "Number=8" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=7" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+403 0 obj
+<<
+/Type /Annot
+/Rect [102 486 87 503]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS87578 : R14" , "-" , "Name=INS87578" , "ID=1289" , "Reference=R14" , "Designator=" , "Part Reference=R14" , "Value=4.7K" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0805" , "TC2=0" , "TC1=0" , "POWER=RMAX" , "MAX_TEMP=RTMAX" , "SLOPE=RSMAX" , "VOLTAGE=RVMAX" , "TOLERANCE=" , "PSpiceTemplate=R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2|" , "DIST=FLAT" \);)
+>>
+/Subtype /Link
+>>
+endobj
+404 0 obj
+<<
+/Type /Annot
+/Rect [86 494 78 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : R14/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+405 0 obj
+<<
+/Type /Annot
+/Rect [110 494 103 495]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : R14/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N87620" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+406 0 obj
+<<
+/Type /Annot
+/Rect [447 449 415 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84315 : L3" , "-" , "Name=INS84315" , "ID=1177" , "Reference=L3" , "Designator=" , "Part Reference=L3" , "Value=47nH" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "IC=" , "TOLERANCE=" , "PSpiceTemplate=L^@REFDES %1 %2 ?TOLERANCE|L^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\\\n.model L^@REFDES IND L=1 DEV=@TOLERANCE%|" \);)
+>>
+/Subtype /Link
+>>
+endobj
+407 0 obj
+<<
+/Type /Annot
+/Rect [455 457 448 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : L3/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84269" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+408 0 obj
+<<
+/Type /Annot
+/Rect [414 457 407 458]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : L3/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84313" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+409 0 obj
+<<
+/Type /Annot
+/Rect [406 490 390 499]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84383 : C15" , "-" , "Name=INS84383" , "ID=1174" , "Reference=C15" , "Designator=" , "Part Reference=C15" , "Value=68pF" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+410 0 obj
+<<
+/Type /Annot
+/Rect [398 481 399 491]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C15/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84313" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+411 0 obj
+<<
+/Type /Annot
+/Rect [398 498 399 507]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C15/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84853" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+412 0 obj
+<<
+/Type /Annot
+/Rect [287 509 271 526]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84247 : SW1" , "-" , "Name=INS84247" , "ID=1186" , "Reference=SW1" , "Designator=" , "Part Reference=SW1" , "Value=Connect" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=SW_2P" , "Filename=" \);)
+>>
+/Subtype /Link
+>>
+endobj
+413 0 obj
+<<
+/Type /Annot
+/Rect [279 484 280 510]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : SW1/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84577" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+414 0 obj
+<<
+/Type /Annot
+/Rect [279 525 280 551]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : SW1/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+415 0 obj
+<<
+/Type /Annot
+/Rect [332 243 300 302]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84767 : J6" , "-" , "Name=INS84767" , "ID=1189" , "Reference=J6" , "Designator=" , "Part Reference=J6" , "Value=PROG" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=conn6_pl" \);)
+>>
+/Subtype /Link
+>>
+endobj
+416 0 obj
+<<
+/Type /Annot
+/Rect [299 293 292 294]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "MISO : J6/MISO" , "-" , "Name=MISO" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84697" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+417 0 obj
+<<
+/Type /Annot
+/Rect [299 284 292 285]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "VCC : J6/VCC" , "-" , "Name=VCC" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=" , "Order=1" , "Is No Connect=True" \);)
+>>
+/Subtype /Link
+>>
+endobj
+418 0 obj
+<<
+/Type /Annot
+/Rect [299 276 292 277]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "SCK : J6/SCK" , "-" , "Name=SCK" , "Number=3" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84669" , "Order=2" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+419 0 obj
+<<
+/Type /Annot
+/Rect [299 268 292 269]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "MOSI : J6/MOSI" , "-" , "Name=MOSI" , "Number=4" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84681" , "Order=3" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+420 0 obj
+<<
+/Type /Annot
+/Rect [299 260 292 261]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "RESET : J6/RESET" , "-" , "Name=RESET" , "Number=5" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84577" , "Order=4" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+421 0 obj
+<<
+/Type /Annot
+/Rect [299 252 292 253]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "GND : J6/GND" , "-" , "Name=GND" , "Number=6" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=5" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+422 0 obj
+<<
+/Type /Annot
+/Rect [381 391 349 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84231 : L1" , "-" , "Name=INS84231" , "ID=1180" , "Reference=L1" , "Designator=" , "Part Reference=L1" , "Value=390nH" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "IC=" , "TOLERANCE=" , "PSpiceTemplate=L^@REFDES %1 %2 ?TOLERANCE|L^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\\\n.model L^@REFDES IND L=1 DEV=@TOLERANCE%|" \);)
+>>
+/Subtype /Link
+>>
+endobj
+423 0 obj
+<<
+/Type /Annot
+/Rect [389 399 382 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : L1/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84277" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+424 0 obj
+<<
+/Type /Annot
+/Rect [348 399 341 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : L1/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+425 0 obj
+<<
+/Type /Annot
+/Rect [102 469 87 487]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84827 : R1" , "-" , "Name=INS84827" , "ID=1207" , "Reference=R1" , "Designator=" , "Part Reference=R1" , "Value=4.7K" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0805" , "TC2=0" , "TC1=0" , "POWER=RMAX" , "MAX_TEMP=RTMAX" , "SLOPE=RSMAX" , "VOLTAGE=RVMAX" , "TOLERANCE=" , "PSpiceTemplate=R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2|" , "DIST=FLAT" \);)
+>>
+/Subtype /Link
+>>
+endobj
+426 0 obj
+<<
+/Type /Annot
+/Rect [86 477 78 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : R1/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+427 0 obj
+<<
+/Type /Annot
+/Rect [110 477 103 478]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : R1/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84577" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+428 0 obj
+<<
+/Type /Annot
+/Rect [447 391 415 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84215 : L2" , "-" , "Name=INS84215" , "ID=1210" , "Reference=L2" , "Designator=" , "Part Reference=L2" , "Value=33nH" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "IC=" , "TOLERANCE=" , "PSpiceTemplate=L^@REFDES %1 %2 ?TOLERANCE|L^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\\\n.model L^@REFDES IND L=1 DEV=@TOLERANCE%|" \);)
+>>
+/Subtype /Link
+>>
+endobj
+429 0 obj
+<<
+/Type /Annot
+/Rect [455 399 448 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : L2/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84269" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+430 0 obj
+<<
+/Type /Annot
+/Rect [414 399 407 400]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : L2/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84277" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+431 0 obj
+<<
+/Type /Annot
+/Rect [472 317 457 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85437 : Y2" , "-" , "Name=INS85437" , "ID=1196" , "Reference=Y2" , "Designator=" , "Part Reference=Y2" , "Value=CRYSTAL 10MHz" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=ABM3B" \);)
+>>
+/Subtype /Link
+>>
+endobj
+432 0 obj
+<<
+/Type /Annot
+/Rect [456 334 449 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : Y2/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85151" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+433 0 obj
+<<
+/Type /Annot
+/Rect [480 325 473 326]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : Y2/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+434 0 obj
+<<
+/Type /Annot
+/Rect [480 334 473 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "3 : Y2/3" , "-" , "Name=3" , "Number=3" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=2" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+435 0 obj
+<<
+/Type /Annot
+/Rect [480 342 473 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "4 : Y2/4" , "-" , "Name=4" , "Number=4" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=3" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+436 0 obj
+<<
+/Type /Annot
+/Rect [168 376 161 393]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS132497 : C39" , "-" , "Name=INS132497" , "ID=1825" , "Reference=C39" , "Designator=" , "Part Reference=C39" , "Value=10n" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0402" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+437 0 obj
+<<
+/Type /Annot
+/Rect [160 384 152 385]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C39/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N132515" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+438 0 obj
+<<
+/Type /Annot
+/Rect [176 384 169 385]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C39/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+439 0 obj
+<<
+/Type /Annot
+/Rect [151 600 144 618]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS88196 : C23" , "-" , "Name=INS88196" , "ID=1296" , "Reference=C23" , "Designator=" , "Part Reference=C23" , "Value=100n" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0402" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+440 0 obj
+<<
+/Type /Annot
+/Rect [143 609 136 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C23/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+441 0 obj
+<<
+/Type /Annot
+/Rect [160 609 152 610]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C23/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+442 0 obj
+<<
+/Type /Annot
+/Rect [242 361 234 378]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84627 : C6" , "-" , "Name=INS84627" , "ID=1154" , "Reference=C6" , "Designator=" , "Part Reference=C6" , "Value=100n" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0402" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+443 0 obj
+<<
+/Type /Annot
+/Rect [233 369 226 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C6/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N85407" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+444 0 obj
+<<
+/Type /Annot
+/Rect [250 369 243 370]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C6/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+445 0 obj
+<<
+/Type /Annot
+/Rect [381 334 366 343]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS85189 : C19" , "-" , "Name=INS85189" , "ID=1201" , "Reference=C19" , "Designator=" , "Part Reference=C19" , "Value=2.2uF" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=1206" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+446 0 obj
+<<
+/Type /Annot
+/Rect [373 325 374 335]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C19/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+447 0 obj
+<<
+/Type /Annot
+/Rect [373 342 374 351]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C19/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=0" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+448 0 obj
+<<
+/Type /Annot
+/Rect [102 502 87 519]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS87604 : R15" , "-" , "Name=INS87604" , "ID=1292" , "Reference=R15" , "Designator=" , "Part Reference=R15" , "Value=4.7K" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0805" , "TC2=0" , "TC1=0" , "POWER=RMAX" , "MAX_TEMP=RTMAX" , "SLOPE=RSMAX" , "VOLTAGE=RVMAX" , "TOLERANCE=" , "PSpiceTemplate=R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2|" , "DIST=FLAT" \);)
+>>
+/Subtype /Link
+>>
+endobj
+449 0 obj
+<<
+/Type /Annot
+/Rect [86 510 78 511]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : R15/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=3.3V" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+450 0 obj
+<<
+/Type /Annot
+/Rect [110 510 103 511]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : R15/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N87630" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+451 0 obj
+<<
+/Type /Annot
+/Rect [160 410 144 427]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS132469 : R34" , "-" , "Name=INS132469" , "ID=1822" , "Reference=R34" , "Designator=" , "Part Reference=R34" , "Value=1k" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0805" , "TC2=0" , "TC1=0" , "POWER=RMAX" , "MAX_TEMP=RTMAX" , "SLOPE=RSMAX" , "VOLTAGE=RVMAX" , "TOLERANCE=" , "PSpiceTemplate=R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2|" , "DIST=FLAT" \);)
+>>
+/Subtype /Link
+>>
+endobj
+452 0 obj
+<<
+/Type /Annot
+/Rect [151 402 152 411]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : R34/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N132515" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+453 0 obj
+<<
+/Type /Annot
+/Rect [151 426 152 436]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : R34/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=Humidity" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+454 0 obj
+<<
+/Type /Annot
+/Rect [406 424 390 433]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS84291 : C13" , "-" , "Name=INS84291" , "ID=1216" , "Reference=C13" , "Designator=" , "Part Reference=C13" , "Value=2.7pF" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=0603" , "TC2=0" , "TC1=0" , "DIST=FLAT" , "PSpiceTemplate=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ TC=@TC1,@TC2 ?TOLERANCE|\\\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE% TC1=@TC1 TC2=@TC2 VC1=@VC1 VC2=@VC2|" , "TOLERANCE=" , "IC=" , "VOLTAGE=CMAX" , "CURRENT=CIMAX" , "KNEE=CBMAX" , "SLOPE=CSMAX" , "MAX_TEMP=CTMAX" , "VC1=0" , "VC2=0" \);)
+>>
+/Subtype /Link
+>>
+endobj
+455 0 obj
+<<
+/Type /Annot
+/Rect [398 416 399 425]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "1 : C13/1" , "-" , "Name=1" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84277" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+456 0 obj
+<<
+/Type /Annot
+/Rect [398 432 399 441]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "2 : C13/2" , "-" , "Name=2" , "Number=2" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84313" , "Order=1" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+457 0 obj
+<<
+/Type /Annot
+/Rect [406 520 366 562]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "INS114418 : ANT1" , "-" , "Name=INS114418" , "ID=1704" , "Reference=ANT1" , "Designator=" , "Part Reference=ANT1" , "Value=433MHz_Antenna_Helical" , "Primitive=DEFAULT" , "Implementation Type=<none>" , "Implementation=" , "Implementation Path=" , "PCB Footprint=ant_helli_433" \);)
+>>
+/Subtype /Link
+>>
+endobj
+458 0 obj
+<<
+/Type /Annot
+/Rect [398 512 399 521]
+/C [0 1 0]
+/Border [0 0 0]
+/A <<
+/S /JavaScript
+/JS (var cmd = app.popUpMenu\( "In : ANT1/In" , "-" , "Name=In" , "Number=1" , "Swap Id=-1" , "Type=Passive" , "Net Name=N84853" , "Order=0" , "Is No Connect=False" \);)
+>>
+/Subtype /Link
+>>
+endobj
+460 0 obj
+12420
+endobj
+459 0 obj
+<<
+/Length 12420
+/Filter /FlateDecode
+>>
+stream
+xœí}k“%·qå÷şıqZ±s]xA‘õ²^äÊÚPl8´|hl“²,[VP¿~‘™xT¡úv÷­æ²CÆÌÜ“§••@‰gıÛırQú~¡ÿëÏ¾¾û»_‡û?üûİ¿İ‘8iƒ»÷÷ŞÛåşÏ_ÜÿÃıïüı_ïÔıOòŸÎ}œÿU|a¼ÿ:ÿöŞ¸ï¿ºûäîWœL–Ğ÷6™å>í§R5¿¾³I»MBY¨ºIéQ“†JzÕÈnXKŒ-ó&†8¦´¾ÜgÓ]‘òÅœõ9 f«¢;*_’êü6°êşwñ>¨˜EúŞ¹{òİ}™úC~Üx1ôg3şşìëûïšs=Şgg-ÁßJê²,K¾ÛÛìò{1ş>ú‹K¦¿¾{ã>ıç»|šnj£·¯r_Óe‰;w¦TÆ[òU°P®‰£¸Pµß’W’•f‡ââC½(Î‚Ã}¨­¾(§øIìÖ‡¯qßâÃùÉ‡ÚO}˜ÅÍ‡õ7ø°ÓìC¼B|hÌ+ùĞ¤ØÄl}ø÷->œß™|h’7fq¨>¬¿Á‡fââCë•:g/‹‘'Ñ[¾Æ}‹çw&:=õa7ÖßàÃN³ñ
+ñ¡K¯äÃ –ö$jëÃ×¸oñáş½ÏÕY”&!ßØ¸ƒnİÅæê‰«aÍ÷ıhs_ï¢-|ğ}CÊñIR“û*òôk<°ÖRkÂ¸½ók<r¹3>ó‡ğ(Í (¿-å]ÉŒ‡à€á¨È-(èÆÆ,^Õ=—	úôàÑïå;£G¾3zôûàQm]š{T[oÀ£GÊÍ£Á£›¬¹ç‹9dÓ6j€_~/ûá¯ÏÓy×nÒ¢FVğ~Qb+t˜oò¬ëß•raµ‹¯R.œ’ÈÊÅcmJw~rQîŒåâ(&»h^.(à7ÙEK·İ¹ª•ÃG¶şúã;­øÉä!¿.ĞjÕ
+
+¦|~Dc–¦OĞ.ËÈÁ”O¤ÏP»¯İŸSÌ[y.­xLø§ddjy¨}ªµeà'6)§T"³¥å¡U*WáAÚá¯ŒÎ´î
+¦¼Éqp05À`ù"˜òªñƒ#_S>Ò†hLjÅ'µÃ¿Ô©.Ç–#øKHs§¦´€ÓLnJ§VÁ”Ï^2‹ZÀiF-+¾¦¼#ıèÀif1jÅµËg/™Å¡ÓrÓãV¼w;ü­NÍ-¶N¥§K’‰!N)‚)OO¼Á‡.|LyzÊh°¤™ÍÈÁŒ×é×ê§@V¼
+;üËª/¹Âµ¹S‘ÔÚ©ÊÛü”¾–Då©Îó½$‚)¯9¿j¸ä©Î*PyêzãHmøÙ]ÊÇZKÑâ—v!ecã,jÙ1E‹wc-‹)Úrá»'ú2\r+ÚZÄ\çˆ;s3xÉ½?rT¦¿ËıÜÜ::ç½zsÉ?—à¢±	Å¿yÈÑÿÿùô'âtªîrÍQëÄ\¦¹!@ÁŒ§'·µ¡TÒ
+ÌU!qò– /ögwª$k©¢Å)ªza\tç¢--Eån¢å0E§qznµ/Ñæ&LÕŠá^çx Uª•íq(
+¦<•ıVi
+„J{LyŠZ¥-°Ô±o•î–çx`	µTŒ«ğ¢UúşÖğ!GdË¶R<ØTlvÊ6D·D¼e­w÷9¼ªŒ³YK?I÷ß±”#ASRF¿EÃ»ö;_E®¯L8¤á.Y£İìº¹äæü‹4X”n(¸6GàÖ«Z0Û¦A0åé·‚Ë0è0òE0åCÈ‚¥ñ½Ó#_S>‘ \Ñ¯øèwø—Ü\ø/ºC©õ] áS:İç—±8E J}€SŞåÛ-±éT!Œ|Lù@×x†‹^ñ‹Şåó#e«ÏĞøoüÿR§**Ğ÷Ê˜‰O½˜T° RCtGÄ[ÖóóÙÂz—òì9»ôß¢õÙ ‰DcñU½*ªÎ$ĞHCZ	îÂÒ²éÊ xªSùÕ²f¨r§×—Ê GŒ‹Gñª2Ö@›ô
+%6 Á”×Ô8›Æ+Õ ı%o~¢I±C‰^EË§¢E)@fotÎ¢–S´x7Òjv€·ÇùñÔ¿
+—x[ìàÜødÇØ¡¦<µH®öRú°â‹`ÊS0àk/\ ëµÑ ˜ñx5-xcV¼1;ü±ƒÍ±kØô=´[h`:Ô€… ^To7P0åi2¦¦O0õ®ı ˜ò–¡ñáUAÁ”§ÑãÔ^%nYñnÙá_Ü®erÖo² iĞ©¶ÅÁ™†¸<a—\jMm§sñmÈS¨d¤ë,¿E‹jWB¥Şdé§HZ¦\•_úÎè®!¿kZ‚ÊkH+èCªƒ¸PP`ò»Y°ß½ùYíÿéá­Ï^‹yó‡.}×şT=äš%,*½ù/ĞÔÊ§Ô*åì’ƒÕT›z†Á´—{Ly¿PüWC†A™‘/‚)ŸÛ³6¡‰+ŞÄ=Ş/$¨ã’½âk¹Ùğ/®<r:TåºMÍÁ…¼Jp1†1	Ä–
+S°à"[å2€ ¿ëØ‚ ñ¨hÈx„¤U‡*¸ÈVFwù]Ó$wi4H!…|¤øQ+¬é…õë‡·Ë…J»6Xô?Ÿ¾Xô¿ypË%œ"¦¥vyp§ÂRBâ£<ÙŒ÷7$5È¯ƒZd® Ñüì®@™:(ZºhqŠº]pµâ˜bÄ»±–Ç}8$ƒTH4(—#òZ¼÷Fõ˜o™şüÎ‹ÜBfşmÈ~1–:ÊEé# ˆ',À¥†\Ìââ¿ÄÔK S^ŒÅûöbÏIZ.Â‹Qİ5äwMKÜE4¤•â‘µîöµ­ıÿµÿüëC–ı›ï?¼5mto~ÿX5ïi™”«!y¦"îß °¹Ë®\­¡=*yEŒÌyÉï`ŠïIV4$<”´\½Ê†Î8ĞpCZîÂ	ÒJæßç’ËYªïÿêŸt?2ßÊÒ°¥ªÁ©ÀÜ©hµ
+¦|şa”«í+CíV¼vËïh¸V×«@ìÈ«`wùì!£jœ*P/iä‹`Â¿¸«4šÆÜc7›ñ\úr”²5Ú¶Fı1>—©ûÀµG©²uƒü!, œ0ŸÉÓ®n¹ÊÎZ¦jQŠ¦_H&P+Œ)¼iL1Ô¨²Ê»$%-Ÿ_eûÄUvº8›û¸oş±_øyÿùEÿù•´¾1·¾¿ïÒor0‘û=Ã¥Ÿ?äŠ‰ŞkíÅåşãÛWúy6ôÓ‡·j¹h«BiÑcnK‹¢ö¦ÜŠÅ_ä¤raM‘’Óö’ögwŸ~ïwù½äW4F‹©ôçùâá­v¹Ÿí$4ö^—*Uùğæ³æŠ¿4™Ä>÷4uy’ş±ıBïá÷Ïkòó¤şo“öDÿüs:ç§á‡ÊÅeÉ}äE¼óëš\¿ü?k»ú¶^û6{"w¶ÇûıÔÔÌÏÍD¬wU¹k–Tï
+Ş|71øHá·w©«®sŞ[UfÇL¸×ÖóÒOî¬	±Q:·¡@å(Ï40FæH
+ƒJ¹=Ğ[¥SKÎG^+L.¦2K²ÂÜ2¢ë3Y­{èÔKÙ—è«·*ù‹M9,ä7öúÿxx›ß«•z¼şÏ‡ÜÊà.T«lsÍâ{ò¶^'/]úË~éŸüe16¸–˜¹´¿èš|!¾œ¦ÕïŠ×şs~_sÿÌ¤é•Ÿƒ+»NÏşpõåÍŞéo.¾fèŸ&<Ô;×«‰ß`^ÍÜövzß¿‡ª¤¿àÃÇŒ¿8£-Wœó²Dª–½·PøTNCå$Ç8êAJ¨§5ç¦–®Èçf1˜ÑŸO¼øÅÄŸıºnu/BÿmÇIó§ízx­jüÒ~í¥«'×vı0¸Ğê‹¥š'ñ+ÿ¾Áú/×`½o¨Ş7Tïª÷Õû†ê}Cõ¾¡zßP½o¨Ş7Tïª×k¨ÊÎ %Ê/;íI¹†ÍµE„f¤|›#F<aiåC×%´f»î”­ƒç)ç*.ûB<a©îlĞ#cåÈ†\¡>mÔŞ ï.´}Ò.½jü°M¾Áğo¬Ã¯Ë%šà“¹›j	mı¥^T²§llSñîBx’A0áGFšÊñ–mÅCGjĞâRÓÄ`”5é ˜ò¬ß×¬3kÚA0å‡}Bö}Fƒ`—ms˜ğh&üM‹ÓÓ…gˆ|İqŒeD^Z3Ìu•¥5©Î¡~.ıçŸúÏ>x
+†»n‰›=5®öCÁ.¿òj‚-s(˜ğ½ø$«Á½´Ì~pï ˜ğE¿fá{ñ^§à±ø„â‚]¾;Rx´ş–âã(ÊyBñYzñQÓ2óÇ§•™Ù£b™@Á.¿r%–Lø[%³Ğ‚ØäÛü¶WîæxÖxŞF–#ùì¬âÑÿÕ<ê©¦Ë¥¶*.Zß¿‘rklœ•şuÓË.½ĞúU"ösê?û«U›ƒ†ÆÙëü¸Í÷F)Ó÷ëË
+F.æ(˜ğÔ¤i÷¼v"¥/å Ÿèi¡NÙğ-KmsİÕVÅ~Ògà?Ê½Z“<ê7?Ş¬txê®âı{«
+ZåÖG4Ek‰ÀE`Âè¢èø|ƒ}Ø]ôÓ!Çowlµ÷ôS@haº‡!ºş@÷$Ã›ÒÑ=?ï>÷|r¬{ò›:z§Ÿ3crq@ï0Dï `Âç»(Ziô„÷ëáè÷+Éqà".Š~pÁÁE ˜ğGº(É:æyúñCYnèr%Ü¤¿:Ü[v±œSà­~€–±Î¡·¢·P0áôíZY½nPŠ>èeF$?8ôÍ³´“xp”ïrzhÙ¢£P0áéTò’¸‹ÛJ·hÚĞR”å÷¡§‚)Oúmù¾ğ1˜Q¿&üY—C;µª~(™dRÀšrñ—Çf^¸ô@Ş…¾o‹ç«!Š£Ş(d$Á!#A0át›±;z\Ë6Ú½vß+_Ğ(NĞ¹çƒ¿¦öé&0¾İµ)¿lƒk#¼Ô’»ºæV ï{3Á„?Ü›9ìÓµ—+.;­> Ş…k·}‹ƒ\h”»˜âÂ4Ö,èB‚ƒA0áC63m¬¹· Ñÿ:ùxò>üİØM„^OoÚÀ¯Ñ¯(˜ğÇ7m)÷ºªé¿™zğØHRÚ³=©­Ç(1D¡`Â:eùú6Cñûa…nF$VÚs™¸ŒNÂ—\‚	|@x¼ü1—ıü!h}t0¾ç2³uuÙÀeÑe(˜ğÇ÷ğbªgï%DŸë2îáíyÌn=Fc à1†è1LøIì©<9µ‰`ôBmJßR0f¼èû4ğ}Ú ˜ğÇbD}±a[ì?™V³?Æ(êğŞ©äÓ^öºMöá)‰a^«U4€‚	?Éë…c®–×Ê¸U^‚`Æ‹~Ëká!¯Q0áÓúZ‡úç·ŠïïúMÕ^£0ğPà^ağÓÂĞFió6ís¯;Ozßwî `Ê§8èÜğ ?çÛ‘?‹ŠÃ^ÓA0ái78®%ö!‚	O¸}SÛEÜ[Û¶	m§8·­ûÛ6Ï™h“ÌtòµÙd\{ƒ×é°N|hLøScXñ ˜ğÃüCÊvOEg—.Úß<iÙ‚öq6ı04_}¥4Uı8ËÙÙ+÷ñC5j±çô“emFöò ÕüõĞS!»³zìkA>µ7ñ–İV¾ÎDhug\(7ú	ˆ·,ë†z,³pÂ:â-{\¥›‰åú«E•¿œ†Hp¢‹RÈA/?†ßÛZ™†‡¶ı[+İ\ßÉAúu( ¦_†Æ–W´¼f¹‰xËça:2my’íÜÇ¿ı&mÔRVøu§öI^¡ÑüÈ<…xËèGey 
+ıø±’°ôKÕ°dåv/É‘áà¥>yÃË`º—¡— oÙ½¤õeå¤ßLËÏ‡¯æ$8ŸÀIğ^ıÓ¼$«XLøeƒxVqÒÇzJ;îÓƒ§Üê„·î)†è)Lø#=©m^™:ØSÆpf§<x*‡±è)‚ƒ§@0áôT‚h„u§ª‡£üÕªšPˆq~öØ ßÍ^Î14d‚—û,‹|l {™!z3~<)MSV-zRšN iLyÒo”ğø‘Løóİ9Zş„|·çûv”òæ|w[È÷8¨ò{ˆ¡€@ÌdÌøm!0´F¨Ã1d2
+¦<é÷BÀ<Lø7ü•ëq›‚uĞ|`şF.¿i'íb0bş¡`ÂèMYÙ¯JÁ›;UéëñÀM'e;§t³£½§Ux*wªÔ8TÖÖOÓ€&ú:¬B!Lø#}Í§9=Á×;Õ×u_¿Bcx×Õ¯Ç7HNÚê¾fˆ¾FÁ„?Ğ×1^”JS±\ïqC¼i¼‚¯£ÙuôèÉÙhİÑÑÑ(˜ğ:š&®‹©¹£Ñ;C_	†í'EcÏÍfåæ0c7‡![óÇ¹Y/–+_w³»ùÕ¦ÇUâ]®{µ[‡öUåaı ˜ñÛÀÆ;ÜQ’½OÓX¡¯CÁ”gıv,—ğı#'ƒ`ÂÅ´	´:÷Á´yø[åÃ+!ÉOÚ®’&s-éñ‰7®i0ƒ—¸Êà%¼â¯˜öÜùm-Z*õÍàÎa·Æf„Eğ Cô 
+&üám¨YRŸş¸/—›İlW*Ñ*î¹oÛsüîcˆîCÁŒßÖ0Öá¦"e“kLyÖvà¡†AÁ„?< }^^+¤ÜËÓmÇ{ÛwÂ&8d0fü¤oõÁÚ­23^ô{3‚	|o.™>µÿËé"ìƒÅ°WÃ«õåö
+Ã¶:Ù”@a`ˆ™‚?(Â@cfƒ`Ê³~+ÂCa@Á„?~ äzaP/+¯Ğ’”½Â°]Ó5…ÂÀ3şøÊë®×/sı«Nî¹~»ŞŠÇ÷ÁÛÑÛ(˜ğÇO\÷¶y™·_!¦‘)€=oo£zwBoë´ò¶Nƒ·WüñÓT!×ÛéQoÛ—y{®6ßwğØ€LíåÊ6âySÈ†˜+(˜ğGæŠL³øhĞ<WÜËre®6ßèú³ãß™ÂİË™¸¹!Íü÷Œa~G¼eÌY%ûQi2h3tãgŞıÿ»U¤,0Øóùv €Ö¤€Ïõj!Ş²Û@,-‡%;†Yˆ'ì‚1˜°=ÄB¼eÌı²’†>éòøxÿ<‡ìÿ-ª¹ˆ¾,µ2Ù<6<±YùÕsœä)â-{ ŸËÊ¯û„¹Ÿç.¬|E?ó ğŸ·¡4-Šì®eÎC¼es­,[ÌÏšú®…±W—’ß”E‹{nŞ†Í*ğâ†6ÂÏGøQ0áşUš»¸>Â¿³FWşÂ¤Ê°aãè3:4|µ;öïÆ±ÿ¨†Io†èjLø]­eæuWï,EWãD!øúøMdnØw¶M"S†ØŞ¢`Â^®‡Qdˆ6÷V¸YùJ)İ›ÑØ\ôÀyÑy(˜ğÇ—Tú®‘z´¤>'>?vMs)—{î×cRNÃ„P÷<1Œ¶"€‚)Oßv}‚ôç|ıÖ·I¦CáÍ£¼]èSæÀ³}¨‚	O¸}c‘º~6<røàvøLöãÈ±ÂPvğ;§ ú´sæVş°KXVşÁ„_û;Òçº‘GÁ„öìP¯ÎZÙ…e¬ü¹uÇN‰èUõ#çeÏf;œ¬ÙÏwÌ²¸9Ïş„ÓjC;¦Óµ_ßÏ/k.à	O„„6<¦PŸ³1X“úÂ=LøÃ‡ \®Ú¹p$m‰£–Q›ñ‘pùŸÒÈÀf1D¡`Â>v¶ç¢»‹~¶9¦õ Á-t‘×v£‹.ÁŒßÎ£(ú¾»	mÕ°^hó`ÿÜ
+f<ëÛö¹Ræ|®şğáå!Ó>è™ö
+9%ƒÃ˜Sfg)Ma@¶1ÄlAÁ„?|ÆcpRY+ ú6*ÙÔ¯ÎÏ—¶•©ô—×ÓÛ¸.ˆA.Š½œ®øã]äsÉ	Ûr¤/GÅ/Q_”Úî{¡W¸ûE øşø÷kÇ/êÕŞ/ğ‹_5à†èLøã‹¿,¯ÖB€_Â¸£ü"ü‚‚	|œ‘cÙ¶qú7ÓFôÃã«šg€‹úzFKße¨_âÎı0:‰§yñUVeD×Wğ56$;¤Œø*ì2â«¬3cÊ€¯²9ìR|•UİëÌ*Ì…5KÃÑGvÅ9¸bé·ñö›l»ÛgPúqıÃ§.ÊP¤ÓÖ?¬pÃÿ{â§“~C	FÏx·O‡xË~£idoÙŞñ§ì #‡ğ«ƒ”	ã—Ğúøô}ô>»3ŞZà\-%Eº ÷$éø74 àWÖ¤œ‰ı&Î4À\R •€ sÒÀ „_X“²ÔM®7±1 wœ¿1 ´ğûâüªÀæL|JêÔ‚T.èĞµt~u[7ÜæZ=¿ù^÷Ó``ãÙæ°8(5;ıG«ó,Êë’MèªÆ'şæãÔ?ıS5=7§ÓäãP0áo;,-PD‹†émkh4¯Ú¡ş¹(6(‚`Æ‹~;Ô_x8ôS^ÅgèÖ¼{œ_¢x´ş˜Ö‚N;£æÛ‹·í…ÚşŒ})ı¾]Û¯ş¡ŸGFõ¦Ï¿ô“şÁ.¿ò¯î'ı‚	ß
+’6:·=t^?_¨µ£AˆĞš—A0áo9üÈç¾Û½£Ér³·½•\ärm]üÿáö£WœüêßêŸÄÚ~Lå*%»Ã‘;Ê›­²ÒI?Èª†t©‰\¢p¬U%‘—v¡ñÀYZzŠëİXËbŠ¶\øå÷àç3Ÿ>_
+áÒÌ&¸˜~®
+&üÍ³-!H=ëÜ´élÅÂÖL<T ømÀ¤ˆ~ÍÍC÷kyw$Åª_G¾kZzŠÛİŒ;ÀF.'´º—«æ¶‹f,E0á*ÎÌÎ¦C´ÍQ‰^¤ÔÔaIæCjŸ¬½,ô>ÓgÒj0¿“Ádfÿ†Ê/ÚaeofÑ‡Éy(kë÷|,­z-İ‚	ÿòA‰·-ˆÏ0ôYD:Ø÷³v·ËÖ“²·¯ØÂË iÑj§d÷
+BfêÊ8qHİaûüvœ?Wôq†ö›ï©é4Û–"¦¼|<Å¼Ó+}§wø#³0¿ÆšWk¶…
+Ãê„Z<o[œ°›a¹V¨5º÷—Ü[ü;‹_åŞ.¨¯dx„­dŸÌœuÛZƒ]gW#1˜ÿäòŠÏ_`÷Ï>ÿ
+ÕAĞ=bœ,Ğ¢}”‡.ĞÚu˜÷õÔt˜‡©z*Œ8¤Àî°}şP‡ñ÷z<ìáèÂ·°úy×q.ÖÅ0{R×¢@qÌ²¬·Ëê¸…^ú>ÜjæMvéV'Ş¶ uß?­€Y”Şù§/·åTÛùÊ‚o*'g™…Fìxé4øŒRöS¼k©h	?»`|áŞ•/ĞuÓ*”^ ‚o*'7Ñ‰ÆòšiKLÓ8kà4ÓV ¦ñšìnšÀb€o*WM£Ër{¬Órd² GCzM‹A5m€4Óø¨lÈĞ«‹f¨Àš5èe=zMÑBÆÅ´ôXA3í @V>´Hß0h5ÑŞqpÉÂ2cøÜßü»‹{tä<ø–Îì¯PFÂ@0áoÿ¥qÕEµ¦"ÇU‘¤o|â½Á„¿É.«hU76g¤YZb'Ğ<­ï«÷G|•¥y´eéÇ|¥y4LñU–ºe2â«¬3cÊ€¯²4 €)¾Êªîõ:ëÖsaÍÒìä‘]±c®Ø#gİr”Í&ÌŞíÉdÛf…$L#\™nëEjøXˆ·ìè0šPCñ–]M·õz£À:Q¥±ÎXj_{«õ2Ï½õ:›çŞG­uÓbĞêl„ôæ„§ÚÀ4Í	‚o*WnÂ³rõö<+×MãY¹ÆQkİ´4ÓVĞMã™•nZeNÀ7•+7áùºz{¯ÓĞ£<'×LÓCè‚°‚nOÏuÓ
+,.ğMåjÖ gx&¯›Æ3y•ãÙºª% ™†°‚fÚíÓz;¯~BÃk?­×ÈÓvØÚ¢`Â5­7mn×…§íĞ8Lø#¦õvš[ü.s¤GùnŠ¢ sä ¢¥î õúÊöÿı ÌeñÆ¯>4‘»!zy+Oõù°¾Wñ]ıì=Â§0ggÁŞ?LWÅCp‡}ûµ»ıíÁ-ËÎ7Ùum‰	¦ï×‘ÒgÜ£|âc¢ê¬5ÈÃ÷·Á„/ú5ıÂ÷ôÁ„ı¶FxØ3&|+CÊPIWpr,UQ}ÂdLyúòèÜğ ?çÛÂ6*D2‚OgÊ /ö!‚	Ëv„°ğyNô±²íÎ¡C2|M$¿M†„äO­¿É2ôXö?Ï²zjZ6;<5
+füÚ«A­xLø^|´Š÷n±íFU_ß0¦¼uƒ>ÁúS~©{øA+lxŒ§…µÈ«¸ÒWò·Ë‡¼Ö}·ÍRë6mpJûm® Ÿ#sŸÃh(:tá2ùõÇÍ*Õ^„VON+iGÏ€`Æ¯<K%ràQ0á{â&-¶nE`¨Tßî‡‚)Oßw}‚ô§üR?V&_.*»Ö(˜ğò©¤Æ—ÇAş–u†«İ\…æJgS³~Prl|¬Öyb´zhşş>4
+&üÆ©ôı§Á„‡Î@-[[ş“«ª¹¡DÁŒı> Æ<Dz(˜òÃeö†vìò=ĞíÁ„¿e¨-(n¿´ï“$Ó‹éá­]è;YOÀ8ˆÿò¤½ŠÓÇÆø»üÊ­	V5¡`ÂÃV–FïS˜²Z÷å¶€¯²4EŸp¬,àk,/ÿ†”_ei 
+RF|•¥åß˜2à«,DaÊ€¯²ª{½[õ\X³¼è¹ç‘]±c®Ø[Çª\.ÁAáXÕc+ş\!Ş‰×€Ã#!Ş²£³x8°ˆ·,„u0:×¶eÑX…ëSµƒà)<G;ÁÂSr6ù1}›ÌSr‰DÁSxNÎ¹UúîÉ<'gì*}cŸÊSvØ^}‚]Ş¹€|ÉNäÕKXkxı-~òzÒ%6Ã»‹ç…%oµ¡£ÖÁÉ¿¬ºñ5™ù –¦‚]~å#üÄ%
+&ü¸Âº'Ä+ +”Á"ÌxÑnà£[é?ÂS,<zsµBº
+vùö²ˆöƒ`Â°¬:·)şÑdØU0,¬Ş‰H`nài§'L½`û'tÁ.¿ör_»5&|/N¼Û†TøU®.¢ã9ËË$¥µí63õ½R/ÕgÜ?^#‚)Oúpÿé?Æ?®Kaöõ­ìÔ5˜°côç5x€ñÎa½ºrY/Çpf……a€í/<ÆâG5õ¿=¤‹³Aë7ÿØ.+úR÷ÿ€¨ä1Øşú}ûÕ“l÷ëª_ñzÓ¨ıæŸúÏ¾ş÷p¥^í]mwX•~İ×<‚	ÿò¥=Ûqx%‡ZØ^7ı|¶[¹}€¿˜!ä„)	^÷)Gn¢	
+èß0Ä/¬£`ÂÓ¾@ÙG¾Â¦ÿÏÓ1*µÚ&@
+ì$ğ³Ùßõ7<WŸ0£âøü(ØãÍË×zl&€ ¹=û—¥è¾o<wåú´5zÆı9R£7$3”¶7KKƒÆ,¼B,"¨ÓµµT¹S¬ëôáSL+gh™a:¸Àr!kU;ÀÆ¶¥6–g3Ÿ6.¬^fÎØ$øÌĞAnµA'ÄjåÂ‡::¡* Z¡L@sŠ¡MNóã4´i™a£m¡;¡Ù6ÎòğTæÏòpµÑ²´çá#ülë3¦Ã³Àã‹hd¯ÀÀßp)E³€¶œ€ayJÑ*…]Rl/B\LçèSíMK@K±Àz¡;ÀÆU8ŸùÛ2`•I‡Ï?€muÀÚsw:›ÉVĞç”A>†z¼ôù¯¡GŒ‚	Ïá&Û&:èûõÊDf<ÛÖ3Løë¶a‚xËfeRkgÁçĞ­BµØ@G%»ôF8ÖråBNÑÅz¡ÀZzŠk"ì ÇòBó·åŸó¤ııYùGÃ–4Ç(,•¤ŠjÉz2«ÒÈŞ²YÁ">zÏq‰à9;dÿ<]“R=$†€
+J,Fø]òFPàû‰†€’–/YRjH-‹k*Ä–ÓK© ¦Åô4Fo§VÜ…yñŒ#ÏX>rêìµSiWúq÷
+füjwÙsõ§Gi;;VşU0áiãÑcü“ôa÷&7IË¯var{éowŸõÍ¨K²ãfUìñôÁDÈß
+[ş?ÂÏÒßğ]Ã›é9Ëªño;ãg| möØSª#é:³WFÙV«ŞS²t s*1q%Êî\¤»ƒ¢ÀŞSêv€“NÂ¹Ìßéèmòğéƒ[åQNXT¦¬
+¨•k…8Á90Y@sBåøA«–€88¡Şµª`ã4Ïdş$iÄXÅ62Åê©Ap~=¨|¤Ã,uãUƒÜÆå‹= “äI*”}e¢¥Ë…œ¢öõÂà€‹´´Ö»±VµlËÀ	ÍŸ•¨†2@Ğ÷µmƒà:Ïm5òƒ`_µõ/ĞoÇ},jiPS€¥ëŞDKy¿ÖMŒ¬¥S¹R,€.Ô¸ü²u-"Ãz7íÀ°qU†ÎgşN[ eˆáº½ïñÀ5şÙñDP€RÛ¢ïº3 X* ¶“.…£×F¢nIÑÕœ6\w.w»V¡]èûİX«Ù6®ËÀéÌß–şztïó,vŠÁ.ßËĞsõ¹ãÜšš—tºk8Bjˆ–˜åFÎ÷ßºT¹)aHCÆª$-UjpZŞVQ$wò»¤%¨Ü…5ÊİÁ®±ÈœÃâIÏuuXÇD à‰<D¬†@öøÚë×<lX ¦ïíÖîxu'»@éÆ-_ròĞ÷×4EÚ9“@Ë¤!E“àn¬Uí W5ÅùÌŸ´´ûR§Ú{ˆó™(˜ò	¿È(pÃƒşš§éeÛ>»­°í>ÆÓö}`ˆ£(˜ñ“ôŸ3¶,öÇa>í[=ß–§ªÖ#3Dÿ `Âó]Ÿ÷çãzæA0ãé je¬mT`”·2›Q€ªŠÀrğhÉÔWIq©!OŠ¸˜@‹AO‘a½kU;ÀÆÕ;x>óßõ\ifÓ¦õvyÔ¾'$ İD`1@´Ši’b3;Zœƒ‡ĞStà$Ñªv€r˜ßù¬Tx«î48Á(Şï)Ğ,©—ªÉÊã­2W,)V'd˜€Ó´´–»‰V±m\•œÏü¡¨Ô°œUŠs¾-r’2›8ÁŒç7:Õ1C©?
+”š%éˆ ÁÃPÕ)ò©?½( Ö:	+š¦Ó¢Àz¡;ÀÆY¥y*ó÷Ê@Ï#ÌÒYoøUÃ‚Ë
+f<Oû´9k™Ö9ëA0á×sâÏı’cØ¬oê´@0¾Á@—×®@YŠR´T¹STº^èptGÓbĞSdXïÆZÕ°q5/}>ó'İlŞ}8æáµ<F~} ÆÒ»ÁõÕÍüO?, (ğI¡ñªÁÜi ÛÊ¡ÿê}2îW´¤ó_R¬sşvQ8­AKkH±ÀT.d-±c°q,C'4²¶gv Â3là··ø0YP»é á‚×OC¸!—àPO¡`Æ¯6ôbr{é#¿^°üÜ›YßBch,“f ZóTA]Î%°Ìä‰V‰s$ÅÚëp>€ƒ¢Àz¡;ÀÆU<w>óßµ(º›Íe½œCÍšPõ&‹¢U£K¥Ñl(FMK;L±ÀšHêv ìõZ=	œ&+ğW/Äv ğ<¶ÛßÓxxá×¼N£ş°}n’şÀÓùÀî‚	ï"®rj<\ñ„¥ƒÛˆŸ}™’ó±À•ß%«É¸hÈ€¤UÇú\ìÃ€.õUJò»¥•ú%Ñ(w»ÆúáOB+şĞÜ?H5ı8î†oê3¾eêĞE>=ÃFZ%Ñcu2®ÂE8øàMI±NïñòÇÎZZŠëİX«Ú6NÖ|ËüIà/0¾p¿ùôÓ¿¾©oøñ[iTc`ñ@üv¬A†ÚgÅ‡F>_·?[O„øIì3WAasüÍ@ATÔÌ—ßµ\´Ô¦–%I«3ª/“\×ß5-Få.¬QîvmëÄï¾Å“W‚NËzä³¿×>Ìõ\?9‰2NBüö9Å«¯‘*/ˆİª½î¿‡kšÃË¢$-«Àá•I®kğï–£rÖèZ_»µ)"ßy‹'E„ó<™Ú[zîg‘å{À]ÿ¹Ÿ^ß“ÛMäs‘zpSƒXúPšPÇf*T…#­ÒêHŠm´GÓ’¿ÊiZòWµ
+¨)
+,w­jØ¸jyÏgş^5ã}m±Öá<ZUCsŞ×ïµÑvi£À×g(ç?­b²¤XM¦M$À‘ëšƒ"Ãz7Öªv€«<<Ÿù;€ÖyX äÑ~Uà{:«gıö"°;jdGÕ¢) ÛUwb-ì’b{ØÃ×Ç¯–Å×N´0[æïñùÌ'¹âĞlşRb½\;ƒ^Y,‰Ó$Å^ı\H % ¥È°Şµª`£xı|VïUšı…xö7ÆfÏş;÷§Üëı©÷V!÷ë20 BëÊ1¬û£XKÂ’¢¯µõŞ:—ûu]‹AO‘a½kU;ÀÆI—õ\æï”N.]ëc‘šUÊ~u²*©½2¶9™ƒ3‚Cğ‚)¿
+î ¹İôç¡FXKÅĞôÃËÁuıƒü ØåûZ²çê¯ÖÒim–yäOä©eø*¸ÎóYÌÈ‚]ÿ™ú<?	ùÇP¥q-`\ç¹8!?vyXø\}Ş'ŞõqÛxçíP‘“^¯z†•†“5ÑÀŠnmi;kE´Íµî&‘ßu£IA|Ñ©eI«î[¡½¬ñ&×ªRAªßÒ7ÉˆR1 LÛîÚ=…Ñ“-åÄ÷-åsÛœ\³«5¥ÏT"Xş>f<ßüşš>M B!g¸Ø0òE0áµ5Û†<lg@äñ çÙvÖ^	‚	¯]îËªdÛFtNArìñğ	¿[õŸû‰ÀÕô±	f·oÙÕÑ‘Lã9€'ìpŠ#˜C¼eWG<ë{EóÍ§q½95îñ³mÏù47k©-  „O†xÎv]ö(¬=@¼es8J°ØœTØŞÔÇxzÓî$F´/h(İÇiSI`, =(¯|Ñ²edŠS¬C™´ç8«A‹AO‘a½kU;ÀÆõXÚéÌß™Æ¤ÊÇÃd5
+È?«QŸEÇ²Q©Bî;e° hcTm™¸s²°Z §Ø`€´ôÖ»±VµlœtÏeş»êu“z®ÑÁº²i9‹‚Ì6©,E-ÚM*(fw.ĞbĞSšÙİ°Q¼~>«w^¸U¥y­RİğğÂ
+ÄÕ%—ë=‰7¥HõûÁ%ê¯VÒ¨fkeP@+ŸKÙ­Rª%ÅVâù{^³´¬RdXïÆZÕ°qRiŸËü¥˜G±y‚'òÃò<îò>òªEĞŒ\?Ôñ5Öó6æÎ"Ş²BÙöÇ£4/XÕñÒ­{óÅAmÈªd
+GŸá‰åBJ±€2Ü9:?ªi€Ö5Ø6®ÊşùÌß™@^nÿœ<wÄî
+f<ıø­-İOÕ`éªÇùà‡î-$7MÅŸğÜ×ÿÇÖğ¤VZ|>«ÙÙç;•œ}>«[Wà\çoÖ®À¹¬~ww®£/Ock«ŸÏuH^­ŸÏe58ûL§ÙugŸÉj>‰á|ÇÆÑIç³š}¾óÕÈÙç³Zœ}ºƒÌØÙ§³úİİ‰-;‡¡ïîÎz:Ø	­fgŸï%röù¬~úÓ·|úÓ	<j;ÍOeu¯FNu²P«FNe5-ïZ:ŸÕäì5“}B«ßİõL–Zış(–où(–sÇ‘ı{CÛË¹N»¨3,ç²º–ßïşÑ	¥ü~÷m.ıÎ5P]ú7ôİİiO8ŸÕïê®¸sí—'gŸÏêîìSmLoÎ>•Õï·ÓËÛéO¸¼†qç²º.”9ÅÆÍ²Pæ¶¾;ï«óYİªŒsíªUÆ¹¬~¿§é[´ºU#çÚFS«‘sYİÂ¼síÛ¨aŞ¹¬&gÿêîÿìVd
+endstream
+endobj
+4 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 595 842]
+/Rotate 90
+/Resources <<
+/ProcSet [/PDF /Text]
+/ExtGState <<
+/R7 154 0 R
+>>
+/Font <<
+/R8 155 0 R
+>>
+>>
+/Annots [157 0 R 158 0 R 159 0 R 160 0 R 161 0 R 162 0 R 163 0 R 164 0 R 165 0 R 166 0 R 167 0 R 168 0 R 169 0 R 170 0 R 171 0 R 172 0 R 173 0 R 174 0 R 175 0 R 176 0 R 177 0 R 178 0 R 179 0 R 180 0 R 181 0 R 182 0 R 183 0 R 184 0 R 185 0 R 186 0 R 187 0 R 188 0 R 189 0 R 190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 199 0 R 200 0 R 201 0 R 202 0 R 203 0 R 204 0 R 205 0 R 206 0 R 207 0 R 208 0 R 209 0 R 210 0 R 211 0 R 212 0 R 213 0 R 214 0 R 215 0 R 216 0 R 217 0 R 218 0 R 219 0 R 220 0 R 221 0 R 222 0 R 223 0 R 224 0 R 225 0 R 226 0 R 227 0 R 228 0 R 229 0 R 230 0 R 231 0 R 232 0 R 233 0 R 234 0 R 235 0 R 236 0 R 237 0 R 238 0 R 239 0 R 240 0 R 241 0 R 242 0 R 243 0 R 244 0 R 245 0 R 246 0 R 247 0 R 248 0 R 249 0 R 250 0 R 251 0 R 252 0 R 253 0 R 254 0 R 255 0 R 256 0 R 257 0 R 258 0 R 259 0 R 260 0 R 261 0 R 262 0 R 263 0 R 264 0 R 265 0 R 266 0 R 267 0 R 268 0 R 269 0 R 270 0 R 271 0 R 272 0 R 273 0 R 274 0 R 275 0 R 276 0 R 277 0 R 278 0 R 279 0 R 280 0 R 281 0 R 282 0 R 283 0 R 284 0 R 285 0 R 286 0 R 287 0 R 288 0 R 289 0 R 290 0 R 291 0 R 292 0 R 293 0 R 294 0 R 295 0 R 296 0 R 297 0 R 298 0 R 299 0 R 300 0 R 301 0 R 302 0 R 303 0 R 304 0 R 305 0 R 306 0 R 307 0 R 308 0 R 309 0 R 310 0 R 311 0 R 312 0 R 313 0 R 314 0 R 315 0 R 316 0 R 317 0 R 318 0 R 319 0 R 320 0 R 321 0 R 322 0 R 323 0 R 324 0 R 325 0 R 326 0 R 327 0 R 328 0 R 329 0 R 330 0 R 331 0 R 332 0 R 333 0 R 334 0 R 335 0 R 336 0 R 337 0 R 338 0 R 339 0 R 340 0 R 341 0 R 342 0 R 343 0 R 344 0 R 345 0 R 346 0 R 347 0 R 348 0 R 349 0 R 350 0 R 351 0 R 352 0 R 353 0 R 354 0 R 355 0 R 356 0 R 357 0 R 358 0 R 359 0 R 360 0 R 361 0 R 362 0 R 363 0 R 364 0 R 365 0 R 366 0 R 367 0 R 368 0 R 369 0 R 370 0 R 371 0 R 372 0 R 373 0 R 374 0 R 375 0 R 376 0 R 377 0 R 378 0 R 379 0 R 380 0 R 381 0 R 382 0 R 383 0 R 384 0 R 385 0 R 386 0 R 387 0 R 388 0 R 389 0 R 390 0 R 391 0 R 392 0 R 393 0 R 394 0 R 395 0 R 396 0 R 397 0 R 398 0 R 399 0 R 400 0 R 401 0 R 402 0 R 403 0 R 404 0 R 405 0 R 406 0 R 407 0 R 408 0 R 409 0 R 410 0 R 411 0 R 412 0 R 413 0 R 414 0 R 415 0 R 416 0 R 417 0 R 418 0 R 419 0 R 420 0 R 421 0 R 422 0 R 423 0 R 424 0 R 425 0 R 426 0 R 427 0 R 428 0 R 429 0 R 430 0 R 431 0 R 432 0 R 433 0 R 434 0 R 435 0 R 436 0 R 437 0 R 438 0 R 439 0 R 440 0 R 441 0 R 442 0 R 443 0 R 444 0 R 445 0 R 446 0 R 447 0 R 448 0 R 449 0 R 450 0 R 451 0 R 452 0 R 453 0 R 454 0 R 455 0 R 456 0 R 457 0 R 458 0 R]
+/Contents 459 0 R
+/Parent 2 0 R
+>>
+endobj
+461 0 obj
+<<
+/Names [(180313232_133538448_0) [4 0 R /FitB] (Dest_637765840_180072800) [4 0 R /FitR 311 417 486 594] (Dest_637765840_180072976) [4 0 R /FitR 151 93 352 394] (Dest_637765840_180073152) [4 0 R /FitR 151 93 318 294] (Dest_637765840_180073408) [4 0 R /FitR 191 168 361 369] (Dest_637765840_180077552) [4 0 R /FitR 317 425 480 594] (Dest_637765840_180080336) [4 0 R /FitR 191 193 352 394] (Dest_637765840_637760496) [4 0 R /FitR 160 84 361 369] (Dest_637765840_637776608) [4 0 R /FitR 394 267 515 468] (Dest_637765840_637778384) [4 0 R /FitR 314 217 515 451] (Dest_637765840_637780992) [4 0 R /FitR 298 299 499 517] (Dest_637765840_637782144) [4 0 R /FitR 247 518 312 594] (Dest_637765840_637782384) [4 0 R /FitR 306 299 499 500] (Dest_637765840_637782640) [4 0 R /FitR 298 299 490 500] (Dest_637765840_637782896) [4 0 R /FitR 298 217 499 500] (Dest_637765840_637783440) [4 0 R /FitR 355 283 556 500] (Dest_637765840_637783696) [4 0 R /FitR 355 283 507 484] (Dest_637765840_637784592) [4 0 R /FitR 135 253 195 454] (Dest_637765840_637785504) [4 0 R /FitR 109 335 302 536] (Dest_637765840_637785744) [4 0 R /FitR 298 357 499 582] (Dest_637765840_637785984) [4 0 R /FitR 363 357 556 558] (Dest_637765840_637786512) [4 0 R /FitR 396 357 589 558] (Dest_637765840_637787216) [4 0 R /FitR 355 299 556 558] (Dest_637765840_637787488) [4 0 R /FitR 306 357 499 558] (Dest_637765840_637787984) [4 0 R /FitR 298 340 499 558] (Dest_637765840_637789568) [4 0 R /FitR 179 377 220 578] (Dest_637765840_637789776) [4 0 R /FitR 0 41 181 230] (Dest_637765840_637790064) [4 0 R /FitR 2 35 195 236] (Dest_637765840_637790304) [4 0 R /FitR 10 76 211 303] (Dest_637765840_637791216) [4 0 R /FitR 27 76 211 277] (Dest_637765840_637792416) [4 0 R /FitR 160 84 310 285] (Dest_637765840_637793456) [4 0 R /FitR 109 84 310 303] (Dest_637765840_637793952) [4 0 R /FitR 191 176 343 377] (Dest_637765840_637794576) [4 0 R /FitR 142 176 343 443] (Dest_637765840_637795456) [4 0 R /FitR 142 242 318 443] (Dest_637765840_637796000) [4 0 R /FitR 158 269 351 470] (Dest_637765840_637796176) [4 0 R /FitR 19 242 220 578] (Dest_637765840_647233632) [4 0 R /FitR 0 41 189 279] (Dest_637765840_647233904) [4 0 R /FitR 289 76 490 328] (Dest_637765840_647234176) [4 0 R /FitR 289 76 285 277] (Dest_637765840_647234400) [4 0 R /FitR 298 93 352 294] (Dest_637765840_647234656) [4 0 R /FitR 298 93 499 328] (Dest_637765840_647234880) [4 0 R /FitR 142 101 343 377] (Dest_637765840_647235104) [4 0 R /FitR 281 101 343 302] (Dest_637765840_647236096) [4 0 R /FitR 281 101 482 328] (Dest_637765840_647236320) [4 0 R /FitR 273 84 361 285] (Dest_637765840_647237456) [4 0 R /FitR 273 84 474 328] (Dest_637765840_647238112) [4 0 R /FitR 289 225 474 426] (Dest_637765840_647239088) [4 0 R /FitR 257 225 441 426] (Dest_637765840_647239344) [4 0 R /FitR 289 217 490 426] (Dest_637765840_647239584) [4 0 R /FitR 306 69 507 328] (Dest_637765840_647239776) [4 0 R /FitR 135 69 336 454] (Dest_637765840_647240048) [4 0 R /FitR 35 84 236 303] (Dest_637765840_647240352) [4 0 R /FitR 306 69 336 270] (Dest_637765840_647240832) [4 0 R /FitR 330 217 531 435] (Dest_637765840_647241120) [4 0 R /FitR 322 217 523 459] (Dest_637765840_647241312) [4 0 R /FitR 179 160 380 578] (Dest_637765840_647241552) [4 0 R /FitR 191 160 380 361] (Dest_637765840_647242000) [4 0 R /FitR 125 269 293 470] (Dest_637765840_647242560) [4 0 R /FitR 92 242 293 470] (Dest_637765840_647242784) [4 0 R /FitR 306 217 507 484] (Dest_637765840_647243024) [4 0 R /FitR 394 234 581 435] (Dest_637765840_647243328) [4 0 R /FitR 380 234 581 443] (Dest_637765840_647243568) [4 0 R /FitR 380 225 581 435]]
+/Limits [(180313232_133538448_0) (Dest_637765840_647243568)]
+>>
+endobj
+463 0 obj
+<<
+/Names [(Dest_637765840_647243776) [4 0 R /FitR 348 234 531 435] (Dest_637765840_647244112) [4 0 R /FitR 125 335 310 536] (Dest_637765840_647244352) [4 0 R /FitR 109 242 310 536] (Dest_637765840_647244896) [4 0 R /FitR 158 335 351 536] (Dest_637765840_647245104) [4 0 R /FitR 240 225 433 426] (Dest_637765840_647245296) [4 0 R /FitR 273 250 458 451] (Dest_637765840_647245472) [4 0 R /FitR 257 250 441 451] (Dest_637765840_647245648) [4 0 R /FitR 273 225 458 426] (Dest_637765840_647246080) [4 0 R /FitR 52 427 194 594] (Dest_637765840_647246992) [4 0 R /FitR 61 428 194 594] (Dest_637765840_647247552) [4 0 R /FitR 28 395 210 594] (Dest_637765840_647248464) [4 0 R /FitR 0 408 131 547] (Dest_637765840_647248928) [4 0 R /FitR 43 242 244 503] (Dest_637765840_647249216) [4 0 R /FitR 158 302 285 503] (Dest_637765840_647249392) [4 0 R /FitR 84 242 285 503] (Dest_637765840_647249568) [4 0 R /FitR 314 250 515 468] (Dest_637765840_647249744) [4 0 R /FitR 314 250 474 451] (Dest_637765840_647251040) [4 0 R /FitR 127 609 70 610] (Dest_637765840_647251616) [4 0 R /FitR 110 461 218 594] (Dest_637765840_647251792) [4 0 R /FitR 0 425 139 580] (Dest_637765840_647252784) [4 0 R /FitR 0 433 147 588] (Dest_637765840_647253024) [4 0 R /FitR 0 400 147 555] (Dest_637765840_647253200) [4 0 R /FitR 0 408 139 564] (Dest_637765840_647253440) [4 0 R /FitR 0 417 147 572] (Dest_637765840_647253648) [4 0 R /FitR 69 444 202 594] (Dest_637765840_647254096) [4 0 R /FitR 135 609 128 610] (Dest_637765840_647254464) [4 0 R /FitR 176 592 177 610] (Dest_637765840_647255472) [4 0 R /FitR 176 609 161 610] (Dest_637765840_647255680) [4 0 R /FitR 127 584 128 610] (Dest_637765840_647255888) [4 0 R /FitR 175 558 178 594] (Dest_637765840_647256096) [4 0 R /FitR 175 591 153 594] (Dest_637765840_647256272) [4 0 R /FitR 150 525 211 594] (Dest_637765840_647256880) [4 0 R /FitR 142 493 211 594] (Dest_637765840_647257072) [4 0 R /FitR 150 591 145 594] (Dest_637765840_647257328) [4 0 R /FitR 142 583 145 594] (Dest_637765840_647257568) [4 0 R /FitR 150 583 153 594] (Dest_637765840_647257744) [4 0 R /FitR 69 510 70 610] (Dest_637765840_647258192) [4 0 R /FitR 19 84 195 285] (Dest_637765840_647258416) [4 0 R /FitR 27 76 228 303] (Dest_637765840_647258832) [4 0 R /FitR 43 43 244 303] (Dest_637765840_647259088) [4 0 R /FitR 330 43 244 244] (Dest_637765840_647259360) [4 0 R /FitR 330 43 531 328] (Dest_637765840_647259600) [4 0 R /FitR 68 51 269 303] (Dest_637765840_647259824) [4 0 R /FitR 167 51 269 252] (Dest_637765840_647260032) [4 0 R /FitR 167 51 368 459] (Dest_637765840_647260272) [4 0 R /FitR 322 258 368 459] (Dest_637765840_647260496) [4 0 R /FitR 76 60 277 303] (Dest_637765840_647260944) [4 0 R /FitR 314 60 277 261] (Dest_637765840_647261184) [4 0 R /FitR 314 60 515 328] (Dest_637765840_647261360) [4 0 R /FitR 142 591 137 594] (Dest_637765840_647261728) [4 0 R /FitR 134 583 137 594] (Dest_637765840_647262416) [4 0 R /FitR 19 377 211 578] (Dest_637765840_647262656) [4 0 R /FitR 0 248 189 448] (Dest_637765840_647262928) [4 0 R /FitR 51 335 191 536] (Dest_637765840_647263184) [4 0 R /FitR 43 302 191 503] (Dest_637765840_647263392) [4 0 R /FitR 191 152 382 353] (Dest_637765840_647263824) [4 0 R /FitR 181 133 382 353] (Dest_637765840_647264096) [4 0 R /FitR 200 133 382 334] (Dest_637765840_647264528) [4 0 R /FitR 117 93 318 303] (Dest_637765840_647264720) [4 0 R /FitR 260 529 312 594] (Dest_637765840_647264896) [4 0 R /FitR 92 25 293 303] (Dest_637765840_647265264) [4 0 R /FitR 35 35 228 236] (Dest_637765840_647265504) [4 0 R /FitR 27 35 228 277] (Dest_637765840_647265904) [4 0 R /FitR 35 84 220 285]]
+/Limits [(Dest_637765840_647243776) (Dest_637765840_647265904)]
+>>
+endobj
+464 0 obj
+<<
+/Names [(Dest_637765840_647266128) [4 0 R /FitR 19 84 220 303] (Dest_637765840_647266352) [4 0 R /FitR 2 88 203 303] (Dest_637765840_647266640) [4 0 R /FitR 44 395 227 594] (Dest_637765840_647266864) [4 0 R /FitR 44 362 243 594] (Dest_637765840_647267280) [4 0 R /FitR 43 361 236 562] (Dest_637765840_647267504) [4 0 R /FitR 35 242 236 562] (Dest_637765840_647267744) [4 0 R /FitR 35 241 236 443] (Dest_637765840_647268016) [4 0 R /FitR 35 372 228 573] (Dest_637765840_647268208) [4 0 R /FitR 27 242 228 573] (Dest_637765840_647268672) [4 0 R /FitR 27 241 228 443] (Dest_637765840_647268928) [4 0 R /FitR 52 389 219 594] (Dest_637765840_647269184) [4 0 R /FitR 24 372 230 573] (Dest_637765840_647269440) [4 0 R /FitR 2 269 191 470] (Dest_637765840_647269728) [4 0 R /FitR 2 242 203 470] (Dest_637765840_647269984) [4 0 R /FitR 179 377 380 585] (Dest_637765840_647270224) [4 0 R /FitR 319 433 478 594] (Dest_637765840_647270416) [4 0 R /FitR 248 234 433 443] (Dest_637765840_647271328) [4 0 R /FitR 10 35 203 236] (Dest_637765840_647271488) [4 0 R /FitR 27 35 220 236] (Dest_637765840_647271984) [4 0 R /FitR 19 27 211 244] (Dest_637765840_647272320) [4 0 R /FitR 110 0 293 294] (Dest_637765840_647273248) [4 0 R /FitR 110 0 284 183] (Dest_637765840_647273456) [4 0 R /FitR 84 76 285 303] (Dest_637765840_647273728) [4 0 R /FitR 51 284 252 503] (Dest_637765840_647274000) [4 0 R /FitR 51 242 252 485] (Dest_637765840_647274256) [4 0 R /FitR 2 88 183 289] (Dest_637765840_647274624) [4 0 R /FitR 322 209 523 418] (Dest_637765840_647274768) [4 0 R /FitR 330 209 531 418] (Dest_637765840_647274912) [4 0 R /FitR 330 127 531 336] (Dest_637765840_647275088) [4 0 R /FitR 322 127 523 336] (Dest_637765840_647275232) [4 0 R /FitR 314 127 515 336] (Dest_637765840_647275376) [4 0 R /FitR 306 127 507 336] (Dest_637765840_647275520) [4 0 R /FitR 298 127 499 336] (Dest_637765840_647275664) [4 0 R /FitR 289 127 490 336] (Dest_637765840_647276160) [4 0 R /FitR 281 127 482 336] (Dest_637765840_647276288) [4 0 R /FitR 273 127 474 336] (Dest_637765840_647276880) [4 0 R /FitR 339 135 466 410] (Dest_637765840_647277136) [4 0 R /FitR 150 335 343 536] (Dest_637765840_647277280) [4 0 R /FitR 133 335 326 536] (Dest_637765840_647277792) [4 0 R /FitR 142 326 334 544] (Dest_637765840_647278032) [4 0 R /FitR 240 242 441 451] (Dest_637765840_647278192) [4 0 R /FitR 240 225 441 435] (Dest_637765840_647279232) [4 0 R /FitR 125 111 187 435] (Dest_637765840_647279488) [4 0 R /FitR 371 357 564 558] (Dest_637765840_647279632) [4 0 R /FitR 388 357 581 558] (Dest_637765840_647280480) [4 0 R /FitR 380 349 572 566] (Dest_637765840_647280752) [4 0 R /FitR 257 242 458 451] (Dest_637765840_647280912) [4 0 R /FitR 257 225 458 435] (Dest_637765840_647281312) [4 0 R /FitR 265 234 449 443] (Dest_637765840_647281904) [4 0 R /FitR 273 209 474 418] (Dest_637765840_647282048) [4 0 R /FitR 281 209 482 418] (Dest_637765840_647282176) [4 0 R /FitR 289 209 490 418] (Dest_637765840_647282304) [4 0 R /FitR 298 209 499 418] (Dest_637765840_647282432) [4 0 R /FitR 306 209 507 418] (Dest_637765840_647282560) [4 0 R /FitR 314 209 515 418] (Dest_637765840_647282704) [4 0 R /FitR 35 234 236 443] (Dest_637765840_647282832) [4 0 R /FitR 43 234 244 443] (Dest_637765840_647282976) [4 0 R /FitR 51 234 252 443] (Dest_637765840_647283344) [4 0 R /FitR 60 234 261 443] (Dest_637765840_647283520) [4 0 R /FitR 68 234 269 443] (Dest_637765840_647283696) [4 0 R /FitR 76 234 277 443] (Dest_637765840_647283840) [4 0 R /FitR 84 234 285 443] (Dest_637765840_647284336) [4 0 R /FitR 92 234 293 443] (Dest_637765840_647284496) [4 0 R /FitR 101 234 302 443]]
+/Limits [(Dest_637765840_647266128) (Dest_637765840_647284496)]
+>>
+endobj
+465 0 obj
+<<
+/Names [(Dest_637765840_647284640) [4 0 R /FitR 101 102 302 312] (Dest_637765840_647284768) [4 0 R /FitR 92 102 293 312] (Dest_637765840_647284912) [4 0 R /FitR 84 102 285 312] (Dest_637765840_647285056) [4 0 R /FitR 76 102 277 312] (Dest_637765840_647285200) [4 0 R /FitR 68 102 269 312] (Dest_637765840_647285376) [4 0 R /FitR 60 102 261 312] (Dest_637765840_647285744) [4 0 R /FitR 51 102 252 312] (Dest_637765840_647285888) [4 0 R /FitR 43 102 244 312] (Dest_637765840_647286016) [4 0 R /FitR 35 102 236 312] (Dest_637765840_647286144) [4 0 R /FitR 27 102 228 312] (Dest_637765840_647286272) [4 0 R /FitR 19 102 220 312] (Dest_637765840_647286400) [4 0 R /FitR 10 102 211 312] (Dest_637765840_647286528) [4 0 R /FitR 2 102 203 312] (Dest_637765840_647286656) [4 0 R /FitR 0 108 189 306] (Dest_637765840_647286864) [4 0 R /FitR 85 469 202 594] (Dest_637765840_647287008) [4 0 R /FitR 77 469 194 594] (Dest_637765840_647287136) [4 0 R /FitR 69 469 186 594] (Dest_637765840_647287696) [4 0 R /FitR 143 518 137 594] (Dest_637765840_647288304) [4 0 R /FitR 11 395 202 594] (Dest_637765840_647288448) [4 0 R /FitR 0 408 164 581] (Dest_637765840_647288816) [4 0 R /FitR 11 395 178 594] (Dest_637765840_647289568) [4 0 R /FitR 117 234 318 443] (Dest_637765840_647289712) [4 0 R /FitR 109 234 310 443] (Dest_637765840_647289856) [4 0 R /FitR 117 102 318 312] (Dest_637765840_647290000) [4 0 R /FitR 109 102 310 312] (Dest_637765840_647290128) [4 0 R /FitR 0 240 189 437] (Dest_637765840_647290272) [4 0 R /FitR 2 234 203 443] (Dest_637765840_647290432) [4 0 R /FitR 10 234 211 443] (Dest_637765840_647290560) [4 0 R /FitR 19 234 220 443] (Dest_637765840_647290720) [4 0 R /FitR 27 234 228 443] (Dest_637765840_647290976) [4 0 R /FitR 355 357 548 558] (Dest_637765840_647291840) [4 0 R /FitR 347 349 515 558] (Dest_637765840_647292480) [4 0 R /FitR 311 411 486 594] (Dest_637765840_647292624) [4 0 R /FitR 298 381 499 591] (Dest_637765840_647293136) [4 0 R /FitR 311 395 485 594] (Dest_637765840_647293376) [4 0 R /FitR 236 482 323 594] (Dest_637765840_647293520) [4 0 R /FitR 195 400 364 594] (Dest_637765840_647294032) [4 0 R /FitR 219 441 339 594] (Dest_637765840_647294288) [4 0 R /FitR 118 567 137 594] (Dest_637765840_647294432) [4 0 R /FitR 126 567 145 594] (Dest_637765840_647294576) [4 0 R /FitR 134 567 153 594] (Dest_637765840_647294720) [4 0 R /FitR 142 567 161 594] (Dest_637765840_647294848) [4 0 R /FitR 93 469 210 594] (Dest_637765840_647295184) [4 0 R /FitR 372 217 557 451] (Dest_637765840_647295440) [4 0 R /FitR 199 152 392 353] (Dest_637765840_647295584) [4 0 R /FitR 199 160 392 361] (Dest_637765840_647295728) [4 0 R /FitR 199 168 392 369] (Dest_637765840_647295872) [4 0 R /FitR 199 176 392 377] (Dest_637765840_647296048) [4 0 R /FitR 199 184 392 385] (Dest_637765840_647296176) [4 0 R /FitR 199 193 392 394] (Dest_637765840_647296720) [4 0 R /FitR 232 143 400 402] (Dest_637765840_647298080) [4 0 R /FitR 248 299 441 500] (Dest_637765840_647298224) [4 0 R /FitR 289 299 482 500] (Dest_637765840_647298704) [4 0 R /FitR 281 291 449 500] (Dest_637765840_647298944) [4 0 R /FitR 314 357 507 558] (Dest_637765840_647299296) [4 0 R /FitR 76 284 269 485] (Dest_637765840_647299456) [4 0 R /FitR 60 284 252 485] (Dest_637765840_647299968) [4 0 R /FitR 68 276 261 493] (Dest_637765840_647300224) [4 0 R /FitR 10 377 203 578] (Dest_637765840_647300368) [4 0 R /FitR 0 391 164 564] (Dest_637765840_647300880) [4 0 R /FitR 2 369 187 587] (Dest_637765840_647301136) [4 0 R /FitR 314 299 507 500] (Dest_637765840_647301296) [4 0 R /FitR 355 299 548 500] (Dest_637765840_647301808) [4 0 R /FitR 347 291 515 500]]
+/Limits [(Dest_637765840_647284640) (Dest_637765840_647301808)]
+>>
+endobj
+466 0 obj
+<<
+/Names [(Dest_637765840_647302416) [4 0 R /FitR 380 242 573 443] (Dest_637765840_647302576) [4 0 R /FitR 380 234 573 435] (Dest_637765840_647302720) [4 0 R /FitR 380 225 573 426] (Dest_637765840_647302864) [4 0 R /FitR 356 234 549 435] (Dest_637765840_647303680) [4 0 R /FitR 27 427 162 594] (Dest_637765840_647304320) [4 0 R /FitR 273 242 474 451] (Dest_637765840_647304480) [4 0 R /FitR 273 225 474 435] (Dest_637765840_647304992) [4 0 R /FitR 281 234 466 443] (Dest_637765840_647305600) [4 0 R /FitR 150 269 343 470] (Dest_637765840_647305744) [4 0 R /FitR 133 269 326 470] (Dest_637765840_647306256) [4 0 R /FitR 142 261 334 478] (Dest_637765840_647306512) [4 0 R /FitR 160 609 152 610] (Dest_637765840_647306656) [4 0 R /FitR 143 609 136 610] (Dest_637765840_647307024) [4 0 R /FitR 151 600 144 618] (Dest_637765840_647307312) [4 0 R /FitR 413 258 595 476] (Dest_637765840_647307632) [4 0 R /FitR 413 225 595 443] (Dest_637765840_647308336) [4 0 R /FitR 178 294 359 511] (Dest_637765840_647308592) [4 0 R /FitR 325 439 472 594] (Dest_637765840_647309120) [4 0 R /FitR 374 488 398 594] (Dest_637765840_647309376) [4 0 R /FitR 51 326 252 536] (Dest_637765840_647309520) [4 0 R /FitR 51 302 252 511] (Dest_637765840_647310032) [4 0 R /FitR 60 310 244 527] (Dest_637765840_647310288) [4 0 R /FitR 298 332 499 541] (Dest_637765840_647310432) [4 0 R /FitR 298 316 499 525] (Dest_637765840_647310864) [4 0 R /FitR 306 324 490 533] (Dest_637765840_647311104) [4 0 R /FitR 27 427 186 594] (Dest_637765840_647311232) [4 0 R /FitR 3 427 161 594] (Dest_637765840_647311600) [4 0 R /FitR 0 304 164 513] (Dest_637765840_647311888) [4 0 R /FitR 220 125 401 342] (Dest_637765840_647312208) [4 0 R /FitR 178 326 359 544] (Dest_637765840_647312512) [4 0 R /FitR 232 217 417 435] (Dest_637765840_647312816) [4 0 R /FitR 0 41 156 230] (Dest_637765840_647313248) [4 0 R /FitR 55 27 236 244] (Dest_637765840_647313552) [4 0 R /FitR 287 529 317 594] (Dest_637765840_647313872) [4 0 R /FitR 0 408 107 548] (Dest_637765840_647314208) [4 0 R /FitR 178 261 359 478] (Dest_637765840_647314528) [4 0 R /FitR 240 291 425 509] (Dest_637765840_647314816) [4 0 R /FitR 101 326 285 544] (Dest_637765840_647315152) [4 0 R /FitR 416 349 597 566] (Dest_637765840_647317104) [4 0 R /FitR 146 0 219 150] (Dest_637765840_647317840) [4 0 R /FitR 96 276 277 493] (Dest_637765840_647318176) [4 0 R /FitR 0 98 148 280] (Dest_637765840_647318512) [4 0 R /FitR 0 271 164 476] (Dest_637765840_647318832) [4 0 R /FitR 92 13 274 239] (Dest_637765840_647319136) [4 0 R /FitR 0 336 164 549] (Dest_637765840_647319424) [4 0 R /FitR 179 526 210 594] (Dest_637765840_654390256) [4 0 R /FitR 584 492 509 789]]
+/Limits [(Dest_637765840_647302416) (Dest_637765840_654390256)]
+>>
+endobj
+462 0 obj
+<<
+/Kids [461 0 R 463 0 R 464 0 R 465 0 R 466 0 R]
+>>
+endobj
+7 0 obj
+<<
+/Count 2
+/First 5 0 R
+/Last 5 0 R
+/Title (Design Hierarchy)
+/Parent 8 0 R
+/Next 34 0 R
+>>
+endobj
+34 0 obj
+<<
+/Count 25
+/First 9 0 R
+/Last 33 0 R
+/Title (Reference Designators)
+/Parent 8 0 R
+/Prev 7 0 R
+/Next 58 0 R
+>>
+endobj
+58 0 obj
+<<
+/Count 118
+/First 57 0 R
+/Last 153 0 R
+/Title (Nets - Connected component pins)
+/Parent 8 0 R
+/Prev 34 0 R
+>>
+endobj
+467 0 obj
+<<
+/Type /Metadata
+/Subtype /XML
+/Length 1651
+>>
+stream
+<?xpacket begin='ï»¿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="3-Heights(TM) XMP Library 4.9.17.0 (http://www.pdf-tools.com)">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="uuid:26705013-37af-11e7-0000-6379bef6dbe4">
+      <xmp:CreateDate>2017-05-10T09:38:25+02:00</xmp:CreateDate>
+      <xmp:CreatorTool>PScript5.dll Version 5.2.2</xmp:CreatorTool>
+      <xmp:ModifyDate>2017-05-10T04:31:18-04:00</xmp:ModifyDate>
+      <xmp:MetadataDate>2017-05-10T04:31:18-04:00</xmp:MetadataDate>
+    </rdf:Description>
+    <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="uuid:26705013-37af-11e7-0000-6379bef6dbe4">
+      <xmpMM:DocumentID>uuid:26705013-37af-11e7-0000-6379bef6dbe4</xmpMM:DocumentID>
+    </rdf:Description>
+    <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="uuid:26705013-37af-11e7-0000-6379bef6dbe4">
+      <dc:format>application/pdf</dc:format>
+      <dc:title>
+        <rdf:Alt>
+          <rdf:li xml:lang="x-default">schematic_sensor_v4.1.1</rdf:li>
+        </rdf:Alt>
+      </dc:title>
+      <dc:creator>
+        <rdf:Seq>
+          <rdf:li>KennHedegaard</rdf:li>
+        </rdf:Seq>
+      </dc:creator>
+    </rdf:Description>
+    <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="uuid:26705013-37af-11e7-0000-6379bef6dbe4">
+      <pdf:PDFVersion>1.5</pdf:PDFVersion>
+      <pdf:Producer>3-Heights(TM) PDF Merge Split API 4.9.17.0 (http://www.pdf-tools.com)</pdf:Producer>
+    </rdf:Description>
+  </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end='w'?>
+
+endstream
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [4 0 R]
+/Count 1
+>>
+endobj
+8 0 obj
+<<
+/Count 148
+/First 7 0 R
+/Last 58 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+/PageMode /UseOutlines
+/OpenAction [4 0 R /XYZ null null null]
+/Names <<
+/Dests 462 0 R
+>>
+/Outlines 8 0 R
+/Metadata 467 0 R
+>>
+endobj
+3 0 obj
+<<
+/Title (schematic_sensor_v4.1.1)
+/Author (KennHedegaard)
+/Creator (PScript5.dll Version 5.2.2)
+/CreationDate (D:20170510093825+02'00')
+/ModDate (D:20170510043118-04'00')
+/Producer (3-Heights\(TM\) PDF Merge Split API 4.9.17.0 \(http://www.pdf-tools.com\))
+>>
+endobj
+xref
+0 468
+0000000000 65535 f
+0000143796 00000 n
+0000143681 00000 n
+0000143970 00000 n
+0000121355 00000 n
+0000000124 00000 n
+0000000015 00000 n
+0000141581 00000 n
+0000143738 00000 n
+0000000273 00000 n
+0000000399 00000 n
+0000000537 00000 n
+0000000676 00000 n
+0000000815 00000 n
+0000000954 00000 n
+0000001093 00000 n
+0000001232 00000 n
+0000001371 00000 n
+0000001510 00000 n
+0000001649 00000 n
+0000001788 00000 n
+0000001926 00000 n
+0000002064 00000 n
+0000002202 00000 n
+0000002340 00000 n
+0000002478 00000 n
+0000002616 00000 n
+0000002755 00000 n
+0000002894 00000 n
+0000003033 00000 n
+0000003172 00000 n
+0000003310 00000 n
+0000003448 00000 n
+0000003586 00000 n
+0000141689 00000 n
+0000003711 00000 n
+0000003849 00000 n
+0000004000 00000 n
+0000004151 00000 n
+0000004303 00000 n
+0000004454 00000 n
+0000004606 00000 n
+0000004758 00000 n
+0000004911 00000 n
+0000005062 00000 n
+0000005213 00000 n
+0000005363 00000 n
+0000005513 00000 n
+0000005663 00000 n
+0000005814 00000 n
+0000005965 00000 n
+0000006114 00000 n
+0000006263 00000 n
+0000006412 00000 n
+0000006563 00000 n
+0000006714 00000 n
+0000006863 00000 n
+0000017161 00000 n
+0000141817 00000 n
+0000007001 00000 n
+0000017259 00000 n
+0000007132 00000 n
+0000017374 00000 n
+0000007261 00000 n
+0000007399 00000 n
+0000007550 00000 n
+0000007701 00000 n
+0000007853 00000 n
+0000008004 00000 n
+0000008156 00000 n
+0000008308 00000 n
+0000008461 00000 n
+0000008612 00000 n
+0000008763 00000 n
+0000008912 00000 n
+0000009061 00000 n
+0000009212 00000 n
+0000009363 00000 n
+0000017497 00000 n
+0000009501 00000 n
+0000017611 00000 n
+0000009626 00000 n
+0000017728 00000 n
+0000009757 00000 n
+0000017845 00000 n
+0000009887 00000 n
+0000017960 00000 n
+0000010016 00000 n
+0000010160 00000 n
+0000010311 00000 n
+0000018072 00000 n
+0000010449 00000 n
+0000010588 00000 n
+0000010739 00000 n
+0000010888 00000 n
+0000018188 00000 n
+0000011024 00000 n
+0000011164 00000 n
+0000011314 00000 n
+0000011464 00000 n
+0000018304 00000 n
+0000011603 00000 n
+0000011742 00000 n
+0000011897 00000 n
+0000018421 00000 n
+0000012038 00000 n
+0000012180 00000 n
+0000018541 00000 n
+0000012327 00000 n
+0000012475 00000 n
+0000012630 00000 n
+0000012787 00000 n
+0000018661 00000 n
+0000012926 00000 n
+0000013067 00000 n
+0000013227 00000 n
+0000018781 00000 n
+0000013368 00000 n
+0000013509 00000 n
+0000013670 00000 n
+0000018901 00000 n
+0000013812 00000 n
+0000013953 00000 n
+0000014114 00000 n
+0000019021 00000 n
+0000014256 00000 n
+0000014397 00000 n
+0000019141 00000 n
+0000014541 00000 n
+0000014682 00000 n
+0000019261 00000 n
+0000014829 00000 n
+0000014974 00000 n
+0000019381 00000 n
+0000015121 00000 n
+0000015265 00000 n
+0000019501 00000 n
+0000015404 00000 n
+0000015547 00000 n
+0000019621 00000 n
+0000015686 00000 n
+0000015837 00000 n
+0000015992 00000 n
+0000019741 00000 n
+0000016133 00000 n
+0000016284 00000 n
+0000016439 00000 n
+0000019861 00000 n
+0000016580 00000 n
+0000016722 00000 n
+0000019981 00000 n
+0000016869 00000 n
+0000017014 00000 n
+0000020101 00000 n
+0000020207 00000 n
+0000020331 00000 n
+0000020254 00000 n
+0000020421 00000 n
+0000020644 00000 n
+0000020867 00000 n
+0000021090 00000 n
+0000021313 00000 n
+0000021536 00000 n
+0000021759 00000 n
+0000021982 00000 n
+0000022205 00000 n
+0000022428 00000 n
+0000022651 00000 n
+0000022874 00000 n
+0000023097 00000 n
+0000023320 00000 n
+0000023543 00000 n
+0000023766 00000 n
+0000023983 00000 n
+0000024205 00000 n
+0000024428 00000 n
+0000024651 00000 n
+0000024867 00000 n
+0000025082 00000 n
+0000025305 00000 n
+0000025528 00000 n
+0000025751 00000 n
+0000025974 00000 n
+0000026197 00000 n
+0000026420 00000 n
+0000026643 00000 n
+0000026866 00000 n
+0000027089 00000 n
+0000027312 00000 n
+0000027535 00000 n
+0000027758 00000 n
+0000027981 00000 n
+0000028204 00000 n
+0000028427 00000 n
+0000028650 00000 n
+0000028873 00000 n
+0000029096 00000 n
+0000029319 00000 n
+0000029542 00000 n
+0000029765 00000 n
+0000029988 00000 n
+0000030211 00000 n
+0000030434 00000 n
+0000030649 00000 n
+0000030872 00000 n
+0000031095 00000 n
+0000031318 00000 n
+0000031541 00000 n
+0000031764 00000 n
+0000031981 00000 n
+0000032204 00000 n
+0000032427 00000 n
+0000032644 00000 n
+0000032861 00000 n
+0000033078 00000 n
+0000033295 00000 n
+0000033518 00000 n
+0000033741 00000 n
+0000033958 00000 n
+0000034181 00000 n
+0000034398 00000 n
+0000034615 00000 n
+0000034838 00000 n
+0000035061 00000 n
+0000035284 00000 n
+0000035507 00000 n
+0000035730 00000 n
+0000035953 00000 n
+0000036176 00000 n
+0000036399 00000 n
+0000036622 00000 n
+0000036845 00000 n
+0000037068 00000 n
+0000037297 00000 n
+0000037512 00000 n
+0000037735 00000 n
+0000037958 00000 n
+0000038181 00000 n
+0000038404 00000 n
+0000038619 00000 n
+0000038834 00000 n
+0000039049 00000 n
+0000039264 00000 n
+0000039479 00000 n
+0000039702 00000 n
+0000039918 00000 n
+0000040133 00000 n
+0000040356 00000 n
+0000040579 00000 n
+0000040802 00000 n
+0000041025 00000 n
+0000041248 00000 n
+0000041471 00000 n
+0000041694 00000 n
+0000041911 00000 n
+0000042134 00000 n
+0000042357 00000 n
+0000042574 00000 n
+0000042797 00000 n
+0000043020 00000 n
+0000043243 00000 n
+0000043466 00000 n
+0000043689 00000 n
+0000043912 00000 n
+0000044135 00000 n
+0000044358 00000 n
+0000044581 00000 n
+0000044804 00000 n
+0000045027 00000 n
+0000045250 00000 n
+0000045473 00000 n
+0000045689 00000 n
+0000045906 00000 n
+0000046123 00000 n
+0000046346 00000 n
+0000046569 00000 n
+0000046821 00000 n
+0000047045 00000 n
+0000047269 00000 n
+0000047493 00000 n
+0000047717 00000 n
+0000047941 00000 n
+0000048170 00000 n
+0000048399 00000 n
+0000048621 00000 n
+0000048845 00000 n
+0000049069 00000 n
+0000049293 00000 n
+0000049517 00000 n
+0000049740 00000 n
+0000049964 00000 n
+0000050188 00000 n
+0000050412 00000 n
+0000050636 00000 n
+0000050860 00000 n
+0000051084 00000 n
+0000051308 00000 n
+0000051532 00000 n
+0000051756 00000 n
+0000051980 00000 n
+0000052195 00000 n
+0000052409 00000 n
+0000052636 00000 n
+0000052863 00000 n
+0000053087 00000 n
+0000053333 00000 n
+0000053580 00000 n
+0000053918 00000 n
+0000054256 00000 n
+0000054594 00000 n
+0000054932 00000 n
+0000055233 00000 n
+0000055534 00000 n
+0000055872 00000 n
+0000056171 00000 n
+0000056509 00000 n
+0000056847 00000 n
+0000057146 00000 n
+0000057447 00000 n
+0000057785 00000 n
+0000058123 00000 n
+0000058430 00000 n
+0000058768 00000 n
+0000059075 00000 n
+0000059380 00000 n
+0000059683 00000 n
+0000059980 00000 n
+0000060318 00000 n
+0000060638 00000 n
+0000062010 00000 n
+0000062761 00000 n
+0000063048 00000 n
+0000063338 00000 n
+0000064092 00000 n
+0000064382 00000 n
+0000064669 00000 n
+0000065422 00000 n
+0000065712 00000 n
+0000065999 00000 n
+0000066410 00000 n
+0000066707 00000 n
+0000067004 00000 n
+0000067301 00000 n
+0000067598 00000 n
+0000067898 00000 n
+0000068198 00000 n
+0000068491 00000 n
+0000068800 00000 n
+0000069106 00000 n
+0000069413 00000 n
+0000069707 00000 n
+0000070006 00000 n
+0000070305 00000 n
+0000070602 00000 n
+0000070900 00000 n
+0000071207 00000 n
+0000071958 00000 n
+0000072248 00000 n
+0000072535 00000 n
+0000072950 00000 n
+0000073253 00000 n
+0000073558 00000 n
+0000073853 00000 n
+0000074151 00000 n
+0000074446 00000 n
+0000074744 00000 n
+0000075059 00000 n
+0000075367 00000 n
+0000075666 00000 n
+0000075979 00000 n
+0000076293 00000 n
+0000076606 00000 n
+0000076920 00000 n
+0000077236 00000 n
+0000077531 00000 n
+0000077833 00000 n
+0000078130 00000 n
+0000078425 00000 n
+0000078732 00000 n
+0000079039 00000 n
+0000079354 00000 n
+0000079670 00000 n
+0000079996 00000 n
+0000080322 00000 n
+0000080639 00000 n
+0000080943 00000 n
+0000081253 00000 n
+0000081565 00000 n
+0000081879 00000 n
+0000082193 00000 n
+0000082493 00000 n
+0000082804 00000 n
+0000083558 00000 n
+0000083845 00000 n
+0000084137 00000 n
+0000084546 00000 n
+0000084843 00000 n
+0000085140 00000 n
+0000085427 00000 n
+0000085719 00000 n
+0000086008 00000 n
+0000086297 00000 n
+0000086586 00000 n
+0000086881 00000 n
+0000087558 00000 n
+0000087846 00000 n
+0000088138 00000 n
+0000088700 00000 n
+0000088991 00000 n
+0000089282 00000 n
+0000090035 00000 n
+0000090327 00000 n
+0000090619 00000 n
+0000091045 00000 n
+0000091337 00000 n
+0000091624 00000 n
+0000092033 00000 n
+0000092333 00000 n
+0000092623 00000 n
+0000092920 00000 n
+0000093220 00000 n
+0000093523 00000 n
+0000093815 00000 n
+0000094378 00000 n
+0000094669 00000 n
+0000094958 00000 n
+0000095632 00000 n
+0000095919 00000 n
+0000096210 00000 n
+0000096772 00000 n
+0000097063 00000 n
+0000097354 00000 n
+0000097769 00000 n
+0000098060 00000 n
+0000098346 00000 n
+0000098632 00000 n
+0000098918 00000 n
+0000099672 00000 n
+0000099965 00000 n
+0000100252 00000 n
+0000101005 00000 n
+0000101295 00000 n
+0000101582 00000 n
+0000102332 00000 n
+0000102623 00000 n
+0000102909 00000 n
+0000103663 00000 n
+0000103953 00000 n
+0000104240 00000 n
+0000104917 00000 n
+0000105205 00000 n
+0000105497 00000 n
+0000106175 00000 n
+0000106468 00000 n
+0000106762 00000 n
+0000107516 00000 n
+0000107808 00000 n
+0000108100 00000 n
+0000108540 00000 n
+0000108859 00000 n
+0000108836 00000 n
+0000123973 00000 n
+0000141510 00000 n
+0000127664 00000 n
+0000131357 00000 n
+0000135057 00000 n
+0000138763 00000 n
+0000141946 00000 n
+trailer
+<<
+/Size 468
+/Root 1 0 R
+/Info 3 0 R
+/ID [<8E5F1E064F724B281F08FC4E4644F84F> <A74EFB7FCB6B2651246EAD1977121C6D>]
+>>
+startxref
+144247
+%%EOF
