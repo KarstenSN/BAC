@@ -1,56 +1,124 @@
-\begin{longtable}{| l | L{4cm} | Z | Z | L{3 cm} |} \hline
-Krav & Test & Forventet Resultat & Resultat & Godkendt/ kommentar \\ \hline
+I denne sektion testes de ikke-funktionelle krav. Kravende testes individuelt og opstilles med deres ID.
 
-    1.	& Der udmåles en strækning, på en vandret overflade, på $10$ meter. Bilen startes således at maksimumshastighed er nået når den passerer startpunktet for den udmålte strækning. Der tages tid på bilen fra startpunkt til slutpunkt af strækningen. Herefter omregnes disse data til en hastighed.
-    	& Der måles en maksimumshastighed på $10$ km/t $\pm$ $10\%$.
-    	& Der blev målt en maksimalhastighed på $5.14$ km/t.
-    	& IKKE OK - Forstærkningen af brugerinput i steeringklassen på Pi er ikke kalibreret. Dette vil sandsynligvis løse dette.\\ \hline
-    
-    2. 	& Der udmåles en strækning, på en vandret overflade, på $1$ meter. Bilen startes således at maksimumshastighed er nået når den passerer startpunktet for den opmålte strækning. Bilen sættes til at bremse indtil at bilen er i stilstand. Der observeres om bilen er kommet ud over slutpunkt for den udmålte strækning.
-    	& Bil er i stilstand inden for den udmålte stræknings start- og slutpunkt.
-    	& Bilen var først i stilstand efter 1.2 meter.
-    	& IKKE OK\\ \hline
-    
-	3. 	& Bilen sættes til at accelerere ligeud på en vandret overflade. Der tages tid fra start af bilens acceleration. Ved $6$ sekunders mærket tages der to billeder af bilen med et kamera med en maks. lukketid på $1/100 s$. Disse billeder bruges til at finde hastigheden af bilen, ved at aflæse længden bilen har flyttet sig og dividere det med tiden der er gået mellem de to billeder.
-		& De beregnede data viser at bilen har nået maksimumhastighed på $10$ km/t $\pm$ $10\%$.
-		& Test ej udført
-		& IKKE OK\\ \hline
-	
-	4. 	& Bruger trykker på ''B''-knappen på Xbox-360 controlleren. Der måles en tid fra tryk på knap til test-LED på bilen lyser.
-		& Den målte tid overstiger ikke $50$ms.
-		& Test ej udført
-		& IKKE OK - Lampe ej monteret på bil.\\ \hline
-	
-    5. 	& Der placeres en genstand der opfylder givne krav for forhindring ($30cm \times 30cm$) i afstanden $6m$ fra sensoren og der måles om sensoren detekterer pågældene genstand.
-    	& Der observeres at sensoren detekterer genstanden.
-    	& Sensorerne viser maks $1.5m$ afstand og kan derved ikke detektere objekter på $6m$ afstand
-    	& IKKE OK - Skyldes formentlig akustiks støj fra de andre sensorer.\\ \hline
-    
-    6. 	& Bruger slukker for program på PC.
-    	& Der observeres at bilens bremse-LED lyser indenfor $50 ms$.
-    	& Test ej udført
-    	& IKKE OK - Bremselys ej monteret.\\ \hline
-    
-	7. 	& Datablad for kamera aflæses.
-		& Kameraet er detekteret til at have en opdateringshastighed på minimum $15$ billeder i sekundet.
-		& Kameraets opdateringshastighed er på 15 billeder i sekundet.
-		& OK\\ \hline
-       
-    8. 	& Der tages et screenshot af hovedvinduet. Selve videofeedet beskæres i mspaint.exe og måles.
-    	& Den målte opløsning er $640 \times 480$ pixels.
-    	& Feedet præsenteres med en opløsning på $1182 \times 945$ pixels.
-    	& OK - Billedet skaleres efter størrelsen på softwarens vindue.\\ \hline
-    
-    9. 	& Wireshark anvendes til at aflæse antal kommandoer sendt per sekund.
-    	& Den aflæste mængde kommandoer er minimum $60$.
-    	& Der aflæses 100 kommandoer per sekund til bilen.
-    	& OK\\ \hline
-    	
-    10.	& Bruger kigger på HID.
-    	& HID består af Xbox-360 controller, tastatur og mus.
-    	& HID består af Xbox-360 controller, tastatur og mus.
-    	& OK -  Xbox-360 controller anvendes til at styre bilen, tastatur og mus anvendes til at navigere i software på PC.\\ \hline 
-    
-\caption{Ikke funktionelle krav}
-\label{tbl:ikkefunk}
-\end{longtable}
+\textbf{Brugervenlighed}
+
+\textbf{US\_01} Tastaturet skal bestå af 4 taktile trykknapper. \\
+Der kigges på tastaturet og det konstateres at det består af 4 knapper. Kravet er opfyldt.
+
+\textbf{US\_02} Tastaturet skal indeholde 1 rød LED til indikation af fejl. \\
+Der kigges på kontrolboksen og det konstateres at der er monteret en rød LED ved siden af displayet. Kravet er delvist opfyldt da LED'en ikke sidder på tastaturet.
+
+\textbf{US\_03} Tastaturet skal have en størrelse på B:70mm H:23mm. \\
+Tastaturet måles med en skydelærer og kravet er opfyldt.
+
+\textbf{US\_04} Displayet skal kunne vise jordfugtighed samt temperatur. \\
+Kravet er testet via UC2. Kravet er opfyldt
+
+\textbf{US\_05} Displayet skal kune vise systemets menuer. \\
+Kravet er testet via UC3 - UC8. Kravet er opfyldt.
+
+\textbf{US\_06} Displayet skal have en størrelse på B:53mm H:22mm. \\
+Displayet måles med en skydelærer og kravet er opfyldt.
+
+\textbf{US\_07} Displayet skal være baggrundsbelyst. \\
+Der trykkes på \texttt{SET} knappen på tastaturet og baggrundslyset tændes. Kravet er opofyldt.
+
+\textbf{US\_08} Motorventilen skal kunne tilsluttes 1/2" tomme vandrør. \\
+Det forsøges at montere motorventilen på et 1/2" vandrør. Kravet er opfyldt.
+
+\textbf{US\_09} Printplader til kontrolboks og sensor skal monteres i et plasthus med en størrelse på B:83mm H:59mm D:34mm \\
+Der måles med en skydelærer på både sensor og kontrolboks. Kravet er opfyldt.
+
+\textbf{Driftsikkerhed}
+
+\textbf{RI\_01} Systemfejl skal indikeres med en rød LED på tastaturet. \\
+Batterispændingen sænkes til 4V og LED'en tændes og teksten "Low bat" fremkommer på displayet. Kravet er delvist opfyldt da der ikke er indikation af andre fejl.
+
+\textbf{Performance}
+
+\textbf{PF\_01} Sensorens batteritype skal være 2 stk AAA. \\
+Der kigges på sensoren og der ses at der er plads til montage af 2 stk AAA batterier. Kravet er opfyldt.
+
+\textbf{PF\_02} Sensorens batterilevetid skal være minimum 1 år. \\
+Batterilevetiden testes ved at lodde en 10$\Omega$ modstand i serie med en ekstern strømforsyning til sensoren. Der måles med et oscilloskop således at sensorens strømtræk kan udregnes via en konvention. Det antages at et standard AAA batteri har en kapacitet på 800mA. 
+
+\begin{equation}
+ i = \dfrac{V_{measured}}{10\Omega}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/acceptest/scope_2_current.png}
+	\caption{Spændingen over 10$\Omega$ modstanden ved en forsyningsspænding på 3.45V}
+	\label{fig:currentdraw_345}
+\end{figure} 
+
+Det ses på Figur \ref{fig:currentdraw_345} at det første der sker er at mikroprocessoren vågner op. Herefter tændes for måle-ground og \texttt{sensorPackage} sendes til kontrolboksen. Dette ses via det skiftende strømtræk. Herefter går der et stykke tid og mikroprocessoren ligges i power-down mode igen. Det antages at spændingen totalt over hele perioden er 180mV (Proben er sat i x10). Periodetiden er 380ms. Dette bliver omregnet til 18mA. Sænkes forsyningsspændingen til under  2.8V enables boostconverteren og der vil derfor trækkes mere strøm. Se Figur \ref{fig:currentdraw_237}. Her trækkes der 40mA i 380ms. Det ses på Figur \ref{fig:currentdraw_3} og \ref{fig:currentdraw_4} at når boost converteren er enablet vil der også trækkes strøm selvom at mikroprocessoren er i power-down mode. Dette skyldes at boost-converteren hele tiden skal opretholde en spænding på 3.3V. Det antages at der i gennemsnit trækkes 30mA i 380ms hvert kvarter hvilket bliver 1.52 sek hver time. Der vælges at se bort fra boost-converterens strømtræk da dette kun vil være i slutningen af batteriets levetid den vil være enablet. Batterilevetiden kan nu approximeres:
+
+\begin{equation}
+lifetime = \dfrac{800mA}{30mA\cdot 1.52s / 60s\cdot 60min}\cdot \dfrac{1}{24hour\cdot 360days} = 7.3 year
+\end{equation} 
+
+Det skal dog siges at det er en approximation og at beregningerne kan laves mere præcis. Men de viser at kravet om 1 års leve tid er opfyldt. 
+
+ 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/acceptest/scope_3_current.png}
+	\caption{Spændingen over 10$\Omega$ modstanden ved en forsyningsspænding på 2.37V}
+	\label{fig:currentdraw_237}
+\end{figure}  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/acceptest/scope_5_current.png}
+	\caption{Strømtræk fra boost-converteren}
+	\label{fig:currentdraw_3}
+\end{figure}  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/acceptest/scope_4_current.png}
+	\caption{Strømtræk fra boost-converteren}
+	\label{fig:currentdraw_4}
+\end{figure}  
+
+\textbf{PF\_03} Sensoren skal fungere ned til 1.8V batterispænding.\\
+
+\textbf{PF\_04} Minimum 10 instanser af systemet skal kunne køre samtidig. \\
+
+\textbf{PF\_05} Temperatursensoren skal kunne måle i området fra $-20^\circ$ til $-70^\circ$. \\
+
+\textbf{PF\_06} Jordfugtigheden skal kunne måles med en præcision på minimum 5\%. \\
+ 
+\textbf{PF\_07} Kommunikation mellem sensor og kontrolboks skal ske på under 1 sekund. \\
+
+\textbf{PF\_08} Jordfugtighed og temperatur skal kunne vises med 1 decimal på kontrolboksen. \\
+
+\textbf{PF\_09} Sensoren og kontrolboks skal være funktionsdygtig i temperaturområdet $-20^\circ$ til $-70^\circ$. \\
+
+\textbf{Vedligeholdelse}
+
+\textbf{SP\_01} Systemet skal kun vedligeholdes i forbindelse med batteriskift. \\
+
+\textbf{SP\_02} Batteriet på sensoren skal være let tilgængelig. \\
+
+\textbf{SP\_03} Brugeren skal selv kunne udskifte batteriet på sensoren. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

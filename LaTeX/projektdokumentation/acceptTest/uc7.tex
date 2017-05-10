@@ -1,120 +1,120 @@
 \begin{longtable}{| l | >{\raggedright}X | >{\raggedright}X | >{\raggedright}X | >{\raggedright\arraybackslash}p{2.3cm} |} \hline
 	\multicolumn{2}{|l|}{\textbf{Use case under test}}  & \multicolumn{3}{l|}{UC7: Indstil vandingstidspunkt} \\ \hline
 	\multicolumn{2}{|l|}{\textbf{Scenarie}} 			& \multicolumn{3}{l|}{Hovedscenarie} \\ \hline
-	\multicolumn{2}{|l|}{\textbf{Forudsætning}} 		& \multicolumn{3}{p{10.2cm}|}{UC1 og UC8 er gennemført samt sensoren er placeret i tør luft og dagslys. Fugtigheden er indstillet til 10\% i UC3. Åbningstiden er indstillet til 1 minut i UC4\hfill} \\ \hline
+	\multicolumn{2}{|l|}{\textbf{Forudsætning}} 		& \multicolumn{3}{p{10.2cm}|}{UC1 og UC8 er gennemført samt sensoren er placeret i tør luft og dagslys. Fugtigheden er indstillet til 10\% i UC3. Watering time er indstillet til 1 minut i UC4\hfill} \\ \hline
 	%\multicolumn{5}{|l|}{}\\ \hline
 	\textbf{Step} 	& \textbf{Handling} & \textbf{Forventet Resultat} & \textbf{Resultat} & \textbf{Godkendt / Kommentar} \\ \hline
 	
 	1   & Der trykkes på \texttt{SET} 5 gange
-		& Teksten "Watering period" fremkommer på displayes linje 1. På linje 2 vises hvad indstillingen i forvejen er sat til
-		& resultat
-		& resultat\\ \hline
+		& Teksten "Watering period" fremkommer på displayes linje 1. På linje 2 vises "Time:" efterfulgt af hvad indstillingen i forvejen er sat til
+		& OK
+		& Godkendt\\ \hline
 		
 	2   & Der trykkes på enten \texttt{Pil-op} eller \texttt{Pil-ned} for at vælge \texttt{Evening}
 		& Vandingstidspunktet er sat til \texttt{Evening}
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt\\ \hline
 		
 	3   & Der trykkes på \texttt{OK}
 		& Der returneres til hovedmenuen
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt\\ \hline
 		
 	4   & Sensoren ligges i en papkasse således intet lys kan komme igennem
 		& Sensoren ligger i en papkasse hvor intet lys kommer igennem
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt\\ \hline
 		
 	5   & Der ventes i op til 15 min
 		& Ventilen åbner
-		& resultat
-		& resultat\\ \hline
+		& Ventilen åbner efter 14 min og 7 sek
+		& Godkendt\\ \hline
 		
 	6   & Der ventes i 1 min
 		& Ventilen lukker
-		& resultat
-		& resultat\\ \hline	
+		& Ventilen lukker efter 1 min og 4 sek
+		& Godkendt \\ \hline	
 
 	7   & Der trykkes på \texttt{SET} 5 gange
 		& Teksten "Watering period" fremkommer på displayes linje 1. På linje 2 vises "Time:Evening"
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt \\ \hline
 		
 	8   & Der trykkes på \texttt{Pil-op} for at vælge \texttt{Morning}
 		& Vandingstidspunktet er sat til \texttt{Morning}
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt \\ \hline
 		
 	9   & Der trykkes på \texttt{OK}
 		& Der returneres til hovedmenuen
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt \\ \hline
 		
 	10  & Sensoren tages ud af papkassen og ligges i dagslys
 		& Sensoren ligger i dagslys
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt\\ \hline
 		
 	11  & Der ventes i op til 15 min
 		& Ventilen åbner
-		& resultat
-		& resultat\\ \hline		
+		& Ventilen åbner efter 13 min og 47 sek.
+		& Godkendt\\ \hline		
 
 	12  & Der ventes i 1 min
 		& Ventilen lukker
-		& resultat
-		& resultat\\ \hline	
+		& Ventilen lukker efter 1 min og 4 sek.
+		& Godkendt\\ \hline	
 		
 	13  & Der trykkes på \texttt{SET} 5 gange
 		& Teksten "Watering period" fremkommer på displayes linje 1. På linje 2 vises "Time:Morning"
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt\\ \hline
 		
 	14  & Der trykkes på \texttt{Pil-ned} to gange for at vælge \texttt{Both}
 		& Vandingstidspunktet er sat til \texttt{Both}
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt\\ \hline
 	
 	15  & Der trykkes på \texttt{OK}
 		& Der returneres til hovedmenuen
-		& resultat
-		& resultat\\ \hline	
+		& OK
+		& Godkendt\\ \hline	
 		
 	16  & Sensoren ligges i en papkasse således intet lys kan komme igennem
 		& Sensoren ligger i en papkasse hvor intet lys kommer igennem
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt \\ \hline
 		
 	17  & Der ventes i op til 15 min
 		& Ventilen åbner
-		& resultat
-		& resultat\\ \hline
+		& Ventilen åbner efter 14 min og 2 sek
+		& Godkendt \\ \hline
 		
 	18  & Der ventes i 1 min
 		& Ventilen lukker
-		& resultat
-		& resultat\\ \hline	
+		& Ventilen lukker efter 1 min og 4 sek
+		& Godkendt \\ \hline	
 
 	19  & Der ventes i op til 15 min
 		& intet sker
-		& resultat
-		& resultat\\ \hline		
+		& OK
+		& Godkendt\\ \hline		
 		
 	20  & Sensoren tages ud af papkassen og ligges i dagslys
 		& Sensoren ligger i dagslys
-		& resultat
-		& resultat\\ \hline
+		& OK
+		& Godkendt \\ \hline
 		
 	21  & Der ventes i op til 15 min
 		& Ventilen åbner
-		& resultat
-		& resultat\\ \hline		
+		& Ventilen åbner efter 13 min og 42 sek
+		& Godkent\\ \hline		
 
 	22  & Der ventes i 1 min
 		& Ventilen lukker
-		& resultat
-		& resultat\\ \hline	
+		& Ventilen lukker efter 1 min og 4 sek
+		& Godkendt \\ \hline	
 				
 	
-\caption{Accepttest for UC7: Brems Bil }\label{tbl:acceptuc7}
+\caption{Accepttest for UC7: Indstil vandingstidspunkt }\label{tbl:acceptuc7}
 \end{longtable}

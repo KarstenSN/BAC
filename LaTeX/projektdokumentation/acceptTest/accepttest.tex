@@ -2,8 +2,8 @@
 
 \section{Funktionelle Krav}
 
-For at teste de funktionelle krav tages der udgangspunkt i use-casene i sektion \ref{sec:use_cases} side \pageref{sec:use_cases}. Visse Use Cases kan dog kun testes hvis andre Use Cases er blevet udført og indstillet til en bestemt indstilling. Dette vil fremgå af selve accepttesten under forudsætning. Under test af en Use Case vil der samtidig kunne testes om de funktionelle krav fra Sektion \ref{sec:funktionelle_krav} side \pageref{sec:funktionelle_krav} er implementeret. Sammenhæng mellem disse og Use Casene ses i Tabel \ref{tbl:kravTabel}. Det er dog ikke alle krav der kan testes i Use Casene og disse vil derfor blive testet separat. 
-\todo[inline]{opdater funktionelle ikke funktionelle krav}
+For at teste de funktionelle krav tages der udgangspunkt i Use Casene i sektion \ref{sec:use_cases} fra side \pageref{sec:use_cases}. Visse Use Cases kan dog kun testes hvis andre Use Cases er blevet udført og sat til en bestemt indstilling. Dette vil fremgå af selve accepttesten under rubrikken forudsætning. Under test af en Use Case vil der samtidig kunne testes om de funktionelle krav fra Sektion \ref{sec:funktionelle_krav} side \pageref{sec:funktionelle_krav} er implementeret. Sammenhæng mellem disse krav og Use Cases ses i Tabel \ref{tbl:kravTabel}. Det er ikke alle krav der  testes i Use Casene og disse vil derfor blive testet separat. 
+
 \begin{table}[H]
 \centering
 \begin{tabularx}{\textwidth-5cm}{| C{2 cm} | X | X | X | X | X | X | X | X | X | X | X | X |}
@@ -17,41 +17,41 @@ Use-case/krav &\begin{turn}{90}{UC1}\end{turn} % tænd system
 			  &\begin{turn}{90}{UC7}\end{turn} % indstil vandingstidspunkt
 			  &\begin{turn}{90}{UC8}\end{turn} \\ \hline % par sensor og kontrolboks
 	   MC\_01 & X & X & X & X & X & X & X & X  \\ \hline
-	   MC\_02 &   &   &   &   &   &   &   &    \\ \hline
-	   MC\_03 &   &   &   &   &   &   &   &    \\ \hline
-	   MC\_04 &   &   &   &   &   &   &   &    \\ \hline
-	   MC\_05 &   &   &   &   &   &   & X &    \\ \hline
-	   MC\_06 &   &   &   &   &   &   &   &    \\ \hline
-	   MC\_07 &   &   &   &   &   &   &   &    \\ \hline
-	   MC\_08 & X &   &   &   &   &   &   &    \\ \hline
-	   MC\_09 &   &   &   &   &   &   &   &    \\ \hline
-	   MC\_10 &   &   &   &   &   &   &   &    \\ \hline
+	   MC\_02 &   & X & X & X &   &   & X &    \\ \hline
+	   MC\_03 &   & X &   &   &   &   &   &    \\ \hline
+	   MC\_04 &   &   & X & X & X & X & X &    \\ \hline
+	   MC\_05 &   &   & X & X & X & X & X &    \\ \hline
 	   EL\_01 & X &   &   &   &   &   &   &    \\ \hline
-	   EL\_02 &   &   & X & X & X & X & X &    \\ \hline
-	   EL\_03 & X &   &   &   &   &   &   &    \\ \hline
-	   CM\_01 &   &   & X & X & X & X & X & X  \\ \hline
-	   CM\_02 &   &   &   &   &   &   &   &    \\ \hline
-	   CM\_03 &   &   &   &   &   &   &   & X  \\ \hline
-	   UX\_01 & X & X & X & X & X & X & X & X  \\ \hline
-	   UX\_02 &   &   &   &   &   &   &   &    \\ \hline
-	   UX\_03 &   &   &   &   &   & X &   &    \\ \hline
-	   UX\_04 &   &   &   & X &   &   &   &    \\ \hline
-	   UX\_05 &   &   & X &   &   &   &   &    \\ \hline
+	   EL\_02 & X &   &   &   &   &   &   &    \\ \hline
+	   CM\_01 &   & X & X & X & X & X & X & X  \\ \hline
+	   CM\_02 &   &   &   &   &   &   &   & X  \\ \hline
+	   UX\_01 &   &   &   &   &   & X &   &    \\ \hline
+	   UX\_02 &   &   & X &   &   &   &   &    \\ \hline
+	   UX\_03 &   &   &   & X &   &   &   &    \\ \hline
+	   UX\_04 &   &   &   &   &   &   & X &    \\ \hline
 	   UX\_06 &   &   &   &   & X &   &   &    \\ \hline
-	   UX\_07 &   &   &   &   &   &   & X &    \\ \hline
 
 \end{tabularx}
-\caption{Tabel som viser hvilket krav der testes via hvilke Use Cases}
+\caption{Tabel over hvilke krav der testes i hvilke Use Cases}
 \label{tbl:kravTabel}
 \end{table}
 
-\textbf{MC\_02} \textit{Could} Systemet skal kunne pre-indstilles til en specifik afgrøde \\
-Er ikke blevet implementeret. 
+\textbf{CM\_03} \textit{Should} Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m. \\ 
+Testes ved at gennemføre UC8 ved en afstand mellem kontrolboks og sensor på 30m. 
 
-\textbf{MC\_03} \textit{Would} Systemet skal kunne betjenes via en smartphone-applikation \\
+\textbf{UX\_05} \textit{Should} Kontrolboksen skal kunne måle om slangen er sprunget fra og give fejlmelding.\\
 Er ikke blevet implementeret.
 
-\textbf{MC\_04} \textit{Would} Systemet skal kunne tilsluttes flere sensorer \\
+\textbf{MC\_06} \textit{Could} Systemet skal kunne pre-indstilles til en specifik afgrøde. \\
+Er ikke blevet implementeret. 
+
+\textbf{MC\_07} \textit{Could} Systemet skal kunne måle PH-værdien i jorden.\\
+Er ikke blevet implementeret.
+
+\textbf{MC\_08} \textit{Would} Systemet skal kunne betjenes via en smartphone-applikation. \\
+Er ikke blevet implementeret.
+
+\textbf{MC\_09} \textit{Would} Systemet skal kunne tilsluttes flere sensorer. \\
 Er ikke blevet implementeret.
 
 
@@ -62,7 +62,7 @@ Er ikke blevet implementeret.
 \subsubsection{Use Case 2: Aflæs fugtighed og temperatur}
 \LTXtable{\textwidth}{accepttest/uc2}
 \clearpage
-\subsubsection{Use Case 3: Indstil ønsket fugtighed i jorden}
+\subsubsection{Use Case 3: Indstil ønsket fugtighed}
 \LTXtable{\textwidth}{accepttest/uc3} 
 \clearpage
 \subsubsection{Use Case 4: Indstil åbningstid}
@@ -84,6 +84,6 @@ Er ikke blevet implementeret.
 \clearpage
 
 \section{Ikke-funktionelle krav}
-\LTXtable{\textwidth}{Accepttest/ikke_funk}
+\input{Accepttest/ikke_funk}
 
 \clearpage

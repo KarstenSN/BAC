@@ -169,7 +169,7 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
 		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
-		RI\_01		 & Systemfejl skal indikeres med rød LED på keypad						& \\ \hline
+		RI\_01		 & Systemfejl skal indikeres med rød LED på tastaturet						& \\ \hline
 	\end{tabularx}
 	\caption{Krav til driftsikkerhed}
 	\label{tbl:driftsikkerhed_krav}
@@ -179,15 +179,15 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
 		\textbf{ID:} & \textbf{Krav:}														& \textbf{Kommentarer:} \\ \hline
-		PF\_01		 & Batteritype (Alkaline AAA) 											& \\ \hline
-		PF\_02		 & Sensorens batterilevetid (min 1 år)  								& \todo[inline]{test??}\\ \hline
+		PF\_01		 & Sensorens batteritype skal være 2 stk AAA							& \\ \hline
+		PF\_02		 & Sensorens batterilevetid skal være minimum 1 år						& \\ \hline
 		PF\_03		 & Sensoren skal fungerer ned til 1.8V batterispænding 					& \\ \hline		
 		PF\_04		 & Minimum 10 instanser af systemet skal kunne køre samtidig			& \\ \hline
-		PF\_05		 & Temperaturmåleren skal kunne måle fra ($ -20 - 70 ^{\circ}C $)								& \\ \hline
-		PF\_06		 & Målepræcision (5\%)													& \todo[inline]{hvordan test vi?}\\ \hline
-		PF\_07		 & Systemrespons fra brugerinteraktion til aktuator skal være 1<sek		& \todo[inline]{hvordan test vi?}\\ \hline
-		PF\_08		 & Sensoren skal kunne måle temperatur og jordfugtighed med min. 1 decimals præcision	& \\ \hline
-		PF\_09		 & Sensoren skal være funktionsdygtig i temperaturintervallet ($ -20 - 70^{\circ}C $) 		& \\ \hline
+		PF\_05		 & Temperatursensoren skal kunne måle i området $ -20^{\circ}C$ til $70 ^{\circ}C $								& \\ \hline
+		PF\_06		 & Jordfugtigheden skal kunne måles med en præcision på minimum 5\%		& \\ \hline
+		PF\_07		 & Kommunikation mellem kontrolboks og sensor skal ske på under 1 sekund	& \\ \hline
+		PF\_08		 & Kontrolboksen skal kunne vise temperatur og jordfugtighed med 1 decimals afstand	& \\ \hline
+		PF\_09		 & Sensor og kontrolboks skal være funktionsdygtig i temperaturområdet $ 0^{\circ}C$ til $70 ^{\circ}C $	 		& \\ \hline
 	\end{tabularx}
 	\caption{Krav til performance}
 	\label{tbl:performance_krav}
