@@ -4,7 +4,7 @@
 
 Valget af antennetype og transmissionsfrekvens afhænger af hvilken effekt der ønskes ved receiver-antennen og dermed hvor lang rækkevidde der kan opnås, dette sættes i forhold til den effekt transmitter-antennen fødes med. Som udgangspunkt gælder at jo højere frekvens des kortere rækkevidde. Så valget til dette system er altså begrænset af ISM-båndene, samt krav CM\_03 om en rækkevidde på min 30m. Der er derfor groft sagt 2 mulige frekvenser at vælge imellem 433MHz, 868MHz hvis der snakkes inden for Europe. Ydermere er der et trade-off i forbindelse med forholdet imellem bølgelængde og størrelse på antennen, mere om det senere i dette afsnit.
 
-Af ligning \ref{eq:ant_R} på side \pageref{eq:ant_R} ses det at transmissionsfrekvensen vælges til at 433MHz, for at overholde krav CM\_02.
+Af ligning \ref{eq:ant_R} på side \pageref{eq:ant_R} ses det at transmissionsfrekvensen vælges til at 433MHz, for at overholde krav CM\_03 om min. 30m.
 
 Sammenhængen imellem parametre fås ved \textit{Friis transmissions formel}
 2-117 på side 95 i \cite{lib:balanis}
@@ -84,7 +84,7 @@ af ligning \ref{eq:ant_R} ses det at ved den givne transmissionsfrekvens kan det
 For at finde den optimale antenne til systemet er der foretaget en teknologiundersøgelse af forskellige antennetyper samt deres performance. Der er ydermere foretaget en række beregninger i forbindelse med disse antenner, dette kan ses i Appendix \ref{appendix:antenne}. Tre typer antenner blev undersøgt: TH-monteret Helical antenne, microstrip antenne, samt SMD-monteret antenne. Derudover blev der også eksperimenteret med at implementere en loopantenne på indersiden af plasthuset, sidstnævnte blev dog hurtigt afskrevet pga. dens krævende monteringsprocess samt manglende mekaniske understøttelse der vil føre til et ustabilt produkt og øget omkostninger. 
 
 Til kontrolboksen er valgt at benytte en SMD-monteret 433 MHz ISM Antenna fra \textit{Johanson Technology} \cite{lib:ant_jt_datasheet}. Dette valg skyldes primært pladskravene til antennen på PCB'et, hvorfor en større antenne er udelukket. Den valgte antenne har en Max Gain på $ G_{max}=-4.0 dBi$ jvf. databladet.
-Antennes karakteristisk impedans er 50 $\Omega$ hvilket sætter kravet til den microstripline der føder antennen. Ved at benytte formel 9-39 på side 528 i \cite{lib:balanis} kan banebredden beregnes når følgende parametre for PCB'et kendes: 
+Antennens karakteristisk impedans er 50 $\Omega$ hvilket sætter kravet til den microstripline der føder antennen. Ved at benytte formel 9-39 på side 528 i \cite{lib:balanis} kan banebredden beregnes når følgende parametre for PCB'et kendes: 
 
 \begin{align} \label{eq:ant_trace}
 	Z_{c} = \frac{87}{\varepsilon_{r}+1.41} \times ln{\bigg( \frac{5.98h}{0.8w+t} \bigg)}
@@ -109,3 +109,8 @@ De givne parametre indsættes og ligning \ref{eq:ant_trace} løses for $w$
 \end{align}
 
 Hermed kendes banebredde der skal føde antennen for at få optimal matching.
+
+\textbf{Modultest - Antenne} \\
+Da det ikke har været muligt at få modultestet antennedesignet alene i et laboratorie, er der derfor foretaget nogle empiriske måling hvor kontrolboks og sensor er blevet parret over forskellige afstande således at kravet CM\_03 kan overholdes.
+
+\vfill

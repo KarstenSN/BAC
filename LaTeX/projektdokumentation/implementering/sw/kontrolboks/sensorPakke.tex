@@ -1,12 +1,15 @@
 \subsubsection{SensorPakke} \label{sec:SWimp_sensorPakke}
 
+Som det ses på Figur \ref{fig:sensorpakke1} skal sensorpakken bestå af i alt 11 bytes. To bytes som tilsammen udgør et startword til \texttt{transceiver} samt 1 byte til hhv. ID og batteristatus,2 temperatur-bytes, 2 fugtigheds-bytes, 1 byte til lystyrke samt 2 Cheksum-bytes. 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../fig/Kommunikation/sensorpakke.pdf}
+	\includegraphics[width=0.5\textwidth]{../fig/Kommunikation/sensorpakke.pdf}
 	\caption{Sensorpakke}
 	\label{fig:sensorpakke1}
 \end{figure}
 
+Implementeringen ses på Figur \ref{fig:sensorpakke2}. 
 
 \begin{figure}[H]
 	\centering

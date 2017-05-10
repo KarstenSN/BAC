@@ -1,5 +1,5 @@
 \subsubsection{Jordfugtmåler}  \label{sec:HWimp_jordfugt}
-Hovedformålet med jordfugt sensoren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling. Skalaen som der er brugt at at bestemme jordfugten er den volumetriske skala\cite{lib:wiki_waterContent}. 
+Hovedformålet med jordfugtmåleren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling. Skalaen som der er brugt at at bestemme jordfugten er den volumetriske skala\cite{lib:wiki_waterContent}. 
 
 \begin{equation}
 	\theta = \frac{V_w}{V_s + V_w +V_a} \cdot 100\%
@@ -45,7 +45,7 @@ Ved brug af denne overføringsfunktion ses R1 som værende 0 ohm.
 	\label{fig:akvj1}
 \end{figure} 
 
-I matlab blev der skrevet et script, som kan findes i bilagende, \todo[inline]{henvisning} til at udregne overføringsfunktionen. Der blev i alt foretaget målinger på tre typer jord, en taget på Helgenæs, en i Randers samt en så og plantejord fra en plantesæk. Aflæsningen blev foretaget ved 3$\tau$ og ikke ved 1 $\tau$ som ellers er normalen. Dette skyldes at R1 er sat til 0 ohm. 
+I MATLAB blev der skrevet et script, som kan findes i appendix \ref{appendix:res_jordfugt} til at udregne overføringsfunktionen. Der blev i alt foretaget målinger på tre typer jord, en taget på Helgenæs, en i Randers samt en så og plantejord fra en plantesæk. Aflæsningen blev foretaget ved 3$\tau$ og ikke ved 1 $\tau$ som ellers er normalen. Dette skyldes at R1 er sat til 0 ohm.
 
 \begin{figure}[H]
 	\centering
@@ -54,7 +54,7 @@ I matlab blev der skrevet et script, som kan findes i bilagende, \todo[inline]{h
 	\label{fig:msystem}
 \end{figure} 
 
-På figur \ref{fig:msystem} ses hvordan den approksimerende overføringsfunktion er blevet målt. Den grønne streg er start tidspunktet og den gule streg er stop tidspunket. i Intervallet herimellem aflæses tiden af tre tidskonstanter. Disse divideres med 3 således at $\alpha$ står tilbage. $\beta$ aflæses blot som forholdet mellem inputtet og outputtet lige før spændingen går negativ. Grunden til at spændingen går negativ skyldes at der med tiden vil opstå slitage på proben, denne slitage vendes således at hver enkelt spyd vil slides lige meget. Det ses at når spændingen fjernes fra proben aflades C1 langsomt. Der blev noteret overføringsfunktioner for alle tre typer jord ved forskellige fugtigheder og tilsidst blev der lavet en regression til at bestemme fugtigheden ud fra $\beta$ og $\alpha$. $\alpha$ viste sig desværre afhænge meget af tiden siden den foregående måling og det var derfor ikke en fordel at inkludere den i en måling. På Figur\ref{fig:funcfit} ses regressionen af $\beta$ og på Figur\ref{fig:resplot} ses et residual plot over regressionen. Regressionen blev bestemt via matlabs indbyggede funktion \textit{fit} til at være:
+På Figur \ref{fig:msystem} ses hvordan den approksimerende overføringsfunktion er blevet målt. Den grønne streg er start tidspunktet og den gule streg er stop tidspunket. i Intervallet herimellem aflæses tiden af tre tidskonstanter. Disse divideres med 3 således at $\alpha$ står tilbage. $\beta$ aflæses blot som forholdet mellem inputtet og outputtet lige før spændingen går negativ. Grunden til at spændingen går negativ skyldes at der med tiden vil opstå slitage på proben, denne slitage vendes således at hver enkelt spyd vil slides lige meget. Det ses at når spændingen fjernes fra proben aflades C1 langsomt. Der blev noteret overføringsfunktioner for alle tre typer jord ved forskellige fugtigheder og tilsidst blev der lavet en regression til at bestemme fugtigheden ud fra $\beta$ og $\alpha$. $\alpha$ viste sig desværre afhænge meget af tiden siden den foregående måling og det var derfor ikke en fordel at inkludere den i en måling. På Figur\ref{fig:funcfit} ses regressionen af $\beta$ og på Figur\ref{fig:resplot} ses et residual plot over regressionen. Regressionen blev bestemt via matlabs indbyggede funktion \textit{fit} til at være:
 
 \begin{equation}
 	\theta = a \cdot exp(b\cdot x) + c \cdot exp(d\cdot x)
@@ -72,7 +72,7 @@ Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/residualplot.PNG}
-	\caption{Plot over residualerne}
+	\caption{Residualplot}
 	\label{fig:resplot}
 \end{figure} 
  
@@ -80,7 +80,7 @@ Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvil
 
 
 \textbf{Kapacitiv måling} \\
-Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden\cite{lib:SoilModeling} \cite{lib:MultiSensorSystem} \cite{lib:DPHP} \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}.
+Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden\cite{lib:SoilModeling} \cite{lib:MultiSensorSystem} \cite{lib:DPHP} \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}. Kobberbanerne skal dog forinden belægges med en elektrisk isolerende coating for at undgå kortslutning og korodering.
 
 \begin{figure}[H]
   \centering
@@ -92,12 +92,12 @@ Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden\cite
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=1\textwidth]{../fig/Jordfugt/printkapasitet_vad.png}
-    \caption{Tværsnit af jordspyd som der er i kontakt med vand. Her skal kobberbanerne dog være belagt med en elektrisk isolerende coating.}
+    \caption{Tværsnit af jordspyd i vand}
     \label{fig:kap2}
   \end{minipage}
 \end{figure}
 
-For en kondensator gælder:
+For en kapaciteten i en kondensator gælder:
 
 \begin{equation}
 	C = \frac{\epsilon_0\cdot \epsilon_r \cdot A}{d}
@@ -111,13 +111,13 @@ Det vil sige at kapaciteten vil blive 80 gange større når jordspyddet er stukk
 	C = \frac{8.854\cdot 10^{-12}\cdot 1 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 0.05pF
 \end{equation} 
 
-Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gange størrer:
+Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gange større:
 
 \begin{equation}
 	C = \frac{8.854\cdot 10^{-12}\cdot 80 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 4.00pF
 \end{equation} 
 
-Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det viste sig at kapaciteten lå højere end det forventede. Dette skyldes at der er udstråling fra banerne som der er svære at tage med i beregningerne. Se figur \ref{fig:spyd1},\ref{fig:spyd2},\ref{fig:spyd3},\ref{fig:spyd4}. Type 1 og 2 er meget ens. De danner begge en kapacitet mellem stelplanet og midterbanen. Størstedelen af kapaciten vil ligge for enden af spyddet hvor banen er tykkest på Type 1 og gaffelformet på Type 2. Dog er det ikke ligegyldigt hvor dybt spyddes stikkes ned i jorden da der også vil dannes en kapacitet mellem fødebanen og stelplanet. For at undgå at spyddet skal stikkes ned i en bestemt højde er Type 2 og 3 blevet lavet. Type 3 fører en bane på oversiden af printet hvor der ligger en identisk bane på bagsiden. På den måde skulle kapaciteten ikke ændre sig når der kommer vand længere op end til "diamanten". Test viste dog at kapaciteten alligevel varierede. Det blev lagt et stelplan uden på banerne for at indkapsle dem, ved at skære et andet print til, og lime det på således der laves et 4-lags print. Dette viste sig at have gode egenskaber og derfor skal jordspyddet også laves i 4-lag hvis der en gang skal laves en produktion. Type 4 er delt med et stelplan således at banerne ikke kan se hinanden. Dette print var dog det der performede dårligst da det kun virkede når der lå vand mellem banerne. Kom der først vand ud på stelplanet blev her dannet en kapacitet som var sammenligning med det der var mellem pladerne og virkningen blev herved reduceret. Der blev herefter testet i en så og prikle jord med Type 1,2 og 3 for sammenhæng mellem kapacitet og fugtighed. Se Figur \ref{fig:graffugt}.
+Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det viste sig at kapaciteten lå højere end det forventede. Dette skyldes at der er udstråling fra banerne som der er svære at tage med i beregningerne. Se figur \ref{fig:spyd1},\ref{fig:spyd2},\ref{fig:spyd3},\ref{fig:spyd4}. Type 1 og 2 er meget ens. De danner begge en kapacitet mellem stelplanet og midterbanen. Størstedelen af kapaciten vil ligge for enden af spyddet hvor banen er tykkest på Type 1 og gaffelformet på Type 2. Dog er det ikke ligegyldigt hvor dybt spyddes stikkes ned i jorden da der også vil dannes en kapacitet mellem fødebanen og stelplan'et. For at undgå at spyddet skal stikkes ned i en bestemt højde er Type 2 og 3 blevet lavet. Type 3 fører en bane på oversiden af printet hvor der ligger en identisk bane på bagsiden. På den måde skulle kapaciteten ikke ændre sig når der kommer vand længere op end til "diamanten". Test viste dog at kapaciteten alligevel varierede. Det blev lagt et stelplan uden på banerne for at indkapsle dem, ved at skære et andet print til, og lime det på således der laves et 4-lags print. Dette viste sig at have gode egenskaber og derfor skal jordspyddet også laves i 4-lag hvis der en gang skal laves en produktion. Type 4 er delt med et stelplan således at banerne ikke kan se hinanden. Dette print var dog det der performede dårligst da det kun virkede når der lå vand mellem banerne. Kom der først vand ud på stelplan'et blev her dannet en kapacitet som var sammenligning med det der var mellem pladerne og virkningen blev herved reduceret. Der blev herefter testet i en så og prikle jord med Type 1,2 og 3 for sammenhæng mellem kapacitet og fugtighed. Se Figur \ref{fig:graffugt}.
 
 \begin{figure}[H]
   \centering
@@ -158,7 +158,7 @@ Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det vis
 	\centering
 	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/moleopstilling.jpg}
 	\caption{Måleopstilling. Alle målinger er foretaget med LCR meter ESCORT ELC-133A ved 10kHz}
-	\label{fig:graffugt}
+	\label{fig:moleopstilling}
 \end{figure}  
 
 \begin{figure}[H]
@@ -168,7 +168,7 @@ Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det vis
 	\label{fig:graffugt}
 \end{figure}  
 
-Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i deres udslag, men at Type 3 har et pænt lineært forhold op til omkring 40\%. Afvigelsen skyldes at ved 40\% bliver jorden så våd at der begynder at ligge mere vand på spyddet end hvad der er i jorden. Derfor bliver kapaciteten højere end hvad den burde. Der kan nu opstilles en formel til beregning af fugtigheden af jorden hvis kapaciten af spyddet er kendt for både tør og våd. 
+Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i deres udslag, men at Type 3 har et pænt lineært forhold op til omkring 40\%. Afvigelsen skyldes at ved 40\% bliver jorden så våd at der begynder at ligge mere vand på spyddet end hvad der er i jorden. Derfor bliver kapaciteten højere end hvad den burde. Der kan nu opstilles en formel til beregning af fugtigheden af jorden hvis kapaciteten af spyddet er kendt for både tør og våd. 
 
 \begin{equation}
 	\theta = \frac{C_{weat} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
@@ -314,7 +314,7 @@ Kredsløbet blev designet på PCB sensor\_3.brd som bruger type 4 jordspyd. Grun
 	\centering
 	\includegraphics[width=0.4\textwidth]{../fig/Jordfugt/scope_klip.jpg}
 	\caption{Målt på udgangen af U12A. Her ses klipning ved 160pF. Scopet står i dual channel men kanal 2 er ikke koblet til noget}
-	\label{fig:j8}
+	\label{fig:scopeU12A}
 \end{figure}
 
 \textbf{Målerkredsløb ver.02} \\
