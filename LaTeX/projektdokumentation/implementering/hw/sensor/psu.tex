@@ -90,8 +90,7 @@ Herefter ganges op med $\theta_{JA}= 190.5^\circ C/W $ (Package terminal resista
 
 \textit{PCB-udlæg overvejelser} \label{sec:psu_PCB} \\
 
-\texttt{Sensor ver2:} \\
-
+Boostkonverteren først blev implementeret på version 4 af sensoren-printet, derfor ingen tidligere iterationer af denne.
 I Databladet anbefales et layout af konverteren med tilhørende eksterne komponenter, det er forsøgt fulgt bedst muligt,for at sikre størst mulig effektivitet af konverteren, samt mindst mulig støj. På Figur \ref{fig:boostkonverter_layout_datasheet} ses layout forslag og på Figur \ref{fig:boostkonverter_layout_PCB} ses det aktuelle layout fra sensor PCB'et. 
 
 \begin{figure}[H]
@@ -109,13 +108,13 @@ I Databladet anbefales et layout af konverteren med tilhørende eksterne kompone
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%				BOOST KONVERTER MODULTEST
+%				BOOST KONVERTER MODULTESTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Boost konverter modultest} \label{sec:psu_modultest}
+\subsubsection{Boost konverter modultests} \label{sec:psu_modultest}
 
 \input{implementering/hw/modultests/psu_modultest01}
 
-Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke du beregnede værdier fra afsnit \ref{sec:psu_beregninger}. Denne test kan ses foretaget herunder.
+Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke de beregnede værdier fra afsnit \ref{sec:psu_beregninger}. Denne test kan ses foretaget herunder.
 
 \todo[inline]{indsæt psu-modultest02 (ver3) når denne er klar.}
 

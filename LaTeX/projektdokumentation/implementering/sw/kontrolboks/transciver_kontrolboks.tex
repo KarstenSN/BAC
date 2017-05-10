@@ -1,7 +1,6 @@
 \subsubsection{Transceiver} \label{sec:SWimp_transceiver_kontrolboks}
 
-\todo[inline]{første afsnit skal lige rettes til da det er kopieret direkte fra HW-imp (frem til klasse diagram)}
-MRF49XA har i alt 16 indbyggede registre som der benyttes til at konfigurere IC'en med. For et overblik over disse henvises der til databladet\cite{lib:trans_MRFX49A_datasheet}. Herunder gennemgås hvordan der skrives til og læses fra et enkelt register. \texttt{STSREG} er statusregistret og er det eneste register der kan læses fra. Når statusregistret læses er der oftest blevet givet et eksternt interrupt til mikroprocessoren, dette interrupt kan være forsaget af mange hændelser og disse aflæses i statusregistret. Hændelser der forsager interruptet kan eks. være, at der er for lav batterispænding på sensoren, at der er wake-up timer overflow, eller at der er modtaget en byte fra senderen osv. Overblik over \texttt{STSREG} kan ses i Figur \ref{fig:mrfx49a_stsreg} og strukturen for en fuld læsning ses i Figur \ref{fig:mrfx49a_read}. Hvis bit 10 er "1" når status registret læses betyder det "Low Battery Detected", for yderligere info om statusregistret henvises til databladet \cite{lib:trans_MRFX49A_datasheet}.
+MRF49XA har i alt 16 indbyggede registre som der benyttes til at konfigurere IC'en med. For et overblik over disse henvises til databladet\cite{lib:trans_MRFX49A_datasheet}. Herunder gennemgås hvordan der skrives til og læses fra et enkelt register. \texttt{STSREG} er statusregistret og er det eneste register der kan læses fra. Når statusregistret læses er der oftest blevet givet et eksternt interrupt til mikroprocessoren, dette interrupt kan være forsaget af forskellige hændelser og disse kan aflæses i statusregistret. Hændelser der forsager interruptet er eks. at der er for lav batterispænding på sensoren, at der er wake-up timer overflow, eller at der er modtaget en byte fra sensoren. Overblik over \texttt{STSREG} kan ses i Figur \ref{fig:mrfx49a_stsreg} og sekvensen for en fuld læsning ses i Figur \ref{fig:mrfx49a_read}. Hvis bit 10 er "1" når status registret læses betyder det "Low Battery Detected". For yderligere info om statusregistret henvises til databladet \cite{lib:trans_MRFX49A_datasheet}.
 
 \begin{figure}[H]
 	\centering
@@ -17,7 +16,7 @@ MRF49XA har i alt 16 indbyggede registre som der benyttes til at konfigurere IC'
 	\label{fig:mrfx49a_read}
 \end{figure}
 
-Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generelle konfigurations register. Her vælges hvilken frekvens transceiveren skal kommunikere ved, hvilken load kapacitet krystallet skal bruge, om TX-data registret skal aktiveres og om FIFO-registret skal aktiveres. Overblik over \texttt{GENCREG} kan ses på Figur \ref{fig:mrfx49a_gencreg}.
+Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generelle konfigurations register. Her vælges hvilken frekvens transceiveren skal kommunikere ved, hvilken load-kapacitet krystallet skal bruge, om TX-data registret skal aktiveres (når tranceiveren skal sende) eller om FIFO-registret skal aktiveres (når transceiveren skal modtage). Overblik over \texttt{GENCREG} kan ses på Figur \ref{fig:mrfx49a_gencreg}.
 
 \begin{figure}[H]
 	\centering
@@ -32,16 +31,16 @@ Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generel
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/Klassebeskrivelser/rfTransciver/rfTransciver.pdf}
 	\caption{Klassediagram over RF-Transciveren}
-	\label{fig:class_rftransciver}
+	\label{fig:class_rftransciver_kontrolboks}
 \end{figure} 
 
-På Figur \ref{fig:class_rftransciver} ses klassediagram over \texttt{transceiver}.Koden er skrevet i C og det er derfor svært at give en korrekt standardiseret beskrivelse af klassen som en traditionel C++ klasse. Funktionerne er i stedet implementeret i en en struct. Det vil sige at struct'en oprettes med funktionspointere til alle public funktioner, disse er markeret med + foran funktionen. Ved private members er der sat - foran funktionen. Alle funktioner er implementeret i en .c fil hvor struct'en er implementeret i en .h fil. Det er derfor kun muligt at se de funktioner som struct'en initieres med i init-funktionen. Denne funktionen er en ekstern funktion da den ligger uden for struct'en og bliver kaldt med \texttt{transceiver} som parameter. Funktionen giver pointere fra .c filen videre til struct'en. Private members er funktioner som kun kan ses af selve .c filen selv og disse funktioner kan derfor ikke ses i .h filen.
+På Figur \ref{fig:class_rftransciver_kontrolboks} ses klassediagram over \texttt{transceiver}. Koden er skrevet i C og det er derfor svært at give en korrekt standardiseret beskrivelse af klassen som en traditionel C++ klasse. Funktionerne er i stedet implementeret i en struct. Det vil sige at struct'en oprettes med funktionspointere til alle public funktioner, disse er markeret med + foran funktionen. Private members er markeret med - foran funktionen. Alle funktioner er implementeret i en .c (source) fil hvor struct'en er implementeret i en .h (header)fil. Det er derfor kun muligt at se de funktioner som struct'en initieres med i init-funktionen. init-funktionen er en ekstern funktion da den ligger uden for struct'en og bliver kaldt med \texttt{transceiver} som parameter. Funktionen giver pointere fra .c filen videre til struct'en. Private members er funktioner som kun kan ses af selve .c filen selv og disse funktioner kan derfor ikke ses i .h filen.
 
 \textit{Variabel beskrivelse}
 	\begin{table}[H]
 		\begin{tabularx}{\textwidth}{| L{2.5cm} | l | Z |} \hline
 			Navn 					& Type 				& Beskrivelse \\ \hline
-			\texttt{mrf\_Register}	& \texttt{struct}	& Bliver brugt til at gemme værdierne af i alt 17 registre, som er konfigurerbare på transceiveren. Disse register sættes 																og skrives til transceiveren i initierings-funktionen \texttt{rfTransceiverInit}. Når der skal ændres på nogle 																		funktioner i transceiveren er det vigtigt at vide hvad der i forvejen står i et register, for at undgå at overskrive en 															indstilling. Defor opdateres denne struct hver gang et register ændres. \\ \hline
+			\texttt{mrf\_Register}	& \texttt{struct}	& Bliver brugt til at gemme værdierne af i alt 17 registre, som er konfigurer-bare på transceiveren. Disse register sættes og skrives til transceiveren i initierings-funktionen \texttt{rfTransceiverInit}. Når der skal ændres på noglefunktioner i transceiveren er det vigtigt at vide hvad der i forvejen står i et register, for at undgå at overskrive en indstilling. Defor opdateres denne struct hver gang et register ændres. \\ \hline
 		\end{tabularx}
 		\caption{Attributter for klassen MainWindow}
 	\label{table:attr_distancesensor}

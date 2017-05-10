@@ -9,5 +9,4 @@ Implementeringen af Mikroprocessoren på Sensor-PCB'et er meget lig implementeri
 	\label{fig:atmega8L_sensor_diagram}
 \end{figure}
 
-Jfv. Figur \ref{fig:atmega8L_sensor_diagram} er der følgende ændring. C6 er tilføjet for at afkoble AREFF og sørge for den interne reference på 2.56VDC til Lyssensoren. Jordfugtmåleren er koblet ind på ADC2
-
+Jfv. Figur \ref{fig:atmega8L_sensor_diagram} er der følgende ændringer. C6 er tilføjet for at afkoble AREFF og sørge for den interne reference på 2.56VDC til Lyssensoren. Jordfugtmåleren er koblet ind på ADC2 hvor C39 sørger for at levere den smule strøm som ADC'en trækker når der foretages en måling, og C39 sammen med R34 danner et LP-filter til at midle over inputtet til ADC'en. Ydermere er der koblet 2 baner som leder 100kHz samt 100kHz\_delayed signalerne ud til målekredsløbet.
