@@ -3,104 +3,48 @@
 %			MODULTEST: PSU - Iteration 02
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\todo[inline]{DETTE ER KOPI AF MODULTEST 1 (skal rettes når 02 udføres)}
-
-
-Første iteration af PSU'en blev opbygget med standardværdier fra databladets anbefalinger for at verificere at grundopsætningen og udlægget fungerer inden der optimeres herpå. 
+\textbf{PSU Modultest02} \\
+2. iteration af PSU'en blev opbygget med de beregnede værdier fra afsnit \ref{sec:HWimp_psu} fra side \pageref{sec:HWimp_psu} samt appendix \ref{appendix:psu} på side \pageref{appendix:psu}. 
 Følgende data er gældende for denne test: 
 
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{| L{3.3 cm} | Z |} \hline
 	\textbf{Test:} 					& Modultest 02 af Boostkonverter	\\ \hline
-	\textbf{Dato \& tid:}			& -- -- --							\\ \hline
-	\textbf{Udført af:}				& -- -- --							\\ \hline
+	\textbf{Dato \& tid:}			& 11-05-2017: 08.45-10.25			\\ \hline
+	\textbf{Udført af:}				& KE \& KSN							\\ \hline
 	\textbf{SW ver:}				& NA								\\ \hline
 	\textbf{Benyttet udstyr:} 		& 									
 		\begin{packed_enum}
-			\item  Oscilloskop: Keysight DSOX2002A: ID-D22401
-			\item  Spændingsforsyning: TTI EL302Tv: ID-1-C2\_9
+			\item  Oscilloskop: Agilent DSO6014A1
+			\item  Spændingsforsyning: Danica Suppply TPS23A
 			\item  Digitalt multimeter: Fluke 189
 			\item  Decadebox (Variable modstand)
 		\end{packed_enum}	 		 									\\ \hline										
 \end{tabularx}
-\caption{Data for PSU-modultest 01}
-\label{tbl:psu_modultest1}
+\caption{Data for PSU-modultest 02}
+\label{tbl:psu_modultest2}
 \end{table}
 
-Testopstilling ses på Figur \ref{fig:psu_modultest_opstilling}.
+Testopstilling ses på Figur \ref{fig:psu_modultest_opstilling2}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../fig/psu/modultest/psu_opstilling.jpg}
+	\includegraphics[width=0.9\textwidth]{../fig/psu/modultest/psu_opstilling2.jpg}
 	\caption{Testopstilling til modultest af boostkonverter}
-	\label{fig:psu_modultest_opstilling}
+	\label{fig:psu_modultest_opstilling2}
 \end{figure}
 
-Kanal 1 på Spændingsforsyningen emulerer batteripakken, og kanal 2 forsyner EN-pin'en med 3.3V. Den variable modstand sættes som load og indstilles til 33 $\Omega$ for at simulerer max. load på 100mA, da:
+Opsætning og udførelse af test foregår efter samme fremgangsmåde som modultest01 på side \pageref{psutest}.
 
-\begin{align}
-	R_{load_{max}} = \frac{V_{OUT}}{I_{OUT}} = \frac{3.3V}{100mA} = 33\Omega  
-\end{align}
+Dokumentation for samtlige målinger kan ses på de vedlagte Bilag.
 
-Den variable modstand indstilles ligeledes til 330 $\Omega$ for at simulerer min. load på 10mA, samt til 66 $\Omega$ for at simulerer middel. load på 50mA.
-
-Herefter er følgende målinger udført: 
-
-\begin{packed_enum}
-			\item  Kontinuert sekvens ved $ R_{load}=100mA $:
-			\begin{packed_enum}
-				\item 	$V_{IN} = 3.0V $
-				\item 	$V_{IN} = 2.5V $
-				\item 	$V_{IN} = 2.0V $
-				\item 	$V_{IN} = 1.8V $
-			\end{packed_enum}
-			\item  Kontinuert sekvens ved $ R_{load}=10mA $:
-			\begin{packed_enum}
-				\item 	$V_{IN} = 3.0V $
-				\item 	$V_{IN} = 2.5V $
-				\item 	$V_{IN} = 2.0V $
-				\item 	$V_{IN} = 1.8V $
-			\end{packed_enum}
-			\item  EN-sekvens ved $ R_{load}=100mA $:
-			\begin{packed_enum}
-				\item 	$V_{IN} = 3.0V $
-				\item 	$V_{IN} = 2.5V $
-				\item 	$V_{IN} = 2.0V $
-				\item 	$V_{IN} = 1.8V $
-			\end{packed_enum}
-			\item  EN-sekvens ved $ R_{load}=10mA $:
-			\begin{packed_enum}
-				\item 	$V_{IN} = 3.0V $
-				\item 	$V_{IN} = 2.5V $
-				\item 	$V_{IN} = 2.0V $
-				\item 	$V_{IN} = 1.8V $
-			\end{packed_enum}
-			\item  DIS-sekvens ved $ R_{load}=100mA $:
-			\begin{packed_enum}
-				\item 	$V_{IN} = 3.0V $
-				\item 	$V_{IN} = 1.8V $
-			\end{packed_enum}
-			\item  DIS-sekvens ved $ R_{load}=10mA $:
-			\begin{packed_enum}
-				\item 	$V_{IN} = 3.0V $
-				\item 	$V_{IN} = 1.8V $
-			\end{packed_enum}
-			\item  Middelbelastning ved $ R_{load}=50mA $::
-			\begin{packed_enum}
-				\item 	$V_{IN} = 2.5V $
-			\end{packed_enum}
-		\end{packed_enum}
-
-Dokumentation for samtlige målinger kan ses i appendix \ref{appendix:psu_modultest01}.
-
-Her er det interessant at se på målingerne ved $V_{IN}<2.8V $ da det primært er her at boostkonverteren kommer til at arbejde, samt at kravet PF\_03 skal være opfyldt.På Figur \ref{fig:modultest01_scope_05} på side \pageref{fig:modultest01_scope_05} ses at der ved $ R_{load}=100mA $ stadig står $3.3V$ på udgangen af konverteren.
+Her er det igen interessant at se på målingerne ved $V_{IN}<2.8V $ da det primært er her at boostkonverteren kommer til at arbejde, samt at kravet PF\_03 skal være opfyldt.På Figur \ref{fig:modultest01_scope_05_2} ses at der ved $ R_{load}=100mA $ stadig står $3.3V$ på udgangen af konverteren.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../fig/appendix/psu/scope_5.png}
+	\includegraphics[width=0.9\textwidth]{../fig/psu/modultest/scope_5_2.png}
 	\caption{Kontinuert-mode: $R_{load}=100mA$,$V_{IN} = 1.8V$}
-	\label{fig:modultest01_scope_05}
+	\label{fig:modultest01_scope_05_2}
 \end{figure}
 
 \newpage
