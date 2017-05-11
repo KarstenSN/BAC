@@ -85,26 +85,36 @@ Det skal dog siges at det er en approximation og at beregningerne kan laves mere
 \end{figure}  
 
 \textbf{PF\_03} Sensoren skal fungere ned til 1.8V batterispænding.\\
+Her henvises til modultesten i sektion \ref{sec:psu_modultest} fra side \pageref{sec:psu_modultest}. Kravet er opfyldt
 
 \textbf{PF\_04} Minimum 10 instanser af systemet skal kunne køre samtidig. \\
+Kravet er opfyldt da sensoren og kontrolboksen skal parres og herved får tildelt et tilfældigt ID mellem 0 og 255. 
 
 \textbf{PF\_05} Temperatursensoren skal kunne måle i området fra $-20^\circ$ til $-70^\circ$. \\
+Sensoren ligges i en fryser og det konstateres at sensoren fryser i dens software når temperaturen kommer under 0 grader. Kravet er ikke opfyldt.
 
 \textbf{PF\_06} Jordfugtigheden skal kunne måles med en præcision på minimum 5\%. \\
+Kravet testes ikke da målekredsløbet til jordfugtigheden ikke er blevet færdigdesignet. Der er i stedet blevet implementeret et midlertidigt kredsløb som ikke vil leve op til kravet. Kavet er derfor ikke opfyldt.
  
 \textbf{PF\_07} Kommunikation mellem sensor og kontrolboks skal ske på under 1 sekund. \\
+Her henvises til krav \textbf{PF\_02}. Det ses på Figur \ref{fig:currentdraw_345} at sensoren sender sin pakke til kontrolboksen som modtages igen af sensoren. Hele periodetiden er aflæst til 380ms og kravet er derfor opfyldt.
 
 \textbf{PF\_08} Jordfugtighed og temperatur skal kunne vises med 1 decimal på kontrolboksen. \\
+Der kigges på displayet og fugtighed og temperatur vises med 1 decimal. Kravet er opfyldt.
 
-\textbf{PF\_09} Sensoren og kontrolboks skal være funktionsdygtig i temperaturområdet $-20^\circ$ til $-70^\circ$. \\
+\textbf{PF\_09} Sensoren og kontrolboks skal være funktionsdygtig i temperaturområdet $0^\circ$ til $-70^\circ$. \\
+Det antages at kravet er opfyldt da alle komponenter på både kontrolboks og sensor opfylder kravet.
 
 \textbf{Vedligeholdelse}
 
 \textbf{SP\_01} Systemet skal kun vedligeholdes i forbindelse med batteriskift. \\
+Kravet er opfyldt da der ikke skal vedligeholdes på andre tidspunker.
 
 \textbf{SP\_02} Batteriet på sensoren skal være let tilgængelig. \\
+Kravet er delvist opfyldt da der skal skrues et låg af for at kunne tilgå batterierne.
 
 \textbf{SP\_03} Brugeren skal selv kunne udskifte batteriet på sensoren. \\
+Kravet er opfyldt
 
 
 
