@@ -1,10 +1,15 @@
-\newpage
 \subsubsection{Antenne} \label{sec:HWimp_antenne_kontrolboks}
 
 
+<<<<<<< HEAD
 Valget af antennetype og transmissionsfrekvens afhænger af hvilken effekt der ønskes ved receiver-antennen og dermed hvor lang rækkevidde der kan opnås, dette sættes i forhold til den effekt transmitter-antennen fødes med. Som udgangspunkt gælder at jo højere frekvens des kortere rækkevidde. Så valget til dette system er altså begrænset af ISM-båndene, samt krav CM\_03 om en rækkevidde på min 30m. Der er derfor groft sagt 2 mulige frekvenser at vælge imellem 433MHz, 868MHz hvis der snakkes inden for Europa. Ydermere er der et trade-off i forbindelse med forholdet imellem bølgelængde og størrelse på antennen, mere om det senere i dette afsnit.
 
 Af ligning \ref{eq:ant_R} på side \pageref{eq:ant_R} ses det at transmissionsfrekvensen vælges til 433MHz, for at overholde krav CM\_03 om min. 30m afstand mellem kontrolboks og sensor.
+=======
+Valget af antennetype og transmissionsfrekvens afhænger af hvilken effekt der ønskes ved receiver-antennen og dermed hvor lang rækkevidde der kan opnås, dette sættes i forhold til den effekt transmitter-antennen fødes med. Som udgangspunkt gælder at jo højere frekvens des kortere rækkevidde. Så valget til dette system er altså begrænset af ISM-båndene, samt krav \textbf{CM\_03} om en rækkevidde på min 30m. Der er derfor groft sagt 2 mulige frekvenser at vælge imellem 433MHz, 868MHz hvis der snakkes inden for Europe. Ydermere er der et trade-off i forbindelse med forholdet imellem bølgelængde og størrelse på antennen, mere om det senere i dette afsnit.
+
+Af ligning \ref{eq:ant_R} på side \pageref{eq:ant_R} ses det at transmissionsfrekvensen vælges til at 433MHz, for at overholde krav \textbf{CM\_03} om min. 30m.
+>>>>>>> ae197e6a33b261985294f34775c0d6fa48c519af
 
 Sammenhængen imellem parametre fås ved \textit{Friis transmissions formel}
 2-117 på side 95 i \cite{lib:balanis}
@@ -76,7 +81,7 @@ Denne ligning kan nu løses for $ R $ for at finde den maksimale rækkevidde for
 	R = \sqrt{ e_{t}   \frac{P_{t} D_{t}(\theta_{t},\phi_{t})} {4 \pi P_{r}} \times e_{r} D_{r}(\theta_{r},\phi_{r}) \frac{\lambda^{2}}{4 \pi}}= 38,86m
 \end{align}
 
-af ligning \ref{eq:ant_R} ses det at ved den givne transmissionsfrekvens kan det forventes at opnå en rækkevidde på 38m og dette opfylder krav \textit{CM2} om rækkevidde.
+af ligning \ref{eq:ant_R} ses det at ved den givne transmissionsfrekvens kan det forventes at opnå en rækkevidde på 38m og dette opfylder krav \textbf{CM\_03} om rækkevidde.
 \newpage
 
 \textbf{Valg af Antenne} \\
@@ -108,9 +113,33 @@ De givne parametre indsættes og ligning \ref{eq:ant_trace} løses for $w$
 	50 \Omega = \frac{87}{4.4+1.41} \times ln{\bigg( \frac{5.98 \times 1.57mm}{0.8\times w+ 0.035mm} \bigg)} = 2.89mm
 \end{align}
 
-Hermed kendes banebredde der skal føde antennen for at få optimal matching.
+Hermed kendes banebredde der skal føde antennen for at få optimal matching. \newline
+
+Antennens placering på kontrolnoks-PCB'et er foretaget på baggrund af udstrålingsdiagrammet for antennen. På Figur \ref{fig:ant_orientering_kontrolboks} ses hvordan udstrålingen sker i X/Z planet. Det er dette plan der svarer til udbredelse langs med jorden når kontrolboksen er monteret således at display'et korrekt orienteret. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/antenner/ant_orientering_kontrolboks.png}
+	\caption{Annetenne Gain i X/Z-planet}
+	\label{fig:ant_orientering_kontrolboks}
+\end{figure} 
+
+\textbf{Balun} \\
+På Figur \ref{fig:ant_balun} se balun-kredsløbet til antennen på kontrolboksen. Balunen har til formål at omdanne det balancerede differentielle signal fra transceiveren til et ubalanceret signal på indgangen af antennen derudover kobles der typisk også et tilpasningsnetværk ind således at man får impedanstilpasning imellem den drivende kreds og antennen og hermed opnås maksimal effektoverførsel til antennen. Til dette system er der benyttet en $ 50 \Omega $ antenne og derfor kan databladets anbefalede værdier, (side 73 i \cite{lib:trans_MRFX49A_datasheet} benyttes til at opbygge balun og tilpasningskredsen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/antenner/balun.png}
+	\caption{Diagram Balun på kontrolboks}
+	\label{fig:ant_balun}
+\end{figure}  
+
 
 \textbf{Modultest - Antenne} \\
+<<<<<<< HEAD
 Da det ikke har været muligt at få modultestet antennedesignet alene i et laboratorie, er der derfor foretaget nogle empiriske måling hvor kontrolboks og sensor er blevet parret over forskellige afstande således at kravet \textbf{CM\_03} kan overholdes. Test af \textbf{CM\_03} findes under Acceptest sektion \ref{ch:Accepttest}.
+=======
+Da det ikke har været muligt at få modultestet antennedesignet alene i et laboratorie, er der derfor foretaget nogle empiriske måling hvor kontrolboks og sensor er blevet parret over forskellige afstande således at kravet \textbf{CM\_03} kan overholdes.
+>>>>>>> ae197e6a33b261985294f34775c0d6fa48c519af
 
 \vfill

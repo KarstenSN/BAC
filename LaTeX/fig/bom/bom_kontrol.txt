@@ -1,0 +1,73 @@
+Prototype for jordfugt kontrol print V2.0 - H-Bro  Revised: Thursday, May 04, 2017
+
+Bill Of Materials            May 8,2017      8:59:12	Page1
+
+Item		Quantity	Reference	Part				Footprint		Price
+_______________________________________________________________________________________________________________
+
+1		1		ANT1		433MHz_Antenna_SMD		ANT_HELLI_433		8.590
+2		1		C3		330n				0402			0.176
+3		2		C4		100n				0402			0.095
+				C8		100n				0402			0.095
+4		4		C11		1u				0805			0.112
+				C12		1u				0805			0.112
+				C16		1u				0805			0.112
+				C17		1u				0805			0.112
+5		1		C13		2.7pF				0603			0.101
+6		1		C14		5.1pF				0603			0.167
+7		1		C15		68pF				0603			0.177	
+8		1		C19		2.2uF				1206			0.638
+9		1		C20		10nF				0603			0.095
+10		1		C21		220pF				0603			0.176
+11		1		D2		C503B-RCS			led5mm			0.801
+12		5		D4		BAT54S/PLP			SOT23			0.316
+				D5		BAT54S/PLP			SOT23			0.316
+				D6		BAT54S/PLP			SOT23			0.316
+				D7		BAT54S/PLP			SOT23			0.316
+				D9		BAT54S/PLP			SOT23			0.316
+13		1		D10		SMAJ7.5A			do214			0.820
+14		1		F1		FUSE 250mA			1206			1.240
+15		1		F2		FUSE 1A				1206			1.240
+16		1		J4		CONN_PWR			DC-CONN			2.132
+17		1		J6		PROG				conn6_pl		2.00
+18		1		KEY1		KEYPAD_4BUT			sip5			6.00
+19		1		L1		390nH				0603			0.504
+20		1		L2		33nH				0603			0.504
+21		1		L3		47nH				0603			0.490
+22		6		PAD1		PINPAD				solderpad3x5		0
+				PAD2		PINPAD				solderpad3x5		0
+				PAD3		PINPAD				solderpad3x5		0
+				PAD4		PINPAD				solderpad3x5		0
+				PAD5		PINPAD				solderpad3x5		0
+				PAD6		PINPAD				solderpad3x5		0
+23		3		Q3		BC847C				sot23_ksn		0.198
+				Q7		BC847C				sot23_ksn		0.198
+				Q8		BC847C				sot23_ksn		0.198
+24		2		Q9		DMN2035U			sot23_ksn		0.787
+				Q10		DMN2035U			sot23_ksn		0.787
+25		2		Q11		DMN2046U			sot23_ksn		0.597
+				Q12		DMN2046U			sot23_ksn		0.597
+26		3		R1		4.7K				0805			0.020
+				R7		4.7K				0805			0.020
+				R8		4.7K				0805			0.020
+27		3		R3		220				0805			0.020
+				R6		220				0805			0.020
+				R11		220				0805			0.020
+28		2		R5		20				0805			0.020
+				R12		20				0805			0.020
+29		2		R9		10k				0805			0.020
+				R10		10k				0805			0.020
+30		1		SW1		Reset				SW_2P			0.820
+31		1		U2		UA78M33CDCYR			sot223_ws		1.718
+32		1		U4		ATMEGA8L-8AUR			tqfp32			14.31	
+33		1		U6		MRF49XA				tssop16			13.0
+34		1		U7		I2C_Display			DiSPLAY_I2C_NHD		51.29
+35		1		Y2		CRYSTAL 10MHz			ABM3B			5.40
+
+Transformer												20.0
+Print													10.0
+Plastikboks												8.00
+Motoventil												100.00
+
+__________________________________________________________________________________________________________________
+											Samlet:		191.803
