@@ -1,5 +1,5 @@
 \subsubsection{Lysmåler} \label{sec:HWimp_lysmoler}
-Lysmåleren er implementeret ved via af en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
+Lysmåleren er implementeret med en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
 
 \begin{figure}[H]
 	\centering
@@ -8,7 +8,7 @@ Lysmåleren er implementeret ved via af en fototransistor som afgiver en strøm 
 	\label{fig:lysdiagram}
 \end{figure} 
 
-Afhængig af hvilken lysintensitet der opfanges af fototransistoren vil denne afgive en $I_{C}$ i et forventet område fra 2.5-7.$5mA$ jvf. databladet. Kurven over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}. Her skal det bemærkes at kurven baserer sig på en forsyningsspænding på 5VDC, der må derfor forventes en mindre $I_{C}$ end den afbilledet. Derudover baserer grafen sig på en bølgelængde på 950nm, dette er fototransistorens mest effektive område. jfv. Figur \ref{fig:lysspectrum} derfor må der yderligere forventes en lavere $I_{C}$ da fototransistoren omsætter en mindre effekt end afbilledet på grafen. 
+Afhængig af hvilken lysintensitet der opfanges af fototransistoren vil denne afgive en kollektorstrøm $I_{C}$ i et forventet område fra 2.5-7.$5mA$ jvf. databladet. Kurven over strøm vs. indstrålet effekt ses på Figur \ref{fig:fotokurve}. Her skal det bemærkes at kurven baserer sig på en forsyningsspænding på 5VDC, der må derfor forventes en mindre $I_{C}$ end den afbilledet. Derudover baserer grafen sig på en bølgelængde på 950nm, dette er fototransistorens mest effektive område. jfv. Figur \ref{fig:lysspectrum} derfor må der yderligere forventes en lavere $I_{C}$ da fototransistoren omsætter en mindre effekt end afbilledet på grafen. 
 
 \begin{figure}[H]
   \centering
@@ -100,7 +100,7 @@ Der udføres en test fra kl. 15.00 d. 10/04 til kl.08.00 d. 11/04. får at verif
 	\label{fig:test_måling4_zoom2}
 \end{figure}
 
-Det ses også på Figur \ref{fig:test_måling4} at det lukkes ned og kører på Dark Current, for at verificere at der trækkes den forventede strøm sammenholdes Figur \ref{fig:test_darkCurrent} med databladet. På Figur \ref{fig:test_darkCurrent} ses at der trækkes i omegnen af $80nA$, hvilket må siges at være tilfredsstillende. 
+Det ses også på Figur \ref{fig:test_måling4} at der lukkes helt ned og at der kun kan måles Dark Current, for at verificere at der trækkes den forventede strøm sammenholdes Figur \ref{fig:test_darkCurrent} med databladet. På Figur \ref{fig:test_darkCurrent} ses at der trækkes i omegnen af $80nA$, hvilket stemmer fint overens. 
 
 \begin{figure}[H]
 	\centering

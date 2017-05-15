@@ -1,5 +1,5 @@
 \subsubsection{Strømforsyning} \label{sec:HWimp_stromforsyning}
-Ifølge krav EL\_03 skal kontrolboksen kunne forsynes med en ekstern 3. parts AC/DC adaptor, kravene til denne adaptor findes i sektion \ref{designkrav:stromforsyning} på side \pageref{designkrav:stromforsyning} under afsnittet Strømforsyning, og disse vil som sådan ikke blive diskuteret yderligere, i afsnittet her tages design af strømforsyningen på kontrolboksen under behandling. Diagram over strømforsyningen ses på Figur \ref{fig:stromforsyning_digram1}. Alle reference i følgende afsnit referer til denne figur. 
+Ifølge krav \textbf{EL\_03} skal kontrolboksen kunne forsynes med en ekstern 3. parts AC/DC adaptor, kravene til denne adaptor findes i sektion \ref{designkrav:stromforsyning} på side \pageref{designkrav:stromforsyning} under afsnittet Strømforsyning, og disse vil som sådan ikke blive diskuteret yderligere, i afsnittet her tages design af strømforsyningen på kontrolboksen under behandling. Diagram over strømforsyningen ses på Figur \ref{fig:stromforsyning_digram1}. Alle reference i følgende afsnit referer til denne figur. 
 
 \begin{figure}[H]
 	\centering
@@ -14,13 +14,13 @@ Herunder af valg af komponenterne i forhold til typer og tolerancer beskrevet.
 J4 er strømforsyningens AC/DC jack-konnektor som mater med den eksterne power supply der ønskes brugt. Til konnektoren er valgt modellen PJ-002B fra CUI-INC \cite{lib:dc_connector_datasheet}. Denne model er valgt da den opfylder de givne designkrav i afsnit \ref{designkrav:stromforsyning} på side \pageref{designkrav:stromforsyning} under afsnittet Strømforsyning. Selve konnektoren er en 6.50Ø $\pm 2mm$ DC jack-konnekter med 2.5 mm center pin. Konnektoren har en maksimum input current rating på 2.5A.
 
 \textbf{D10} \\
-D10 er en zener-diode af typen SMAJ7.5A fra Vishay \cite{lib:zener_SMAJ75A_datasheet}, den er valgt specifikt for at sikre mod overspænding. 7.5V-modellen er valgt for ikke at risikere at belaste den eksterne power supply hvis denne eks. lever den maksimum tolerance ud hvorved en 5V-zener diode ville klippe udgangsspændingen til 5V og dermed belaste den eksterne power supply og afsætte unødvendig effekt. Det er verificeret at diode ikke efterfølgende kan skabe problemer for hverken U2: Spændingsregulatoren eller Motorventilen, da en inputspænding på 7.5VDC er indenfor begge absolut rating. 
+D10 er en zener-diode af typen SMAJ7.5A fra Vishay \cite{lib:zener_SMAJ75A_datasheet}, den er valgt specifikt for at sikre mod overspænding samt omvendt polarisation. 7.5V-modellen er valgt for ikke at risikere at belaste den eksterne power supply hvis denne eks. lever den maksimale tolerance ud hvorved en 5V-zener diode ville klippe udgangsspændingen til 5V og dermed belaste den eksterne power supply og afsætte unødvendig effekt. Det er verificeret at diode ikke efterfølgende kan skabe problemer for hverken U2: Spændingsregulatoren eller Motorventilen, da en inputspænding på 7.5VDC er indenfor begges absolut rating. 
 
 \textbf{F1}	\\
-Fuseresistoren F1 sidder som primær sikring for kontrolboksen, da alt på printet, på nær motorventilen, forsynes herigennem. Den er valgt til en værdi på 250mA, da  \todo[inline]{hvorfor denne væredi for fuse resistor}
+Fuseresistoren F1 sidder som primær sikring for kontrolboksen, da alt på printet, på nær motorventilen, forsynes herigennem. Den er valgt til en værdi på 250mA som udgangspunkt. Værdien bør udregnes mere præcist senere.
 
 \textbf{F2}	\\
-Fuseresistoren F2 sidder som sikring alene for forsyningen til motorventilen derfor er den valgt til en værdi på 1A, det er gjort på baggrund af følgende. Det vides fra test, at motorventilen trækker 100mA når ventilen åbnes og lukkes. Derfor er der valgt en faktor 10, først  sikringen springer.  
+Fuseresistoren F2 sidder som sikring til motorventilen. Motorventilen trækker 100mA når den åbnes og lukkes. For at sikre en mindre belastning ikke vil sprænge sikringen vælges den til 1A. 
 
 \textbf{U2} \\
 Som spændingsregulator er der i første omgang valgt modellen UA78M33CDCYR fra Texas Instruments \cite{lib:reg_UA78M33CDCYR_datasheet}. Denne model blev valgt uden et konkret strømbudget for kontrolboksen og derfor er dens evne til at levere 500mA ud på Vout ved 3.3VDC lige til den gode side i forhold hvad der reelt set er behov for. Derfor kan der spares på omkostningerne hvis der vælges en model spec'et til at yde mindre. Et realistisk maksimum strømbudget for kontrolboksen kan beregnes som følger: De primære strømslugende moduler trækker ifølge deres datablade:

@@ -1,11 +1,11 @@
-\subsubsection{Tastetur} \label{sec:HWimp_tastetur}
-Systemet betjenes via en keypad der påmonteres kontrolboksen. Keypad'en består af 4 knapper som brugeren kan benytte til at navigere rundt i menuen. En sketchup af keypad'en kan ses på Figur \ref{fig:keypad_UI}. \texttt{SET} knappen benyttes til at skifte mellem menupunkterne. \texttt{Pil-op} og \texttt{Pil-ned} benyttes hhv.til at inkrementere eller dekrementere en given værdi. \texttt{OK} benyttes til at gemme indstillingen. For et fuldt overblik over menuen henvises til usecases i sektion \ref{ch:kravspecifikation}. Keypad'en rummer desuden et vindue til displayet, samt en rød LED der tændes hvis systemet registrerer en fejl. Eks. tænder LED'en når batterispændingen på sensoren går under thresholdværdien på 2.8VDC, denne værdi er sat af transceiverens low battery-detect som også starter boostkonverteren. Det er programmeret sådan at LED først tænder 2. gang at transceiveren får en low battery detect. Dermed ved brugeren hvornår det er tid at skifte batteri i sensoren. Derudover tænder LED'en også hvis kontakten til sensoren mistes. I det færdige produkt forventes det at implementere en specialbygget keypad, men til prototypeformål er her benyttet en 16 knappers membrane switch keypad.
+\subsubsection{Tastatur} \label{sec:HWimp_tastetur}
+Systemet betjenes via et tastatur der moneres på kontrolboksen. Tastaturet består af 4 knapper som brugeren kan benytte til at navigere rundt i menuen. En sketchup af tastaturet kan ses på Figur \ref{fig:keypad_UI}. \texttt{SET} knappen benyttes til at skifte mellem menupunkterne. \texttt{Pil-op} og \texttt{Pil-ned} benyttes hhv.til at inkrementere eller dekrementere en given værdi. \texttt{OK} benyttes til at gemme indstillingen. For et fuldt overblik over menuen henvises til usecases i sektion \ref{ch:kravspecifikation}. Tastaturet indeholder desuden et vindue til displayet, samt en rød LED der tændes hvis systemet registrerer en fejl. Eks. hvis batterispændingen bliver for lav. I det færdige produkt forventes det at implementere en specialbygget keypad, men til prototypeformål er her benyttet en 4 knappers membrane switch keypad som tastatur.
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
 	\includegraphics[width=1\textwidth]{../fig/Keypad/keypad.png}
-	\caption{Skitse af keypad'en}
+	\caption{Skitse af keypad'en som den ønskes i en færdig produktion}
 	\label{fig:keypad_UI}
   \end{minipage}
   \hfill
