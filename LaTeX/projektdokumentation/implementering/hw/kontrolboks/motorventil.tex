@@ -1,6 +1,6 @@
 \subsubsection{Motorventil} \label{sec:HWimp_motorventil}
-Der blev hos den kinesiske producent Flow-Control bestilt nogle motorventiler hjem. Disse blev i første omgang valgt grundet deres lave pris, omkring 150kr stykket og har en tilslutning som som fylder kravene i afsnit \ref{designkrav:motorventil} på side \pageref{designkrav:motorventil}. 
-kontakten skabes via 3 seperater ledinger, blå, gul og rød. Blå er GND, gul og rød tilsluttes hver især 3-6V for når der ønskes at åbne eller lukke for ventilen. Når ventilen er i fuldt åben eller fuldt lukket position vil intern kontakt sørge for at koble fra, så der ikke trækkes unødig strøm. på Figur \ref{fig:delt} ses disse kontakter som de 4 grønne ledninger (disse blev først brugt i iteration 2 af motorstyringen). Se Figur \ref{fig:motorventilSamlet} for den valgte motorventil.
+Der blev hos den kinesiske producent Flow-Control bestilt nogle motorventiler hjem. Disse blev i første omgang valgt grundet deres lave pris, omkring 150kr stykket og har en tilslutning som fylder kravene i sektion \ref{designkrav:motorventil} på side \pageref{designkrav:motorventil} hvis de skilles ad. 
+Internt i ventilen sidder der en styring således ventilen kan styrres via 3 seperater ledinger, blå, gul og rød. Blå er GND, gul og rød tilsluttes hver især 3-6V for  at åbne eller lukke for ventilen. Når ventilen er i fuldt åben eller fuldt lukket position vil den interne styring sørge for at koble fra, så der ikke trækkes unødig strøm. På Figur \ref{fig:motorventilSamlet} ses motorventilen som den kommer fra producenten. På Figur \ref{fig:delt} ses motorventilen adskilt, hvor de grønne ledninger er til posotions-kontakterne og de røde er til motoren.
 
 \begin{figure}[H]
   \centering
@@ -17,7 +17,7 @@ kontakten skabes via 3 seperater ledinger, blå, gul og rød. Blå er GND, gul o
   \end{minipage}
 \end{figure}
 
-Styringen af denne motorventil er udviklet over 2 iterationer. Første iteration blev implementeret med en specialdesignet relæ-styring. Dette design ses på Figur \ref{fig:relae} 
+Før at kravende i sektion \ref{designkrav:motorventil} lå fast blev der designet en relæstyring af ventilen. Se Figur \ref{fig:relae}. Relæstyringen bruger motorventilen som den kommer fra producenten og den skulle derfor monteres i en klemrække. Relæstyringen er dog meget ineffektiv da den vil bruge strøm når ventilen er lukket. Det er hellere ikke muligt at detektere hvilken position ventilen står i, da O1 og C1 ikke er ført ud med en ledning. D1 og D13 sidder for at beskytte med ESD hvis kontakterne blev monteret. D12 sidder for at beskytte transistoren Q2 mod spikes fra spolen i relæet. R2 er monteret for at sænke spændingen til relæet da det kun må forsynes med 3V og forsyningsspændingen er 3.3V. Kredsløbet virkede men var som sagt meget ineffektivt og dyr at producere. 
 
 \begin{figure}[H]
 	\centering
@@ -26,9 +26,9 @@ Styringen af denne motorventil er udviklet over 2 iterationer. Første iteration
 	\label{fig:relae}
 \end{figure}  
 
-Når der fra Mikroprocessoren tilsluttes 3.3V på R17 vil Q2 gå on og LS1 vil slutte kontakt til OPEN (rød ledning). Er der påtrykt 0V på R2 vil relæet slutte kontakt til CLOSE (gul ledning). O1,O2 og C1,C2 er de føromtalte kontakter til detektion af ventilens position. D1 og D2 sidder som ESD-beskyttelse. Kredsløbet virkede som forventet til iteration 1.
 
-Til iteration 2 blev det valgt at overgå fra relæstyring til styring via H-bro. Dette valg blev truffet af flere årsager, dels er relæ'er dyre sammenlignet med FET'erne i en H-Bro, og derudover blev det ved test fastlagt at der var mulighed for at få kontakt med de interne switch'ene O1,O2 og C1,C2 i Figur \ref{fig:relae}. Derfor er det nu muligt, software-mæssigt at teste på om ventilen er fuldt åben eller lukket. Dermed kan det hele styres via et H-Bro design, og lukkes ned når der detekteres en åben/lukket position, så der ikke trække unødvendig strøm. Dette design kan ses på Figur \ref{fig:hbro}. I tillæg til dette design, er der 4 separate loddeplads som er brugt til at få kontakt med de interne switche. 
+
+Motorventilen blev skilt ad og den interne styring blev fjernet. Se Figur \ref{fig:delt}. Det var nu nemmere at komme i kontakt med de interne kontakter og motoren som blot skulle styres af mikroprocessoren. Til dette blev der designet en H-bro. Se Figur \ref{fig:hbro}. PAD1 og PAD2 er monterings pad's som bruges til at lodde ledningerne fra motoren fast på printet. Kontakterne som afbrydes af enten den fuldt åbne position eller fuldt lukkede position loddes ligeledes på printet og føres direkte op til mikroprocessoren. Når der sluttes 3.3V på H1 og 0V på H2 vil motorventilen åbne og omvendt for at lukke. Sluttes der 3.3V eller 0V på begge indgange vil motoren være i bremset position. Det blev bestemt at bruge standard transistoren BC847C da den er billig og nem at skaffe, af MOSFETS blev der fundet NTR4101 og NTR4501 da disse have en lav on resistance, gode switch karakterstikker og indbyggede beskyttelsesdioder mellem drain og source.  
 
 \begin{figure}[H]
   \centering
@@ -37,6 +37,5 @@ Til iteration 2 blev det valgt at overgå fra relæstyring til styring via H-bro
     \label{fig:hbro}
 \end{figure}
 
-PAD1 og PAD2 er monterings pad's som bruges til at lodde ledningerne fra motoren fast på printet. Kontakterne som afbrydes af enten den fuldt åbne position eller fuldt lukkede position loddes ligeledes på printet og føres direkte op til mikroprocessoren. Når der sluttes 3.3V på H1 og 0V på H2 vil motorventilen åbne og omvendt for at lukke. Sluttes der 3.3V eller 0V på begge indgange vil motoren være i bremset position. Det blev bestemt at bruge standard transistoren BC847C da den er billig og nem at skaffe, af MOSFETS blev der fundet NTR4101 og NTR4501 da disse have en lav on resistance, gode switch karakterstikker og indbyggede beskyttelsesdioder mellem drain og source.
-
-\todo[inline]{referencer til komponenter}
+\textbf{Modultest af motorventil} \\
+For at teste blokken \texttt{Motorventil} testes først H-bro'en. Dette gøres ved at påføre 0V på H1 og 3.3V på H2. Herefter måles der med et multimeter på PAD7 og PAD8. PAD7 defineres som den positive. Der måles nu 3.3V. Vendes polariteten på H1 og H2 måles der -3.3V. Er spændingen på H1 og H2 3.3V måles der 0V. Samme måles der hvis spændingen på H1 og H2 er 0V. Det testes nu med motorventilen, hvor kun motoren monteres. Påføres der 0V på H1 og 3.3V på H2 åbnes ventilen. Påføres der 3.3V på H1 og 0V på H2 lukker ventilen. Er spændingen det samme på både H1 og H2 er motoren låst. Det konkluderes derfor at blokken virker delvist, da der stadig mangler software til mikroprocessoren, for at aflæse om ventilen er i lukket eller åben position. 
