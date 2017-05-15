@@ -1,10 +1,10 @@
 \subsubsection{Mikroprocessor} \label{sec:HWimp_mikroprocessor_kontrolboks}
-Som mikroprocessoren i kontrolboks og sensor er er valgt at benytte en ATMEGA8L i TQFP pakke fra Atmel \cite{lib:mikro_ATMEGA8L_datasheet}. Denne er valgt da den opfylder designkravene i afsnit \ref{designkrav:mikroprocessor} og side \pageref{designkrav:mikroprocessor} samt kravene i afsnit \ref{ch:kravspecifikation} fra side \pageref{ch:kravspecifikation}. \texttt{L}-typen er valgt da den kan forsynes i intervallet fra 2.7VDC  - 5.5VDC hvilket både egner sig til adaptor-forsyning på kontrolboksen, samt batteriforsyning på sensoren. Processoren kan køre med en clockfrekvens fra 0-8MHz. Her er valgt at kører med 8MHz til de første iterationer, grundet SPI og I2C kommunikationen, men denne frekvens kan med fordel nedjusteres til 4MHz for ydeligere strømbesparelse iht. sensorens batterilevetid.
+Som mikroprocessoren i kontrolboks og sensor er er valgt at benytte en ATMEGA8L i TQFP pakke fra Atmel \cite{lib:mikro_ATMEGA8L_datasheet}. Denne er valgt da den opfylder designkravene i afsnit \ref{designkrav:mikroprocessor} på side \pageref{designkrav:mikroprocessor} samt kravene i afsnit \ref{ch:kravspecifikation} fra side \pageref{ch:kravspecifikation}. \texttt{L}-typen er valgt da den kan forsynes i intervallet fra 2.7VDC  - 5.5VDC hvilket både egner sig til adaptor-forsyning på kontrolboksen, samt batteriforsyning på sensoren. Processoren kan køre med en clockfrekvens fra 0-8MHz. Her er valgt at kører med 8MHz til de første iterationer, grundet SPI og I2C kommunikationen, men denne frekvens kan med fordel nedjusteres til 4MHz for ydeligere strømbesparelse iht. sensorens batterilevetid.
 
 \todo[inline]{Note omkring clockfrekens - evt. prøve med 4MHz}  
 
 Af perifere enheder skal der på kontrolboksen benyttes SPI, I2C, samt et antal analoge pins til kontrol af hhv. motorventil og keypad, herunder error-LED. ATMEGA8L rummer derudover en del forprogrammerede biblioteker skrevet i C således at disse ikke skal skrives fra ny.
-Desuden har mokroprocessoren en intern RC-oscillator som gør at der ikke behøves at benytte et eksternt krystal. Af andre mulige processore kan nævnes PIC processorserien fra Mircochip, men da der i projektgruppen var mest erfaring med Atmel blev denne valgt til de første iterationer af udviklingen. Mikroprocessorens pinout samt den benyttede pakke kan ses på Figur \ref{fig:atmega8L_pinout} herunder. 
+Desuden har mikroprocessoren en intern RC-oscillator som gør at der ikke behøves et eksternt krystal. Mikroprocessorens pinout samt den benyttede pakke kan ses på Figur \ref{fig:atmega8L_pinout} herunder. 
 
 \begin{figure}[H]
 	\centering
@@ -13,9 +13,9 @@ Desuden har mokroprocessoren en intern RC-oscillator som gør at der ikke behøv
 	\label{fig:atmega8L_pinout}
 \end{figure}
 
-TQFP-pakken er valgt da alt på PCB'et håndloddes og denne pakkes benytter "gull wing"-ben som letter denne process. Der vil der med fordel kunne vælges MLF-pakken til en serieproduktion da denne kan opnå bedre mekanisk stabilisering via en underliggende GND-pad. Dette kræver dog en anelse rettelser til PCB layout fra den nuværende iteration grundet denne GND-pad der skal loddes eller limes fast på PCB'et. Hvorfor de nuværende baner skal omarrangeres.
+TQFP-pakken er valgt da PCB'et til disse prototyper håndloddes og denne pakkes benytter "gull wing"-ben som letter denne process. Der vil der med fordel kunne vælges MLF-pakken til en serieproduktion da denne kan opnå bedre mekanisk stabilisering via en underliggende GND-pad. Dette kræver dog en anelse rettelser til PCB layout fra den nuværende iteration grundet denne GND-pad der skal loddes eller limes fast på PCB'et. Hvorfor de nuværende baner skal omarrangeres.
 
-Det grundlæggende diagram for opkobling af mikroprocessoren kan ses på Figur \ref{fig:atmega8L_kontrolboks_diagram}. opkobling af de perifere kredsløb vil blive diskuteret under deres respektive afsnit. 
+Det grundlæggende diagram for opkobling af mikroprocessoren kan ses på Figur \ref{fig:atmega8L_kontrolboks_diagram}. Opkobling af de perifere kredsløb vil blive diskuteret under deres respektive afsnit. 
 
 \begin{figure}[H]
 	\centering

@@ -82,7 +82,7 @@ Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sen
 	\label{fig:FlowdiagramSensor}
 \end{figure}
 
-På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren. Ved start initieres de interne indstillinger samt de enheder som der skal kommunikeres med. Derefter sættes en wakeUp timer der holder styr på hvornår sensoren skal vækkes for at foretage målinger. Dernæst sætte en Watch Dog Timer for at forhindre at softwaren ender i deadlock. Herefter foretages en indhentning af data fra hhv. temperatursensoren, lyssensoren samt jordfugtmåleren. Denne datapakke transmitteres til kontrolboksen, skulle dette mislykkes første gang, forsøges der i alt at transmittere datapakken 10 gange. Efter endt transmission (eller 10 x mislykket transmission) disables watch Dog Timeren og softwaren lægges i sleepmode. Softwaren vækkes fra sleepmode af wakeUp Timeren. Denne sekvens forsætter indtil brugeren vælger at frakoble batterierne, eller at batterierne selv løber tør.  
+På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren. Ved start initieres de interne indstillinger samt de enheder som der skal kommunikeres med. Derefter sættes en WakeUp timer der holder styr på hvornår sensoren skal vækkes for at foretage målinger. Dernæst sætte en Watch Dog Timer for at forhindre at softwaren ender i deadlock. Herefter foretages en indhentning af data fra hhv. temperatursensoren, lyssensoren samt jordfugtmåleren. Denne datapakke transmitteres til kontrolboksen, skulle dette mislykkes første gang, forsøges der i alt at transmittere datapakken 10 gange. Efter endt transmission (eller 10 x mislykket transmission) disables Watch Dog Timeren og softwaren lægges i sleep-mode. Softwaren vækkes fra sleep-mode af WakeUp Timeren. Denne sekvens forsætter indtil brugeren vælger at frakoble batterierne, eller at batterierne selv løber tør.  
 
 
 \begin{figure}[H]
@@ -102,7 +102,6 @@ På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren.
 
 \textbf{Boundary: soilSensor} \\
 \texttt{soilSensor}: Driver der styrer hardwarekredsløbet til jordfugtmåling. \\
-
 
 
 \textbf{Boundary: temperatureSensor} \\
