@@ -8,14 +8,14 @@ For at teste de funktionelle krav tages der udgangspunkt i Use Casene i sektion 
 \centering
 \begin{tabularx}{\textwidth-5cm}{| C{2 cm} | X | X | X | X | X | X | X | X | X | X | X | X |}
 \hline
-Use-case/krav &\begin{turn}{90}{UC1}\end{turn} % tænd system
-			  &\begin{turn}{90}{UC2}\end{turn} % aflæs data
-			  &\begin{turn}{90}{UC3}\end{turn} % indstil fugtighed
-			  &\begin{turn}{90}{UC4}\end{turn} % indstil åbningstid
-			  &\begin{turn}{90}{UC5}\end{turn} % indstil vandingsinterval
-			  &\begin{turn}{90}{UC6}\end{turn} % abn/luk manuelt
-			  &\begin{turn}{90}{UC7}\end{turn} % indstil vandingstidspunkt
-			  &\begin{turn}{90}{UC8}\end{turn} \\ \hline % par sensor og kontrolboks
+Use Case / Krav &\begin{turn}{90}{UC1}\end{turn} % tænd system
+			    &\begin{turn}{90}{UC2}\end{turn} % aflæs data
+			    &\begin{turn}{90}{UC3}\end{turn} % indstil fugtighed
+			    &\begin{turn}{90}{UC4}\end{turn} % indstil åbningstid
+			    &\begin{turn}{90}{UC5}\end{turn} % indstil vandingsinterval
+			    &\begin{turn}{90}{UC6}\end{turn} % abn/luk manuelt
+			    &\begin{turn}{90}{UC7}\end{turn} % indstil vandingstidspunkt
+			    &\begin{turn}{90}{UC8}\end{turn} \\ \hline % par sensor og kontrolboks
 	   MC\_01 & X & X & X & X & X & X & X & X  \\ \hline
 	   MC\_02 &   & X & X & X &   &   & X &    \\ \hline
 	   MC\_03 &   & X &   &   &   &   &   &    \\ \hline
@@ -35,9 +35,12 @@ Use-case/krav &\begin{turn}{90}{UC1}\end{turn} % tænd system
 \caption{Tabel over hvilke krav der testes i hvilke Use Cases}
 \label{tbl:kravTabel}
 \end{table}
+\newpage
+
+Følgende krav testes seperat hvis disse er implementeret. 
 
 \textbf{CM\_03} \textit{Should} Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m. \\ 
-Testes ved at gennemføre UC8 ved en afstand mellem kontrolboks og sensor på 30m. 
+Testes ved gennemførelse af UC8 ved en afstand mellem kontrolboks og sensor på 30m. 
 
 \textbf{UX\_05} \textit{Should} Kontrolboksen skal kunne måle om slangen er sprunget fra og give fejlmelding.\\
 Er ikke blevet implementeret.
@@ -54,11 +57,12 @@ Er ikke blevet implementeret.
 \textbf{MC\_09} \textit{Would} Systemet skal kunne tilsluttes flere sensorer. \\
 Er ikke blevet implementeret.
 
+\newpage
 
 %Her vælges bredde på hele tabellen samt hvilken FIL selve tabellen defineres i.
 \subsubsection{Use Case 1: Tænd system}
 \LTXtable{\textwidth}{accepttest/uc1}
-\clearpage
+%\clearpage
 \subsubsection{Use Case 2: Aflæs fugtighed og temperatur}
 \LTXtable{\textwidth}{accepttest/uc2}
 \clearpage
@@ -76,11 +80,9 @@ Er ikke blevet implementeret.
 \clearpage
 \subsubsection{Use Case 7: Indstil vandingstidspunkt}
 \LTXtable{\textwidth}{accepttest/uc7}
-%\clearpage
+\clearpage
 \subsubsection{Use Case 8: Par sensor og kontrolboks}
 \LTXtable{\textwidth}{accepttest/uc8}
-\clearpage
-
 \clearpage
 
 \section{Ikke-funktionelle krav}

@@ -21,7 +21,7 @@ Kravet er testet via UC3 - UC8. Kravet er opfyldt.
 Displayet måles med en skydelærer og kravet er opfyldt.
 
 \textbf{US\_07} Displayet skal være baggrundsbelyst. \\
-Der trykkes på \texttt{SET} knappen på tastaturet og baggrundslyset tændes. Kravet er opofyldt.
+Der trykkes på \texttt{SET} knappen på tastaturet og baggrundslyset tændes. Kravet er opfyldt.
 
 \textbf{US\_08} Motorventilen skal kunne tilsluttes 1/2" tomme vandrør. \\
 Det forsøges at montere motorventilen på et 1/2" vandrør. Kravet er opfyldt.
@@ -31,8 +31,11 @@ Der måles med en skydelærer på både sensor og kontrolboks. Kravet er opfyldt
 
 \textbf{Driftsikkerhed}
 
-\textbf{RI\_01} Systemfejl skal indikeres med en rød LED på tastaturet. \\
-Batterispændingen sænkes til 4V og LED'en tændes og teksten "Low bat" fremkommer på displayet. Kravet er delvist opfyldt da der ikke er indikation af andre fejl.
+\textbf{RI\_01} Lav batterispænding (1.8V) skal indikeres med en rød LED på tastaturet. \\
+Batterispændingen sænkes til 1.8V og LED'en tændes og teksten "Low Bat" fremkommer på displayet. Kravet er delvist opfyldt da der ikke er indikation af andre fejl.
+
+\textbf{RI\_02} Lav forsyningsspænding (4.5V) skal indikeres med en rød LED på tastaturet. \\
+forsyningsspændingen sænkes til 4.5V og LED'en tændes og teksten "Low Power" fremkommer på displayet. Kravet er delvist opfyldt da der ikke er indikation af andre fejl.
 
 \textbf{Performance}
 
@@ -49,24 +52,22 @@ Batterilevetiden testes ved at lodde en 10$\Omega$ modstand i serie med en ekste
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../fig/acceptest/scope_2_current.png}
-	\caption{Spændingen over 10$\Omega$ modstanden ved en forsyningsspænding på 3.45V}
+	\caption{Spændingen over 10$\Omega$ modstanden ved en forsyningsspænding på 3.3V}
 	\label{fig:currentdraw_345}
 \end{figure} 
 
-Det ses på Figur \ref{fig:currentdraw_345} at det første der sker er at mikroprocessoren vågner op. Herefter tændes for måle-ground og \texttt{sensorPackage} sendes til kontrolboksen. Dette ses via det skiftende strømtræk. Herefter går der et stykke tid og mikroprocessoren ligges i power-down mode igen. Det antages at spændingen totalt over hele perioden er 180mV (Proben er sat i x10). Periodetiden er 380ms. Dette bliver omregnet til 18mA. Sænkes forsyningsspændingen til under  2.8V enables boostconverteren og der vil derfor trækkes mere strøm. Se Figur \ref{fig:currentdraw_237}. Her trækkes der 40mA i 380ms. Det ses på Figur \ref{fig:currentdraw_3} og \ref{fig:currentdraw_4} at når boost converteren er enablet vil der også trækkes strøm selvom at mikroprocessoren er i power-down mode. Dette skyldes at boost-converteren hele tiden skal opretholde en spænding på 3.3V. Det antages at der i gennemsnit trækkes 30mA i 380ms hvert kvarter hvilket bliver 1.52 sek hver time. Der vælges at se bort fra boost-converterens strømtræk da dette kun vil være i slutningen af batteriets levetid den vil være enablet. Batterilevetiden kan nu approximeres:
+Det ses på Figur \ref{fig:currentdraw_345} at det første der sker er at mikroprocessoren vågner op. Herefter tændes for måle-GND-planet og \texttt{sensorPackage} sendes til kontrolboksen. Dette ses via det skiftende strømtræk. Herefter går der et stykke tid og mikroprocessoren lægges i sleep-mode igen. Det antages at spændingen totalt over hele perioden er 180mV (Proben er sat i x10). Periodetiden er 380ms. Dette bliver omregnet til 18mA. Sænkes forsyningsspændingen til under  2.8V enables boostconverteren og der vil derfor trækkes mere strøm. Se Figur \ref{fig:currentdraw_237}, her trækkes der 40mA i 380ms. Det ses på Figur \ref{fig:currentdraw_3} og \ref{fig:currentdraw_4} at når boost converteren er enable'et vil der også trækkes strøm selvom at mikroprocessoren er i power-down mode. Dette skyldes at boost-converteren hele tiden skal opretholde en spænding på 3.3V. Det antages at der i gennemsnit trækkes 30mA i 380ms hvert kvarter hvilket bliver 1.52 sek hver time. Der vælges at se bort fra boost-converterens strømtræk da dette kun vil være i slutningen af batteriets levetid den vil være enable'et. Batterilevetiden kan nu approximeres:
 
 \begin{equation}
 lifetime = \dfrac{800mA}{30mA\cdot 1.52s / 60s\cdot 60min}\cdot \dfrac{1}{24hour\cdot 360days} = 7.3 year
 \end{equation} 
 
-Det skal dog siges at det er en approximation og at beregningerne kan laves mere præcis. Men de viser at kravet om 1 års leve tid er opfyldt. 
-
- 
+Det skal dog siges at det er en grov approximation og at beregningerne kan laves mere præcis. Men dette viser at kravet om 1 års leve tid er opfyldt. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../fig/acceptest/scope_3_current.png}
-	\caption{Spændingen over 10$\Omega$ modstanden ved en forsyningsspænding på 2.37V}
+	\caption{Spændingen over 10$\Omega$ modstanden ved en forsyningsspænding på 1.8V}
 	\label{fig:currentdraw_237}
 \end{figure}  
 
@@ -115,20 +116,3 @@ Kravet er delvist opfyldt da der skal skrues et låg af for at kunne tilgå batt
 
 \textbf{SP\_03} Brugeren skal selv kunne udskifte batteriet på sensoren. \\
 Kravet er opfyldt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

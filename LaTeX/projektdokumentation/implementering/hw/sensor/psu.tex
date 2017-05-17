@@ -14,11 +14,11 @@ Diagrammet for Boostkonverteren ses på Figur \ref{fig:boostkonverter}. Alle ref
 %				BOOST KONVERTER BEREGNINGER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Boost konverter beregninger} \\ \label{sec:psu_beregninger}
+\textit{Boost konverter beregninger} \\ \label{sec:psu_beregninger}
 Alle beregninger kan findes i Appendix \ref{appendix:psu}.
 
 
-\textbf{Udgangspænding} \label{sec:psu_Vout} \\
+\textit{Udgangspænding} \label{sec:psu_Vout} \\
 For at fastlægge og fastholde udgangsspændingen på 3.3VDC lægges en spændingsdeler fra $V_{out}$-pin til $V_{FB}$-pin via R30 og R31 i forhold til $V_{REF}$ på $V_{FB}$-pin'en. Når Vout er i reguleret tilstand er $V_{REF}$=1.21VDC. Der antages en værdi for R31=562k, denne værdi er en standard værdi som findes i de gængse serier E48, E96, E192. Værdien for R30 kan nu beregnes på følgende måde:
 
 \begin{align} \label{eq:boostkonverter_VFB}
@@ -114,8 +114,9 @@ I Databladet anbefales et layout af konverteren med tilhørende eksterne kompone
 
 \input{implementering/hw/modultests/psu_modultest01}
 
-Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke de beregnede værdier fra afsnit \ref{sec:psu_beregninger}. Denne test kan ses foretaget herunder.
+Denne test er som nævnt en modultest foretaget med anbefalede værdier fra databladet og ikke de beregnede værdier fra afsnit \ref{sec:psu_beregninger}. modultesten med de beregnede værdier kan ses foretaget næste afsnit.
 
+\newpage
 \input{implementering/hw/modultests/psu_modultest02}
 
 \clearpage

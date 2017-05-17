@@ -21,7 +21,7 @@ Hvor $m_w$ er massen af væske, $m_{wet}$ er massen af den fugtige jord og $\eta
 
 Det er derfor nu muligt at bestemme en jordfugtighed uden at skulle måle volumen af prøven. Til vejning af jordprøver er der blevet brugt en vægt af producenten \texttt{Sartorius} model \texttt{QUINTIX2102-1S} med en præcision på $\pm0.01g$.
 
-\textbf{Resistiv måling} \\
+\textit{Resistiv måling} \\
 Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}. Det blev derfor undersøgt om det ved hjælp af denne kunne gøre målingen mere præcis.
 
 
@@ -79,7 +79,7 @@ Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
 Residualplottet viser at der er helt op til 8\% afvigelse på regressionen, hvilket må siges ikke at leve op til krav \textbf{PF\_06} om 5\% præcision. 
 
 
-\textbf{Kapacitiv måling} \\
+\textit{Kapacitiv måling} \\
 Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden\cite{lib:SoilModeling} \cite{lib:MultiSensorSystem} \cite{lib:DPHP} \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}. Kobberbanerne skal dog forinden belægges med en elektrisk isolerende coating for at undgå kortslutning og korodering.
 
 \begin{figure}[H]
@@ -177,7 +177,7 @@ Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i d
 
 Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude\cite{lib:cap_meas} ændringen når der sættes et AC signal igennem eller at måle faseændringen.  
 
-\textbf{Målemetoder} \\
+\textit{Målemetoder} \\
 
 \begin{figure}[H]
   \centering
@@ -196,7 +196,7 @@ Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensa
 
 På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Se Sektion \ref{sec:test_amplitudemoling} for bevis af denne påstand. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. 
 
-\textbf{Målerkredsløb ver.01} \\
+\textit{Målerkredsløb ver.01} \\
 Der er designet et kredsløb der konverterer faseændringen om til en DC-spænding som herefter samples af mikroprocessorens ADC. Dette kredsløb ses på Figur \ref{fig:jf2}. Kredsløbet fungerer ved at der påtrykkes en firkant-spænding på 100kHz over jordspyddet som bliver loaded af R25. Dette efterfølges af en spændingsfølger således R25 kan vælges uden forbehold for det efterfølgende kredsløb. Firkant-spændingen filtreres herefter af et båndpass-filter således at der ligger en sinus på udgangen af U12A. Denne sinus er $180^\circ$ faseforskudt da U12A er koblet som en inverterende forstærkter, derfor sættes der en komparator på udgangen af U12A for at returnere fasen til $0^\circ$ og samtisig sikre et hurtigt skift i XOR-gaten U10A. Til orientering, vil der her blive introduceret et propagation delay som vil bidrage en smule til faseforskydelsen, der forventes i omegnen af $80ns$ \cite{lib:comp_MCP6561_datasheet}. Ved at køre frekvensen fra mikroprocessoren samt udgangen af U8A igennem en XOR-gate (U10A). Bliver faseforskellen af de 2 signaler konverteret til et PWM-signal som efterfølgende filtreres således der ligger en spænding på C26 varierende fra 0V-Vcc/2. For at få et bedere dynamisk range er der indsat en inverterende forstærker med en forstærkning på 2.  
 
 \begin{figure}[H]
@@ -317,7 +317,7 @@ Kredsløbet blev designet på PCB sensor\_3.brd som bruger type 4 jordspyd. Grun
 	\label{fig:scopeU12A}
 \end{figure}
 
-\textbf{Målerkredsløb ver.02} \\
+\textit{Målerkredsløb ver.02} \\
 Efter modultesten af Målerkredsløb ver.01 blev der fortaget en del rettelser til designet hvilket resulterede i et nyt diagram da der samtidig blev designet nyt printudlæg til sensoren (sensor\_4.brd) grundet andre designfejl. I det nye design af målerkredsløbet benyttes der Type 3 jordspyd, designet ses på Figur \ref{fig:j9}.  
 
 \begin{figure}[H]
@@ -329,7 +329,7 @@ Efter modultesten af Målerkredsløb ver.01 blev der fortaget en del rettelser t
 
 Her er indført en MOSFET-transistor, Q11 således at mikroprocessoren kan tænde og slukke for et separat måle-groundplan.  Herved kan der lukkes ned for hele målerkredsløbet når sensoren lægges i sleep-mode. I mikroprocessoren er der en automatisk kalibreringsfunktion som køres ved tryk på Connect-knappen. Spændingsfølgeren på indgangen er fjernet da den viste sig overflødig. Selvom at R22 ikke er 22k$\Omega$ giver 33k$\Omega$ ikke den store forskel. R22 er ændret til 33k$\Omega$ da forstærkningen er sænket til 1. 
 
-\textbf{Modultest - Målerkredsløb ver.02} \\
+\textit{Modultest - Målerkredsløb ver.02} \\
 Kredsløbet viste sig dog stadig at volde problemer. Det første der blev iagttaget var at den ikke-inverterende forstærker U12B var inverterende men ikke gav udslag som den ville hvis benene 5 og 6 var vendt forkert. Der blev kigget i databladet for U12 og der burde ikke være nogle design fejl. Forstærkeren blev afmonteret således resten af kredsløbet kunne blive testet. Her viste det sig at kredsløbet allerede gav fuldt udslag ved 160pF hvilket er 50\% af fuld kapacitet og at udgangsspændingen herefter faldt en smule. Fuldt udslag burde ikke kunne opstå da der maksimalt burde være en faseforskydelse på omkring $55^\circ$ og at fuldt udslag opstår ved $90^\circ$. På Figur \ref{fig:j10} ses der et scopebillede ved 0\% fugtighed. Den automatiske kalibrerings-funktion er blevet kørt og der ligger 357mV rms på C26. At spændingen ikke kan komme ned på 0V skyldes propagation-delay'et i U8A som gør at pulsen bliver bredere og at mikroprocessoren derfor ikke kan forskyde 100kHz\_delayed så den rammer præcis.   
 
 \begin{figure}[H]
@@ -420,7 +420,7 @@ Operationsforstærkerens passer med det gamle footprint og det var derfor nemt a
 
 Pga. af tidspres blev det valgt ikke at bruge mere tid på at finde fejlen. Det blev derfor testet om kredsløbet i Figur \ref{fig:jdig1} kunne bruges som midlertidig løsning.  
 
-\textbf{Test af kredsløb til amplitudemåling af kondensator}  \\ \label{sec:test_amplitudemoling}
+\textit{Test af kredsløb til amplitudemåling af kondensator}  \\ \label{sec:test_amplitudemoling}
  For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. En anden løsning er at sample over en periodetid på 20ms og herefter returnere gennemsnittet af målingerne. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF som aflæses til 37ms. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 da diodetabet vil ændres med temperatur og strømtræk. Kredsløbet blev implementeret på sensoren som en midlertidig løsning da det ikke var muligt at finde på en løsning til problemet med kredsløbet til fasedetektion. På Figur \ref{fig:j20} ses et plot over kapaciteten versus udgangsspændingen på kredsløbet. Funktionen er blevet implementeret i mikroprocessoren. 
  
 \begin{figure}[H]
@@ -444,6 +444,4 @@ Pga. af tidspres blev det valgt ikke at bruge mere tid på at finde fejlen. Det 
 	\label{fig:j20}
 \end{figure} 
 
-
- 
-\clearpage
+\newpage

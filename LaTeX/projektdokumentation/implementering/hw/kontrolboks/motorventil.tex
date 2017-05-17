@@ -37,5 +37,5 @@ Motorventilen blev skilt ad og den interne styring blev fjernet. Se Figur \ref{f
     \label{fig:hbro}
 \end{figure}
 
-\textbf{Modultest af motorventil} \\
+\textit{Modultest af motorventil} \\
 For at teste blokken \texttt{Motorventil} testes først H-bro'en. Dette gøres ved at påføre 0V på H1 og 3.3V på H2. Herefter måles der med et multimeter på PAD7 og PAD8. PAD7 defineres som den positive. Der måles nu 3.3V. Vendes polariteten på H1 og H2 måles der -3.3V. Er spændingen på H1 og H2 3.3V måles der 0V. Samme måles der hvis spændingen på H1 og H2 er 0V. Det testes nu med motorventilen, hvor kun motoren monteres. Påføres der 0V på H1 og 3.3V på H2 åbnes ventilen. Påføres der 3.3V på H1 og 0V på H2 lukker ventilen. Er spændingen det samme på både H1 og H2 er motoren låst. Det konkluderes derfor at blokken virker delvist, da der stadig mangler software til mikroprocessoren, for at aflæse om ventilen er i lukket eller åben position. 
