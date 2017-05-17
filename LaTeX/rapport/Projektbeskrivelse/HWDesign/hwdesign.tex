@@ -1,6 +1,64 @@
-\section{Hardware Design og Implementering}
-\label{ch:HWdesign}
+\section{Hardware Design og Implementering} \label{ch:HWdesign}
 
-Hardware Design og Implementering
+\subsection{Kontrolboks}
+\textbf{Mikroprocessor}
 
-\clearpage
+Mikroprocessoren til kontrolboksen er valgt til at være en Atmel ATMEGA8L i TQFP pakke. Samme mikroprocessor er valgt til sensoren. Valget stod mellem Microchip's PIC serie eller Atmels ATMEGA serie og da der var størst kendskab til programmering af Atmel var det den producent der blev valgt. Fordelen ved Atmel er samtidig at programmet til at programmere mikroprocessoren i, AtmelStudio, er gratis og at der er nogle gode biblioteker som er godt dokumenteret. Microchip kan derimod godt være svære at gennemskue med hensyn til hvad der kræves betaling for.  
+
+Af perifere enheder på kontrolboksen bruges der SPI til transceiveren, I2C til displayet samt en del analoge pins til kontrol af motorventil og tastatur. På sensoren bruges der også den indbyggede 10-bit SAR ADC. 
+
+\textbf{Motorventil}
+
+Der blev hos den kinesiske producent Flow-Control bestilt nogle motorventiler hjem. Disse blev i første omgang valgt grundet deres lave pris, omkring 150kr stykket og har en tilslutning som fylder kravet om den skal kunne monteres på et 1/2" vandrør. Ventilen blev adskilt og det sås at der sat et lille print med et relæ til styring af ventilen. Styringen var lavet således at når den enten var i fuldt lukket eller åben position trak den intet strøm.  \ref{fig:motorventilSamlet} ses motorventilen som den kommer fra producenten. På Figur \ref{fig:delt} ses motorventilen adskilt, hvor de grønne ledninger er til posotions-kontakterne og de røde er til motoren.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Motorventil/samlet.JPG}
+    \caption{Motorventil}
+    \label{fig:motorventilSamlet}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.385\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Motorventil/delt.JPG}
+    \caption{Motorventil adskilt}
+    \label{fig:delt}
+  \end{minipage}
+\end{figure}
+
+Der blev dog i første omgang designet en relæstyring af ventilen. Men den viste sig at være dyr at producere samtidig med at relæet træk en del strøm når det var sluttet. Herefter blev der designet en H-bro som bruger minimal tomgangsstrøm.
+ 
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.4\textwidth]{../fig/Motorventil/hbro.png}
+    \caption{Diagram over H-bro'en}
+    \label{fig:hbro}
+\end{figure}
+
+\textbf{Display}
+
+Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus og have 16X2 karakterer og have baggrundsbelysning. Ved undersøgelse af flere displays blev Newheaven's display \textit{NHD-C0216CiZ-FSW-FBW-3V3} udvalgt. Dette skyldes primært at display'et har indbygget DC-DC step-up converter således at displayet kan forsynes ned til 2.8V. Normalt kører LCD displays på 5V, hvilket er over forsyningskravet på 3.3V. Opsætning og kommunikation sker via I2C som kravet foreskriver. Diagrammet for display'et ses på Figur \ref{fig:display_diagram}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/display/display_diagram_kontrol2.png}
+	\caption{Diagram over I2C Display}
+	\label{fig:display_diagram}
+\end{figure}
+
+D11 sidder for at sænke forsyningsspændingen til omkring 3V da forsyningen ikke må overskride 3.3V. C22 sidde over pin5 og pin6 som udgangskondesator for Step-up konverteren, C23 sidder over pin7 og pin8 som en integreret del af step-up konverteren og disse værdier er valgt ud fra databladet anbefalinger. Derudover benyttes Q13 for at kontrollere LED'en til baggrundsbelysningen hvormed dette kan styres fra software. SDA og SCL linjerne har pull-up modstande påsat som en del af standardopsætning for I2C-bussen.
+
+\textbf{HF Transceiver}
+
+Der er valgt at benytte en transceiveren MRFX49A fra Microchip, denne er valgt da den opfylder designkravene. Derudover skal denne kreds ikke forprogrammeres som mange andre RF-kredse skal, den kan derimod sættes op ved initialisering fra mikroprocessoren som krævet af systemet. Chippen er som skræddersyet til dette system da den er designet til batteri-applikationer. Den har en indbygget "low battery voltage detection" som afgiver et interrupt til mikroprocessoren når batterispændingen når under et forudindstillet threshold som sættes internt i transceiveren. Dette interrupt bliver brugt på sensoren til at enable boostkonverteren, mere info kan finde i implementeringsafsnittet for transceiveren på sensoren i dokumentationen. Derudover har den også en indbygget wake-up timer således at chippen kan sættes i sleep-mode, herved minimeres strømforbruget til nogle få $\mu A$, den kan herefter vækkes op igen efter en forudindstillet tidsperiode. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte benyttes i consumer-elektronik. Transceiveren benytter sig af FSK modulation.
+
+På Figur \ref{fig:mrfx49a_diagram_kontrolboks} ses implementering af transceiveren på kontrolboksen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/transciver/mrfx49a_diagream2_kontrolboks.PNG}
+	\caption{Diagram af MRF49XA på kontrolboksen}
+	\label{fig:mrfx49a_diagram_kontrolboks}
+\end{figure}
+
+Som udgangspunkt er databladets anbefalinger fulgt. Balun-kredsløbet er designet på baggrund af referencedesignet i databladet. Her er det vigtigt at holde sig til at lavtolerance-komponenter for at holde sig tæt på de 50 $\Omega$ udgangsimpedans som det kræves af antennen. Det skal dog nævnes at der i databladet er byttet om på værdierne til balun-kredsløbet ved 433MHz og 868MHz i tabellerne under diagrammerne. Det er derfor svært at vide hvilke værdier der er de rigtige. Fejlen blev først opdaget tilsidst i projektet da rækkevidden ikke kunne komme længere op end ca 10m. Det er derfor nærliggende at tro det er de forkerte værdier som er blevet monteret. 
