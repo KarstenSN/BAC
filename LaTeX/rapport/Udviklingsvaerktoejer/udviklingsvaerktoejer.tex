@@ -5,7 +5,7 @@
 \subsection{V-Model og ASE-Model}
 Under udvikling af dette projekt at det valgt at følge V-Modellen \cite{lib:V_model}. Denne model definere forløbet for udviklignsprojektet og egner sig godt til et iterativt projekt, da der let kan køres flere iterationer under implementeringsfasen. Se Figur \ref{fig:udv_vmodel} for denne model. 
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.5\textwidth]{../fig/rapport/v_model.png}
 	\caption{V-model}
@@ -13,15 +13,14 @@ Under udvikling af dette projekt at det valgt at følge V-Modellen \cite{lib:V_m
 \end{figure} 
 
 I dette projet er modul- og process-integration dog udeladt, og projektet har holdt sig til modul samt acceptests. Derudover er der, som det også fremgår af den iterative beskrivelse i projektdokumentationen udført løbende modultests under implementering af hardware og software. \newline
-Ud over V-Modellen, er ASE-Modellen \cite{lib:V_model} taget i brug som en vejledning til gennemførelse af projektet. ASE-modellen kobler hver fase i udviklingsprojektet med en dokument, disse dokumenter udgår herefter projektdokumentationen. Derudover kan der med denne model efter defineret Systemarkitektur udviklet hardware og software hver for sig i et givent antal iterationer, dette samles så til sidst i Accepttesten for hele systemet. 
+Ud over V-Modellen, er ASE-Modellen \cite{lib:V_model} taget i brug som en vejledning til gennemførelse af projektet. ASE-modellen kobler hver fase i udviklingsprojektet med en dokument, disse dokumenter udgår herefter projektdokumentationen. Derudover kan der med denne model efter defineret Systemarkitektur udviklet hardware og software hver for sig i et givent antal iterationer, dette samles så til sidst i Accepttesten for hele systemet. Oversigt over ASE-modellen ses på figur \ref{fig:udv_asemodel} på \pageref{fig:udv_asemodel}. 
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../fig/rapport/ase_model.png}
 	\caption{ASE-model}
 	\label{fig:udv_asemodel}
 \end{figure}
-
 
 \subsection{SysML}
 Projektet har anvendt SysML primært i systemarkitektur-fasen, for at beskrive systemet bedst muligt
@@ -30,43 +29,42 @@ Veldefinerede grænseflader mellem blokke ved hjælp af SysML har også bidraget
 
 
 \subsection{Versionsstyring}
-der er anvendt versionshistorik på dokumenter i projektdokumentationen samt projektrapport i for git, og for resten af projektet i form af dropbox. Væsentlige ændringer i eks. design har givet anledning til versions-ændring, hvilket hjælper med at holde styr på hvilke større ændringer projektet har gennemgået.
+Der er anvendt versionshistorik på dokumenter i projektdokumentationen samt projektrapport i for git, og for resten af projektet i form af dropbox. Væsentlige ændringer i eks. design har givet anledning til versions-ændring, hvilket hjælper med at holde styr på hvilke større ændringer projektet har gennemgået.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PROJEKTSTYRING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Projektstyring}
 Tidsplan - Mødestruktur - 	Arbejdsfordeling
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  UDVIKLIGNSVÆRKØER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Udviklingsværktøjer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  UDVIKLIGNSVÆRKØER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 I dette afsnit vil de forskellige udviklingsværktøjer, som er blevet anvendt under dette projekts design-, implementerings- og integrationsproces, blive gennemgået.
 
-\paragraph{Cadence OrCAD Capture} 
+\subsection{Cadence OrCAD Capture} 
 er brugt til at designe alle hardwarediagrammer til kontrolboks og sensor. Programmet blev valgt da dette er industristandard, samt at der i projektgruppen er et rigtig godt kendskab til dette arbejdsmiljø. Der har ligeledes været mulighed for at oprette et stort antal af egene komponenter der er brugt til designs. Derudover Cadence pSpice-modulet blevet brugt i forbindelse med alle simuleringer. OrCAD integrer derudover fuldt ud med det valgte layout-tool. 
 
-\paragraph{Cadence allegro}
+\subsection{Cadence allegro}
 er valgt som Layout-tool da der i projektgrupper er stor erfaring med dette program. Derudover integrerer det fuldt ud med det brugte design-tool, og mulighed derudover crossprobing som markant nedsætter arbejdstiden.  
 
-\paragraph{Atmel Studio 7.0}
+\subsection{Atmel Studio 7.0}
 er benyttet som udviklignsmiljø til al software. Dette miljø er skab af fabrikanten til den valgte mikrokontroller. Derfor var det oplagt at skrive i dette tool.  
 
-\paragraph{AWR Design Environment 11}
+\subsection{AWR Design Environment 11}
 designet af native Instruments er lavet til beregner på højfrekvente kredsløb, her er det benyttet til at lave beregninger på mikrostrip-linjerne til antennerne.
 
-\paragraph{WaveForms} 
+\subsection{WaveForms} 
 er brugt til at teste de forskellige hardwareenheder samt indput/output porte af de forskellige embeddede enheder. WaveForms er et program der integrerer med Analog Discovery-enheden, som begge er produceret af Analog Devices, og er et multi-funktions instrument med mulighed for bland andet at agere oscilloskop og funktionsgenerator. Fordelen med Analog Discovery er den mobilitet der gives under udviklingen.
 
-\paragraph{PTC MathCad Prime} 
+\subsection{PTC MathCad Prime} 
 er benyttet til at lave diverse beregninger.
 
 
-\paragraph{Maplesoft Maple} 
+\subsection{Maplesoft Maple} 
 er benyttet til at lave diverse beregninger.
 
 
-\paragraph{MathWorks MATLAB} 
+\subsection{MathWorks MATLAB} 
 er benyttet til at lave diverse beregninger samt diverse plot og dataanalyser.
 
-\paragraph{Git}
+\subsection{Git}
 er et versionsstyringsværktøj til vedligeholdelse af diverse dokumenter. Som repository host er der valgt Github grundet stabilitet og projektgruppens tidligere arbejde med dette miljø. Projektgruppen har valgt at lægge kildekoden til bl.a. denne rapport og Projektdokumentationen på Git for netop at opnå en kraftfuld versionsstyring af hele projektet.
