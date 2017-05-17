@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.17)  17 MAY 2017 13:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.17)  17 MAY 2017 14:49
 entering extended mode
 **rapport.tex
 
@@ -1931,7 +1931,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
 (Font)              using `T1/cmr/b/n' instead on input line 23.
 
-<../fig/Billeder/forsidebillede.jpg, id=118, 1927.2pt x 1284.8pt>
+<../fig/Billeder/forsidebillede.jpg, id=110, 1927.2pt x 1284.8pt>
 File: ../fig/Billeder/forsidebillede.jpg Graphic file (type jpg)
 
 <use ../fig/Billeder/forsidebillede.jpg>
@@ -1964,12 +1964,7 @@ sopgaver/arbejdsopgaver.tex") [5
 
 ] [1]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Indled
-ning/indledning.tex"
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 7.
-
-[2
+ning/indledning.tex" [2
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Opgave
@@ -1980,70 +1975,97 @@ formulering_og_Systembeskrivelse/opgaveformulering_og_systembeskrivelse.tex"
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Krav/k
-rav.tex" [4
+rav.tex"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+
+Underfull \vbox (badness 6575) has occurred while \output is active []
+
+ [4
 
 
 
-])
+]
+[5] <../fig/Systemarkitektur/Usecases.pdf, id=201, 472.01344pt x 627.09282pt>
+File: ../fig/Systemarkitektur/Usecases.pdf Graphic file (type pdf)
+
+<use ../fig/Systemarkitektur/Usecases.pdf>
+Package pdftex.def Info: ../fig/Systemarkitektur/Usecases.pdf used on input lin
+e 64.
+(pdftex.def)             Requested size: 473.0pt x 628.41176pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
+
+ <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/fig/Systemarki
+tektur/Usecases.pdf>])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Projek
 tbeskrivelse/projektbeskrivelse.tex"
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Projek
-tbeskrivelse/HWDesign/hwdesign.tex" [5
+tbeskrivelse/HWDesign/hwdesign.tex" [7
 
 
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Projek
-tbeskrivelse/SWDesign/swdesign.tex" [6
+tbeskrivelse/SWDesign/swdesign.tex" [8
 
-]) [7
+]) [9
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Udvikl
 ingsvaerktoejer/udviklingsvaerktoejer.tex"
-<../fig/rapport/v_model.png, id=214, 496.85625pt x 355.3275pt>
+<../fig/rapport/v_model.png, id=232, 496.85625pt x 355.3275pt>
 File: ../fig/rapport/v_model.png Graphic file (type png)
 
 <use ../fig/rapport/v_model.png>
 Package pdftex.def Info: ../fig/rapport/v_model.png used on input line 10.
 (pdftex.def)             Requested size: 236.5pt x 169.13472pt.
 
-<../fig/rapport/ase_model.png, id=218, 944.7797pt x 521.69907pt>
+<../fig/rapport/ase_model.png, id=236, 944.7797pt x 521.69907pt>
 File: ../fig/rapport/ase_model.png Graphic file (type png)
 
 <use ../fig/rapport/ase_model.png>
 Package pdftex.def Info: ../fig/rapport/ase_model.png used on input line 20.
 (pdftex.def)             Requested size: 378.40144pt x 208.95454pt.
- [8
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10
 
 
 
  <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/fig/rapport/v_
-model.png>] [9 <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/
-fig/rapport/ase_model.png>]) [10]
+model.png>] [11 <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX
+/fig/rapport/ase_model.png>]) [12]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Produk
-tion/produktion.tex") [11
+tion/produktion.tex") [13
 
 
 ]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Result
-ater_og_Diskussion/resultater_og_diskussion.tex" [12
+ater_og_Diskussion/resultater_og_diskussion.tex" [14
 
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Fremti
-digt_arbejde/fremtidigt_arbejde.tex") [13
+digt_arbejde/fremtidigt_arbejde.tex") [15
 
 
 
 ]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Opnaae
-de_erfaringer/Opnaaede_erfaringer.tex" [14
+de_erfaringer/Opnaaede_erfaringer.tex" [16
 
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Konklu
-sion/konklusion.tex" [15
+sion/konklusion.tex" [17
 
 
 
@@ -2051,11 +2073,11 @@ sion/konklusion.tex" [15
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Litter
 aturliste/Litteraturliste.tex"
 bibitemlist
-) [16
+) [18
 
 
 
-] [17
+] [19
 
 
 
@@ -2093,31 +2115,33 @@ aturliste/Litteraturliste.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 4969CE96FF49CF80A86C5C77D3E31EA5;1692.
+(rerunfilecheck)             Checksum: 78975F40740DB2F98112C032B29DA897;1541.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32302 strings out of 493921
- 603390 string characters out of 3144852
- 755405 words of memory out of 3000000
- 34812 multiletter control sequences out of 15000+200000
- 25960 words of font info for 73 fonts, out of 3000000 for 9000
+ 32333 strings out of 493921
+ 603976 string characters out of 3144852
+ 770534 words of memory out of 3000000
+ 34845 multiletter control sequences out of 15000+200000
+ 26273 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 70i,13n,58p,844b,782s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,13n,58p,919b,780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1000.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrb0900.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrb1728.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on rapport.pdf (23 pages, 750743 bytes).
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrb0900.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrb1728.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on rapport.pdf (25 pages, 1098997 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 328 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

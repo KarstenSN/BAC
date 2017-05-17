@@ -22,13 +22,14 @@ Ud over V-Modellen, er ASE-Modellen \cite{lib:V_model} taget i brug som en vejle
 	\label{fig:udv_asemodel}
 \end{figure}
 
-\subsection{SysML}
+
+\textbf{SysML} \\
 Projektet har anvendt SysML primært i systemarkitektur-fasen, for at beskrive systemet bedst muligt
 ud industristandarden for opbygning logiske blokke. Muligheden for derefter at beskrive overordnede blokke har givet mulighed for forskellige abstraktionsniveauer i udviklingen af projektet.
 Veldefinerede grænseflader mellem blokke ved hjælp af SysML har også bidraget til en mere klart defineret designfase og implementeringsfase.
 
 
-\subsection{Versionsstyring}
+\textbf{Versionsstyring} \\
 Der er anvendt versionshistorik på dokumenter i projektdokumentationen samt projektrapport i for git, og for resten af projektet i form af dropbox. Væsentlige ændringer i eks. design har givet anledning til versions-ændring, hvilket hjælper med at holde styr på hvilke større ændringer projektet har gennemgået.
 
 
@@ -38,33 +39,41 @@ Tidsplan - Mødestruktur - 	Arbejdsfordeling
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  UDVIKLIGNSVÆRKØER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{udviklingsværktøjer}
 I dette afsnit vil de forskellige udviklingsværktøjer, som er blevet anvendt under dette projekts design-, implementerings- og integrationsproces, blive gennemgået.
 
-\subsection{Cadence OrCAD Capture} 
+
+\textbf{Cadence OrCAD Capture} 
 er brugt til at designe alle hardwarediagrammer til kontrolboks og sensor. Programmet blev valgt da dette er industristandard, samt at der i projektgruppen er et rigtig godt kendskab til dette arbejdsmiljø. Der har ligeledes været mulighed for at oprette et stort antal af egene komponenter der er brugt til designs. Derudover Cadence pSpice-modulet blevet brugt i forbindelse med alle simuleringer. OrCAD integrer derudover fuldt ud med det valgte layout-tool. 
 
-\subsection{Cadence allegro}
+
+\textbf{Cadence Allegro} 
 er valgt som Layout-tool da der i projektgrupper er stor erfaring med dette program. Derudover integrerer det fuldt ud med det brugte design-tool, og mulighed derudover crossprobing som markant nedsætter arbejdstiden.  
 
-\subsection{Atmel Studio 7.0}
-er benyttet som udviklignsmiljø til al software. Dette miljø er skab af fabrikanten til den valgte mikrokontroller. Derfor var det oplagt at skrive i dette tool.  
 
-\subsection{AWR Design Environment 11}
-designet af native Instruments er lavet til beregner på højfrekvente kredsløb, her er det benyttet til at lave beregninger på mikrostrip-linjerne til antennerne.
-
-\subsection{WaveForms} 
-er brugt til at teste de forskellige hardwareenheder samt indput/output porte af de forskellige embeddede enheder. WaveForms er et program der integrerer med Analog Discovery-enheden, som begge er produceret af Analog Devices, og er et multi-funktions instrument med mulighed for bland andet at agere oscilloskop og funktionsgenerator. Fordelen med Analog Discovery er den mobilitet der gives under udviklingen.
-
-\subsection{PTC MathCad Prime} 
-er benyttet til at lave diverse beregninger.
+\textbf{Atmel Studio 7.0} \\
+Atmel Studio 7.0 er benyttet som udviklignsmiljø til al software. Dette miljø er skab af fabrikanten til den valgte mikrokontroller. Derfor var det oplagt at skrive i dette tool.  
 
 
-\subsection{Maplesoft Maple} 
-er benyttet til at lave diverse beregninger.
+\textbf{AWR Design Environment 11} \\
+AWR Design Environment 11 designet af native Instruments er lavet til beregner på højfrekvente kredsløb, her er det benyttet til at lave beregninger på mikrostrip-linjerne til antennerne.
 
 
-\subsection{MathWorks MATLAB} 
-er benyttet til at lave diverse beregninger samt diverse plot og dataanalyser.
+\textbf{WaveForms} \\
+WaveForms er brugt til at teste de forskellige hardwareenheder samt indput/output porte af de forskellige embeddede enheder. WaveForms er et program der integrerer med Analog Discovery-enheden, som begge er produceret af Analog Devices, og er et multi-funktions instrument med mulighed for bland andet at agere oscilloskop og funktionsgenerator. Fordelen med Analog Discovery er den mobilitet der gives under udviklingen.
 
-\subsection{Git}
-er et versionsstyringsværktøj til vedligeholdelse af diverse dokumenter. Som repository host er der valgt Github grundet stabilitet og projektgruppens tidligere arbejde med dette miljø. Projektgruppen har valgt at lægge kildekoden til bl.a. denne rapport og Projektdokumentationen på Git for netop at opnå en kraftfuld versionsstyring af hele projektet.
+
+\textbf{PTC MathCad Prime} \\
+PTC MathCad Prime er benyttet til at lave diverse beregninger.
+
+
+\textbf{Maplesoft Maple} \\
+Maplesoft Maple er benyttet til at lave diverse beregninger.
+
+
+\textbf{MathWorks MATLAB} \\
+MathWorks MATLAB er benyttet til at lave diverse beregninger samt diverse plot og dataanalyser.
+
+
+\textbf{Git} \\
+Git er et versionsstyringsværktøj til vedligeholdelse af diverse dokumenter. Som repository host er der valgt Github grundet stabilitet og projektgruppens tidligere arbejde med dette miljø. Projektgruppen har valgt at lægge kildekoden til bl.a. denne rapport og Projektdokumentationen på Git for netop at opnå en kraftfuld versionsstyring af hele projektet.
