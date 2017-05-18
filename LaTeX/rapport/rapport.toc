@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {5.1}Udviklingsmodeller}{11}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}V-Model og ASE-Model}{11}{subsection.5.1.1}
 \contentsline {section}{\numberline {5.2}Projektstyring}{12}{section.5.2}
-\contentsline {section}{\numberline {5.3}udviklingsv\IeC {\ae }rkt\IeC {\o }jer}{12}{section.5.3}
+\contentsline {section}{\numberline {5.3}Udviklingsv\IeC {\ae }rkt\IeC {\o }jer}{12}{section.5.3}
 \contentsline {chapter}{\chapternumberline {6}Produktion}{14}{chapter.6}
 \contentsline {section}{\numberline {6.1}Produktionsovervejelser}{14}{section.6.1}
 \contentsline {section}{\numberline {6.2}Markedsunders\IeC {\o }ger}{14}{section.6.2}
