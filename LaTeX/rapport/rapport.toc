@@ -3,47 +3,27 @@
 \contentsline {chapter}{Abstract}{ii}{chapter*.1}
 \contentsline {chapter}{Resum\IeC {\'e}}{iii}{chapter*.2}
 \contentsline {chapter}{Indhold}{iv}{section*.3}
-\contentsline {chapter}{Arbejdsopgaver}{vi}{chapter*.4}
+\contentsline {chapter}{Arbejdsopgaver}{v}{chapter*.4}
 \contentsline {chapter}{\chapternumberline {1}Indledning}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}L\IeC {\ae }sevejledning}{2}{section.1.1}
 \contentsline {chapter}{\chapternumberline {2}Projektformulering}{3}{chapter.2}
 \contentsline {chapter}{\chapternumberline {3}Kravspecifikation}{4}{chapter.3}
-<<<<<<< HEAD
 \contentsline {chapter}{\chapternumberline {4}Design og Implementering}{7}{chapter.4}
 \contentsline {section}{\numberline {4.1}Hardware Design og Implementering}{7}{section.4.1}
-=======
-\contentsline {chapter}{\chapternumberline {4}Design og Implementering}{5}{chapter.4}
-\contentsline {section}{\numberline {4.1}Hardware Design og Implementering}{5}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Kontrolboks}{5}{subsection.4.1.1}
->>>>>>> 4660a93e81fe8a0badb12049e357b89ef9f60943
-\contentsline {section}{\numberline {4.2}Software Design og Implementering}{8}{section.4.2}
-\contentsline {section}{\numberline {4.3}Projektafgr\IeC {\ae }nsning}{9}{section.4.3}
-\contentsline {chapter}{\chapternumberline {5}Udviklingsprocess}{10}{chapter.5}
-\contentsline {section}{\numberline {5.1}Udviklingsmodeller}{10}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}V-Model og ASE-Model}{10}{subsection.5.1.1}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {5.2}Projektstyring}{11}{section.5.2}
-\contentsline {section}{\numberline {5.3}udviklingsv\IeC {\ae }rkt\IeC {\o }jer}{11}{section.5.3}
-=======
-\contentsline {subsection}{\numberline {5.1.2}SysML}{10}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Versionsstyring}{10}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Projektstyring}{11}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Cadence OrCAD Capture}{11}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Cadence allegro}{11}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Atmel Studio 7.0}{11}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}AWR Design Environment 11}{11}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}WaveForms}{12}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}PTC MathCad Prime}{12}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Maplesoft Maple}{12}{subsection.5.2.7}
-\contentsline {subsection}{\numberline {5.2.8}MathWorks MATLAB}{12}{subsection.5.2.8}
-\contentsline {subsection}{\numberline {5.2.9}Git}{12}{subsection.5.2.9}
->>>>>>> 4660a93e81fe8a0badb12049e357b89ef9f60943
-\contentsline {chapter}{\chapternumberline {6}Produktion}{13}{chapter.6}
-\contentsline {section}{\numberline {6.1}Produktionsovervejelser}{13}{section.6.1}
-\contentsline {section}{\numberline {6.2}Markedsunders\IeC {\o }ger}{13}{section.6.2}
-\contentsline {section}{\numberline {6.3}EMC og Godkendelser}{13}{section.6.3}
-\contentsline {chapter}{\chapternumberline {7}Resultater og Diskussion}{14}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Fremtidigt Arbejde}{15}{chapter.8}
-\contentsline {chapter}{\chapternumberline {9}Erfaringer}{16}{chapter.9}
-\contentsline {chapter}{\chapternumberline {10}Konklusion}{17}{chapter.10}
-\contentsline {chapter}{Litteraturliste}{18}{section*.6}
+\contentsline {subsection}{\numberline {4.1.1}Kontrolboks}{7}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Software Design og Implementering}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Projektafgr\IeC {\ae }nsning}{11}{section.4.3}
+\contentsline {chapter}{\chapternumberline {5}Udviklingsprocess}{12}{chapter.5}
+\contentsline {section}{\numberline {5.1}Udviklingsmodeller}{12}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}V-Model og ASE-Model}{12}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Projektstyring}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}udviklingsv\IeC {\ae }rkt\IeC {\o }jer}{13}{section.5.3}
+\contentsline {chapter}{\chapternumberline {6}Produktion}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}Produktionsovervejelser}{15}{section.6.1}
+\contentsline {section}{\numberline {6.2}Markedsunders\IeC {\o }ger}{15}{section.6.2}
+\contentsline {section}{\numberline {6.3}EMC og Godkendelser}{15}{section.6.3}
+\contentsline {chapter}{\chapternumberline {7}Resultater og Diskussion}{16}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Fremtidigt Arbejde}{17}{chapter.8}
+\contentsline {chapter}{\chapternumberline {9}Erfaringer}{18}{chapter.9}
+\contentsline {chapter}{\chapternumberline {10}Konklusion}{19}{chapter.10}
+\contentsline {chapter}{Litteraturliste}{20}{section*.6}

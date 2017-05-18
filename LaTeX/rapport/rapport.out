@@ -8,49 +8,20 @@
 \BOOKMARK [0][-]{chapter.3}{Kravspecifikation}{}% 8
 \BOOKMARK [0][-]{chapter.4}{Design og Implementering}{}% 9
 \BOOKMARK [1][-]{section.4.1}{Hardware Design og Implementering}{chapter.4}% 10
-<<<<<<< HEAD
-\BOOKMARK [1][-]{section.4.2}{Software Design og Implementering}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.3}{Projektafgr\346nsning}{chapter.4}% 12
-\BOOKMARK [0][-]{chapter.5}{Udviklingsprocess}{}% 13
-\BOOKMARK [1][-]{section.5.1}{Udviklingsmodeller}{chapter.5}% 14
-\BOOKMARK [2][-]{subsection.5.1.1}{V-Model og ASE-Model}{section.5.1}% 15
-\BOOKMARK [1][-]{section.5.2}{Projektstyring}{chapter.5}% 16
-\BOOKMARK [1][-]{section.5.3}{udviklingsv\346rkt\370jer}{chapter.5}% 17
-\BOOKMARK [0][-]{chapter.6}{Produktion}{}% 18
-\BOOKMARK [1][-]{section.6.1}{Produktionsovervejelser}{chapter.6}% 19
-\BOOKMARK [1][-]{section.6.2}{Markedsunders\370ger}{chapter.6}% 20
-\BOOKMARK [1][-]{section.6.3}{EMC og Godkendelser}{chapter.6}% 21
-\BOOKMARK [0][-]{chapter.7}{Resultater og Diskussion}{}% 22
-\BOOKMARK [0][-]{chapter.8}{Fremtidigt Arbejde}{}% 23
-\BOOKMARK [0][-]{chapter.9}{Erfaringer}{}% 24
-\BOOKMARK [0][-]{chapter.10}{Konklusion}{}% 25
-\BOOKMARK [0][-]{section*.6}{Litteraturliste}{}% 26
-=======
 \BOOKMARK [2][-]{subsection.4.1.1}{Kontrolboks}{section.4.1}% 11
 \BOOKMARK [1][-]{section.4.2}{Software Design og Implementering}{chapter.4}% 12
 \BOOKMARK [1][-]{section.4.3}{Projektafgr\346nsning}{chapter.4}% 13
 \BOOKMARK [0][-]{chapter.5}{Udviklingsprocess}{}% 14
 \BOOKMARK [1][-]{section.5.1}{Udviklingsmodeller}{chapter.5}% 15
 \BOOKMARK [2][-]{subsection.5.1.1}{V-Model og ASE-Model}{section.5.1}% 16
-\BOOKMARK [2][-]{subsection.5.1.2}{SysML}{section.5.1}% 17
-\BOOKMARK [2][-]{subsection.5.1.3}{Versionsstyring}{section.5.1}% 18
-\BOOKMARK [1][-]{section.5.2}{Projektstyring}{chapter.5}% 19
-\BOOKMARK [2][-]{subsection.5.2.1}{Cadence OrCAD Capture}{section.5.2}% 20
-\BOOKMARK [2][-]{subsection.5.2.2}{Cadence allegro}{section.5.2}% 21
-\BOOKMARK [2][-]{subsection.5.2.3}{Atmel Studio 7.0}{section.5.2}% 22
-\BOOKMARK [2][-]{subsection.5.2.4}{AWR Design Environment 11}{section.5.2}% 23
-\BOOKMARK [2][-]{subsection.5.2.5}{WaveForms}{section.5.2}% 24
-\BOOKMARK [2][-]{subsection.5.2.6}{PTC MathCad Prime}{section.5.2}% 25
-\BOOKMARK [2][-]{subsection.5.2.7}{Maplesoft Maple}{section.5.2}% 26
-\BOOKMARK [2][-]{subsection.5.2.8}{MathWorks MATLAB}{section.5.2}% 27
-\BOOKMARK [2][-]{subsection.5.2.9}{Git}{section.5.2}% 28
-\BOOKMARK [0][-]{chapter.6}{Produktion}{}% 29
-\BOOKMARK [1][-]{section.6.1}{Produktionsovervejelser}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.2}{Markedsunders\370ger}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.3}{EMC og Godkendelser}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Resultater og Diskussion}{}% 33
-\BOOKMARK [0][-]{chapter.8}{Fremtidigt Arbejde}{}% 34
-\BOOKMARK [0][-]{chapter.9}{Erfaringer}{}% 35
-\BOOKMARK [0][-]{chapter.10}{Konklusion}{}% 36
-\BOOKMARK [0][-]{section*.6}{Litteraturliste}{}% 37
->>>>>>> 4660a93e81fe8a0badb12049e357b89ef9f60943
+\BOOKMARK [1][-]{section.5.2}{Projektstyring}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{udviklingsv\346rkt\370jer}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Produktion}{}% 19
+\BOOKMARK [1][-]{section.6.1}{Produktionsovervejelser}{chapter.6}% 20
+\BOOKMARK [1][-]{section.6.2}{Markedsunders\370ger}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.3}{EMC og Godkendelser}{chapter.6}% 22
+\BOOKMARK [0][-]{chapter.7}{Resultater og Diskussion}{}% 23
+\BOOKMARK [0][-]{chapter.8}{Fremtidigt Arbejde}{}% 24
+\BOOKMARK [0][-]{chapter.9}{Erfaringer}{}% 25
+\BOOKMARK [0][-]{chapter.10}{Konklusion}{}% 26
+\BOOKMARK [0][-]{section*.6}{Litteraturliste}{}% 27

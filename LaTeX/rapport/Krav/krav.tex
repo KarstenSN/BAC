@@ -4,12 +4,12 @@ I dette afsnit er de opstillede krav for Autovandingssystemet beskrevet. Disse k
 
 I figur \ref{fig:use_cases} på side \pageref{fig:use_cases} ses Use Cases for systemet samt en kort beskrivelse af dem. 
 De funktionelle krav for systemet er udledt ud fra disse og beskrevet herunder. 
-For at se den komplette beskrivelse af kravene for systemet henvises til kapitel 2 kravspecifikation i dokumentationen.
+For at se den komplette beskrivelse af kravene for systemet henvises til \ref{P-ch:kravspecifikation} \nameref{P-ch:kravspecifikation} på side \pageref{P-ch:kravspecifikation} i dokumentationen.
 
 \begin{itemize} \itemsep0mm
 	\item \textbf{UC1: Tænd system} sørger for opstart af systemet.
 	\item \textbf{UC2: Aflæs fugtighed og temperatur} sørger for aflæsning af fugtighed og temperatur fra sensoren
-	\item \textbf{UC3: Indstil ønsket fugtig} benyttes til, på kontrolboksen at indstille den ønskede fugtighed i det medie hvor sensoren er placeret 
+	\item \textbf{UC3: Indstil ønsket fugtig} benyttes til, på kontrolboksen at indstille den ønskede fugtighed i det medie hvori sensoren er placeret
 	\item \textbf{UC4: Indstil åbningstid} giver brugeren mulighed for at indstille hvor længe der skal vandes ad gangen
 	\item \textbf{UC5: Indstil vandingsinterval} giver brugeren mulighed for at indstille intervallet imellem vandingerne
 	\item \textbf{UC6: Åbn/luk for ventil manuelt} giver brugeren mulighed for at åbne og lukke ventilen manuelt
@@ -17,39 +17,38 @@ For at se den komplette beskrivelse af kravene for systemet henvises til kapitel
 	\item \textbf{UC8: Par sensor og kontrolboks} giver brugeren mulighed for parre sensor og kontrolboks
 \end{itemize}
 
-
 I tabel \ref{tbl:funk_krav} opstilles de funktionelle krav til systemet, disse krav skal være opfyldt for at systemet betragtes som fuldt funktionelt. Kravene listes med et unik ID således de kan spores tilbage igennem hele dokumentationen. Kravenes ID er givet ved:
 
 \begin{itemize} \itemsep0mm
-\item	\texttt{MC}: \textit{Mechanical Contraints:} Dette er de mekaniske krav til systemet
-\item	\texttt{EL}: \textit{Electrical Contraints:} Dette er de elektriske krav til systemet
-\item	\texttt{CM}: \textit{Communications Contraints:} Dette er de krav der vedrører kommunikation i systemet
-\item 	\texttt{UX}: \textit{User Experience:} Dette er de bruger-relaterede krav til systemet
+	\item	\texttt{MC}: \textit{Mechanical Contraints:} Dette er de mekaniske krav til systemet
+	\item	\texttt{EL}: \textit{Electrical Contraints:} Dette er de elektriske krav til systemet
+	\item	\texttt{CM}: \textit{Communications Contraints:} Dette er de krav der vedrører kommunikation i systemet
+	\item 	\texttt{UX}: \textit{User Experience:} Dette er de bruger-relaterede krav til systemet
 \end{itemize}
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | L{1.9 cm}|} \hline
 	\textbf{ID:} 		& \textbf{Krav:}		& \textbf{Prioritet:} 	 \\ \hline
-MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks												& \textit{Must}	 \\ \hline
-MC\_02	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet									& \textit{Must}  \\ \hline
-MC\_03	& Kontrolboksen skal vise jordfugtighed og temperatur på et display									& \textit{Would} \\ \hline
-MC\_04	& Kontrolboksen skal indeholde et tastatur															& \textit{Would} \\ \hline
-MC\_05	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet					& \textit{Would} \\ \hline
-MC\_06	& Systemet skal kunne pre-indstilles til en specifik afgrøde 										& \textit{Could} \\ \hline
-MC\_07  & Systemet skal kunne måle PH-værdien i jorden														& \textit{Could} \\ \hline
-MC\_08	& Systemet skal kunne betjenes fra en smartphone-applikation										& \textit{Would} \\ \hline
-MC\_09	& Systemet skal kunne tilsluttes flere sensorer														& \textit{Would} \\ \hline
-EL\_01	& Sensoren skal være batteridrevet																	& \textit{Must}	 \\ \hline
-EL\_02	& Kontrolboksen skal kunne forsynes med en 3. parts 5V AC/DC adaptor								& \textit{Must}	 \\ \hline
-CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse					& \textit{Must}	 \\ \hline
-CM\_02	& Sensor og kontrolboks skal parres manuelt 														& \textit{Must}	 \\ \hline
-CM\_03	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m 								& \textit{Should}\\ \hline
-UX\_01	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen				& \textit{Must}	 \\ \hline
-UX\_02	& Brugeren skal kunne indstille en ønsket jordfugtighed på kontrolboksen							& \textit{Must}	 \\ \hline
-UX\_03	& Brugeren skal kunne indstille en åbningstid for ventilen											& \textit{Must}	 \\ \hline
-UX\_04	& Brugeren skal kunne vælge automatisk vandingstidsrum												& \textit{Must}	 \\ \hline
-UX\_05	& Kontrolboksen skal kunne måle om slangen er sprunget fra, og give fejlmelding						& \textit{Should}\\ \hline
-UX\_06	& Brugeren skal kunne indstille en tidsbaseret vandingssekvens										& \textit{Should}\\ \hline		
+		MC\_01 	& Systemet skal bestå af en sensor samt en kontrolboks											& \textit{Must}	 \\ \hline
+		MC\_02	& Sensoren skal måle temperatur, jordfugtighed samt lysintensitet								& \textit{Must}  \\ \hline
+		MC\_03	& Kontrolboksen skal vise jordfugtighed og temperatur på et display								& \textit{Would} \\ \hline
+		MC\_04	& Kontrolboksen skal indeholde et tastatur														& \textit{Would} \\ \hline
+		MC\_05	& Kontrolboksen skal drive en indbygget motorventil til at åbne og lukke for vandet				& \textit{Would} \\ \hline
+		MC\_06	& Systemet skal kunne pre-indstilles til en specifik afgrøde 									& \textit{Could} \\ \hline
+		MC\_07  & Systemet skal kunne måle PH-værdien i jorden													& \textit{Could} \\ \hline
+		MC\_08	& Systemet skal kunne betjenes fra en smartphone-applikation									& \textit{Would} \\ \hline
+		MC\_09	& Systemet skal kunne tilsluttes flere sensorer													& \textit{Would} \\ \hline
+		EL\_01	& Sensoren skal være batteridrevet																& \textit{Must}	 \\ \hline
+		EL\_02	& Kontrolboksen skal kunne forsynes med en 3. parts 5V AC/DC adaptor							& \textit{Must}	 \\ \hline
+		CM\_01	& Kontrolboksen skal kunne udveksle data med sensoren via en trådløs forbindelse				& \textit{Must}	 \\ \hline
+		CM\_02	& Sensor og kontrolboks skal parres manuelt 													& \textit{Must}	 \\ \hline
+		CM\_03	& Kommunikation fra sensor til kontrolboks skal virke ved minimum 30m 							& \textit{Should}\\ \hline
+		UX\_01	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen			& \textit{Must}	 \\ \hline
+		UX\_02	& Brugeren skal kunne indstille en ønsket jordfugtighed på kontrolboksen						& \textit{Must}	 \\ \hline
+		UX\_03	& Brugeren skal kunne indstille en åbningstid for ventilen										& \textit{Must}	 \\ \hline
+		UX\_04	& Brugeren skal kunne vælge automatisk vandingstidsrum											& \textit{Must}	 \\ \hline
+		UX\_05	& Kontrolboksen skal kunne måle om slangen er sprunget fra, og give fejlmelding					& \textit{Should}\\ \hline
+		UX\_06	& Brugeren skal kunne indstille en tidsbaseret vandingssekvens									& \textit{Should}\\ \hline		
 	\end{tabularx}
 	\caption{Funktionelle krav}
 	\label{tbl:funk_krav}
