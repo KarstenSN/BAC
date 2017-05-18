@@ -95,4 +95,187 @@ Systemet betjenes via et tastatur der moneres på kontrolboksen. Tastaturet best
 
 \subsection{Sensor}
 
+\textbf{Mikroprocessor}\\
+Som mikroprocessor er der valgt samme type som på kontrolboksen. Her er der dog små ændringer i brugen da den interne ADC bruges til at sample værdierne fra både jordfugtmåleren og lyssensoren. 
+
+\textbf{Jordfugtmåler}\\
+Hovedformålet med jordfugtmåleren er som det fremgår af navnet; at måle jordfugtigheden. Her er der i videnskabelige artikler fundet frem til fire metoder at gøre dette på. En resistiv målemetode \cite{lib:MultiSensorSystem}, en kapasitiv målemetode\cite{lib:MultiSensorSystem}, en optisk målemetode\cite{lib:optical} og en metode hvor der bruges en varmepuls\cite{lib:DPHP}. Den resistive målemetode er den simpleste men desværre også den mest upræcise. Der er igennem projektet blevet undersøgt om denne målemetode kunne bruges trods dens begrænsninger og om der kunne findes en løsning der på. Da det viste sig at være svært at forbedre den resistive målemetode blev der herefter undersøgt hvordan der kunne laves en kapasitiv måling. Skalaen som der er brugt at at bestemme jordfugten er den volumetriske skala\cite{lib:wiki_waterContent}. 
+
+\begin{equation}
+	\theta = \frac{V_w}{V_s + V_w +V_a} \cdot 100\%
+	\label{equ:fugtighed}
+\end{equation}
+
+Hvor $\theta$ er fugtigheden i procent. $V_w$ er volumen af væsken, $V_s$ er volumen af jorden og $V_a$ er volumen af luften indeholdende i jorden. For at gøre det nemmere at bestemme en jordfugtighed afvejes først 1 liter jord, som der sammenpresses nok til at der ikke er noget luft i prøven. Herefter noteres vægten som $m_{s1L}$ og nu kan ligning \ref{equ:fugtighed} omskrives til ligning \ref{equ:fugtighed2} 
+
+\begin{equation}
+	\theta = \frac{m_w}{(m_{wet}-m_w)\cdot \eta + m_w} \cdot 100\% 
+	\label{equ:fugtighed2}
+\end{equation}
+
+Hvor $m_w$ er massen af væske, $m_{wet}$ er massen af den fugtige jord og $\eta$ er udregnet via vægten af 1 liter jord.
+
+\begin{equation}
+	\eta = \frac{1}{m_{s1L}}
+\end{equation}
+
+Det er derfor nu muligt at bestemme en jordfugtighed uden at skulle måle volumen af prøven. Til vejning af jordprøver er der blevet brugt en vægt af producenten \texttt{Sartorius} model \texttt{QUINTIX2102-1S} med en præcision på $\pm0.01g$.
+
+\textit{Resistiv måling} \\
+Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Ved hjælp af denne kunne der opstilles et ækvivalent-diagram som ses på Figur \ref{fig:akvj1}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../fig/Jordfugt/akvivalentjord.PNG}
+	\caption{Ækvivalentdiagram af jorden}
+	\label{fig:akvj1}
+\end{figure} 
+
+Systemet blev moduleret som et første ordenssystem med overføringsfunktionen:
+\begin{equation}
+	System = \dfrac{\alpha \cdot \beta}{S + \alpha}
+\end{equation}
+Der blev i alt lavet målinger af 3 typer jord. To fra en have og en fra en plantesæk. Både $\beta$ værdien og $\alpha$ værdien varierede med fugtigheden af jorden og det var derfor nærliggende at tro at ved brug af begge, ville der kunne opnås en større præcision. Det viste sig dog at $\alpha$ værdien varierede med tiden siden sidste måling og at den derfor var uegnet til udregning af fugtigheden. $\beta$ værdien var noget mere præcis, men den varierede meget for hvilken jordtype der var tale om og er derfor hellere ikke egnet til udregning af fugtighed. Se Figur \ref{fig:funcfit} for regression over $\beta$ værdien i MATLAB. Regressionen blev bestemt til at være:
+
+\begin{equation}
+	\theta = a \cdot exp(b\cdot x) + c \cdot exp(d\cdot x)
+\end{equation}
+
+Hvor a=2.219$\cdot 10^{7}$ b=-39.8 c=151.9 d=-3.473
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/functionfit.PNG}
+	\caption{Functionfit i MATLAB}
+	\label{fig:funcfit}
+\end{figure} 
+
+
+\textit{Kapacitiv måling} \\
+Den kapacitive målemetode benytter sig af et jordspyd stukket ned i jorden\cite{lib:SoilModeling} \cite{lib:MultiSensorSystem} \cite{lib:DPHP} \cite{lib:cap_soil}. På jordspyddet er der to kobberplader som vil danne en kapacitet der vil variere afhængig af fugtigheden af den jord det befinder sig i. Se Figur \ref{fig:kap1} og \ref{fig:kap2}. Kobberbanerne skal dog forinden belægges med en elektrisk isolerende coating for at undgå kortslutning og korodering.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Jordfugt/printkapasitet.png}
+    \caption{Tværsnit af jordspyd}
+    \label{fig:kap1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../fig/Jordfugt/printkapasitet_vad.png}
+    \caption{Tværsnit af jordspyd i vand}
+    \label{fig:kap2}
+  \end{minipage}
+\end{figure}
+
+For en kapacitet gælder:
+
+\begin{equation}
+	C = \frac{\epsilon_0\cdot \epsilon_r \cdot A}{d}
+\end{equation}
+
+Hvor $\epsilon_0 = 8.854\cdot 10^{-12}F/m$ er permativiteten af vaccum, $\epsilon_r$ er permativiteten af materialet mellem kobberet som er 1 for luft og omkring 80 for vand. A er arealet af det kobber som kan se hinanden og d er diameteren mellem banerne. 
+
+Det vil sige at kapaciteten vil blive 80 gange større når jordspyddet er stukket ned i rent vand end hvis det var i tør luft. Hvis vi antager at der er 0.3mm mellem banerne, at de har en længde på 5cm, at kobbertykkelsen er 35$\mu m$ og at jordspyddet befinder sig i vaccum. Vil der være en kapacitet på:
+
+\begin{equation}
+	C = \frac{8.854\cdot 10^{-12}\cdot 1 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 0.05pF
+\end{equation} 
+
+Antager vi at jordspyddet er stukket ned i vand vil vi have en kapacitet 80 gange større:
+
+\begin{equation}
+	C = \frac{8.854\cdot 10^{-12}\cdot 80 \cdot 35 \cdot 10^{-6} \cdot 5 \cdot 10^{-2}}{0.3 \cdot 10^{-3}} = 4.00pF
+\end{equation} 
+
+Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det viste sig at kapaciteten lå højere end det forventede. Dette skyldes at der er udstråling fra banerne som der er svære at tage med i beregningerne. Se figur \ref{fig:spyd1},\ref{fig:spyd2},\ref{fig:spyd3},\ref{fig:spyd4}. Type 1 og 2 er meget ens. De danner begge en kapacitet mellem stelplanet og midterbanen. Størstedelen af kapaciten vil ligge for enden af spyddet hvor banen er tykkest på Type 1 og gaffelformet på Type 2. Dog er det ikke ligegyldigt hvor dybt spyddes stikkes ned i jorden da der også vil dannes en kapacitet mellem fødebanen og stelplan'et. For at undgå at spyddet skal stikkes ned i en bestemt højde er Type 2 og 3 blevet lavet. Type 3 fører en bane på oversiden af printet hvor der ligger en identisk bane på bagsiden. På den måde skulle kapaciteten ikke ændre sig når der kommer vand længere op end til "diamanten". Test viste dog at kapaciteten alligevel varierede. Det blev lagt et stelplan uden på banerne for at indkapsle dem, ved at skære et andet print til, og lime det på således der laves et 4-lags print. Dette viste sig at have gode egenskaber og derfor skal jordspyddet også laves i 4-lag hvis der en gang skal laves en produktion. Type 4 er delt med et stelplan således at banerne ikke kan se hinanden. Dette print var dog det der performede dårligst da det kun virkede når der lå vand mellem banerne. Kom der først vand ud på stelplan'et blev her dannet en kapacitet som var sammenligning med det der var mellem pladerne og virkningen blev herved reduceret. Der blev herefter testet i en så og prikle jord med Type 1,2 og 3 for sammenhæng mellem kapacitet og fugtighed. Se Figur \ref{fig:graffugt}.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+  \centering
+    \includegraphics[width=0.4\textwidth]{../fig/Jordfugt/type1.jpg}
+    \caption{Type 1 jordspyd}
+    \label{fig:spyd1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+  \centering
+    \includegraphics[width=0.31\textwidth]{../fig/Jordfugt/type2.jpg}
+    \caption{Type 2 jordspyd}
+    \label{fig:spyd2}
+  \end{minipage}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+    \begin{minipage}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{../fig/Jordfugt/type3.jpg}
+    \caption{Type 3 jordspyd}
+    \label{fig:spyd3}
+  \end{minipage}
+  \hfill
+    \begin{minipage}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.34\textwidth]{../fig/Jordfugt/type4.jpg}
+    \caption{Type 4 jordspyd}
+    \label{fig:spyd4}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/capVsSoil.PNG}
+	\caption{Kapacitet vs. jordfugtighed. Her er målt i en så og priklejord}
+	\label{fig:graffugt}
+\end{figure}  
+
+Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i deres udslag, men at Type 3 har et pænt lineært forhold op til omkring 40\%. Afvigelsen skyldes at ved 40\% bliver jorden så våd at der begynder at ligge mere vand på spyddet end hvad der er i jorden. Derfor bliver kapaciteten højere end hvad den burde. Der kan nu opstilles en formel til beregning af fugtigheden af jorden hvis kapaciteten af spyddet er kendt for både tør og våd. 
+
+\begin{equation}
+	\theta = \frac{C_{weat} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
+\end{equation}
+
+\textit{Målemekredsløb}\\
+Det blev overvejet hvordan kapaciteten kunne måles præcist uden at det skulle blive et alt for dyrt kredsløb. Det blev overvejet at lave en amplitude måling af kapaciteten. Men denne viste sig at være meget støjfyldt og meget temperatur afhængig. Herefter blev der designet et kredsløb til måling af faseændringen, som ved hjælp at et båndpass-filter med et højt Q dæmpede støjen betragteligt. Se Figur \ref{fig:j9}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../fig/Jordfugt/diagram4.PNG}
+	\caption{Målekredsløb ver.2}
+	\label{fig:j9}
+\end{figure}  
+
+Kredsløbet virker ved at der fra mikroprocessoren kommer en firkantspænding på 100kHz igennem jordspydet som virker som en kondensator. Denne kondensator bliver belastet af R22 således at der totalt opnåes en faseændring på 55$^\circ$ fra 0\% fugtighed til 100\% fugtighed. Herefter føres firkantspændingen i et båndpasfilter og vil ligge som en faseforskudt sinus på udgangen af U12A. Da U12 er en inverterende forstærker monteres U8A som en komparator der både vender fasen til 0$^\circ$ igen og samtidig sørger for at konvertere sinusen om til en firkant igen, således indgangen af U10A skifter hurtigt. U10A er en XOR-gate som her bruges tom fasedetektion. På indgang B kommer den faseforskudte firkant og på indgang A er en forskudt frekvens fra mikroprocessoren som kalibreres ind ved at kalde en kalibrerings-funktion således der ligger 0V på C26 ved 0\% fugtighed. Alt afhænging af fugtigheden i jorden vil der nu ligge en DC på C26. Denne forstærkes som sidste led op af U12B således der gived et bedre dynamisk range til mikroprocessorens ADC. Q11 er blevet monteret for at kunne slukke totalt for målekredsløbet når det er inaktivt for at spare strøm. \\
+
+Desværre viste kredsløbet sig at volde store problemer. I første øjekast så det ud til at virke, men ved nærmere iagttagelse sås der at det gav en for stor faseforskydelse. Det viste sig at faseforskydelsen opstod i U12A. Der blev testet med en tonegenerator og det blev opserveret at der ved en amplitude ændring på indgangen opstod en faseforskydelse på udgangen. Filterets komponentværdier blev ændret til et lavere Q men dette gav intet bedre resultat. Komponent-værdierne blev også skaleret således udgangen ikke blev belastet så hårdt. Dette hjalp hellere ikke. Til sidst blev det forsøgt at udskifte operationsforstærkeren til en anden type. Dette gjorde dog at båndpassfilteret begyndte at oscillere.
+Da det begyndte at knibe med tiden blev der derfor implementeret en løsning som i starten var valgt fra pga. dens dårlige støj og temperatur forhold. Se Figur \ref{fig:jdig1}.
+
+\begin{figure}[H]
+	\centering
+   \includegraphics[width=0.7\textwidth]{../fig/Jordfugt/diagram1.png}
+   \caption{Amplitudemåling af kondensator}
+   \label{fig:jdig1}
+\end{figure}  
+
+På Figur \ref{fig:j20} ses udgangsspændingen vs. kapaciteten. Regressionen er blevet implementeret i mikroprocessoren og en kalibrerings-funktion bliver kaldt når brugeren trykker på connect-knappen på sensoren.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../fig/Jordfugt/funch_dc_charge.PNG}
+	\caption{Kapacitet vs. udgangspænding i forhold til forsyningsspændingen}
+	\label{fig:j20}
+\end{figure} 
+
+
+
+
+
+
+
+
+
 
