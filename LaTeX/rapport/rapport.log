@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.17)  18 MAY 2017 08:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.17)  18 MAY 2017 08:38
 entering extended mode
 **rapport.tex
 
@@ -2025,7 +2025,7 @@ Underfull \vbox (badness 6575) has occurred while \output is active []
 
 
 ]
-[5] <../fig/Systemarkitektur/Usecases.pdf, id=209, 472.01344pt x 627.09282pt>
+[5] <../fig/Systemarkitektur/Usecases.pdf, id=212, 472.01344pt x 627.09282pt>
 File: ../fig/Systemarkitektur/Usecases.pdf Graphic file (type pdf)
 
 <use ../fig/Systemarkitektur/Usecases.pdf>
@@ -2043,14 +2043,14 @@ tektur/Usecases.pdf>])
 tbeskrivelse/projektbeskrivelse.tex"
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Projek
 tbeskrivelse/HWDesign/hwdesign.tex"
-<../fig/Motorventil/samlet.JPG, id=227, 2289.55376pt x 1727.45375pt>
+<../fig/Motorventil/samlet.JPG, id=230, 2289.55376pt x 1727.45375pt>
 File: ../fig/Motorventil/samlet.JPG Graphic file (type jpg)
 
 <use ../fig/Motorventil/samlet.JPG>
 Package pdftex.def Info: ../fig/Motorventil/samlet.JPG used on input line 17.
 (pdftex.def)             Requested size: 189.19711pt x 142.73283pt.
 
-<../fig/Motorventil/delt.JPG, id=228, 1815.78375pt x 1450.41875pt>
+<../fig/Motorventil/delt.JPG, id=231, 1815.78375pt x 1450.41875pt>
 File: ../fig/Motorventil/delt.JPG Graphic file (type jpg)
 
 <use ../fig/Motorventil/delt.JPG>
@@ -2063,14 +2063,14 @@ Package pdftex.def Info: ../fig/Motorventil/delt.JPG used on input line 23.
  <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/fig/Motorventi
 l/samlet.JPG> <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/f
 ig/Motorventil/delt.JPG>]
-<../fig/Motorventil/hbro.png, id=236, 510.40688pt x 624.83438pt>
+<../fig/Motorventil/hbro.png, id=239, 510.40688pt x 624.83438pt>
 File: ../fig/Motorventil/hbro.png Graphic file (type png)
 
 <use ../fig/Motorventil/hbro.png>
 Package pdftex.def Info: ../fig/Motorventil/hbro.png used on input line 33.
 (pdftex.def)             Requested size: 189.19711pt x 231.61414pt.
 
-<../fig/display/display_diagram_kontrol2.png, id=238, 780.66656pt x 500.62032pt
+<../fig/display/display_diagram_kontrol2.png, id=241, 780.66656pt x 500.62032pt
 >
 File: ../fig/display/display_diagram_kontrol2.png Graphic file (type png)
  <use ../fig/display/display_diagram_kontrol2.png>
@@ -2082,7 +2082,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/fig/Motorve
 ntil/hbro.png>]
-<../fig/transciver/mrfx49a_diagream2_kontrolboks.PNG, id=246, 1056.94875pt x 51
+<../fig/transciver/mrfx49a_diagream2_kontrolboks.PNG, id=249, 1056.94875pt x 51
 1.15968pt>
 File: ../fig/transciver/mrfx49a_diagream2_kontrolboks.PNG Graphic file (type pn
 g)
@@ -2097,20 +2097,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 /display_diagram_kontrol2.png>])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Projek
 tbeskrivelse/SWDesign/swdesign.tex" [10 <C:/Users/KennHedegaard/Dropbox/IHA/6. 
-Semester/E6BAC/BAC/LaTeX/fig/transciver/mrfx49a_diagream2_kontrolboks.PNG>])
-[11
-
-])
+Semester/E6BAC/BAC/LaTeX/fig/transciver/mrfx49a_diagream2_kontrolboks.PNG>]))
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Udvikl
 ingsvaerktoejer/udviklingsvaerktoejer.tex"
-<../fig/rapport/v_model.png, id=264, 496.85625pt x 355.3275pt>
+<../fig/rapport/v_model.png, id=263, 496.85625pt x 355.3275pt>
 File: ../fig/rapport/v_model.png Graphic file (type png)
 
 <use ../fig/rapport/v_model.png>
 Package pdftex.def Info: ../fig/rapport/v_model.png used on input line 10.
 (pdftex.def)             Requested size: 236.5pt x 169.13472pt.
 
-<../fig/rapport/ase_model.png, id=268, 944.7797pt x 521.69907pt>
+<../fig/rapport/ase_model.png, id=267, 944.7797pt x 521.69907pt>
 File: ../fig/rapport/ase_model.png Graphic file (type png)
 
 <use ../fig/rapport/ase_model.png>
@@ -2119,36 +2116,37 @@ Package pdftex.def Info: ../fig/rapport/ase_model.png used on input line 20.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12
+ [11
+
 
 
 
  <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX/fig/rapport/v_
-model.png>] [13 <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX
-/fig/rapport/ase_model.png>]) [14]
+model.png>] [12 <C:/Users/KennHedegaard/Dropbox/IHA/6. Semester/E6BAC/BAC/LaTeX
+/fig/rapport/ase_model.png>]) [13]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Produk
-tion/produktion.tex") [15
+tion/produktion.tex") [14
 
 
 ]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Result
-ater_og_Diskussion/resultater_og_diskussion.tex" [16
+ater_og_Diskussion/resultater_og_diskussion.tex" [15
 
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Fremti
-digt_arbejde/fremtidigt_arbejde.tex") [17
+digt_arbejde/fremtidigt_arbejde.tex") [16
 
 
 
 ]
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Opnaae
-de_erfaringer/Opnaaede_erfaringer.tex" [18
+de_erfaringer/Opnaaede_erfaringer.tex" [17
 
 
 ])
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Konklu
-sion/konklusion.tex" [19
+sion/konklusion.tex" [18
 
 
 
@@ -2156,11 +2154,11 @@ sion/konklusion.tex" [19
 ("C:\Users\KennHedegaard\Dropbox\IHA\6. Semester\E6BAC\BAC\LaTeX\rapport\Litter
 aturliste/Litteraturliste.tex"
 bibitemlist
-) [20
+) [19
 
 
 
-] [21
+] [20
 
 
 
@@ -2198,16 +2196,16 @@ aturliste/Litteraturliste.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 85E60E3CAC8FC0746CE4A2DA20A86D2E;1607.
+(rerunfilecheck)             Checksum: A8E0674E032B8F72D2D57FDEC09018ED;1607.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32466 strings out of 493921
- 606914 string characters out of 3144852
- 776107 words of memory out of 3000000
+ 32465 strings out of 493921
+ 606907 string characters out of 3144852
+ 776110 words of memory out of 3000000
  34944 multiletter control sequences out of 15000+200000
  26273 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2224,9 +2222,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrb0900.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on rapport.pdf (27 pages, 3002644 bytes).
+Output written on rapport.pdf (26 pages, 3002360 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

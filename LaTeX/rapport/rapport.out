@@ -5,12 +5,12 @@
 \BOOKMARK [0][-]{chapter.1}{Indledning}{}% 5
 \BOOKMARK [1][-]{section.1.1}{L\346sevejledning}{chapter.1}% 6
 \BOOKMARK [0][-]{chapter.2}{Projektformulering}{}% 7
-\BOOKMARK [0][-]{chapter.3}{Kravspecifikation}{}% 8
-\BOOKMARK [0][-]{chapter.4}{Design og Implementering}{}% 9
-\BOOKMARK [1][-]{section.4.1}{Hardware Design og Implementering}{chapter.4}% 10
-\BOOKMARK [2][-]{subsection.4.1.1}{Kontrolboks}{section.4.1}% 11
-\BOOKMARK [1][-]{section.4.2}{Software Design og Implementering}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.3}{Projektafgr\346nsning}{chapter.4}% 13
+\BOOKMARK [1][-]{section.2.1}{Projektafgr\346nsning}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Kravspecifikation}{}% 9
+\BOOKMARK [0][-]{chapter.4}{Design og Implementering}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Hardware Design og Implementering}{chapter.4}% 11
+\BOOKMARK [2][-]{subsection.4.1.1}{Kontrolboks}{section.4.1}% 12
+\BOOKMARK [1][-]{section.4.2}{Software Design og Implementering}{chapter.4}% 13
 \BOOKMARK [0][-]{chapter.5}{Udviklingsprocess}{}% 14
 \BOOKMARK [1][-]{section.5.1}{Udviklingsmodeller}{chapter.5}% 15
 \BOOKMARK [2][-]{subsection.5.1.1}{V-Model og ASE-Model}{section.5.1}% 16
