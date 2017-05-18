@@ -1,3 +1,17 @@
 \section{Produktionsovervejelser} \label{sec:produktion}
 
-test
+Grundet projektets art som salgsprodukt har det fra starten været ønsket at tænke DFM\cite{lib:dfm} (Design For Manufacturability) ind som en integreret del af designprocessen. DFM indebærer at udvikle sit design så det bedst muligt egner sig til produktion samt reducerer omkostninger hertil. Derudover handler det om at foregribe evt. produktionsmæssige udfordringer allerede i designfasen, hvor de slår mindst igennem på omkostningerne. Der er mange lag og overvejelser i forbindelse med DFM og her vil blive gennemgået nogle af dem som projektgruppen har fundet til at ha størst betydning for dette projekt.
+
+\textbf{Komponentvalg} \\
+Valget af kompnonenter kan have stor indflydelse på omkostningerne ved produktion. Her er det af stor betydning om der vælges komponenter af \textit{Through hole} eller \textit{SMT} teknologi. SMT (Surface Mount Technology) kan maskinmonteres af EMS-firmaet, hvor imod through hole skal håndloddes efterfølgende med dertil forhøjede omkostninger. Derfor er det at foretrække at benytte SMT så meget som muligt i sit design. Der er naturligvis komponenter såsom enkelt konnektorer, DC stk og lign. som her på er implementeret som TH, men som udgangspunkt er der valgt SMT komponenter der hvor det omkostningsmæssigt har givet mening. \newline
+Et andet punkt hvor mange fejl kan kommes i forkøbet er ved at sikre at ha tolerancerne i orden på sine komponenter, det være sig elektriske komponenter såvel som mekaniske komponenter, på denne måde sikrer du har PCB'er passer i deres plasthuse eks. og at de elektriske kredsløb fungerer som forventet selvom der er udsving i komponenterne. Her er det værd at bemærke at der til, eks. Antenne-balunen, som er et kredsløb der er meget følsomt for komponentvariationer, bør benyttes komponenter af lav tolerance for at sikre en karakteristisk impedans så tæt på $50 \Omega$ som muligt. Andre kredsløb som eks. båndpasfiltre og feedback-kredsløb kan også have deres egne krav om maksimale tolerancer.
+
+
+
+
+
+% DRC og Contraints
+% PCB layout guidelines: følge standerder:
+%	IPC_2221A 	Generic Standard on PCB
+% 	IPC_7351 	Generic Requirements for SMD and Land Pattern Standard
+%	IPC-7251 	Generic Requirements for Through-Hole Design and Land Pattern Standard
