@@ -1,13 +1,56 @@
-\section{Produktionsovervejelser} \label{sec:produktion}
+\section{Udviklingsomkostinger og mulig intjening}
 
-Grundet projektets art som salgsprodukt har det fra starten været ønsket at tænke DFM\cite{lib:dfm} (Design For Manufacturability) ind som en integreret del af designprocessen. DFM indebærer at udvikle sit design så det bedst muligt egner sig til produktion samt reducerer omkostninger hertil. Derudover handler det om at foregribe evt. produktionsmæssige udfordringer allerede i designfasen, hvor de slår mindst igennem på omkostningerne. Der er mange lag og overvejelser i forbindelse med DFM og her vil blive gennemgået nogle af dem som projektgruppen har fundet til at ha størst betydning for dette projekt.
+Formålet med projektet har som udgangspunkt været at skabe en forretning. Da det er blevet mere moderne med automatisering i hjemmet synes det automatiske vandingssystem at være et oplagt produkt. En markedsundersøgelse har vist at produktet findes i forvejen. Men ofte er allerede eksisterende løsninger dyre og upræcise i målingen af jordfugt. Det har derfor været formålet at gøre systemet både mere præcis men samtidig også billigere. Se sektion \ref{sec:marked} for markedsundersøgelse. For at skabe en forretning kræves der både tid, knowhow og penge. Se Figur \ref{fig:plc} for Product Life Cycle \cite{lib:plc} som beskriver økonomien for et produkt, fra det tidspunkt det bliver udviklet til det går af mode. I den periode et produkt udvikles er der ingen indtjening, men der kræves investering af både tid og penge. Når produktet bliver introduceret på  markedet vil der gå noget tid før det er modnet og at salget for alvor tager fat. På et tidspunkt vil produktet blive forældet, eller der vil være kommet en konkurrent og salget vil derfor aftage. Det er derfor vigtigt at sikre sig at udviklings-omkostningerne bliver så lave som mulige da det er utroligt svært at vide hvor stort et salgspotentiale der er. Da projektet har været et afgangsprojekt har det derfor været minimalt hvad der er blevet investeret økonomisk. Omkostninger til løn har været nul og der har været gratis ekspertise til rådighed.     
 
-\textbf{Komponentvalg} \\
-Valget af kompnonenter kan have stor indflydelse på omkostningerne ved produktion. Her er det af stor betydning om der vælges komponenter af \textit{Through hole} eller \textit{SMT} teknologi. SMT (Surface Mount Technology) kan maskinmonteres af EMS-firmaet, hvor imod through hole skal håndloddes efterfølgende med dertil forhøjede omkostninger. Derfor er det at foretrække at benytte SMT så meget som muligt i sit design. Der er naturligvis komponenter såsom enkelt konnektorer, DC stk og lign. som her på er implementeret som TH, men som udgangspunkt er der valgt SMT komponenter der hvor det omkostningsmæssigt har givet mening. \newline
-Et andet punkt hvor mange fejl kan kommes i forkøbet er ved at sikre at ha tolerancerne i orden på sine komponenter, det være sig elektriske komponenter såvel som mekaniske komponenter, på denne måde sikrer du har PCB'er passer i deres plasthuse eks. og at de elektriske kredsløb fungerer som forventet selvom der er udsving i komponenterne. Her er det værd at bemærke at der til, eks. Antenne-balunen, som er et kredsløb der er meget følsomt for komponentvariationer, bør benyttes komponenter af lav tolerance for at sikre en karakteristisk impedans så tæt på $50 \Omega$ som muligt. Andre kredsløb som eks. båndpasfiltre og feedback-kredsløb kan også have deres egne krav om maksimale tolerancer.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/rapport/forretningsmodel/plc.png}
+	\caption{Product Life Cycle. Projektet befinder sig på nuværende tidspunkt under Product development.}
+	\label{fig:plc}
+\end{figure}
 
+Skal produktet sælges kræves det af EU, at det skal leve op til kravet om CE-mærkning. Det vil sige at som producent skal der foretages test af systemet for at sikre det overholder alle krav. Disse krav relaterer hovedsageligt til EMC, men også personsikkerhed samt afskaffelse og brug af miljøforurenende kemikalier. Som producent kunne man blot vælge at sætte et CE-mærke på sit produkt uden reelt at teste det. Men det vil betyde en høj risiko hvor der i sidste ende kan blive tale om at alle produkterne der er solgt, skal trækkes tilbage. Dette kan blive en stor udgift som i sidste ende vil lukke virksomheden. Der findes ikke nogen billig eller nem måde at sikre sig at produktet overholder alle krav til CE-mærkning og det må medregnes at en udgift til dette vil øge udgifterne inden at der kommer en reel indtjening. 
 
+\textbf{Reduktion af produktionsomkostninger}\\
+Det har igennem udviklingen været et krav at systemet skulle designes så billigt som muligt, samtidig med at en god kvalitet skal opretholdes. For at få en lav produktionsomkostning er der forsøgt at undgå så meget håndmontage som muligt og implementere de fleste komponenter som SMD. Dog er der få komponenter som ikke kan monteres som SMD og derfor skal håndmonteres. Her er der tale om displayet, tastaturet og selve ventilen som skal monteres på kontrolboksen. Selve teknologien til jordfugtmåling har også en betydning for prisen. Den resistive målemetode benytter to spyd stukket ned i jorden. Den kapacitive derimod kan blot laves ved at forlænge printpladen og herved spare omkostninger til montage og produktion af jordspyd.  
 
+\section{Forretningsmodel}
+Som forretningsmodel tages der udgangspunkt i Business model canvas \cite{lib:bmc}. Modellen er god til at stille sig selv nogle spørgsmål, der gør at ideen eller konceptet bliver styrket eller viser sig uholdbar. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/rapport/forretningsmodel/Business-Model-Canvas.jpg}
+	\caption{Business Model Canvas}
+	\label{fig:BMC}
+\end{figure}
+
+\textbf{Value Proposition}\\
+Hvad er det produktet gør? Produktet sparer ressourcer af både vand, tid og penge, samtidig med at det optimerer planternes grobetingelser. Det kan være at man har plantet en ny hæk, men skal på ferie i en uge og kan derfor ikke sikre sig at hækken ikke tørrer ud i mellemtiden. I denne situation vil produktet spare kunden for bekymringer på sin ferie. Det vil sikre at ingen planter visner og deraf spare kunden for at skulle købe nye planter, som både ville koste tid og penge. Det kan også bruges i en urtehave som kunden ellers normalt ville vande med en haveslange. Her sørger produktet for at optimere således der ikke vandes mere end det nødvendige. 
+
+\textbf{Customer Segment}\\
+Hvem hjælper produktet? Et marked kan deles op i flere segmenter. Dette gør det lettere at føre en mere målrettet kampagne og herved nå ud til flere potentielle købere. Segmentet til dette produkt er som udgangspunkt personer som har en have. Dette kan både være ældre som har svært ved at løfte en vandkande eller unge mennesker som ikke har nogen anelse om hvor ofte en have skal vandes.
+
+\textbf{Customer Relationship}\\
+Hvordan kommunikeres der med kunden? Det gøres der ved at lave en online kampagne via \texttt{google adwords} hvor markedssegmentet identificeres. Her kan der køres en målrettet kampagne som identificerer den potentielle kunde via søgeord som "legusterhæk", "såning af græs", "gardner" eller simpelthen blot "automatisk vandingssystem. Herefter bliver kunden ledt ind på en webshop.
+
+\textbf{Distribution Channels}\\
+Hvordan leveres produktet? Det gøres der ved at kunden køber produktet på en webshop som efterfølgende leveres med post. Her er det vigtigt hvordan kundeoplevelsen er. Ofte er folk ikke hjemme når posten kommer og at skulle hente pakken i posthusets åbningstider kan ofte være besværlig. Derfor er det vigtigt at give kunden muligheden får at få leveret pakken i en Swip-Box som kan afhentes til hver en tid. Fragten skal være gratis.
+
+\textbf{Key Activities}\\
+Hvordan gøres det? Det gøres ved at lave et produkt som er billigere end konkurrenternes samtidig med det er bedere og at kunden får en god oplevelse selvom det går galt. Det vil sige at hvis en kunde får en defekt vare skal det ikke koste noget at returnere produktet og få tilsendt et nyt. Produktet skal sælges via en webshop som gør at der ikke er nogen mellemmand som tager en del af fortjenesten. 
+
+\textbf{Key Partners}\\
+Hvem hjælper? Det gør fx. UPS som der skal levere pakkerne, google som fører kampagnen og selvfølgelig kunderne selv.
+
+\textbf{Key Resources}\\
+Hvad er der brug for? Der er brug for faglige kompetencer samt finansiering af den første produktion og CE-mærkning. Der er også brug for en webshop samt evt. medarbejdere til at pakke og sende. 
+
+\textbf{Cost Structure}\\
+Der er i markedsundersøgelsen blevet antaget at et fuldt system må koste maks 500kr med moms. Det giver 400kr total. I projektdokumentationen er der fundet frem til at en samlet produktions pris ligger på omkring 273kr. Hertil kommer omkostninger til webshop, indpakning, fragt og evt. løn. 
+   
+\textbf{Revenue Stream}\\
+Hvad er fortjenesten?  I produktes nuværende form er det begrænset hvad der er af fortjente. Det ses klart og tydeligt at skal forretningen løbe rundt kræves der en produktionspris som er lavere end den nuværende. Skal produktet sælges for 400kr kræves der en produktionspris på omkring 100kr. Hvilket kan være svært at indfri. 
+ 
 
 
 % DRC og Contraints
