@@ -239,7 +239,7 @@ Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i d
 	\theta = \frac{C_{weat} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
 \end{equation}
 
-\textit{Målemekredsløb}\\
+\textit{Målekredsløb}\\
 Det blev overvejet hvordan kapaciteten kunne måles præcist uden at det skulle blive et alt for dyrt kredsløb. Det blev overvejet at lave en amplitude måling af kapaciteten. Men denne viste sig at være meget støjfyldt og meget temperatur afhængig. Herefter blev der designet et kredsløb til måling af faseændringen, som ved hjælp at et båndpass-filter med et højt Q dæmpede støjen betragteligt. Se Figur \ref{fig:j9}.
 
 \begin{figure}[H]
@@ -270,7 +270,55 @@ På Figur \ref{fig:j20} ses udgangsspændingen vs. kapaciteten. Regressionen er 
 	\label{fig:j20}
 \end{figure} 
 
+\textbf{Temperaturføler}\\
+Kravet til temperaturføleren var at den skulle have en opløsning på minimalt 1 decimal og at den skulle have en præcision på 0.5$^\circ$C og kommunikere over I2C bussen. Dette krav blev opfyldt med valg af \texttt{TMP75B }som ses på Figur \ref{fig:dtemp}. \texttt{TMP75B} har en intern 12-bit ADC som kan give en opløsning på 0.0625$^\circ$C og en præcision på 0.5$^\circ$C ved 25$^\circ$C. \texttt{TMP75B} opsættes til at køre i single-shot mode hvilket vil sige at den ligger i sleep-mode det meste af tiden. Kun når temperaturen aflæses laves der en enkelt konvertering. Dette er med til at sikre et lavt strømforbrug.  
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{../fig/Temperatur/temp_i2c.png}
+  \caption{Diagram over den digitale temperaturføler}
+  \label{fig:dtemp}
+\end{figure}
+
+\textbf{HF-Transceiver}
+Transceiveren er valgt til \texttt{MRF49XA} som er den samme som på kontrolboksen.
+
+\textbf{Antenne}\\
+Som antenne på sensoren er der valgt en helical antenne. Denne er valgt da den har et relativt lavt tab på 2.9dBi.  Antennen er samtidig også meget isotopisk hvilket vil sige at den udstråler lige meget energi i alle retninger, hvilket gør at brugeren ikke skal tænke over hvilken vej sensoren pejer i forhold til kontrolboksen. Antennen fylder dog en del og det har derfor ikke været muligt at få plads til den i kontrolboksen.  
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{../fig/rapport/antenne_helical.png}
+  \caption{Antennen i sensoren}
+  \label{fig:helant}
+\end{figure}
+
+\textbf{Lysmåler}\\
+Som lysmåler er der blevet brugt en fototransistor af typen BPW96B. Diagram ses på Figur \ref{fig:lysdiagram}. Når der indstråles lys på fotodioden vil spændingen over C32 stige. Det blev valgt at designe kredsløbet sådan at der ved skumringstid vil ligge 1VDC på C32. Dette gøres fordi at der ved måling fra mikroprocessorens ADC køres på den interne 2.56V reference. R20 blev bestemt til at være 47k$\Omega$. Når spændingen måles midles der over 20ms for at minimere 50Hz støj. På Figur \ref{fig:test_måling4} ses der lysmålerens respons ved solopgang og solnedgang. Den røde kurve er strøm og den blå er spænding. Den striplede linje er 1V. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.25\textwidth]{../fig/Lysmaeler/diagram.png}
+	\caption{Diagram over lysmåleren}
+	\label{fig:lysdiagram}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/Lysmaeler/testgraf.png}
+	\caption{Dataopsamling fra lyssensor: Dato: 10-11/04, kl.15.00-08.00, Vejr: klart, Solnedgang + solopgang}
+	\label{fig:test_måling4}
+\end{figure}
+
+\textbf{PSU}\\
+Som strømforsyning til sensoren er der blevet valgt en boostconverter af typen \texttt{MCP1640B} fra \texttt{Microchip}. Se Figur \ref{fig:boostkonverter}. Boostconverteren bliver først enablet når batterispændingen når under 2.8V. Dette måles af transceiveren som ved denne spænding giver et interrupt til mikroprocessoren, som derefter tænder for boostconverteren.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../fig/psu/boostkonverter.png}
+	\caption{Diagram over boostkonverter}
+	\label{fig:boostkonverter}
+\end{figure}
 
 
 
