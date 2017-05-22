@@ -2,11 +2,21 @@
 
 Eftersom at denne prototype kun er 1. iteration af det samlede system er der en del planer for fremtidigt arbejde, det er derfor valgt at dele op i enkelte afsnit afhængig af hvad det omhandler. 
 
-% Low batteri detektion måles direkte på batterispænding med en seperat ADC kanal. 
-% Clock frekvens sættes ned til 4MHz
-% Anden transceiver
-% App baseret kontrol
-% Specifik afgrøde
+\textbf{Low Battery detect} \newline
+Den nuværende indikation af lav batterispænding på sensoren fungerer ved at Transceiveren afgiver interrupt når dens forsyningsspænding går under 2.8V. Dette vil kunne optimeres hvis systemet i stedet foretog måling direkte over batteriet via en af ledig ADC-kanal på mikroprocessoren, derved vil der jævnligt kunne holdes øje med batterispændingen og optimere ydelsen. Det er valgt at implementere i 2. iteration. 
+
+\textbf{Clockfrekvens} \newline
+Yderligere strømbesparelse vil kunne opnås ved at nedsætte clockfrekvensen på mikroprocessoren fra de nuværende 8MHz til den lavest mulige, som stadig kan opretholde de timings- og performancekrav fra Kapitel \ref{P-ch:kravspecifikation}: \nameref{P-ch:kravspecifikation} fra side \pageref{P-ch:kravspecifikation} i projektdokumentation. Dette er planlagt til implementering i iteration 2.
+
+\textbf{Transceiver} \newline
+Valget at den implementerede transceiver er bevidst holdt konservativt i 1. iteration. Der kan dog med fordel tænkes i at implementere en nyere tranceiver, eks. af CC1350 fra Texas Instruments. Denne er bevidst valgt til iteration 2, bla. for dens dual band transceiverog indbyggede bluetooth modul. Det vil i sidste ende kunne spare en seperat tranceiver, da der også findes typer af IC'er med indbygget transceiver. 
+
+\textbf{App baseret kontrolinterface} \newline
+Det har starten af projektet også være en ønske om at gøre systemet kontrollerbart fra en smartphone via en specialudviklet App. På denne måde spares der omkostninger til display og tastetur på kontrolboksen og kunden kan indstille systemet på afstand. Dette er planlagt til implementering i iteration 2. 
+ 
+\textbf{Specifik afgrøde} \newline
+
+
 % pH måling
 % Automatisk fejlmelding ved slangeudfald
  
