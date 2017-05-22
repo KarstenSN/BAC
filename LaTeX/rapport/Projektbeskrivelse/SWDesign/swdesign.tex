@@ -1,5 +1,28 @@
 \section{Software Design og Implementering} \label{ch:SWdesign}
 
-Software design
+\subsection{Kontrolboks}
 
+På Figur \ref{fig:sd_main_kb} ses sekvensdiagram over \texttt{main()}-funktionen i mikroprocessoren på kontrolboksen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/kontrolboks/sd_main.pdf}
+	\caption{Sekvensdiagram over \texttt{main()} i kontrolboksen}
+	\label{fig:sd_main_kb}
+\end{figure} 
+
+Når brugeren tilslutter strøm til kontrolboksen skal main-funktionen vente i 1 sekund før der foretages noget. Dette er til for at sikre at spændingerne på boardet har stabiliseret sig. Efterfølgende skal \texttt{Init()} sørge for at initiere alt hardware, give funktionspointere videre til diverse struct's, samt indlæse indstillingerne fra EEPROM'en. For at sikre at mikroprocessoren aldrig ender i en låst sløjfe, enables watch-dog-timer'en. Mikroprocessoren skal altid være parat til at tage input fra brugeren, derfor skal den befinde i et loop og kontinuerligt aflæse om der påtrykket en tast på tasteturet, eller om der er modtaget ny data fra sensoren. Påtrykkes en knap skal lyset i displayet tændes og funktionen \texttt{menu()} skal kaldes. \texttt{menu()} giver brugeren mulighed for at navigere rundt i systemets use-cases. Når \texttt{menu()} returnerer skal EEPROM'en opdateres med de nye indstillinger som brugeren har konfigureret. Er der blevet modtaget ny data fra sensoren,  skal denne have besked om at data'en er modtaget med succes, og herefter skal displayet opdateres med de seneste værdier. Er der lav batteri på sensoren skal LED'en på tastaturet og teksten "Low battery on sensor" udskrives på displayet. Som sidste led i loop'et skal lyset i displayet slukkes og watch-dog-timeren reset'es.\\
+
+
+\subsection{Sensor}
+På Figur \ref{fig:sd_main_s} ses sekvensdiagrammet over \texttt{main()}-funktionen i mikroprocessoren på sensoren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../fig/sekvensdiagrammer/sensor/sd_main.pdf}
+	\caption{Sekvensdiagram over \texttt{main()} i sensoren}
+	\label{fig:sd_main_s}
+\end{figure} 
+
+Når batterierne er sat i batteriholderen vil mikroprocessoren vente i 1 sekund før den starter op. Dette er for at skire spændingen på hele boardet har stabiliseret sig. Efterfølgende skal hardwaren initieres og funktionspointere gives videre til diverse struct's. Efter \texttt{init()} skal wake-up-timeren i transceiveren aktiveres til 15 minutter. Herefter indlæses data fra temperatursensoren, lyssensoren og jordfugtsensoren. Disse data indlæses i \texttt{sensorPackage} som efterfølgende opdaterer checksummen. \texttt{sensorPackage} sendes nu til kontrolboksen, denne forsøges sendt 10 gange, eller indtil at kontrolboksen svarer tilbage om korrekt modtagelse. Til slut disables måle-ground og watch-dog-timeren og mikroprocessoren ligges i standby-mode. Når der kommer et interrupt på INT0 fra transceiveren vågner mikroprocessoren op igen og watch-dog-timeren enables samt måle-ground enables. 
 \clearpage
