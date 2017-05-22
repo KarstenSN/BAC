@@ -15,8 +15,11 @@ Valget at den implementerede transceiver er bevidst holdt konservativt i 1. iter
 Det har starten af projektet også være en ønske om at gøre systemet kontrollerbart fra en smartphone via en specialudviklet App. På denne måde spares der omkostninger til display og tastetur på kontrolboksen og kunden kan indstille systemet på afstand. Dette er planlagt til implementering i iteration 2. 
  
 \textbf{Specifik afgrøde} \newline
+Et sted hvor systemet yderligere kan optimeres er muligheden for at forprogrammere systemet til den specifikke afgrøde hvor sensoren er placeret. Således at systemet overtage vandingen baseret på info om hvor meget vand den gældende afgrøde skal have i den faser sat i forhold til temperatur, pH og jordfugtighed.
 
+\textbf{pH Måling} \newline
+Det har også været et ønske at implementere en pH måler i sensoren, således at kunden vil kunne få information omkring eksempelvis hvilke typer planter den givne jord egner sig til, eller kunne sætte alarmer hvis jorden når en kritisk surhed i forhold til den plante der måles ved.
+Udvidelserne af systemet med pH-måler og specifikke afgrøder kræver at der programmeres en database til at holde det information som systemet skal basere sine valg på. Dette er derfor ikke planer om at implementere på nuværende tidspunkt.
 
-% pH måling
-% Automatisk fejlmelding ved slangeudfald
- 
+\textbf{Fejlhåndtering ved slangeafkobling} \newline
+Til iteration 2 er det også valgt at implementere en fejlhåndtering således at systemet selv lukke for ventilen hvis slange er faldet af, således at der ikke unødvendigt spildes vand.
