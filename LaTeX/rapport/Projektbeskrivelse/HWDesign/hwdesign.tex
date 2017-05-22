@@ -27,7 +27,7 @@ Der blev hos den kinesiske producent Flow-Control bestilt nogle motorventiler hj
 
 Der blev dog i første omgang designet en relæstyring af ventilen. Men den viste sig at være dyr at producere samtidig med at relæet træk en del strøm når det var sluttet. Herefter blev der designet en H-bro som bruger minimal tomgangsstrøm.
  
-\begin{figure}[H]
+\begin{figure}[ht]
   \centering
     \includegraphics[width=0.4\textwidth]{../fig/Motorventil/hbro.png}
     \caption{Diagram over H-bro'en}
@@ -37,9 +37,9 @@ Der blev dog i første omgang designet en relæstyring af ventilen. Men den vist
 \textbf{Display}\\
 Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus og have 16X2 karakterer og have baggrundsbelysning. Ved undersøgelse af flere displays blev Newheaven's display \textit{NHD-C0216CiZ-FSW-FBW-3V3} udvalgt. Dette skyldes primært at display'et har indbygget DC-DC step-up converter således at displayet kan forsynes ned til 2.8V. Normalt kører LCD displays på 5V, hvilket er over forsyningskravet på 3.3V. Opsætning og kommunikation sker via I2C som kravet foreskriver. Diagrammet for display'et ses på Figur \ref{fig:display_diagram}.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/display/display_diagram_kontrol2.png}
+	\includegraphics[width=0.7\textwidth]{../fig/display/display_diagram_kontrol2.png}
 	\caption{Diagram over I2C Display}
 	\label{fig:display_diagram}
 \end{figure}
@@ -58,7 +58,8 @@ På Figur \ref{fig:mrfx49a_diagram_kontrolboks} ses implementering af transceive
 	\label{fig:mrfx49a_diagram_kontrolboks}
 \end{figure}
 
-Som udgangspunkt er databladets anbefalinger fulgt. Balun-kredsløbet er designet på baggrund af referencedesignet i databladet. Her er det vigtigt at holde sig til at lavtolerance-komponenter for at holde sig tæt på de 50 $\Omega$ udgangsimpedans som det kræves af antennen. Det skal dog nævnes at der i databladet er byttet om på værdierne til balun-kredsløbet ved 433MHz og 868MHz i tabellerne under diagrammerne. Det er derfor svært at vide hvilke værdier der er de rigtige. Fejlen blev først opdaget tilsidst i projektet da rækkevidden ikke kunne komme længere op end ca 10m. Det er derfor nærliggende at tro det er de forkerte værdier som er blevet monteret. 
+Som udgangspunkt er databladets anbefalinger fulgt. Balun-kredsløbet er designet på baggrund af referencedesignet i databladet. Her er det vigtigt at holde sig til at lavtolerance-komponenter for at holde sig tæt på de 50 $\Omega$ udgangsimpedans som det kræves af antennen. Det skal dog nævnes at der i databladet er byttet om på værdierne til balun-kredsløbet ved 433MHz og 868MHz i tabellerne under diagrammerne. Det er derfor svært at vide hvilke værdier der er de rigtige. Fejlen blev først opdaget tilsidst i projektet da rækkevidden ikke kunne komme længere op end ca 10m. Det er derfor nærliggende at tro det er de forkerte værdier som er blevet monteret.
+\newpage
 
 \textbf{Antenne}\\
 Der er på kontrolboksen valgt at bruge en SMD-antenne. Dette skyldes at der var begrænset plads i kontrolboksen og at andre løsninger enten ville være for dyre eller mekanisk ustabil. Her var der overvejet at trække en metalwire rundt i hele kontrolboksen som antenne eller at lave et ekstra print med en PCB-antenne. SMD-antennen er af producenten \texttt{Johanson Technology} med  navn \texttt{0433AT62A0020}. 
@@ -76,7 +77,7 @@ Kontrolboksen forsynes med en ekstern strømforsyning på 5V denne har en tolere
 Spændingsregulatoren kan levere op til 500mA hvilket er mere end hvad der er brug for. Allerede sikringen vil sprænge ved et strømforbrug på 250mA. Beregninger som findes i projektdokummentationen i afsnittet strømforsyning på kontrolboks, viser at der trækkes maksimalt omkring 40mA. Spændingsregulatoren kan derfor vælges til en mindre type som samtidig vil være billigere. 
 
 \textbf{Tastatur}\\
-Systemet betjenes via et tastatur der moneres på kontrolboksen. Tastaturet består af 4 knapper som brugeren kan benytte til at navigere rundt i menuen. En sketchup af tastaturet kan ses på Figur \ref{fig:keypad_UI}. \texttt{SET} knappen benyttes til at skifte mellem menupunkterne. \texttt{Pil-op} og \texttt{Pil-ned} benyttes hhv.til at inkrementere eller dekrementere en given værdi. \texttt{OK} benyttes til at gemme indstillingen. For et fuldt overblik over menuen henvises til usecases i sektion \ref{P-ch:kravspecifikation} i projektdokumentationen. Tastaturet indeholder desuden et vindue til displayet, samt en rød LED der tændes hvis systemet registrerer en fejl. Eks. hvis batterispændingen bliver for lav. I det færdige produkt forventes det at implementere en specialbygget keypad, men til prototypeformål er her benyttet en 4 knappers membrane switch keypad som tastatur.
+Systemet betjenes via et tastatur der monteres på kontrolboksen. Tastaturet består af 4 knapper som brugeren kan benytte til at navigere rundt i menuen. En sketchup af tastaturet kan ses på Figur \ref{fig:keypad_UI}. \texttt{SET} knappen benyttes til at skifte mellem menupunkterne. \texttt{Pil-op} og \texttt{Pil-ned} benyttes hhv.til at inkrementere eller dekrementere en given værdi. \texttt{OK} benyttes til at gemme indstillingen. For et fuldt overblik over menuen henvises til usecases i sektion \ref{P-ch:kravspecifikation} i projektdokumentationen. Tastaturet indeholder desuden et vindue til displayet, samt en rød LED der tændes hvis systemet registrerer en fejl. Eks. hvis batterispændingen bliver for lav. I det færdige produkt forventes det at implementere en specialbygget keypad, men til prototypeformål er her benyttet en 4 knappers membrane switch keypad som tastatur.
 
 \begin{figure}[H]
   \centering
@@ -244,7 +245,7 @@ Det blev overvejet hvordan kapaciteten kunne måles præcist uden at det skulle 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\textwidth]{../fig/Jordfugt/diagram4.PNG}
+	\includegraphics[width=0.8\textwidth]{../fig/Jordfugt/diagram4.PNG}
 	\caption{Målekredsløb ver.2}
 	\label{fig:j9}
 \end{figure}  
@@ -256,7 +257,7 @@ Da det begyndte at knibe med tiden blev der derfor implementeret en løsning som
 
 \begin{figure}[H]
 	\centering
-   \includegraphics[width=0.7\textwidth]{../fig/Jordfugt/diagram1.png}
+   \includegraphics[width=0.5\textwidth]{../fig/Jordfugt/diagram1.png}
    \caption{Amplitudemåling af kondensator}
    \label{fig:jdig1}
 \end{figure}  
@@ -275,7 +276,7 @@ Kravet til temperaturføleren var at den skulle have en opløsning på minimalt 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{../fig/Temperatur/temp_i2c.png}
+  \includegraphics[width=0.4\textwidth]{../fig/Temperatur/temp_i2c.png}
   \caption{Diagram over den digitale temperaturføler}
   \label{fig:dtemp}
 \end{figure}
@@ -285,13 +286,6 @@ Transceiveren er valgt til \texttt{MRF49XA} som er den samme som på kontrolboks
 
 \textbf{Antenne}\\
 Som antenne på sensoren er der valgt en helical antenne. Denne er valgt da den har et relativt lavt tab på 2.9dBi.  Antennen er samtidig også meget isotopisk hvilket vil sige at den udstråler lige meget energi i alle retninger, hvilket gør at brugeren ikke skal tænke over hvilken vej sensoren pejer i forhold til kontrolboksen. Antennen fylder dog en del og det har derfor ikke været muligt at få plads til den i kontrolboksen.  
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.4\textwidth]{../fig/rapport/antenne_helical.png}
-  \caption{Antennen i sensoren}
-  \label{fig:helant}
-\end{figure}
 
 \textbf{Lysmåler}\\
 Som lysmåler er der blevet brugt en fototransistor af typen BPW96B. Diagram ses på Figur \ref{fig:lysdiagram}. Når der indstråles lys på fotodioden vil spændingen over C32 stige. Det blev valgt at designe kredsløbet sådan at der ved skumringstid vil ligge 1VDC på C32. Dette gøres fordi at der ved måling fra mikroprocessorens ADC køres på den interne 2.56V reference. R20 blev bestemt til at være 47k$\Omega$. Når spændingen måles midles der over 20ms for at minimere 50Hz støj. På Figur \ref{fig:test_måling4} ses der lysmålerens respons ved solopgang og solnedgang. Den røde kurve er strøm og den blå er spænding. Den striplede linje er 1V. 
@@ -315,15 +309,7 @@ Som strømforsyning til sensoren er der blevet valgt en boostconverter af typen 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../fig/psu/boostkonverter.png}
+	\includegraphics[width=0.8\textwidth]{../fig/psu/boostkonverter.png}
 	\caption{Diagram over boostkonverter}
 	\label{fig:boostkonverter}
 \end{figure}
-
-
-
-
-
-
-
-
