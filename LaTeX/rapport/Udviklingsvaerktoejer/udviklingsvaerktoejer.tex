@@ -22,25 +22,41 @@ Ud over V-Modellen, er ASE-Modellen \cite{lib:V_model} taget i brug som en vejle
 \end{figure}
 
 
-\textbf{SysML} \\
+\textbf{SysML} \newline
 Projektet har anvendt SysML primært i systemarkitektur-fasen, for at beskrive systemet bedst muligt
 ud industristandarden for opbygning logiske blokke. Muligheden for derefter at beskrive overordnede blokke har givet mulighed for forskellige abstraktionsniveauer i udviklingen af projektet.
 Veldefinerede grænseflader mellem blokke ved hjælp af SysML har også bidraget til en mere klart defineret designfase og implementeringsfase.
 
 
-\textbf{Versionsstyring} \\
+\textbf{Versionsstyring} \newline
 Der er anvendt versionshistorik på dokumenter i projektdokumentationen samt projektrapport i for git, og for resten af projektet i form af dropbox. Væsentlige ændringer i eks. design har givet anledning til versions-ændring, hvilket hjælper med at holde styr på hvilke større ændringer projektet har gennemgået.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PROJEKTSTYRING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Projektstyring}
-Tidsplan - Mødestruktur - 	Arbejdsfordeling
+Da projektgruppen kun består af 2 personer og at den primære udvikling er sket i samarbejde, er det valgt at udarbejde en specifik projektstyring til dette projet. Der er derfor benyttet forskellige modeller, hvor gruppen har udvalgt de dele som tilsammen har givet den mest optimale styring. Der er eksempelvis taget udgangspunkt i scrum-framework'et at arbejde efter, hvor udviklingen inddeles i mindre "sprints" for overskueligheds skyld. Dette er gjort at for at holde projektet og udviklingen så agilt som muligt. Men der er eksempelvis ikke benyttet de typiske SCRUM-roller. Dertil kommer at gruppen for hele tiden at fastholde fokus og enighed om en opgave, har holdt korte orienteringsmøder "standup møder" hver anden dag. Dette har også hjulpet til at få ressourcerne allokeret korrekt igennem hele forløbet. Kravene til systemet har således sat den Backlog som der blev arbejdet ud fra i hver "sprint". Hele Sprint-metoden og den iterative tilgang til udviklingen har passet godt med hvordan projektet var ønsket gennemført. Til projektstyring har Microsoft Project været benyttet, primært været til at fastholde fokus på tidsplanen, samt hele tiden at ha overblik over projektfaserne og allokering af ressourcer. På Figur \ref{fig:udv_gantt} ses strukturen i projektstyringen.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  UDVIKLIGNSVÆRKØER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/rapport/ganttchart.png}
+	\caption{Gantt-chart}
+	\label{fig:udv_gantt}
+\end{figure}
+
+\textbf{Tidsplan} \newline
+Der blev ved projektet opstart fastlagt en overordnet tidsplan for at få et overblik over de givne faser i projektet, og for at sikre sig at der blev allokeret tid nok til disse allerede fra start. Denne blev med overlæg lavet konservativ således at der undervejs var indbyggede buffere hvis noget skulle vise sig at tage længere tid end forventet. Tidsplanen var udarbejdet med en færdig iteration 1 i tankerne, hvor alle \textit{Must}-krav ønskes opfyldt. Tidsplanen som den ser ud d.d ses på Figur \ref{fig:udv_tidsplan}, det har været minimalt hvad der har været af ændring til de overordnede faser, da ingen af dem overskred den estimerede tidsramme. Vejledermøder er blevet tilføjet undervejs, ligesom reviews. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{../fig/rapport/tidsplan.png}
+	\caption{Tidsplan}
+	\label{fig:udv_tidsplan}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  UDVIKLIGNSVÆRKTØJER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Udviklingsværktøjer}
 I dette afsnit vil de forskellige udviklingsværktøjer, som er blevet anvendt under dette projekts design-, implementerings- og integrationsproces, blive gennemgået.
-
 
 \textbf{Cadence OrCAD Capture} \\
 Cadence OrCAD Capture er brugt til at designe alle hardwarediagrammer til kontrolboks og sensor. Programmet blev valgt da dette er industristandard, samt at der i projektgruppen er et rigtig godt kendskab til dette arbejdsmiljø. Der har ligeledes været mulighed for at oprette et stort antal af egene komponenter der er brugt til designs. Derudover Cadence pSpice-modulet blevet brugt i forbindelse med alle simuleringer. OrCAD integrer derudover fuldt ud med det valgte layout-tool. 
@@ -76,3 +92,7 @@ MathWorks MATLAB er benyttet til at lave diverse beregninger samt diverse plot o
 
 \textbf{Git} \\
 Git er et versionsstyringsværktøj til vedligeholdelse af diverse dokumenter. Som repository host er der valgt Github grundet stabilitet og projektgruppens tidligere arbejde med dette miljø. Projektgruppen har valgt at lægge kildekoden til bl.a. denne rapport og Projektdokumentationen på Git for netop at opnå en kraftfuld versionsstyring af hele projektet.
+
+
+\textbf{Microsoft Project 2016} \\
+Project er blevet benyttet som projektstyringsværktøj for at kunne holde fokus på tidsplan og de individuelle projektfaser samt sikre sig at alle ressourcer er allokeret optimalt. det er med vilje blevet valgt at håndtere krav-delen ved selvstændigt fra dette værktøj. 
