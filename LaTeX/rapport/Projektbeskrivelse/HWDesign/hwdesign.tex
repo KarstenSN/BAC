@@ -1,6 +1,28 @@
 \section{Hardware Design og Implementering} \label{ch:HWdesign}
 
+På Figur \ref{fig:bddsystem} ses et blokdiagram over systemet. Det ses at systemet indeholder en kontrolboks og en sensor. Det ses også hvad kontrolboksen og sensoren indeholder af hardware. 
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+    \caption{BDD over systemet}
+    \label{fig:bddsystem}
+\end{figure}
+
 \subsection{Kontrolboks}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{../fig/Systemarkitektur/BDDkontrolboks.pdf}
+    \caption{BDD over kontrolboksen}
+    \label{fig:bddkontrol}
+\end{figure}
+
+På Figur \ref{fig:bddkontrol} ses en uddybning af de blokke der tilsammen udgør kontrolboksen. Herunder beskrives hvordan disse enkelte blokke er blevet implementeret. For uddybning af designovervejelserne henvises til sektion \ref{P-sec:hardwaredesign}: \nameref{P-sec:hardwaredesign} på side \pageref{P-sec:hardwaredesign} i projektdokumentationen.
+
+\subsubsection{Design}
+
+
 
 \textbf{Mikroprocessor}\\
 Mikroprocessoren til kontrolboksen er valgt til at være en Atmel ATMEGA8L i TQFP pakke. Samme mikroprocessor er valgt til sensoren. Valget stod mellem Microchip's PIC serie eller Atmels ATMEGA serie og da der var størst kendskab til programmering af Atmel var det den producent der blev valgt. Fordelen ved Atmel er samtidig at programmet til at programmere mikroprocessoren i, AtmelStudio, er gratis og at der er nogle gode biblioteker som er godt dokumenteret. Microchip kan derimod godt være svære at gennemskue med hensyn til hvad der kræves betaling for.  
@@ -95,6 +117,17 @@ Systemet betjenes via et tastatur der monteres på kontrolboksen. Tastaturet bes
 \end{figure}
 
 \subsection{Sensor}
+
+
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{../fig/Systemarkitektur/BDDsensor.pdf}
+    \caption{BDD over sensoren}
+    \label{fig:bddsensor}
+\end{figure}
+
+På Figur \ref{fig:bddsensor} ses en uddybning af de blokke der tilsammen udgør sensoren. Herunder beskrives hvordan disse enkelte blokke er blevet implementeret. For uddybning af designovervejelserne henvises til sektion \ref{P-sec:hardwaredesign}: \nameref{P-sec:hardwaredesign} på side \pageref{P-sec:hardwaredesign} i projektdokumentationen.
 
 \textbf{Mikroprocessor}\\
 Som mikroprocessor er der valgt samme type som på kontrolboksen. Her er der dog små ændringer i brugen da den interne ADC bruges til at sample værdierne fra både jordfugtmåleren og lyssensoren. 
