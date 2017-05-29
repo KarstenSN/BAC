@@ -4,7 +4,7 @@ På Figur \ref{fig:bddsystem} ses et blokdiagram over systemet. Det ses at syste
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+    \includegraphics[width=0.6\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
     \caption{BDD over systemet}
     \label{fig:bddsystem}
 \end{figure}
@@ -20,9 +20,9 @@ På Figur \ref{fig:bddsystem} ses et blokdiagram over systemet. Det ses at syste
 
 På Figur \ref{fig:bddkontrol} ses en uddybning af de blokke der tilsammen udgør kontrolboksen. Herunder beskrives hvordan disse enkelte blokke er blevet implementeret. For uddybning af designovervejelserne henvises til sektion \ref{P-sec:hardwaredesign}: \nameref{P-sec:hardwaredesign} på side \pageref{P-sec:hardwaredesign} i projektdokumentationen.
 
+\newpage
+
 \subsubsection{Design}
-
-
 
 \textbf{Mikroprocessor}\\
 Mikroprocessoren til kontrolboksen er valgt til at være en Atmel ATMEGA8L i TQFP pakke. Samme mikroprocessor er valgt til sensoren. Valget stod mellem Microchip's PIC serie eller Atmels ATMEGA serie og da der var størst kendskab til programmering af Atmel var det den producent der blev valgt. Fordelen ved Atmel er samtidig at programmet til at programmere mikroprocessoren i, AtmelStudio, er gratis og at der er nogle gode biblioteker som er godt dokumenteret. Microchip kan derimod godt være svære at gennemskue med hensyn til hvad der kræves betaling for.  
@@ -30,7 +30,7 @@ Mikroprocessoren til kontrolboksen er valgt til at være en Atmel ATMEGA8L i TQF
 Af perifere enheder på kontrolboksen bruges der SPI til transceiveren, I2C til displayet samt en del analoge pins til kontrol af motorventil og tastatur. På sensoren bruges der også den indbyggede 10-bit SAR ADC. 
 
 \textbf{Motorventil}\\
-Der blev hos den kinesiske producent Flow-Control \cite{lib:flowcontrol} bestilt nogle motorventiler hjem. Disse blev i første omgang valgt grundet deres lave pris, omkring 150kr stykket og har en tilslutning som fylder kravet om den skal kunne monteres på et 1/2" vandrør. Ventilen blev adskilt og det sås at der sat et lille print med et relæ til styring af ventilen. Styringen var lavet således at når den enten var i fuldt lukket eller åben position trak den intet strøm. På Figur \ref{fig:motorventilSamlet} ses motorventilen som den kommer fra producenten. På Figur \ref{fig:delt} ses motorventilen adskilt, hvor de grønne ledninger er til posotions-kontakterne og de røde er til motoren.
+Der blev hos den kinesiske producent Flow-Control \cite{lib:flowcontrol} bestilt nogle motorventiler hjem. Disse blev i første omgang valgt grundet deres lave pris, omkring 150kr stykket og har en tilslutning som opfylder kravet om den skal kunne monteres på et 1/2" vandrør. Ventilen blev adskilt og det sås at der sat et lille print med et relæ til styring af ventilen. Styringen var lavet således at når den enten var i fuldt lukket eller åben position trak den intet strøm. På Figur \ref{fig:motorventilSamlet} ses motorventilen som den kommer fra producenten. På Figur \ref{fig:delt} ses motorventilen adskilt, hvor de grønne ledninger er til posotions-kontakterne og de røde er til motoren.
 
 \begin{figure}[H]
   \centering
@@ -56,8 +56,10 @@ Der blev dog i første omgang designet en relæstyring af ventilen. Men den vist
     \label{fig:hbro}
 \end{figure}
 
+\newpage
+
 \textbf{Display}\\
-Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus og have 16X2 karakterer og have baggrundsbelysning. Ved undersøgelse af flere displays blev Newheaven's display \textit{NHD-C0216CiZ-FSW-FBW-3V3} udvalgt. Dette skyldes primært at display'et har indbygget DC-DC step-up converter således at displayet kan forsynes ned til 2.8V. Normalt kører LCD displays på 5V, hvilket er over forsyningskravet på 3.3V. Opsætning og kommunikation sker via I2C som kravet foreskriver. Diagrammet for display'et ses på Figur \ref{fig:display_diagram}.
+Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus og have 16X2 karakterer samt baggrundsbelysning. Ved undersøgelse af flere displays blev Newheaven's display \textit{NHD-C0216CiZ-FSW-FBW-3V3} udvalgt. Dette skyldes primært at display'et har indbygget DC-DC step-up converter således at displayet kan forsynes ned til 2.8V. Normalt kører LCD displays på 5V, hvilket er over forsyningskravet på 3.3V. Opsætning og kommunikation sker via I2C som kravet foreskriver. Diagrammet for display'et ses på Figur \ref{fig:display_diagram}.
 
 \begin{figure}[ht]
 	\centering
@@ -69,7 +71,7 @@ Af krav til displayet var at det skulle køre på 3.3V, kommunikere over I2C bus
 D11 sidder for at sænke forsyningsspændingen til omkring 3V da forsyningen ikke må overskride 3.3V. C22 sidde over pin5 og pin6 som udgangskondesator for Step-up konverteren, C23 sidder over pin7 og pin8 som en integreret del af step-up konverteren og disse værdier er valgt ud fra databladet anbefalinger. Derudover benyttes Q13 for at kontrollere LED'en til baggrundsbelysningen hvormed dette kan styres fra software. SDA og SCL linjerne har pull-up modstande påsat som en del af standardopsætning for I2C-bussen.
 
 \textbf{HF Transceiver}\\ \label{hwdesign_hftransceiver}
-Der er valgt at benytte en transceiveren MRF49XA fra Microchip, denne er valgt da den opfylder designkravene. Derudover skal denne kreds ikke forprogrammeres som mange andre RF-kredse skal, den kan derimod sættes op ved initialisering fra mikroprocessoren som krævet af systemet. Chippen er som skræddersyet til dette system da den er designet til batteri-applikationer. Den har en indbygget "low battery voltage detection" som afgiver et interrupt til mikroprocessoren når batterispændingen når under et forudindstillet threshold som sættes internt i transceiveren. Dette interrupt bliver brugt på sensoren til at enable boostkonverteren, mere info kan finde i implementeringsafsnittet for transceiveren på sensoren i dokumentationen. Derudover har den også en indbygget wake-up timer således at chippen kan sættes i sleep-mode, herved minimeres strømforbruget til nogle få $\mu A$, den kan herefter vækkes op igen efter en forudindstillet tidsperiode. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte benyttes i consumer-elektronik. Transceiveren benytter sig af FSK modulation.
+Der er valgt at benytte en transceiver af typen MRF49XA fra Microchip, denne er valgt da den opfylder designkravene. Derudover skal denne kreds ikke forprogrammeres som mange andre RF-kredse skal, den kan derimod sættes op ved initialisering fra mikroprocessoren som krævet af systemet. Chippen er som skræddersyet til dette system da den er designet til batteri-applikationer. Den har en indbygget "low battery voltage detection" som afgiver et interrupt til mikroprocessoren når batterispændingen når under et forudindstillet threshold som sættes ved initiering af transceiveren. Dette interrupt bliver brugt på sensoren til at enable boostkonverteren, mere info kan findes i sektion \ref{P-sec:HWimp_transceiver_kontrolboks}: \nameref{P-sec:HWimp_transceiver_kontrolboks} side \pageref{P-sec:HWimp_transceiver_kontrolboks} for transceiveren, i dokumentationen. Derudover har den også en indbygget wake-up timer således at chippen kan sættes i sleep-mode, herved minimeres strømforbruget til nogle få $\mu A$, den kan herefter vækkes op igen efter en forudindstillet tidsperiode. Transceiveren kan kommunikere ved 433/868/915 MHz og ligger derfor i et frekvens område som ofte benyttes i consumer-elektronik. Transceiveren benytter sig af FSK modulation.
 
 På Figur \ref{fig:mrfx49a_diagram_kontrolboks} ses implementering af transceiveren på kontrolboksen.
 
@@ -84,7 +86,7 @@ Som udgangspunkt er databladets anbefalinger fulgt. Balun-kredsløbet er designe
 \newpage
 
 \textbf{Antenne}\\
-Der er på kontrolboksen valgt at bruge en SMD-antenne. Dette skyldes at der var begrænset plads i kontrolboksen og at andre løsninger enten ville være for dyre eller mekanisk ustabil. Her var der overvejet at trække en metalwire rundt i hele kontrolboksen som antenne eller at lave et ekstra print med en PCB-antenne. SMD-antennen er af producenten \texttt{Johanson Technology} med  navn \texttt{0433AT62A0020}. 
+Der er på kontrolboksen valgt at bruge en SMD-antenne. Dette skyldes at der var begrænset plads i kontrolboksen og at andre løsninger enten ville være for dyre eller mekanisk ustabil. Her var der overvejet at trække en metalwire rundt i hele kontrolboksen som antenne eller at lave et ekstra print med en PCB-antenne, som monteres via en connector. SMD-antennen er af producenten \texttt{Johanson Technology} med  navn \texttt{0433AT62A0020} og har et tab på 4dBi. 
 
 \textbf{Strømforsyning}\\
 Kontrolboksen forsynes med en ekstern strømforsyning på 5V denne har en tolerence på 10\%. Da kontrolboksen internt skal køre på 3.3V er derfor nødvendigt at konvertere spændingen ned. Til dette er brugt en spændingsregulator. Samtidig er der lavet beskyttelse på indgangen således der beskyttes for omvendt polarisation, overspænding samt et for stort strømtræk. Se Figur \ref{fig:stromforsyning_digram1} 
@@ -96,7 +98,7 @@ Kontrolboksen forsynes med en ekstern strømforsyning på 5V denne har en tolere
 	\label{fig:stromforsyning_digram1}
 \end{figure}  
 
-Spændingsregulatoren kan levere op til 500mA hvilket er mere end hvad der er brug for. Allerede sikringen vil sprænge ved et strømforbrug på 250mA. Beregninger som findes i projektdokummentationen i afsnittet strømforsyning på kontrolboks, viser at der trækkes maksimalt omkring 40mA. Spændingsregulatoren kan derfor vælges til en mindre type som samtidig vil være billigere. 
+Spændingsregulatoren kan levere op til 500mA hvilket er mere end hvad der er brug for. Allerede sikringen vil sprænge ved et strømforbrug på 250mA. Beregninger som findes i projektdokummentationen sektion \ref{P-sec:HWimp_stromforsyning}: \nameref{P-sec:HWimp_stromforsyning} side \pageref{P-sec:HWimp_stromforsyning}, viser at der trækkes maksimalt omkring 40mA. Spændingsregulatoren kan derfor vælges til en mindre type som samtidig vil være billigere. 
 
 \textbf{Tastatur}\\
 Systemet betjenes via et tastatur der monteres på kontrolboksen. Tastaturet består af 4 knapper som brugeren kan benytte til at navigere rundt i menuen. En sketchup af tastaturet kan ses på Figur \ref{fig:keypad_UI}. \texttt{SET} knappen benyttes til at skifte mellem menupunkterne. \texttt{Pil-op} og \texttt{Pil-ned} benyttes hhv.til at inkrementere eller dekrementere en given værdi. \texttt{OK} benyttes til at gemme indstillingen. For et fuldt overblik over menuen henvises til usecases i sektion \ref{P-ch:kravspecifikation} i projektdokumentationen. Tastaturet indeholder desuden et vindue til displayet, samt en rød LED der tændes hvis systemet registrerer en fejl. Eks. hvis batterispændingen bliver for lav. I det færdige produkt forventes det at implementere en specialbygget keypad, men til prototypeformål er her benyttet en 4 knappers membrane switch keypad som tastatur.
@@ -116,9 +118,9 @@ Systemet betjenes via et tastatur der monteres på kontrolboksen. Tastaturet bes
   \end{minipage}
 \end{figure}
 
+\newpage
+
 \subsection{Sensor}
-
-
 
 \begin{figure}[H]
   \centering
@@ -270,7 +272,7 @@ Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det vis
 Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i deres udslag, men at Type 3 har et pænt lineært forhold op til omkring 40\%. Afvigelsen skyldes at ved 40\% bliver jorden så våd at der begynder at ligge mere vand på spyddet end hvad der er i jorden. Derfor bliver kapaciteten højere end hvad den burde. Der kan nu opstilles en formel til beregning af fugtigheden af jorden hvis kapaciteten af spyddet er kendt for både tør og våd. 
 
 \begin{equation}
-	\theta = \frac{C_{weat} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
+	\theta = \frac{C_{wet} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
 \end{equation}
 
 \textit{Målekredsløb}\\
@@ -286,7 +288,7 @@ Det blev overvejet hvordan kapaciteten kunne måles præcist uden at det skulle 
 Kredsløbet virker ved at der fra mikroprocessoren kommer en firkantspænding på 100kHz igennem jordspydet som virker som en kondensator. Denne kondensator bliver belastet af R22 således at der totalt opnåes en faseændring på 55$^\circ$ fra 0\% fugtighed til 100\% fugtighed. Herefter føres firkantspændingen i et båndpasfilter og vil ligge som en faseforskudt sinus på udgangen af U12A. Da U12 er en inverterende forstærker monteres U8A som en komparator der både vender fasen til 0$^\circ$ igen og samtidig sørger for at konvertere sinusen om til en firkant igen, således indgangen af U10A skifter hurtigt. U10A er en XOR-gate som her bruges tom fasedetektion. På indgang B kommer den faseforskudte firkant og på indgang A er en forskudt frekvens fra mikroprocessoren som kalibreres ind ved at kalde en kalibrerings-funktion således der ligger 0V på C26 ved 0\% fugtighed. Alt afhænging af fugtigheden i jorden vil der nu ligge en DC på C26. Denne forstærkes som sidste led op af U12B således der gived et bedre dynamisk range til mikroprocessorens ADC. Q11 er blevet monteret for at kunne slukke totalt for målekredsløbet når det er inaktivt for at spare strøm. \\
 
 Desværre viste kredsløbet sig at volde store problemer. I første øjekast så det ud til at virke, men ved nærmere iagttagelse sås der at det gav en for stor faseforskydelse. Det viste sig at faseforskydelsen opstod i U12A. Der blev testet med en tonegenerator og det blev opserveret at der ved en amplitude ændring på indgangen opstod en faseforskydelse på udgangen. Filterets komponentværdier blev ændret til et lavere Q men dette gav intet bedre resultat. Komponent-værdierne blev også skaleret således udgangen ikke blev belastet så hårdt. Dette hjalp hellere ikke. Til sidst blev det forsøgt at udskifte operationsforstærkeren til en anden type. Dette gjorde dog at båndpassfilteret begyndte at oscillere.
-Da det begyndte at knibe med tiden blev der derfor implementeret en løsning som i starten var valgt fra pga. dens dårlige støj og temperatur forhold. Se Figur \ref{fig:jdig1}.
+Da det begyndte at knibe med tiden blev der derfor implementeret en løsning som i starten var valgt fra pga. dens dårlige støj og temperatur forhold. Se sektion \ref{P-sec:HWimp_jordfugt}: \nameref{P-sec:HWimp_jordfugt} side \pageref{P-sec:HWimp_jordfugt} i projektdokumentationen og Figur \ref{fig:jdig1} herunder.
 
 \begin{figure}[H]
 	\centering
@@ -299,7 +301,7 @@ På Figur \ref{fig:j20} ses udgangsspændingen vs. kapaciteten. Regressionen er 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../fig/Jordfugt/funch_dc_charge.PNG}
+	\includegraphics[width=0.6\textwidth]{../fig/Jordfugt/funch_dc_charge.PNG}
 	\caption{Kapacitet vs. udgangspænding i forhold til forsyningsspændingen}
 	\label{fig:j20}
 \end{figure} 
@@ -325,10 +327,12 @@ Som lysmåler er der blevet brugt en fototransistor af typen BPW96B. Diagram ses
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.25\textwidth]{../fig/Lysmaeler/diagram.png}
+	\includegraphics[width=0.2\textwidth]{../fig/Lysmaeler/diagram.png}
 	\caption{Diagram over lysmåleren}
 	\label{fig:lysdiagram}
 \end{figure} 
+
+
 
 \begin{figure}[H]
 	\centering
