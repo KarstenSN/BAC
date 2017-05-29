@@ -2,12 +2,12 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
+	\includegraphics[width=0.7\textwidth]{../fig/Systemarkitektur/BDDsystem.pdf}
 	\caption{Blokdiagram over det samlede system}
 	\label{fig:BDDsystem}
 \end{figure}
 
-På Figur \ref{fig:BDDsystem} ses BDD over det samlede system indeholdende sensor og kontrolboks. Separate blokdiagrammer over sensoren og kontrolboksen ses i figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
+På Figur \ref{fig:BDDsystem} ses BDD over det samlede system indeholdende kontrolboks og sensor. Separate blokdiagrammer over kontrolboksen og sensoren ses i Figur \ref{fig:BDDsensor} og \ref{fig:BDDkontrolboks}.
 
 \raggedbottom
 
@@ -44,7 +44,7 @@ Displayet skal vælges til en forsyningsspænding på 3VDC $ \pm 10\%$ og skal k
 
 
 \textbf{HF-Transceiver} \label{designkrav:transceiver} \\
-Det er naturligvis valgt at benytte samme type og model HF Transceiver på både kontrolboks og sensor. Transceiveren skal vælges således at den opfylder krav \textbf{CM\_01} om trådløs kommunikation il kontrolboks/sensor, og kan kommunikere med mikroprocessoren via SPI-bussen. Denne bus er valgt primært at 2 grunde. Dels at bussen er seriel, hvilket egner sig til at transmittere den type data som skal kommunikeres imellem kontrolboks og sensor. Data-rate'en for systemet skal opfylde krav \textbf{PF\_07}. Det ønskes at implementere en transceiver der egner specielt godt til batteriapplikationer, for bedst muligt at udnytte batterilevetiden på sensoren. Derudover ønskes transceiver'en at indeholde en lavspændings-detektion, således at den kan give besked til mikroprocessoren når batterispændingen på sensoren bliver for lav, dette signal kan så udnyttes til at enable en boost-konverter på sensoren. Transceiver'en skal vælges ud fra et ønske om en forsyningsspænding på 3.3VDC $ \pm 10\% $, da dette egner sig godt til kravet \textbf{EL\_01} om en batteridrevet sensor, samt kan indgå i forsyningskæden på kontrolboksen. Desuden ønskes en transceiver der kan initieres fra en ekstern mikroprocessor, således at den ikke skal forprogrammeres men kan sættes op ved start-up. Til transceiveren udgang skal der kobles en antenne således at krav \textbf{CM\_01} om trådløs kommunikation kan opfyldes.  
+Det er valgt at benytte samme type og model HF Transceiver på både kontrolboks og sensor. Denne skal vælges således at den opfylder krav \textbf{CM\_01} om trådløs kommunikation til kontrolboks/sensor og kan kommunikere med mikroprocessoren via SPI-bussen. Denne bus er valgt af den primære grund at den er seriel og hvilket egner sig til at transmittere den type data som skal kommunikeres imellem kontrolboks og sensor. Data-rate'en for systemet skal opfylde krav \textbf{PF\_07}. Det ønskes at implementere en transceiver der egner specielt godt til batteriapplikationer for bedst muligt at udnytte batterilevetiden på sensoren. Der ønskes at transceiveren skal indeholde en lavspændings-detektion, således at den kan give besked til mikroprocessoren når batterispændingen på sensoren bliver for lav, dette signal kan udnyttes til at enable en boost-konverter på sensoren. Transceiveren skal vælges ud fra et ønske om en forsyningsspænding på 3.3VDC $ \pm 10\% $, da dette egner sig godt til kravet \textbf{EL\_01} om en batteridrevet sensor, samt kan indgå i forsyningskæden på kontrolboksen. Desuden ønskes en transceiver der kan initieres fra en ekstern mikroprocessor, således at den ikke skal forprogrammeres men kan sættes op ved start-up. Til transceiverens udgang skal der kobles en antenne således at krav \textbf{CM\_01} om trådløs kommunikation kan opfyldes.  
 
 
 \textbf{Strømforsyning} \label{designkrav:stromforsyning} \\
@@ -185,28 +185,28 @@ I dette underafsnit opstilles kravene til de enkelte blokke der udgør sensoren 
 	\label{fig:BDDsensor}
 \end{figure}
 
-\textbf{Mikroprocessor} \\ \label{designkrav:mikroprocessor_sensor}
+\textbf{Mikroprocessor} \label{designkrav:mikroprocessor_sensor} \\
 Mikroprocessoren er den samme som i kontrolboksen, derfor henvises til afsnit \ref{designkrav:mikroprocessor} på side \pageref{designkrav:mikroprocessor} for nærmere info.
 
 
-\textbf{Jordfugtmåler} \\ \label{designkrav:jordfugt}
+\textbf{Jordfugtmåler} \label{designkrav:jordfugt} \\ 
 Jordfugt måleren skal inkludere et jordspyd som stikkes ned i jorden for at måle jordfugtigheden. Den skal give en analog spænding ud mellem 0-3.3VDC som indikerer fugtigheden, hvor 0V indikerer $0 \%$ og 3.3V indikerer $100 \%$ Jordfugtmåleren skal opfylde krav \textbf{PF\_06} og krav \textbf{PF\_08} om målepræcision.
 
 
-\textbf{Temperaturføler} \\ \label{designkrav:temperaturfoler}
+\textbf{Temperaturføler} \label{designkrav:temperaturfoler} \\ 
 Temperaturføleren skal kommunikere via I2C og skal have en præcision på minimum $\pm 0.5^{\circ}C$ og en decimalafstand på minimum $0.1^{\circ}C$, jfv. krav \textbf{PF\_06}. Temperaturmåleren skal kunne være operationsdygtig i intervallet $ -20 - 70^{\circ}C$ for at opfylde krav \textbf{PF\_05}. Derudover ønskes en temperaturføler der benytter 3.3VDC forsyningsspænding for at opfylde krav \textbf{EL\_01}. 
 
 
-\textbf{HF-Transceiver} \\ \label{designkrav:transceiver_sensor}
+\textbf{HF-Transceiver} \label{designkrav:transceiver_sensor} \\
 HF-Transceiveren er den samme som i kontrolboksen, derfor henvises til afsnit \ref{designkrav:transceiver} på side \pageref{designkrav:transceiver} for nærmere info.
 
 
-\textbf{Lysmåler} \\ \label{designkrav:lyssensor}
+\textbf{Lysmåler} \label{designkrav:lyssensor} \\
 Lysmåleren skal kunne detektere nat eller dag. Lysintensitet ved tusmørke fastlægges ved test og denne sættes til  referencespænding på 1VDC $\pm 50\%$. Således fås en Vout tæt på 0VDC om natten, og tæt på 3.3VDC ved højlys dag. 
 
 
-\textbf{PSU} \\ \label{designkrav:psu}
-PSU'en består af en batteriholder der skal kunne rumme 2 batterier af typen AAA med en spænding på 1.5VDC hver (1.8VDC - 3.4 VDC) for at opfylde krav \textbf{PF\_01} om batteritype. Derudover indeholder PSU'en en boostkonverter der, når batterispændingen bliver tilstrækkelig lav fastholder en udgangsspænding på 3.3VDC $\pm$ 10\% samt levere en udgangstrøm på min. 100mA til de resterende kredsløb på sensoren. Boostkonverteren skal enables når batterispændingen når ned på 3.0VDC, for at sikre krav de restende  40\% power der er tilbage på batterierne udnyttes optimalt før brugerne skal udskifte dem. Boostkonverter sørger her for, fuldt ud at udnytte batterierne ned til en spænding på 1.8 VDC jfv. krav \textbf{PR\_03}. Transceiverens IRO-pin (low battery detect )benyttes som boostkonverter enable. PSU'en skal sørge for en batterilevetid på min. 1 år. jfv. krav \textbf{PF\_02}.
+\textbf{PSU} \label{designkrav:psu} \\
+PSU'en består af en batteriholder der skal kunne rumme 2 batterier af typen AAA med en spænding på 1.5VDC hver (1.8VDC - 3.4 VDC) for at opfylde krav \textbf{PF\_01} om batteritype. Derudover indeholder PSU'en en boostkonverter der, når batterispændingen bliver tilstrækkelig lav fastholder en udgangsspænding på 3.3VDC $\pm$ 10\% samt levere en udgangstrøm på min. 100mA til de resterende kredsløb på sensoren. Boostkonverteren skal enables når batterispændingen når ned på 2.8VDC, for at sikre krav de restende  40\% power der er tilbage på batterierne udnyttes optimalt før brugerne skal udskifte dem. Boostkonverter sørger her for, fuldt ud at udnytte batterierne ned til en spænding på 1.8 VDC jfv. krav \textbf{PR\_03}. Transceiverens IRO-pin (low battery detect )benyttes som boostkonverter enable. PSU'en skal sørge for en batterilevetid på min. 1 år. jfv. krav \textbf{PF\_02}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -237,9 +237,13 @@ På Figur \ref{fig:IBDsensor} ses Internt blok diagram af sensoren og herefter f
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| l | l | Z | p{4 cm} |} \hline
 	\textbf{Signal} & \textbf{Type} & \textbf{Beskrivelse} & \textbf{Tolerance} \\ \hline
-		3.3VDC 	
+		V\_bat 	
 			& P1 
-			& Batterispænding $ V_{dd} $												
+			& Batterispænding												
+			& 1.8V - 3.3V $ \pm 10\%$					\\ \hline
+		3.3VDC 	
+			& P2 
+			& Forsyningsspænding $ V_{dd} $												
 			& 3.3V $ \pm 10\%$					\\ \hline
 		SPI  	
 			& K1 

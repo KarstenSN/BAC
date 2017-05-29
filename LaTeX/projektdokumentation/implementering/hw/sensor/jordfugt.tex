@@ -22,7 +22,7 @@ Hvor $m_w$ er massen af væske, $m_{wet}$ er massen af den fugtige jord og $\eta
 Det er derfor nu muligt at bestemme en jordfugtighed uden at skulle måle volumen af prøven. Til vejning af jordprøver er der blevet brugt en vægt af producenten \texttt{Sartorius} model \texttt{QUINTIX2102-1S} med en præcision på $\pm0.01g$.
 
 \textit{Resistiv måling} \\
-Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan være med til at give en måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur\ref{fig:maling1}. Det blev derfor undersøgt om det ved hjælp af denne kunne gøre målingen mere præcis.
+Den resistive målemetode er en metode til at måle den ohmske værdi af jorden. Jo mere vand jorden indeholder jo mere ledende vil jorden være og den ohmske værdi vil herefter falde. Der er dog mange faktor som kan give øget måleusikkerhed, disse usikkerheder er betinget af selve næringsindholdet i jorden, om jorden er forurenet med metaller eller om proben som der måles med, har været udsat for kraftig tæring. Disse betingelser kunne der kalibreres for, men en kalibrering vil være besværlig for en almindelig bruger af systemet, da det vil kræve at brugeren ovntørrer en jordprøve og herefter tilsætter en præcis mængde vand for at vide med sikkerhed hvilken værdi der skal kalibreres ind efter. Det viste sig dog at der sammen med den resistive måling af jorden også opstod en kapasitiv virkning, som funktion af en stigetid. Se Figur \ref{fig:maling1}. Det blev derfor undersøgt om der ved hjælp af denne kunne kunne opnås en større målepræcision.
 
 
 \begin{figure}[H]
@@ -171,12 +171,13 @@ Der er blevet designet 4 typer af jordspyd som er blevet brugt til test. Det vis
 Det ses på Figur \ref{fig:graffugt} at Type 1 og type 2 er meget varierende i deres udslag, men at Type 3 har et pænt lineært forhold op til omkring 40\%. Afvigelsen skyldes at ved 40\% bliver jorden så våd at der begynder at ligge mere vand på spyddet end hvad der er i jorden. Derfor bliver kapaciteten højere end hvad den burde. Der kan nu opstilles en formel til beregning af fugtigheden af jorden hvis kapaciteten af spyddet er kendt for både tør og våd. 
 
 \begin{equation}
-	\theta = \frac{C_{weat} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
+	\theta = \frac{C_{wet} - C_{dry}}{100} \cdot (C-C_{dry}) \cdot \%
 \end{equation}
 
 
-Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude\cite{lib:cap_meas} ændringen når der sættes et AC signal igennem eller at måle faseændringen.  
+Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensatoren. Til det er der blevet overvejet to muligheder. Enten at måle amplitude\cite{lib:cap_meas} ændringen når der sættes et AC signal igennem eller at måle faseændringen. 
 
+\newpage
 \textit{Målemetoder} \\
 
 \begin{figure}[H]
@@ -194,10 +195,10 @@ Det er derfor nu muligt at måle jordfugten ved at måle variationen af kondensa
   \end{minipage}
 \end{figure}
 
-På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 som hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Se Sektion \ref{sec:test_amplitudemoling} for bevis af denne påstand. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. 
+På Figur \ref{fig:jdig1} og \ref{fig:jdig2} ses der hvordan amplitudemålingen kan foretages. På Figur \ref{fig:jdig1} ses der et meget simpelt kredsløb som vil oplade en DC på C1 hvis spænding afhænger af størrelsen af C\_soil. Kredsløbet er dog meget støjfølsomt og er derfor ugenet til dette formål. Se Sektion \ref{sec:test_amplitudemoling} for bevis af denne påstand. Kredsløbet kan forbedres med en instrumentationsforstærker som på Figur \ref{fig:jdig2}. Desværre er diodeforspændingen meget varierende med temperatur og strømtræk. Derfor vil dette kredsløb hellere ikke være ideel. Derimod er en måling af fasen mere præcis men samtid også mere avanceret. 
 
 \textit{Målerkredsløb ver.01} \\
-Der er designet et kredsløb der konverterer faseændringen om til en DC-spænding som herefter samples af mikroprocessorens ADC. Dette kredsløb ses på Figur \ref{fig:jf2}. Kredsløbet fungerer ved at der påtrykkes en firkant-spænding på 100kHz over jordspyddet som bliver loaded af R25. Dette efterfølges af en spændingsfølger således R25 kan vælges uden forbehold for det efterfølgende kredsløb. Firkant-spændingen filtreres herefter af et båndpass-filter således at der ligger en sinus på udgangen af U12A. Denne sinus er $180^\circ$ faseforskudt da U12A er koblet som en inverterende forstærkter, derfor sættes der en komparator på udgangen af U12A for at returnere fasen til $0^\circ$ og samtisig sikre et hurtigt skift i XOR-gaten U10A. Til orientering, vil der her blive introduceret et propagation delay som vil bidrage en smule til faseforskydelsen, der forventes i omegnen af $80ns$ \cite{lib:comp_MCP6561_datasheet}. Ved at køre frekvensen fra mikroprocessoren samt udgangen af U8A igennem en XOR-gate (U10A). Bliver faseforskellen af de 2 signaler konverteret til et PWM-signal som efterfølgende filtreres således der ligger en spænding på C26 varierende fra 0V-Vcc/2. For at få et bedere dynamisk range er der indsat en inverterende forstærker med en forstærkning på 2.  
+Der er designet et kredsløb der konverterer faseændringen om til en DC-spænding som herefter samples af mikroprocessorens ADC. Dette kredsløb ses på Figur \ref{fig:jf2}. Kredsløbet fungerer ved at der påtrykkes en firkant-spænding på 100kHz over jordspyddet som bliver loaded af R25. Dette efterfølges af en spændingsfølger således R25 kan vælges uden forbehold for det efterfølgende kredsløb. Firkant-spændingen filtreres herefter af et båndpass-filter således at der ligger en sinus på udgangen af U12A. Denne sinus er $180^\circ$ faseforskudt da U12A er koblet som en inverterende forstærkter, derfor sættes der en komparator på udgangen af U12A for at returnere fasen til $0^\circ$ og samtidig sikrer et hurtigt skift i XOR-gaten U10A. Til orientering, vil der her blive introduceret et propagation delay som vil bidrage en smule til faseforskydelsen, der forventes i omegnen af $80ns$ \cite{lib:comp_MCP6561_datasheet}. Ved at køre frekvensen fra mikroprocessoren samt udgangen af U8A igennem en XOR-gate (U10A). Bliver faseforskellen af de 2 signaler konverteret til et PWM-signal som efterfølgende filtreres således der ligger en spænding på C26 varierende fra 0V-Vcc/2. For at få et bedere dynamisk range er der indsat en inverterende forstærker med en forstærkning på 2.  
 
 \begin{figure}[H]
 	\centering
@@ -279,14 +280,14 @@ På Figur \ref{fig:j8} ses et plot af udgangsspændingen vs. kapaciteten af C26.
 \end{figure}
 
 \textit{U12} \\
-U12 er blevet valgt til typen TL972 da den har en båndbredde på 12MHz. Det skal dog nævens at ved valg af denne var der 
+U12 er blevet valgt til typen TL972 \cite{lib:tl972_datasheet} fra Texas Instruments  da den har en båndbredde på 12MHz. Det skal dog nævens at ved valg af denne var der 
 usikkerhed på om målingen skulle foretages 1MHz \cite{lib:cap_meas} eller lavere. Pga. den store båndbredde bruger den desværre også meget tomgangs strøm som typisk ligger på 2mA pr forstærker. 
 
 \textit{U10} \\
-U10 er valgt til typen SN74AHC86 da den har en lav pris og samtidig har et lavt propagation-delay på 8ns.
+U10 er valgt til typen SN74AHC86 \cite{lib:SN74AHC86_datasheet} fra Texas Instruments da den har en lav pris og samtidig har et lavt propagation-delay på 8ns.
 
 \textit{U8} \\
-U8 er valgt til typen MCP6562 da den har en push-pull udgang og en lav tomgangsstrøm på 130uA pr. forstærker, samt et lavt propagation-delay på 80ns og risetime på 20nS. 
+U8 er valgt til typen MCP6562 \cite{lib:MCP6562_datasheet} fra Microchip da den har en push-pull udgang og en lav tomgangsstrøm på 130uA pr. forstærker, samt et lavt propagation-delay på 80ns og risetime på 20nS. 
 
 \textit{D5 og D6} \\
 Er beskyttelsdioder til ESD. Er blevet valgt til typen BAT54 da de er billige og er meget brugte til netop dette formål.
@@ -335,18 +336,18 @@ Kredsløbet viste sig dog stadig at volde problemer. Det første der blev iagtta
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_2.PNG}
-	\caption{Scopebilled ved 0\% fugtighed. Rød er målt på C26, Grøn U10A ben 4, Gul 100kHz delayed og Grøn er U10A ben 2.}
+	\caption{Scopebillede ved 0\% fugtighed. Rød er målt på C26, Grøn U10A ben 4, Gul 100kHz delayed og Grøn er U10A ben 2.}
 	\label{fig:j10}
 \end{figure}  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../fig/Jordfugt/scope_3.PNG}
-	\caption{Scopebilled ved jordspyd stukket ca. halvt ned i vand. Her ses allerede fuldt udslag}
+	\caption{Scopebillede ved jordspyd stukket ca. halvt ned i vand. Her ses allerede fuldt udslag}
 	\label{fig:j11}
 \end{figure}  
 
-Det blev nu undersøgt om det kunne skyldes at R22 var udregnet forkert. Derfor blev overføringsfunktionen opskrevet endnu en gang for båndpass-filteret dog inkluderet med kapaciteten fra jordspydet. 
+Det blev nu undersøgt om det kunne skyldes at R22 var fejlagtigt beregnet. Derfor blev overføringsfunktionen for båndpass-filteret opskrevet endnu en gang, men denne gang inkluderedes målekapaciteten fra jordspyddet. 
 
 \begin{footnotesize}
 \begin{equation}
@@ -355,7 +356,7 @@ Det blev nu undersøgt om det kunne skyldes at R22 var udregnet forkert. Derfor 
 \end{equation} 
 \end{footnotesize}
 
-Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig:j6} og \ref{fig:j7}. Men blev frekvensen sat til 87kHz skete der noget som måske kunne forklare det observerede. Se Figur \ref{fig:j12}. Her ses der et pludseligt faseskift på $90^\circ$ ved omkring 160pF. Faseskiftet vil ikke kunne ses på udgangsspændingen da der ikke gives nogen indikation af positiv eller negativ forskydelse. Det passer fint med at spændingen falder ved en kapacitet større end 160pF. Herefter blev frekvensen fra mikroprocessoren målt og denne lå på 86kHz. Herefter blev knækfrekvensen i båndpass-filteret målt og denne lå på 88 kHz. Se figur \ref{fig:j13}. Afvigelsen skyldes at C33 og C34 var monteret med 10\% tolerance kondensatorer. Men da knækfrekvensen stemte fint overens med frekvensen fra mikroprocessoren kunne fejlen ikke være det. Det blev forsøgt at ændre Q-værdien både op og ned i filteret, men lige meget hjalp det.  
+Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig:j6} og \ref{fig:j7}. Men blev frekvensen sat til 87kHz skete der noget som måske kunne forklare det observerede. Se Figur \ref{fig:j12}. Her ses der et pludseligt faseskift på $180^\circ$ ved omkring 160pF. Faseskiftet vil ikke kunne ses på udgangsspændingen da der ikke gives nogen indikation af positiv eller negativ forskydelse. Det passer fint med at spændingen falder ved en kapacitet større end 160pF. Herefter blev frekvensen fra mikroprocessoren målt og denne lå på 86kHz. Herefter blev knækfrekvensen i båndpass-filteret målt og denne lå på 88 kHz. Se figur \ref{fig:j13}. Afvigelsen skyldes at C33 og C34 var monteret med 10\% tolerance kondensatorer. Men da knækfrekvensen stemte fint overens med frekvensen fra mikroprocessoren kunne fejlen ikke være det. Det blev forsøgt at ændre Q-værdien både op og ned i filteret, men lige meget hjalp det.  
 
 \begin{figure}[H]
 	\centering
@@ -371,7 +372,7 @@ Ved første øjekast stemte det fint overens med det forventede i Figur \ref{fig
 	\label{fig:j13}
 \end{figure} 
 
-Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvom at overføringsfunktionen viste at faseforskydelsen i skulle ligge fast på $0^\circ$ blev det alligevel testes med en spændingsfølger på indgangen, koblet ligesom U8B på Figur \ref{fig:jf2}, dog blev den båndbredde-begrænset til 500kHz. Spændingsfølgeren blev forsynet med både en positiv og en negativ spænding på 3.3V og var af typen LM357. Se Figur \ref{fig:j14} for scopebillede af indgang og udgang. Herefter blev der målt på udgangen af spændingsfølgeren og udgangen af båndpasfilteret (U12A ben 1). Her blev det konstateret at ved 20pF var der en faseforskydelse på $90^\circ$ og ved en kapacitet på 120pF var der en faseforskydelse på $180^\circ$. Dette ses tydeligt på Figur \ref{fig:j15} og \ref{fig:j16}. Holdes dette resultet op med opservationen om at U12B koblet som inverterende forstærker gav en positiv forstærkning er der ingen tvivl om at operationsforstærkerne er i en ustabil kobling. Ses der i databladet for TL972 ses der at fasemarginen ved en load på udgangen ved en load på 250pF ligger omkring $40^\circ$. Ses der på diagrammet for båndpass-filteret kan der ses at udgangen af U12A bliver loadet med 470pF og 171$\Omega$ serielt. Dette kan muligvis resultere i ustabilitet. Filteret blev skaleret ned så kondensatorene C23 og C34 var 47pF. Dette gav desværre ikke noget bedere resultat. Tilbage var kun at skifte operationsforstærkeren ud til en anden type.  
+Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvom at overføringsfunktionen viste at faseforskydelsen i skulle ligge fast på $0^\circ$ blev det alligevel testes med en spændingsfølger på indgangen, koblet ligesom U8B på Figur \ref{fig:jf2}, dog blev den båndbredde-begrænset til 500kHz. Spændingsfølgeren blev forsynet med både en positiv og en negativ spænding på 3.3V og var af typen LM357. Se Figur \ref{fig:j14} for scopebillede af indgang og udgang. Herefter blev der målt på udgangen af spændingsfølgeren og udgangen af båndpasfilteret (U12A ben 1). Her blev det konstateret at ved 20pF var der en faseforskydelse på $90^\circ$ og ved en kapacitet på 120pF var der en faseforskydelse på $180^\circ$. Dette ses tydeligt på Figur \ref{fig:j15} og \ref{fig:j16}. Holdes dette resultat op med observationen om U12B's koblet som inverterende forstærker gav en positiv forstærkning er der ingen tvivl om at operationsforstærkerne er i en ustabil kobling. Ses der i databladet for TL972 ses der at fasemarginen ved en load på udgangen ved en load på 250pF ligger omkring $40^\circ$. Ses der på diagrammet for båndpass-filteret kan der ses at udgangen af U12A bliver loadet med 470pF og 171$\Omega$ serielt. Dette kan muligvis resultere i ustabilitet. Filteret blev skaleret ned så kondensatorerne C23 og C34 var 47pF. Dette gav desværre ikke noget bedere resultat. Tilbage var kun at skifte operationsforstærkeren ud til en anden type.  
 
 \begin{figure}[H]
 	\centering
@@ -402,14 +403,14 @@ Det eneste sted der kunne være en faseforskydelse var i båndpasfilteret, selvo
 \end{figure} 
 
 \textit{Skift af U12} \\
-Det blev valt at erstatte den hidtil benyttede TL972 Operationsfortærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye opamp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere tomgangs-strøm på $85 \mu A$ samt en slew rate på $0.6V/ \mu s$, der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}.  
+Det blev valgt at erstatte den hidtil benyttede TL972 Operationsforstærker med modellen MCP6102t fra Microchip \cite{lib:opamp_MCP6102t_datasheet}. Denne nye OpAmp er valgt på baggrund af dens mere passende båndbredde på $1Mhz$. Dertil har den lavere tomgangs-strøm på $85 \mu A$ samt en slew rate på $0.6V/ \mu s$, der opfylder kravet til systemet som ses i ligning \ref{equ:slewrate}.  
 
 \begin{equation}
 	Slew Rate = 2 \times \pi \times f \times V_{max} = 2 \times \pi \times 10kHz \times 3.3V = 0.207V/ \mu s   
 	 \label{equ:slewrate}
 \end{equation}
 
-Operationsforstærkerens passer med det gamle footprint og det var derfor nemt at erstatte den på printet. Men det viste sig at kredsløbet nu begyndte at oscillere se Figur \ref{fig:jnyopamp}. Det blev som før forsøgt at ændre størrelserne på komponentværdierne i filteret således C1 og C1 var 47pF. Dette hjalp intet. Det blev også forsøgt at ændre filterets Q ned til 5. Dette løste dog hellere ikke problemet. 
+Operationsforstærkeren passer med det gamle footprint og det var derfor nemt at erstatte den på printet. Men det viste sig at kredsløbet nu begyndte at oscillere, se Figur \ref{fig:jnyopamp}. Det blev som før forsøgt at justerer på komponentværdierne i filteret således C1 og C1 var 47pF. Dette hjalp intet. Det blev også forsøgt at ændre filterets Q ned til 5. Dette løste dog hellere ikke problemet. 
 
 \begin{figure}[H]
 	\centering
@@ -420,8 +421,8 @@ Operationsforstærkerens passer med det gamle footprint og det var derfor nemt a
 
 Pga. af tidspres blev det valgt ikke at bruge mere tid på at finde fejlen. Det blev derfor testet om kredsløbet i Figur \ref{fig:jdig1} kunne bruges som midlertidig løsning.  
 
-\textit{Test af kredsløb til amplitudemåling af kondensator}  \\ \label{sec:test_amplitudemoling}
- For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Der er blevet målt at diode tabet er ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger 80mVpkpk 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. En anden løsning er at sample over en periodetid på 20ms og herefter returnere gennemsnittet af målingerne. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF som aflæses til 37ms. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 da diodetabet vil ændres med temperatur og strømtræk. Kredsløbet blev implementeret på sensoren som en midlertidig løsning da det ikke var muligt at finde på en løsning til problemet med kredsløbet til fasedetektion. På Figur \ref{fig:j20} ses et plot over kapaciteten versus udgangsspændingen på kredsløbet. Funktionen er blevet implementeret i mikroprocessoren. 
+\textit{Test af kredsløb til amplitudemåling af kondensator} \label{sec:test_amplitudemoling}  \\
+For at bevise påstanden om at kredsløbet i Figur \ref{fig:jdig1} på side \pageref{fig:jdig1} er meget støjfølsomt, er det blevet opbygget på et Type 3 jordspyd. Komponentværdierne er følgende: R1 = 100k D1 = BAT54 C1 = 100nF R2=1M$\Omega$. Tabet over diode blev målt til ca 0.2V. Det ses på Figur \ref{fig:j18} at der ved en printkapacitet på 220pF (fuldt dyppet i vand) ligger der $ 80 mV_{pp} $ 50Hz støj. Denne støj kan dog minimeres ved at gøre C1 større, men dette vil også gøre tidskonstanten større således at der skal ventes længere tid før en måling kan foretages. En anden løsning er at sample over en periodetid på 20ms og herefter returnere gennemsnittet af målingerne. Se Figur \ref{fig:j19} for scope billede af stigetiden fra 20pF til 220pF som aflæses til 37ms. Dette vil kræve mere strøm og batteriet vil derfor hurtigere blive afladet. Samtidig er der også problemet med D1 da diodetabet vil ændres med temperatur og strømtræk. Kredsløbet blev implementeret på sensoren som en midlertidig løsning da det ikke var muligt at finde på en løsning til problemet med kredsløbet til fasedetektion. På Figur \ref{fig:j20} ses et plot over kapaciteten versus udgangsspændingen på kredsløbet. Funktionen er blevet implementeret i mikroprocessoren. 
  
 \begin{figure}[H]
 	\centering

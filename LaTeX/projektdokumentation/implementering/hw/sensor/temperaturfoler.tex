@@ -16,7 +16,7 @@ Der er blevet designet to typer temperaturføler. En med en analog udgang som gi
   \end{minipage}
 \end{figure}
 
-Den analoge temperaturføler blev designet først og før at kravet om I2C lå fast. Via en kurve som ses i Figur \ref{fig:tempkurve}. kan temperaturen aflæses. Ved at køre på mikroprocessorens interne 2.56V referenceforsyning, fås der en opløsning af ADC'en på:
+Den analoge temperaturføler blev designet først og før at kravet om I2C lå fast. Via en kurve som ses på Figur \ref{fig:tempkurve}. kan temperaturen aflæses. Ved at køre på mikroprocessorens interne 2.56V referenceforsyning, fås der en opløsning af ADC'en på:
 
 \begin{equation}
 	ADC opløsning = \frac{2.56V}{2^{10}}=2.5mV
@@ -28,7 +28,7 @@ Denne opløsning sætter begrænsningen af hvor mange decimaler temperaturen kan
 	Decimal afstand = \frac{2.5mV}{10mV}=0.25^{\circ}C
 \end{equation}
 
-Hvilket ikke stemmer overens med krav: \textbf{PF\_07}. For at få præcisionen ned til de to decimaler som kræves gøres der derfor brug af TMP74B som har et I2C interface og en opløsning på $ 0.0625^{\circ}C $ og en præcision på $ \pm 0.5^{\circ}C $. Se Figur \ref{fig:dtemp}. A0,A1,A2 bruges til at sætte en adresse, så man således kan have flere temperatur følere på samme I2C bus. Dette er dog ikke nødvendigt i dette system og adressen er hermed sat til 0. AL kan bruges til at give et interrupt når temperaturen kommer over et bestemt niveau. Dette gøres der dog hellere ikke brug af i dette system.  
+Hvilket ikke stemmer overens med krav: \textbf{PF\_07}. For at få præcisionen ned til de to decimaler som kræves gøres der derfor brug af TMP74B \cite{lib:TMP74B_datablad} fra Texas Instruments som har et I2C interface og en opløsning på $ 0.0625^{\circ}C $ og en præcision på $ \pm 0.5^{\circ}C $. Se Figur \ref{fig:dtemp}. A0,A1,A2 bruges til at sætte en individuel adresse, så man således kan have flere temperatur følere på samme I2C bus. Dette er dog ikke nødvendigt i dette system og adressen er hermed sat til 0. AL kan bruges til at give et interrupt når temperaturen kommer over et bestemt niveau. Dette gøres der dog hellere ikke brug af i dette system.  
 
 \begin{figure}[H]
 	\centering

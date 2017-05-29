@@ -35,6 +35,7 @@ Ved opstart skrives der først til \texttt{GENCREG}-registret som er det generel
 \end{figure} 
 
 På Figur \ref{fig:class_rftransciver_kontrolboks} ses klassediagram over \texttt{transceiver}. Koden er skrevet i C og det er derfor svært at give en korrekt standardiseret beskrivelse af klassen som en traditionel C++ klasse. Funktionerne er i stedet implementeret i en struct. Det vil sige at struct'en oprettes med funktionspointere til alle public funktioner, disse er markeret med + foran funktionen. Private members er markeret med - foran funktionen. Alle funktioner er implementeret i en .c (source) fil hvor struct'en er implementeret i en .h (header)fil. Det er derfor kun muligt at se de funktioner som struct'en initieres med i init-funktionen. init-funktionen er en ekstern funktion da den ligger uden for struct'en og bliver kaldt med \texttt{transceiver} som parameter. Funktionen giver pointere fra .c filen videre til struct'en. Private members er funktioner som kun kan ses af selve .c filen selv og disse funktioner kan derfor ikke ses i .h filen.
+\newpage
 
 \textit{Variabel beskrivelse}
 	\begin{table}[H]
@@ -353,13 +354,13 @@ På Figur \ref{fig:class_rftransciver_kontrolboks} ses klassediagram over \textt
 \end{table}
 
 
-\textit{Ekstern funktion }
+\textit{Ekstern funktion}
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| l | Z |} \hline
 		Funktion 	& \texttt{rfTransceiverInit} \\\hline
 		Parametre 	& \_transceiver: struct rfTransceiver* \\\hline
 		Returværdi 	& void \\\hline
-		Beskrivelse & Initierer \texttt{transceiver} structen og giver funktionspointere fra .c filen videre. Funktionen initierer også selve transciveren og sætter den op til 433MHz. Funktionen sætter også krystal-load-kapaciteterne til 10pF, båndbredden til 270kHz, FIFO interrupt ved 8 bit og datarate til 1200bps.  \\\hline
+		Beskrivelse & Initierer \texttt{transceiver} structen og giver funktionspointere fra .c filen videre. Funktionen initierer også selve transceiveren og sætter den op til 433MHz. Funktionen sætter også krystal-load-kapaciteterne til 10pF, båndbredden til 270kHz, FIFO interrupt ved 8 bit og datarate til 1200bps.  \\\hline
 	\end{tabularx}
 	\caption{Metodebeskrivelse for \texttt{rfTransceiverInit}}
 \end{table}

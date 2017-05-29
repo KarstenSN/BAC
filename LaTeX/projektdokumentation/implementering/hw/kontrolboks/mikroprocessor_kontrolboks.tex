@@ -2,7 +2,7 @@
 Som mikroprocessoren i kontrolboks og sensor er er valgt at benytte en ATMEGA8L i TQFP pakke fra Atmel \cite{lib:mikro_ATMEGA8L_datasheet}. Denne er valgt da den opfylder designkravene i afsnit \ref{designkrav:mikroprocessor} på side \pageref{designkrav:mikroprocessor} samt kravene i afsnit \ref{ch:kravspecifikation} fra side \pageref{ch:kravspecifikation}. \texttt{L}-typen er valgt da den kan forsynes i intervallet fra 2.7VDC  - 5.5VDC hvilket både egner sig til adaptor-forsyning på kontrolboksen, samt batteriforsyning på sensoren. Processoren kan køre med en clockfrekvens fra 0-8MHz. Her er valgt at kører med 8MHz til de første iterationer, grundet SPI og I2C kommunikationen, men denne frekvens kan med fordel nedjusteres til 4MHz for ydeligere strømbesparelse iht. sensorens batterilevetid.
 
 Af perifere enheder skal der på kontrolboksen benyttes SPI, I2C, samt et antal analoge pins til kontrol af hhv. motorventil og tastatur, herunder error-LED. ATMEGA8L rummer derudover en del forprogrammerede biblioteker skrevet i C således at disse ikke skal skrives fra ny.
-Desuden har mikroprocessoren en intern RC-oscillator som gør at der ikke behøves et eksternt krystal. Mikroprocessorens pinout samt den benyttede pakke kan ses på Figur \ref{fig:atmega8L_pinout} herunder. 
+Desuden har mikroprocessoren en intern RC-oscillator som gør at der ikke behøves et eksternt krystal. Mikroprocessorens pinout samt den benyttede pakke kan ses på Figur \ref{fig:atmega8L_pinout}. 
 
 \begin{figure}[H]
 	\centering

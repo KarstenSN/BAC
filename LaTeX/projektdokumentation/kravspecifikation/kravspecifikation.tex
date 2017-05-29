@@ -1,6 +1,6 @@
 \chapter{Kravspecifikation} \label{ch:kravspecifikation}
 I det følgende afsnit opstilles de funktionelle og ikke-funktionelle krav til systemt. De funktionelle krav er prioriteret efter MoSCoW-modellen. 
-Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individuelt krav tildeles en prioritering, hermed kan opnås størst fokus på de mest systemkritiske krav, metoden er beskrevet nærmere i afsnit \ref{sec:moscow}. De ikke-funktionelle krav er arrangeret efter FURPS+ modellen, nærmere beskrevet i afsnit \ref{sec:furps}. 
+Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individuelt krav tildeles en prioritering, hermed kan opnås størst fokus på de mest systemkritiske krav, metoden er beskrevet nærmere i afsnit \ref{sec:moscow}. De ikke-funktionelle krav er arrangeret efter FURPS+ modellen og nærmere beskrevet i afsnit \ref{sec:furps}. 
 
 
 %---------------------------------------------------------------------------------------
@@ -8,7 +8,7 @@ Denne model benyttes til at sikre en målrettet projektudvikling. Hvert individu
 %---------------------------------------------------------------------------------------
 
 \section{Funktionelle krav} \label{sec:funktionelle_krav}
-I det følgende afsnit opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. Kravene listes med et unik ID således de kan spores tilbage igennem hele dokumentationen. Kravenes ID er givet ved:
+I det følgende afsnit opstilles de funktionelle krav til systemet. Disse krav skal opfyldes for at systemet betragtes som fuldt funktionelt. Kravene listes med et unik ID således de kan spores tilbage igennem hele dokumentationen. Kravenes ID er opstillet efter følgende model:
 
 \begin{itemize} \itemsep0em
 \item	\texttt{MC}: \textit{Mechanical Contraints:} Dette er de mekaniske krav til systemet
@@ -75,8 +75,8 @@ UX\_07	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. morgen, aft
 		CM\_02	& Sensor og kontrolboks skal parres manuelt 										&	\\ \hline
 		UX\_01	& Brugeren skal have mulighed for at åbne/lukke for ventilen manuelt på kontrolboksen &	\\ \hline
 		UX\_02	& Brugeren skal kunne indstille en ønsket jordfugtighed på kontrolboksen			&	\\ \hline
-		UX\_03	& Brugeren skal kunne indstille en åbningstid for ventilen   						&	En tid som ventilen er åben i, hver gang der vandes\\ \hline
-		UX\_04	& Brugeren skal kunne vælge automatisk vandingstidsrum								&	Eks. morgen, aften, begge eller uafhængig\\ \hline
+		UX\_03	& Brugeren skal kunne indstille en åbningstid for ventilen   						&	Den tid som ventilen er åben i, hver gang der vandes\\ \hline
+		UX\_04	& Brugeren skal kunne vælge automatisk vandingstidsrum								&	Eks. morgen, aften, begge eller hele dagen \\ \hline
 	\end{tabularx}
 	\caption{Must krav}
 	\label{tbl:must_krav}
@@ -125,7 +125,7 @@ UX\_07	& Brugeren skal kunne vælge automatisk vandingstidsrum, eks. morgen, aft
 
 \section{Ikke-Funktionelle krav} \label{sec:ikke_funktionelle_krav}
 \subsection{FURPS+} \label{sec:furps}
-De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard.Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
+De ikke funktionelle krav til systemet opstilles efter FURPS+ modellen udviklet af Hewlett-Packard. Denne metode benyttes til at klassificere og administrere funktionelle og ikke-funktionelle krav, her benyttes modellen primært til håndtering af sidstnævnte.
 Modellen inddeler kravsættet i følgende undergrupper.
 
 \begin{itemize} \itemsep0em
@@ -196,6 +196,7 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 	\label{tbl:performance_krav}
 \end{table}
 
+\newpage
 \textbf{Vedligeholdelse}
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| m{1.5 cm} | Z | m{2.9 cm} |} \hline
@@ -213,12 +214,12 @@ Funktionalitetskravene er der taget hånd om i afsnit \ref{sec:funktionelle_krav
 %--------------------------------------------------------------------------------------
 \newpage
 \section{Use Cases} \label{sec:use_cases}
-Ud fra de funktionelle krav i sektion \ref{sec:funktionelle_krav} opstilles følgende use cases som ses på figur \ref{fig:UCdiagram}
+Ud fra de funktionelle krav i Sektion \ref{sec:funktionelle_krav} opstilles følgende Use Cases som ses på Figur \ref{fig:UCdiagram}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{../fig/Systemarkitektur/Usecases.pdf}
-\caption{Use cases over systemet}
+\caption{Use Cases over systemet}
 \label{fig:UCdiagram}
 \end{figure}
 \newpage

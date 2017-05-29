@@ -1,5 +1,5 @@
 \subsubsection{Lysmåler} \label{sec:HWimp_lysmoler}
-Lysmåleren er implementeret med en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et seperat stelplan der er fælles for målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
+Lysmåleren er implementeret med en fototransistor som afgiver en strøm afhængig af hvor meget lys der indstråles. Der er valgt at benytte modellen BPW96B \cite{lib:fototransistor_BPW96B_datasheet} fra Vishay. Kredsløbet er bygget op således at dynamikområdet i \texttt{LightDet}-signalet skalleres via modstanden R20, C32 er medtaget for at midle over evt. støj, værdien af C32 er valgt til 1$\mu F$. Kredsløbet er desuden koblet til et separat stelplan der er fælles for alle målerkredsene, dette er gjort for at kunne afbryde forbindelse til dette plan når der ikke foretages målinger og dermed mindske det overordnede strømforbruget. 
 
 \begin{figure}[H]
 	\centering
@@ -34,7 +34,7 @@ At fototransistoren opfanger en lavere effekt end den angivet ved 900nm, skyldes
 	\label{fig:solspectrum}
 \end{figure}
 
-Det er valgt at fastlægge en referencespænding ved skumringstid til 1VDC, dette er halvdelen af mikroprocessorens egen reference på indgangen. Hermed opnås størst mulig dynamik i målingen. Dette betyder at en spænding på $<$1VDC skal detektere nat, og en spænding $>$1VDC skal detektere dag. Derfor skal kredsløbet designes således at der ved den denne lysintensitet afgives 1VDC over modstanden R20. For at finde en passende værdi for R20, er der foretaget en række empiriske tests for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. \\
+Det er valgt at fastlægge en referencespænding ved skumringstid til 1VDC, dette er halvdelen af mikroprocessorens egen reference på indgangen. Hermed opnås størst mulig dynamik i målingen. Dette betyder at en spænding på $<$1VDC skal detektere nat, og en spænding $>$1VDC skal detektere dag. Derfor skal kredsløbet designes således at der ved denne lysintensitet afgives 1VDC over modstanden R20. For at finde en passende værdi for R20, er der foretaget en række empiriske tests for at fastlægge fototransistorens udgangsstrøm ved skumring/daggry. \\
 For at fastlægge $I_{C}$ ved skumring, sættes R20 = 4k7$\Omega$ som arbitrær værdi og der foretages 2 tests (solnedgang og solopgang) hvor data for hhv. spænding og strøm logges. Her efter findes dét punkt hvor referencespændingen ønskes fast, og modstandsværdien findes herudfra.
 På Figur \ref{fig:test_måling1}, \ref{fig:test_måling2} og \ref{fig:test_måling3} ses de 3 testmålinger. 
 
@@ -60,7 +60,7 @@ På Figur \ref{fig:test_måling1}, \ref{fig:test_måling2} og \ref{fig:test_mål
 \end{figure} 
 
 På Figur \ref{fig:test_måling3} ses, at ved solopgang udvælges et punkt som reference for $I_{C}$ her fås at $I_{C}=20 \mu A$, dette verificeres med testen for solnedgang på Figur \ref{fig:test_måling1}. Sammenholdes disse, (begge med en spænding på 150mV) fås et passende referencepunkt.  
-Da der ønskes 1VDC ved en $I_{C}=20 \mu A$, kan R20 korrigerede værdi beregnes på følgende måde. 
+Da der ønskes 1VDC ved en $I_{C}=20 \mu A$, kan R20s korrigerede værdi beregnes på følgende måde. 
 
 \begin{equation}
 	R20=\dfrac{V_{skumring}} {I_{skumring}}= \dfrac{1VDC} {20 \mu A} = 50k\Omega

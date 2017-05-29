@@ -14,7 +14,7 @@
 	\label{fig:FlowdiagramKontrolboks}
 \end{figure}
 
-På Figur \ref{fig:FlowdiagramKontrolboks} ses flowdiagram over softwaren i kontrolboksen. Ved efter power-up vises hovedmenuen, hvor der vises "No data" hvis der endnu ikke er forbindelse til en sensor. Når der er opnået forbindelse vises de seneste sensordata på display'et. Efter start-up er det muligt for brugeren at opsætte systemet som ønsket, samt tilgå systemets indstillinger som beskrevet i Use Case'ne i afsnit \ref{sec:use_cases} fra sidde \pageref{sec:use_cases}. Herefter entres en while-løkke hvor der søges efter ny data fra sensoren. På baggrund af det modtaget data kan kontrolboksen åbne eller lukke for ventilen. systemet befinder sig i denne løkke indtil at brugeren vælger at frakoble forsyningsspændende til kontrolboksen. 
+På Figur \ref{fig:FlowdiagramKontrolboks} ses flowdiagram over softwaren i kontrolboksen. Efter power-up vises hovedmenuen, hvor der skrives "No data" til display'et hvis der endnu ikke er forbindelse til en sensor. Når der er opnået forbindelse vises de seneste sensordata på display'et. Efter start-up er det muligt for brugeren at opsætte systemet som ønsket, samt tilgå systemets indstillinger som beskrevet i Use Case'ne i afsnit \ref{sec:use_cases} fra side \pageref{sec:use_cases}. Herefter entres en while-løkke hvor der søges efter ny data fra sensoren. På baggrund af det modtaget data kan kontrolboksen åbne eller lukke for ventilen. Systemet befinder sig i denne løkke indtil at brugeren vælger at frakoble forsyningsspændende til kontrolboksen. 
 
 \begin{figure}[H]
 	\centering
@@ -25,20 +25,20 @@ På Figur \ref{fig:FlowdiagramKontrolboks} ses flowdiagram over softwaren i kont
 
 \textbf{Controller: mikroprocessor} \\
 \texttt{mikroprocessor}: Klasse der behandler data fra de resterende klasser. \newline
-Den opdaterer data i \texttt{controlboxPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{keypad}, \texttt{display}, \texttt{motorvalve}, samt \texttt{clock}, \texttt{isr} og \texttt{settings}. Mikroprocessoren skal have defineret en intern clock.  \\
+Den opdaterer data i \texttt{controlboxPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{keypad}, \texttt{display}, \texttt{motorvalve}, samt \texttt{clock}, \texttt{isr} og \texttt{settings}. Mikroprocessoren skal have defineret en intern clock.
 
 
 \textbf{Boundary: transceiver} \\
-\texttt{transceiver}: Driver der skal håndtere kommunikation med \texttt{transceiveren}. \newline
-Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sensor'en. Den initeres af \texttt{mikroprocessoren} ved start up. Her skal opsættes kommunikationsfrekvens, krystal-load, datarate samt low battery-thredshold.
+\texttt{transceiver}: Driver til håndtering af kommunikation med \texttt{transceiveren}. \newline
+Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sensor'en. Den initeres af \texttt{mikroprocessoren} ved start up. Her opsættes kommunikationsfrekvens, krystal-load, datarate samt low battery-thredshold.
 
 
 \textbf{Boundary: keypad} \\
-\texttt{keypad}: Driver der skal håndtere brugerinterfacet til tastaturets 4 trykknapper, samt LED til fejlindikation. \\
+\texttt{keypad}: Driver til håndtering af brugerinterfacet til tastaturets 4 trykknapper, samt LED til fejlindikation.
 
 
 \textbf{Boundary: i2cDisplay} \\
-\texttt{i2cDisplay}: Driver der skal håndtere kommunikation med I2C Display'et, herunder også baggrundsbelysning. \\
+\texttt{i2cDisplay}: Driver til håndtering af kommunikation med I2C Display'et, herunder også baggrundsbelysning.
 
 
 \textbf{Boundary: motorvalve} \\
@@ -57,13 +57,11 @@ Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sen
 
 
 \textbf{Domain: controlboxPackage} \\
-\texttt{Controlbox Package}: Datapakke på 5 bytes som skal indeholde følgende: 2 startbytes, Kontrolboksens ID samt 2 bytes checksum. \\
+\texttt{Controlbox Package}: Datapakke på 5 bytes som skal indeholde følgende: 2 startbytes, Kontrolboksens ID samt 2 bytes checksum.
 
 
 \textbf{Domain: sensorPackage} \\
 \texttt{Sensor Package}: Datapakke på 11 bytes som skal indeholde følgende: 2 startbytes, Sensor ID, batteristatus, 2 temperaturbytes, 2 fugtighedsbytes, en byte til lysstyrke, samt 2 bytes checksum.
-
-
 
 \newpage
 
@@ -82,7 +80,7 @@ Den sender \texttt{controlboxPackage} og modtager \texttt{sensorPackage} fra Sen
 	\label{fig:FlowdiagramSensor}
 \end{figure}
 
-På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren. Ved start initieres de interne indstillinger samt de enheder som der skal kommunikeres med. Derefter sættes en WakeUp timer der holder styr på hvornår sensoren skal vækkes for at foretage målinger. Dernæst sætte en Watch Dog Timer for at forhindre at softwaren ender i deadlock. Herefter foretages en indhentning af data fra hhv. temperatursensoren, lyssensoren samt jordfugtmåleren. Denne datapakke transmitteres til kontrolboksen, skulle dette mislykkes første gang, forsøges der i alt at transmittere datapakken 10 gange. Efter endt transmission (eller 10 x mislykket transmission) disables Watch Dog Timeren og softwaren lægges i sleep-mode. Softwaren vækkes fra sleep-mode af WakeUp Timeren. Denne sekvens forsætter indtil brugeren vælger at frakoble batterierne, eller at batterierne selv løber tør.  
+På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren. Ved opstart initieres de interne indstillinger samt de enheder som der skal kommunikeres med. Derefter sættes en WakeUp timer der holder styr på hvornår sensoren skal vækkes for at foretage målinger. Dernæst sætte en Watch Dog Timer for at forhindre at softwaren ender i deadlock. Herefter foretages en indhentning af data fra hhv. temperatursensoren, lyssensoren samt jordfugtmåleren. Denne datapakke transmitteres til kontrolboksen, skulle dette mislykkes første gang, forsøges der i alt at transmittere datapakken 10 gange. Efter endt transmission (eller 10 x mislykket transmission) disables Watch Dog Timeren og softwaren lægges i sleep-mode. Softwaren vækkes fra sleep-mode af WakeUp Timeren. Denne sekvens forsætter indtil brugeren vælger at frakoble batterierne, eller at batterierne selv løber tør.  
 
 
 \begin{figure}[H]
@@ -93,7 +91,7 @@ På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren.
 \end{figure}
 
 \textbf{Controller: microprocessor} \\
-\texttt{mikroprocessor}: Klasse der behandler data fra de resterende klasser. Den opdaterer data i \texttt{sensorPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{soilProbe}, \texttt{temperatureSensor} og \texttt{lightSensor}. \\
+\texttt{mikroprocessor}: Klasse der behandler data fra de resterende klasser. Den opdaterer data i \texttt{sensorPackage} som herefter sendes til \texttt{transceiver}. \texttt{mikroprocessor} kommunikerer direkte med \texttt{transceiver} i forbindelse med initiering og parring. \texttt{mikroprocessor} kommunikerer herudover med \texttt{soilProbe}, \texttt{temperatureSensor} og \texttt{lightSensor}.
 
 
 \textbf{Boundary: transceiver} \\
@@ -101,15 +99,15 @@ På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren.
 
 
 \textbf{Boundary: soilSensor} \\
-\texttt{soilSensor}: Driver der styrer hardwarekredsløbet til jordfugtmåling. \\
+\texttt{soilSensor}: Driver der styrer hardwarekredsløbet til jordfugtmåling.
 
 
 \textbf{Boundary: temperatureSensor} \\
-\texttt{temperatureSensor}: Driver til temperatursensor \\
+\texttt{temperatureSensor}: Driver til temperatursensor
 
 
 \textbf{Boundary: lightSensor} \\
-\texttt{lightSensor}: Driver der styrer hardwarekredsløbet til lysmåling. \\
+\texttt{lightSensor}: Driver der styrer hardwarekredsløbet til lysmåling.
 
 
 \textbf{Domain: isr} \\
@@ -117,7 +115,7 @@ På Figur \ref{fig:FlowdiagramSensor} ses flowdiagram over softwaren i sensoren.
 
 
 \textbf{Domain: controlboxPackage} \\
-\texttt{controlboxPackage}: Datapakke på 5 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt 2 bytes checksum \\
+\texttt{controlboxPackage}: Datapakke på 5 bytes som indeholder følgende: 2 startbytes, Kontrolboksens ID samt 2 bytes checksum
 
 
 \textbf{Domain: sensorPackage} \\
