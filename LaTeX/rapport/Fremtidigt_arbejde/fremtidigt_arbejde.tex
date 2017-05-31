@@ -1,9 +1,9 @@
 \chapter{Fremtidigt Arbejde} \label{ch:Fremtidigt_arbejde}
 
-Eftersom at der i dette projekt kun er udviklet en prototype er der derfor stadig en del arbejde. Der skal laves EMC test og der skal laves 3D modeller til plasthuse samt en del andet arbejde. Dette opstilles herunder.
+Eftersom at der i dette projekt kun er udviklet en prototype er der derfor stadig en del arbejde. Der skal laves EMC test og der skal laves 3D modeller til plasthuse osv. Disse opgaver opstilles herunder.
 
 \textbf{Jordfugtmåler}\\
-Der skal kigges på jordfugtmåleren således kredsløbet til måling af faseændring kommer til at virke.
+Kredsløbet til måling af faseændring skal færdigudvikles således at dette kan erstatte det nuværende målingskredsløb. Dette er planlagt til implementering i iteration 2.
 
 \textbf{Low Battery detect} \newline
 Den nuværende indikation af lav batterispænding på sensoren fungerer ved at Transceiveren afgiver et interrupt når dens forsyningsspænding går under 2.8V. Herefter tændes boostconverteren og kontrolboksen får besked om at der er lavt batteri på sensoren. Dog er der stadig meget strøm tilbage på batteriet ved denne spænding og det vil derfor være en fordel at lave en direkte måling af batterispændingen med mikroprocessorens ADC for at alt energi bliver brugt på batteriet.
