@@ -15,14 +15,14 @@ Yderligere strømbesparelse vil kunne opnås ved at nedsætte clockfrekvensen p�
 Valget af den implementerede transceiver er bevidst holdt konservativt. Denne har dog vist sig i mellemtiden at være udgået af produktion. Der skal derfor findes en nyere tranceiver, eks. CC1350 fra Texas Instruments. Dette er en dualband transceiver med en double RF-driver således at der kan kommunikeres over bluetooth og SUB-1 GHz. Endvidere har transceiveren indbygget DC/DC converter, 12-Bit ADC, samt indbygget temperaturføler og en kraftfuld ARM Coretex M3 processor. Ved valg af denne vil der samtidig kunne spares en del på de eksterne komponenter. 
 
 \textbf{App baseret kontrolinterface} \newline
-For at spare produktionsomkostningerne og give brugeren en bedere grænseflade skal der udvikles en smartphone app. 
+For at spare produktionsomkostningerne og give brugeren en bedere grænseflade skal der udvikles en smartphone app. Jvf. krav \textbf{MC\_08} i afsnit \ref{P-sec:funktionelle_krav}: \nameref{P-sec:funktionelle_krav} på side \pageref{P-sec:funktionelle_krav} i projektdokumentation og i tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} her i Rapporten.
  
 \textbf{pH Måling} \newline
 Det har også været et ønske at implementere en pH måler i sensoren, således at brugeren vil kunne få information omkring eksempelvis hvilke typer planter den givne jord egner sig til, eller kunne sætte alarmer hvis jorden når en kritisk surhed i forhold til den plante der måles ved.
-Udvidelserne af systemet med pH-måler og specifikke afgrøder kræver at der programmeres en database til at holde det information som systemet skal basere sine valg på. 
+Udvidelserne af systemet med pH-måler og specifikke afgrøder kræver at der programmeres en database til at holde det information som systemet skal basere sine valg på. Jvf. krav \textbf{MC\_07} i afsnit \ref{P-sec:funktionelle_krav}: \nameref{P-sec:funktionelle_krav} på side \pageref{P-sec:funktionelle_krav} i projektdokumentation og i tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} her i Rapporten.
 
 \textbf{Specifik afgrøde} \newline
-Et sted hvor systemet yderligere kan optimeres på sin funktionalitet, er muligheden for at indstille systemet til en specifik afgrøde. Således kan systemet optimere grobetingelserne informere brugeren om eventuelt mangel på næringsstoffer. Til dette kræves en pH-måling af jorden.
+Et sted hvor systemet yderligere kan optimeres på sin funktionalitet, er muligheden for at indstille systemet til en specifik afgrøde. Således kan systemet optimere grobetingelserne informere brugeren om eventuelt mangel på næringsstoffer. Til dette kræves en pH-måling af jorden. Jvf. krav \textbf{MC\_06} i afsnit \ref{P-sec:funktionelle_krav}: \nameref{P-sec:funktionelle_krav} på side \pageref{P-sec:funktionelle_krav} i projektdokumentation og i tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} her i Rapporten.
 
 \textbf{Fejlhåndtering ved slangeafkobling} \newline
-Der skal også implementeres en fejlhåndtering således at systemet selv lukke for ventilen hvis slange er sprunget fra, således at der ikke unødvendigt spildes vand.
+Der skal også implementeres en fejlhåndtering således at systemet selv lukke for ventilen hvis slange er sprunget fra, således at der ikke unødvendigt spildes vand. Jvf. krav \textbf{UX\_05} i afsnit \ref{P-sec:funktionelle_krav}: \nameref{P-sec:funktionelle_krav} på side \pageref{P-sec:funktionelle_krav} i projektdokumentation og i tabel \ref{tbl:funk_krav} på side \pageref{tbl:funk_krav} her i Rapporten.
