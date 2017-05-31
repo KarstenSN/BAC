@@ -2,6 +2,9 @@
 
 Eftersom at der i dette projekt kun er udviklet en prototype er der derfor stadig en del arbejde. Der skal laves EMC test og der skal laves 3D modeller til plasthuse samt en del andet arbejde. Dette opstilles herunder.
 
+\textbf{Jordfugtmåler}\\
+Der skal kigges på jordfugtmåleren således kredsløbet til måling af faseændring kommer til at virke.
+
 \textbf{Low Battery detect} \newline
 Den nuværende indikation af lav batterispænding på sensoren fungerer ved at Transceiveren afgiver et interrupt når dens forsyningsspænding går under 2.8V. Herefter tændes boostconverteren og kontrolboksen får besked om at der er lavt batteri på sensoren. Dog er der stadig meget strøm tilbage på batteriet ved denne spænding og det vil derfor være en fordel at lave en direkte måling af batterispændingen med mikroprocessorens ADC for at alt energi bliver brugt på batteriet.
 
@@ -9,17 +12,17 @@ Den nuværende indikation af lav batterispænding på sensoren fungerer ved at T
 Yderligere strømbesparelse vil kunne opnås ved at nedsætte clockfrekvensen på mikroprocessoren fra de nuværende 8MHz til den lavest mulige, som stadig kan opretholde de timings- og performancekrav fra Kapitel \ref{P-ch:kravspecifikation}: \nameref{P-ch:kravspecifikation} fra side \pageref{P-ch:kravspecifikation} i projektdokumentation. Dette er planlagt til implementering i iteration 2.
 
 \textbf{Transceiver} \newline
-Valget at den implementerede transceiver er bevidst holdt konservativt i 1. iteration. Denne har dog vist sig i mellemtiden af være udgået af produktion. Der skal derfor findes en nyere tranceiver, eks. CC1350 fra Texas Instruments. Dette er en dualband transceiver med en double RF-driver således at der kan kommunikeres over bluetooth og SUB-1 GHz. Endvidere har transceiveren indbygget DC/DC converter, 12-Bit ADC, samt indbygget temperaturføler og en kraftfuld ARM Coretex M3 processor. Ved valg af denne vil der samtidig kunne spares en del på de eksterne komponenter. 
+Valget af den implementerede transceiver er bevidst holdt konservativt. Denne har dog vist sig i mellemtiden at være udgået af produktion. Der skal derfor findes en nyere tranceiver, eks. CC1350 fra Texas Instruments. Dette er en dualband transceiver med en double RF-driver således at der kan kommunikeres over bluetooth og SUB-1 GHz. Endvidere har transceiveren indbygget DC/DC converter, 12-Bit ADC, samt indbygget temperaturføler og en kraftfuld ARM Coretex M3 processor. Ved valg af denne vil der samtidig kunne spares en del på de eksterne komponenter. 
 
 \textbf{App baseret kontrolinterface} \newline
 For at spare produktionsomkostningerne og give brugeren en bedere grænseflade skal der udvikles en smartphone app. 
  
-\textbf{Specifik afgrøde} \newline
-Et sted hvor systemet yderligere kan optimeres er muligheden for at forprogrammere systemet til den specifikke afgrøde hvor sensoren er placeret. Således at systemet overtage vandingen baseret på info om hvor meget vand den gældende afgrøde skal have i den faser sat i forhold til temperatur, pH og jordfugtighed.
-
 \textbf{pH Måling} \newline
 Det har også været et ønske at implementere en pH måler i sensoren, således at brugeren vil kunne få information omkring eksempelvis hvilke typer planter den givne jord egner sig til, eller kunne sætte alarmer hvis jorden når en kritisk surhed i forhold til den plante der måles ved.
-Udvidelserne af systemet med pH-måler og specifikke afgrøder kræver at der programmeres en database til at holde det information som systemet skal basere sine valg på. Dette er derfor ikke planer om at implementere på nuværende tidspunkt.
+Udvidelserne af systemet med pH-måler og specifikke afgrøder kræver at der programmeres en database til at holde det information som systemet skal basere sine valg på. 
+
+\textbf{Specifik afgrøde} \newline
+Et sted hvor systemet yderligere kan optimeres på sin funktionalitet, er muligheden for at indstille systemet til en specifik afgrøde. Således kan systemet optimere grobetingelserne informere brugeren om eventuelt mangel på næringsstoffer. Til dette kræves en pH-måling af jorden.
 
 \textbf{Fejlhåndtering ved slangeafkobling} \newline
-Det skal også implementeres en fejlhåndtering således at systemet selv lukke for ventilen hvis slange er sprunget fra, således at der ikke unødvendigt spildes vand.
+Der skal også implementeres en fejlhåndtering således at systemet selv lukke for ventilen hvis slange er sprunget fra, således at der ikke unødvendigt spildes vand.
